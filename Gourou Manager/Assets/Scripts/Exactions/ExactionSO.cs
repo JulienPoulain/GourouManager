@@ -8,5 +8,5 @@ public class ExactionSO : ScriptableObject
 {
     [SerializeField] private int duree;
 
-    [SerializeField] private List<ImpactsSO> impactList;
+    [SerializeField] private List<ImpactSO> impactList;
 }
