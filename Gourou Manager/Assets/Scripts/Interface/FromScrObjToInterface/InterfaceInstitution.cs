@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class InterfaceInstitution : InterfaceDisplay
 {
-    [SerializeField] public InstitutionScriptable m_Institution;
+    [SerializeField] public InstitutionSO m_Institution;
 
     public override void DisplayInterface()
     {

@@ -21,7 +21,7 @@ public class InterfaceManager : MonoBehaviour
     /// Afficher l'institution : m_Institution -> TextContainer -> List<TextMesh> -> Modifier
     /// </summary>
     /// <param name="Institution Display"></param>
-    public void DisplayInstitution(GameObject p_Institution, InstitutionScriptable p_InstitutionScriptable)
+    public void DisplayInstitution(GameObject p_Institution, InstitutionSO p_InstitutionScriptable)
     {
         // redirection du flux selon si la camera tourne autour de la carte
         switch (GameManager.Instance.u_rotateAroundMap)
@@ -35,7 +35,7 @@ public class InterfaceManager : MonoBehaviour
         }
     }
 
-    void DisplayLocalInstitution(InstitutionScriptable p_Institution)
+    void DisplayLocalInstitution(InstitutionSO p_Institution)
     {
         m_InstitutionLocal.SetActive(true);
         // TextContainer TextBox = m_Institution.GetComponent<TextContainer>();
@@ -52,7 +52,7 @@ public class InterfaceManager : MonoBehaviour
         // TextBox.m_TextList[6].text = "Etat : " + p_Institution.OpinionOnTheCult;
     }
 
-    void DisplayWorldInstitution(GameObject p_Institution, InstitutionScriptable p_InstitutionScriptable)
+    void DisplayWorldInstitution(GameObject p_Institution, InstitutionSO p_InstitutionScriptable)
     {
         // Placement du texte
         m_InstitutionGlobal.SetActive(true);
