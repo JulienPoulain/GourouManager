@@ -31,11 +31,16 @@ public class Cursor : MonoBehaviour
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         
+        // Affiche les infos 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, m_layerMask))
         {
-            Affiche = true;
-            // hit.transform.gameObject.SetActive(true);
-            hit.transform.gameObject.GetComponent<InterfaceDisplay>().DisplayInterface();
+            if (hit.transform.gameObject.TryGetComponent(out InterfaceDisplay script))
+            {
+                Affiche = true;
+                // hit.transform.gameObject.SetActive(true);
+                // hit.transform.gameObject.GetComponent<InterfaceDisplay>().DisplayInterface();
+                script.DisplayInterface();
+            }
         }
         else
         {
@@ -44,7 +49,7 @@ public class Cursor : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit, Mathf.Infinity, m_layerMask))
         {
-            if (!GameManager.Instance.u_rotateAroundMap)
+            if (!GameManager.Instance.u_rotateAroundMap && hit.transform.gameObject.CompareTag("Map"))
             // on active la rotation de la camera autour de la carte (obj 3d)
             GameManager.Instance.u_rotateAroundMap = true;
         }

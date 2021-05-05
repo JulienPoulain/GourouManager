@@ -56,19 +56,17 @@ public class InterfaceManager : MonoBehaviour
     {
         // Placement du texte
         m_InstitutionGlobal.SetActive(true);
-        float distance = 2f;
-        Vector3 position = (GameManager.Instance.u_Camera.transform.right * distance) ;
+        
+        float distance = 3f;
+        
+        Vector3 position = (GameManager.Instance.u_Camera.transform.up * distance) ;
+        m_InstitutionGlobal.transform.position = p_Institution.gameObject.transform.position + position;
 
         m_InstitutionGlobal.transform.position = p_Institution.gameObject.transform.position + position;
-        m_InstitutionGlobal.transform.LookAt(p_Institution.transform.position, Vector3.left);
-
-        // Changement du texte
-        TextMesh[] textList = m_InstitutionGlobal.GetComponentsInChildren<TextMesh>();
-
-
-
-        // ralentissement de la camera lorsque qu'on affiche une insitution:
-        // GameManager.Instance.u_Camera.GetComponent<CameraControler>().m_cameraRotationSpeed = 4f;
+        TextMesh[] textList = m_InstitutionLocal.GetComponentsInChildren<TextMesh>();
+        
+        // Changement du text
+        textList[0].text = "" + p_InstitutionScriptable.m_name;
     }
 
 
@@ -98,3 +96,10 @@ public class InterfaceManager : MonoBehaviour
         m_InstitutionGlobal.SetActive(false);
     }
 }
+
+// poser le texte à droite de l'institution
+/*
+Vector3 position = (GameManager.Instance.u_Camera.transform.right * distance) ;
+m_InstitutionGlobal.transform.position = p_Institution.gameObject.transform.position + position;
+m_InstitutionGlobal.transform.LookAt(p_Institution.transform.position, Vector3.left);
+*/

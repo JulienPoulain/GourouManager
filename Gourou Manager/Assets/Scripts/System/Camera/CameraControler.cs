@@ -46,6 +46,24 @@ public class CameraControler : MonoBehaviour
         }
     }
 
+    bool _cameraFocusOnInstitution();
+    public bool _cameraFocusOnInstitution
+    {
+        get {return _cameraFocusOnInstitution}
+        set
+        {
+            if (value == _CameraFocusOnMap) return;
+
+            _CameraFocusOnMap = value;
+            Debug.Log("CA BOUGE ICI");
+            
+            if(value)
+            {
+                StartCoroutine("FocusOnInstitution");
+            }
+        }
+    }
+
     /*
     void Update()
     {
@@ -62,6 +80,11 @@ public class CameraControler : MonoBehaviour
     /// <returns></returns>
     IEnumerator FocusOnInstitution()
     {
+
+    }
+
+    IEnumerator FocusOnMap()
+    {
         float pause = 0.5f; // temps de pause lorsque la camera pointe vers la table
         Vector3 position = CalculCameraPosition();
 
@@ -75,17 +98,13 @@ public class CameraControler : MonoBehaviour
             // transform.position += (m_InitialPos - transform.position * Time.deltaTime * m_CameraFirstMovementSpeed).normalized;
             yield return new WaitForSeconds(0f);
             transitionTime += Time.deltaTime;
-
+            
             transform.LookAt(m_FieldTarget.transform.position, Vector3.up);
         }
-        // transition entre la position et la rotation de la camera autour de la carte
-        yield return new WaitForSeconds(1f);
 
-        while (m_cameraFocusOnMap == true)
-        {
-            yield return new WaitForSeconds(0);
-            transform.RotateAround(m_FieldTarget.transform.position, Vector3.up, m_cameraRotationSpeed * Time.deltaTime);
-        }
+        // transition entre la position et la rotation de la camera autour de la carte
+
+        
     }
 
 
@@ -94,6 +113,18 @@ public class CameraControler : MonoBehaviour
         // Vector3 initialPos = new Vector3(9.08f, 10.85f, -28.87f);
 
         Vector3 initialPos = m_FieldTarget.transform.position + m_InitialPos;
-        return initialPos;
+        // return initialPos;
+        return m_InitialPos;
     }
 }
+
+
+// Rotate Around map
+/*
+while (m_cameraFocusOnMap == true)
+{
+    yield return new WaitForSeconds(0);
+    transform.RotateAround(m_FieldTarget.transform.position, Vector3.up, m_cameraRotationSpeed * Time.deltaTime);
+    transform.LookAt(m_FieldTarget.transform.position, Vector3.up);
+}
+*/
