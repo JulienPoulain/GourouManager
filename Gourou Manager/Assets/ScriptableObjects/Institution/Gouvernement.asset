@@ -18,4 +18,6 @@ MonoBehaviour:
   m_fanatics: {fileID: 11400000, guid: 08559802550b6574abfdaa29b9d8feb6, type: 2}
   m_publicExposure: {fileID: 11400000, guid: caf0a690e3beb764eb883e4c57733d87, type: 2}
   m_corruption: {fileID: 11400000, guid: 40955120802f797458ca15c929f2537d, type: 2}
-  InterlocutorList: []
+  InterlocutorList:
+  - {fileID: 11400000, guid: ce437b61f47e5ef439bdf76108f0ddb4, type: 2}
+  - {fileID: 11400000, guid: 0400873e113651d46936c19c4dc9d7ac, type: 2}
