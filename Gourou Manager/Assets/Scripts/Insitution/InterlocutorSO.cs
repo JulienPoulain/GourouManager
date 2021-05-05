@@ -27,7 +27,7 @@ public class InterlocutorSO: ScriptableObject
             }
             else if (!condition.IsValid())
             {
-                Debug.Log("Condition Int : OK");
+                Debug.Log("Condition Int : pas OK");
                 return false;
             }
         }
@@ -41,7 +41,7 @@ public class InterlocutorSO: ScriptableObject
             }
             else if (!condition.IsValid())
             {
-                Debug.Log("Condition Bool : OK");
+                Debug.Log("Condition Bool : pas OK");
                 return false;
             }
         }
