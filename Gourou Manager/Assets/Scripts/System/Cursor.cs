@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Cursor : MonoBehaviour
-{  
+{
+    CameraControler m_CameraScript;
+
     bool _affiche = false;
     public bool Affiche
     {
@@ -20,6 +22,7 @@ public class Cursor : MonoBehaviour
     void Start()
     {
         GameManager.Instance.u_InterfaceManager.Disallow();
+        m_CameraScript = GameManager.Instance.u_Camera.GetComponent<CameraControler>();
     }
 
     // raycast
@@ -35,27 +38,19 @@ public class Cursor : MonoBehaviour
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, m_layerMask))
         {
             // Possibilités lorsque la camera tourne autour de la carte
-            if (hit.transform.gameObject.TryGetComponent(out InterfaceDisplay script) && GameManager.Instance.u_rotateAroundMap)
+            if (hit.transform.gameObject.TryGetComponent(out InterfaceDisplay script))
             {
-                Affiche = true;
-                script.DisplayInterface();
+                GameManager.Instance.u_InformationTarget = script;
 
-                if (Input.GetMouseButtonDown(0) && !GameManager.Instance.u_Camera.GetComponent<CameraControler>().m_cameraFocusOnInstitution)
+                if (Input.GetMouseButtonDown(0))
                 {
-                    GameManager.Instance.u_Camera.GetComponent<CameraControler>().FocusOnInstitution(hit.transform.position);
+                    m_CameraScript.FocusOnInstitution(hit.transform.position);
                 }
-            }
-
-            // activer la camera autour de la carte
-            if (Input.GetMouseButtonDown(0) && !GameManager.Instance.u_rotateAroundMap)
-            {
-                // on active la rotation de la camera autour de la carte (obj 3d)
-                GameManager.Instance.u_rotateAroundMap = true;
             }
         }
         else
         {
-            Affiche = false;
+            GameManager.Instance.u_InformationTarget = null;
         }        
     }
 }

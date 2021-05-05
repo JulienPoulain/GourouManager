@@ -20,12 +20,15 @@ public class InterfaceManager : MonoBehaviour
     [SerializeField] GameObject m_Crisis;   // texte local
 
     // Canvas Institution Local
-    [SerializeField] TMP_Text m_textInstitutionLocalNom;
-    [SerializeField] TMP_Text m_textInstitutionLocalFonts;
-    [SerializeField] TMP_Text m_textInstitutionLocalMembre;
-    [SerializeField] TMP_Text m_textInstitutionLocalFanatique;
-    [SerializeField] TMP_Text m_textInstitutionLocalExpositionPublic;
-    [SerializeField] TMP_Text m_textInstitutionLocalCorruption;
+    [SerializeField] TMP_Text m_textInstitutionNom;
+    [SerializeField] TMP_Text m_textInstitutionFonts;
+    [SerializeField] TMP_Text m_textInstitutionMembre;
+    [SerializeField] TMP_Text m_textInstitutionFanatique;
+    [SerializeField] TMP_Text m_textInstitutionExpositionPublic;
+    [SerializeField] TMP_Text m_textInstitutionCorruption;
+
+    // text
+    [SerializeField] TextInstitution m_TextInstitution;
 
 
 
@@ -33,24 +36,30 @@ public class InterfaceManager : MonoBehaviour
     {
 
         // Si le designer a oublier les liens
-        if (m_textInstitutionLocalNom == null 
-            || m_textInstitutionLocalFonts == null 
-            || m_textInstitutionLocalMembre == null 
-            || m_textInstitutionLocalFanatique == null 
-            || m_textInstitutionLocalExpositionPublic == null 
-            || m_textInstitutionLocalCorruption == null )
+        if (m_textInstitutionNom == null 
+            || m_textInstitutionFonts == null 
+            || m_textInstitutionMembre == null 
+            || m_textInstitutionFanatique == null 
+            || m_textInstitutionExpositionPublic == null 
+            || m_textInstitutionCorruption == null )
         {
 
             Debug.LogWarning("Attention les champs textes ne sont pas configurés, j'assume de l'ordre");
             // Message au designer
             TMP_Text[] textList = m_InstitutionLocal.GetComponentsInChildren<TMP_Text>();
-            m_textInstitutionLocalNom = textList[0];
-            m_textInstitutionLocalFonts = textList[1];
-            m_textInstitutionLocalMembre = textList[2];
-            m_textInstitutionLocalFanatique = textList[3];
-            m_textInstitutionLocalExpositionPublic = textList[4];
-            m_textInstitutionLocalCorruption = textList[5];
+            m_textInstitutionNom = textList[0];
+            m_textInstitutionFonts = textList[1];
+            m_textInstitutionMembre = textList[2];
+            m_textInstitutionFanatique = textList[3];
+            m_textInstitutionExpositionPublic = textList[4];
+            m_textInstitutionCorruption = textList[5];
         }
+    }
+    
+    public void DisplayInterface()
+    {
+
+
     }
 
     /// <summary>
@@ -60,38 +69,40 @@ public class InterfaceManager : MonoBehaviour
     public void DisplayInstitution(GameObject p_Institution, InstitutionSO p_InstitutionScriptable)
     {
         // redirection du flux selon si la camera tourne autour de la carte
-        switch (GameManager.Instance.u_rotateAroundMap)
+        switch (GameManager.Instance.m_focusOnInstitution)
         {
             case true:
-                DisplayWorldInstitution(p_Institution, p_InstitutionScriptable);
+                DisplayLightInstitution(p_Institution, p_InstitutionScriptable);
                 break;
             case false:
-                DisplayLocalInstitution(p_InstitutionScriptable);
+                DisplayHeavyInstitution(p_InstitutionScriptable);
                 break;
         }
     }
 
-    void DisplayLocalInstitution(InstitutionSO p_Institution)
+    void DisplayHeavyInstitution(InstitutionSO p_Institution)
     {
+        // ALL INFORMATION
+
         m_InstitutionLocal.SetActive(true);
  
 
-        m_textInstitutionLocalNom.text = "Nom: " + p_Institution.m_name;
-        m_textInstitutionLocalFonts.text = "Fonts : " + p_Institution.m_funds.m_value; ;
-        m_textInstitutionLocalMembre.text = "Membre : " + p_Institution.m_members.m_value; ;
-        m_textInstitutionLocalFanatique.text = "Fanatique : " + p_Institution.m_fanatics.m_value;
-        m_textInstitutionLocalExpositionPublic.text = "Exposition public : " + p_Institution.m_publicExposure.m_value;
-        m_textInstitutionLocalCorruption.text = "Corruption : " + p_Institution.m_corruption.m_value;
+        m_textInstitutionNom.text = "Nom: " + p_Institution.m_name;
+        m_textInstitutionFonts.text = "Fonts : " + p_Institution.m_funds.m_value; ;
+        m_textInstitutionMembre.text = "Membre : " + p_Institution.m_members.m_value; ;
+        m_textInstitutionFanatique.text = "Fanatique : " + p_Institution.m_fanatics.m_value;
+        m_textInstitutionExpositionPublic.text = "Exposition public : " + p_Institution.m_publicExposure.m_value;
+        m_textInstitutionCorruption.text = "Corruption : " + p_Institution.m_corruption.m_value;
     }
 
-    void DisplayWorldInstitution(GameObject p_Institution, InstitutionSO p_InstitutionScriptable)
+    void DisplayLightInstitution(GameObject p_Institution, InstitutionSO p_InstitutionScriptable)
     {
         // Placement du texte
         m_InstitutionGlobal.SetActive(true);
         
         float distance = 3f;
         
-        Vector3 position = (GameManager.Instance.u_Camera.transform.up * distance) ;
+        Vector3 position = (GameManager.Instance.u_Camera.transform.up * distance);
         m_InstitutionGlobal.transform.position = p_Institution.gameObject.transform.position + position;
 
         m_InstitutionGlobal.transform.position = p_Institution.gameObject.transform.position + position;

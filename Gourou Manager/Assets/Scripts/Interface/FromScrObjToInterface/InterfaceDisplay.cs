@@ -5,4 +5,5 @@ using UnityEngine;
 public abstract class InterfaceDisplay : MonoBehaviour
 {
     public abstract void DisplayInterface();
+
 }
