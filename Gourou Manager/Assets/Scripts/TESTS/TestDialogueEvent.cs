@@ -20,7 +20,7 @@ public class TestDialogueEvent : MonoBehaviour
         }
         else
         {
-            if (m_conditionInt.IsValid())
+            if (m_conditionInt.IsOneValid())
                 Debug.Log("Condition Int : OK");
             else
                 Debug.Log("Condition Int : Pas OK");
@@ -33,7 +33,7 @@ public class TestDialogueEvent : MonoBehaviour
         }
         else
         {
-            if (m_conditionInt2.IsValid())
+            if (m_conditionInt2.IsOneValid())
                 Debug.Log("Condition Int 2 : OK");
             else
                 Debug.Log("Condition Int 2 : Pas OK");
@@ -46,7 +46,7 @@ public class TestDialogueEvent : MonoBehaviour
         }
         else
         {
-            if (m_conditionBool.IsValid())
+            if (m_conditionBool.IsOneValid())
                 Debug.Log("Condition Bool : OK");
             else
                 Debug.Log("Condition Bool : Pas OK");
@@ -59,7 +59,7 @@ public class TestDialogueEvent : MonoBehaviour
         }
         else
         {
-            if (m_conditionInfo.IsValid())
+            if (m_conditionInfo.IsOneValid())
                 Debug.Log("Condition Info : OK (Info détenue)");
             else
                 Debug.Log("Condition Info : Pas OK (Info non détenue)");

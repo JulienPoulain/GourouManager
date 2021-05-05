@@ -2,12 +2,13 @@ using System;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewConditionInt", menuName = "GourouManager/Condition/ConditionInt")]
-public class ConditionIntSO : ConditionSO<SyncIntSO>
+public class ConditionIntSO : ConditionSO
 {
+    [SerializeField] private SyncIntSO m_ressource;
     [SerializeField] private ConditionType m_conditionType;
     [SerializeField] private int m_value;
 
-    public override bool IsValid()
+    public override bool IsOneValid()
     {
         Array conditionTypeValues = Enum.GetValues(typeof(ConditionType));
         foreach (ConditionType cd in conditionTypeValues)
@@ -25,13 +26,13 @@ public class ConditionIntSO : ConditionSO<SyncIntSO>
         switch (p_conditionType)
         {
             case ConditionType.Lesser:
-                if(m_ressource.Value < m_value) return true;
+                return m_ressource.Value < m_value;
                 break;
             case ConditionType.Equal:
-                if(m_ressource.Value == m_value) return true;
+                return m_ressource.Value == m_value;
                 break;
             case ConditionType.Greater:
-                if(m_ressource.Value > m_value) return true;
+                return m_ressource.Value > m_value;
                 break;
             default:
                 Debug.LogError("<color=red>ERROR :</color> ConditionType Inconnue.");

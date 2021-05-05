@@ -1,8 +1,6 @@
 using UnityEngine;
 
-public abstract class ConditionSO<T> : ScriptableObject//, ICondition
+public abstract class ConditionSO : ScriptableObject
 {
-    [SerializeField] protected T m_ressource;
-    
-    public abstract bool IsValid();
+    public abstract bool IsOneValid();
 }
