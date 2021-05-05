@@ -17,5 +17,7 @@ MonoBehaviour:
   m_conditionInt:
   - {fileID: 11400000, guid: 01f8aa5b679297640bc5b34c1fc86c59, type: 2}
   - {fileID: 11400000, guid: 5413dda9bf89d0749b5a087c49d18bcb, type: 2}
-  m_conditionBool: []
+  m_conditionBool:
+  - {fileID: 11400000, guid: 64579fe2a5074304b9be7066384f33f6, type: 2}
+  - {fileID: 11400000, guid: 4c838c73f8686da4f84964232bc5d436, type: 2}
   m_dialogue: {fileID: 11400000, guid: 2a7c53dd134670e4aa0cc22e7f7565dc, type: 2}

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bdbeba0723bc774a8452bc50cad95ca, type: 3}
   m_Name: RessourceCondition2
   m_EditorClassIdentifier: 
-  m_value: 0
+  m_value: 68

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ressource: {fileID: 11400000, guid: af543a0db4172ce4e8a6af25eba894b8, type: 2}
   m_conditionType: 2
-  m_value: 78
+  m_value: 70
