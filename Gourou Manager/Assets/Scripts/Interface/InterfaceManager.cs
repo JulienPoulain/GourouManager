@@ -7,6 +7,8 @@ using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Vector3 = UnityEngine.Vector3;
 
+using TMPro;
+
 // local = text in front of the camera
 // global = text in map
 
@@ -16,6 +18,40 @@ public class InterfaceManager : MonoBehaviour
     [SerializeField] GameObject m_InstitutionGlobal;    // texte global
     
     [SerializeField] GameObject m_Crisis;   // texte local
+
+    // Canvas Institution Local
+    [SerializeField] TMP_Text m_textInstitutionLocalNom;
+    [SerializeField] TMP_Text m_textInstitutionLocalFonts;
+    [SerializeField] TMP_Text m_textInstitutionLocalMembre;
+    [SerializeField] TMP_Text m_textInstitutionLocalFanatique;
+    [SerializeField] TMP_Text m_textInstitutionLocalExpositionPublic;
+    [SerializeField] TMP_Text m_textInstitutionLocalCorruption;
+
+
+
+    private void Awake()
+    {
+
+        // Si le designer a oublier les liens
+        if (m_textInstitutionLocalNom == null 
+            || m_textInstitutionLocalFonts == null 
+            || m_textInstitutionLocalMembre == null 
+            || m_textInstitutionLocalFanatique == null 
+            || m_textInstitutionLocalExpositionPublic == null 
+            || m_textInstitutionLocalCorruption == null )
+        {
+
+            Debug.LogWarning("Attention les champs textes ne sont pas configurés, j'assume de l'ordre");
+            // Message au designer
+            TMP_Text[] textList = m_InstitutionLocal.GetComponentsInChildren<TMP_Text>();
+            m_textInstitutionLocalNom = textList[0];
+            m_textInstitutionLocalFonts = textList[1];
+            m_textInstitutionLocalMembre = textList[2];
+            m_textInstitutionLocalFanatique = textList[3];
+            m_textInstitutionLocalExpositionPublic = textList[4];
+            m_textInstitutionLocalCorruption = textList[5];
+        }
+    }
 
     /// <summary>
     /// Afficher l'institution : m_Institution -> TextContainer -> List<TextMesh> -> Modifier
@@ -38,18 +74,14 @@ public class InterfaceManager : MonoBehaviour
     void DisplayLocalInstitution(InstitutionSO p_Institution)
     {
         m_InstitutionLocal.SetActive(true);
-        // TextContainer TextBox = m_Institution.GetComponent<TextContainer>();
-        TextMesh[] textList = m_InstitutionLocal.GetComponentsInChildren<TextMesh>();
+ 
 
-        // TextMesh test = TextBox.m_TextList[0];
-
-        textList[0].text = "Nom: " + p_Institution.m_name;
-        textList[1].text = "Fonts : " + p_Institution.m_funds.m_value;
-        textList[2].text = "Membre : " + p_Institution.m_members.m_value;
-        textList[3].text = "Fnatique : " + p_Institution.m_fanatics.m_value;
-        textList[4].text = "Exposition public : " + p_Institution.m_publicExposure.m_value;
-        textList[5].text = "Corruption : " + p_Institution.m_corruption.m_value;
-        // TextBox.m_TextList[6].text = "Etat : " + p_Institution.OpinionOnTheCult;
+        m_textInstitutionLocalNom.text = "Nom: " + p_Institution.m_name;
+        m_textInstitutionLocalFonts.text = "Fonts : " + p_Institution.m_funds.m_value; ;
+        m_textInstitutionLocalMembre.text = "Membre : " + p_Institution.m_members.m_value; ;
+        m_textInstitutionLocalFanatique.text = "Fanatique : " + p_Institution.m_fanatics.m_value;
+        m_textInstitutionLocalExpositionPublic.text = "Exposition public : " + p_Institution.m_publicExposure.m_value;
+        m_textInstitutionLocalCorruption.text = "Corruption : " + p_Institution.m_corruption.m_value;
     }
 
     void DisplayWorldInstitution(GameObject p_Institution, InstitutionSO p_InstitutionScriptable)

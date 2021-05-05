@@ -18,12 +18,13 @@ public class CameraControler : MonoBehaviour
 
     [Tooltip("Vitesse de la camera lorsqu'elle tourne autour de la carte")]
     // use in InterfaceManager pour ralentir la camera lorsqu'on affiche une institution
-    [SerializeField] public float m_cameraRotationSpeed = 10f;  
+    [SerializeField] public float m_cameraRotationSpeed = 10f;
+
+    [Tooltip("Definit la distace à laquelle la camera sera éloignée de l'institution lors que m_cameraFocusOnInstitution == true")]
+    [SerializeField] float m_FocusInsitutionDistance;
+
 
     [Tooltip("true = camera cible le plateau / false = camera est sur le personnage")]
-
-
-
     /// <summary>
     /// Accesseur -> permet de rendre le focus sur le plateau en coroutine, et donc,
     /// en automatique et avec une gestion du temps
@@ -41,28 +42,13 @@ public class CameraControler : MonoBehaviour
             
             if(value)
             {
-                StartCoroutine("FocusOnInstitution");
+                StartCoroutine("FocusOnMap");
             }
         }
     }
 
-    bool _cameraFocusOnInstitution();
-    public bool _cameraFocusOnInstitution
-    {
-        get {return _cameraFocusOnInstitution}
-        set
-        {
-            if (value == _CameraFocusOnMap) return;
-
-            _CameraFocusOnMap = value;
-            Debug.Log("CA BOUGE ICI");
-            
-            if(value)
-            {
-                StartCoroutine("FocusOnInstitution");
-            }
-        }
-    }
+    public bool m_cameraFocusOnInstitution;
+    
 
     /*
     void Update()
@@ -75,14 +61,50 @@ public class CameraControler : MonoBehaviour
     */
 
     /// <summary>
-    /// s'acite lorsque la camera tourne autour de la carte
+    /// Permet de cibler la camera sur une intitution
     /// </summary>
-    /// <returns></returns>
-    IEnumerator FocusOnInstitution()
+    /// <param name="p_Object"></param>
+    public void FocusOnInstitution(Vector3 p_position)
     {
+        m_cameraFocusOnInstitution = true;
+        m_cameraFocusOnMap = false;
 
+        // focus l'institution
+        
+
+        IEnumerator coroutine = FocusInstitution(p_position);
+        StartCoroutine(coroutine);
     }
 
+    /// <summary>
+    /// Permet le retour de la camera autour de la carte
+    /// </summary>
+    public void StopFocusOnInstitution()
+    {
+        m_cameraFocusOnInstitution = false;
+        m_cameraFocusOnMap = true;
+    }
+
+    IEnumerator FocusInstitution(Vector3 p_targetPos)
+    {
+        float dist = Vector3.Distance(p_targetPos, transform.position);
+
+        while (dist > m_FocusInsitutionDistance)
+        {
+            transform.LookAt(p_targetPos, Vector3.up);
+            transform.position = Vector3.Lerp(transform.position, p_targetPos, Time.deltaTime * 2f);
+
+            yield return new WaitForSeconds(0f);
+
+            dist = Vector3.Distance(p_targetPos, transform.position);
+            Debug.Log("la distance est de " + dist);
+        }
+    }
+
+    /// <summary>
+    /// s'active lorsque la camera cible la carte
+    /// </summary>
+    /// <returns></returns>
     IEnumerator FocusOnMap()
     {
         float pause = 0.5f; // temps de pause lorsque la camera pointe vers la table
@@ -103,8 +125,6 @@ public class CameraControler : MonoBehaviour
         }
 
         // transition entre la position et la rotation de la camera autour de la carte
-
-        
     }
 
 

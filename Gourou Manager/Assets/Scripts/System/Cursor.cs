@@ -34,24 +34,28 @@ public class Cursor : MonoBehaviour
         // Affiche les infos 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, m_layerMask))
         {
-            if (hit.transform.gameObject.TryGetComponent(out InterfaceDisplay script))
+            // Possibilités lorsque la camera tourne autour de la carte
+            if (hit.transform.gameObject.TryGetComponent(out InterfaceDisplay script) && GameManager.Instance.u_rotateAroundMap)
             {
                 Affiche = true;
-                // hit.transform.gameObject.SetActive(true);
-                // hit.transform.gameObject.GetComponent<InterfaceDisplay>().DisplayInterface();
                 script.DisplayInterface();
+
+                if (Input.GetMouseButtonDown(0) && !GameManager.Instance.u_Camera.GetComponent<CameraControler>().m_cameraFocusOnInstitution)
+                {
+                    GameManager.Instance.u_Camera.GetComponent<CameraControler>().FocusOnInstitution(hit.transform.position);
+                }
+            }
+
+            // activer la camera autour de la carte
+            if (Input.GetMouseButtonDown(0) && !GameManager.Instance.u_rotateAroundMap)
+            {
+                // on active la rotation de la camera autour de la carte (obj 3d)
+                GameManager.Instance.u_rotateAroundMap = true;
             }
         }
         else
         {
             Affiche = false;
-        }
-
-        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit, Mathf.Infinity, m_layerMask))
-        {
-            if (!GameManager.Instance.u_rotateAroundMap && hit.transform.gameObject.CompareTag("Map"))
-            // on active la rotation de la camera autour de la carte (obj 3d)
-            GameManager.Instance.u_rotateAroundMap = true;
-        }
+        }        
     }
 }
