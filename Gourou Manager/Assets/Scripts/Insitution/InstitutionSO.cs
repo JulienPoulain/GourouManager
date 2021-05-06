@@ -31,14 +31,14 @@ public class InstitutionSO : ScriptableObject
         Devoted
     }
 
-    public List<DialogueSO> PossibleDialogues()
+    public List<ApproachSO> PossibleDialogues()
     {
-        List<DialogueSO> DialoguesList = new List<DialogueSO>();
+        List<ApproachSO> DialoguesList = new List<ApproachSO>();
 
         foreach (InterlocutorSO interlocutor in m_interlocutorList)
         {
             if (interlocutor.IsAccessible())
-                DialoguesList.Add(interlocutor.m_dialogue);
+                DialoguesList.AddRange(interlocutor.m_approach);
         }
         
         return DialoguesList;
