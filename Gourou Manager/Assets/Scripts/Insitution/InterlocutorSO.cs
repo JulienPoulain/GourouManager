@@ -7,15 +7,12 @@ using System;
 
 public class InterlocutorSO: ScriptableObject
 {
-    //[Header("Titre")]
     [SerializeField] public string m_name;
-    [SerializeField] public SyncIntSO m_sanity;
-    [SerializeField] public List<ConditionIntSO>  m_conditionInt;
-    [SerializeField] public List<ConditionBoolSO>  m_conditionBool;
-    [SerializeField] public DialogueSO m_dialogue;
-    //[SerializeField] [Tooltip("")]
-
-
+    [SerializeField] [Tooltip("")] public SyncIntSO m_sanity;
+    [SerializeField] [Tooltip("")] public List<ConditionIntSO>  m_conditionInt;
+    [SerializeField] [Tooltip("")] public List<ConditionBoolSO>  m_conditionBool;
+    [SerializeField] [Tooltip("")] public DialogueSO m_dialogue;
+    
     public bool IsAccessible()
     {
         // TEST CONDITION INT
