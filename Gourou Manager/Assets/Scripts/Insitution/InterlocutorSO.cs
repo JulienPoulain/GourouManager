@@ -8,15 +8,16 @@ using System;
 public class InterlocutorSO: ScriptableObject
 {
     [SerializeField] public string m_name;
-    [SerializeField] [Tooltip("")] public SyncIntSO m_sanity;
-    [SerializeField] [Tooltip("")] public List<ConditionIntSO>  m_conditionInt;
-    [SerializeField] [Tooltip("")] public List<ConditionBoolSO>  m_conditionBool;
-    [SerializeField] [Tooltip("")] public DialogueSO m_dialogue;
-    
+    [SerializeField] [Tooltip("santé mentale de l'interlocuteur (0-100) 100 à l'initialisation")] public SyncIntSO m_sanity;
+    [SerializeField] [Tooltip("dialogue débloqué par les conditions")] public DialogueSO m_dialogue;
+    [Header("conditions pour accéder à l'interlocuteur")]
+    [SerializeField] [Tooltip("conditions dépendantes d'un entier")] public List<ConditionIntSO>  m_accesConditionInt;
+    [SerializeField] [Tooltip("conditions dépendantes d'un booléen")] public List<ConditionBoolSO>  m_accesConditionBool;
+
     public bool IsAccessible()
     {
         // TEST CONDITION INT
-        foreach (ConditionIntSO condition in m_conditionInt)
+        foreach (ConditionIntSO condition in m_accesConditionInt)
         {
             if (condition == null)
             {
@@ -30,7 +31,7 @@ public class InterlocutorSO: ScriptableObject
         }
         
         // TEST CONDITION BOOL
-        foreach (ConditionBoolSO condition in m_conditionBool)
+        foreach (ConditionBoolSO condition in m_accesConditionBool)
         {
             if (condition == null)
             {
