@@ -25,7 +25,7 @@ public class InterlocutorSO: ScriptableObject
             {
                 Debug.Log("<color=red>ERROR :</color> Condition Int manquante.");
             }
-            else if (!condition.IsValid())
+            else if (!condition.IsOneValid())
             {
                 Debug.Log("Condition Int : OK");
                 return false;
@@ -39,7 +39,7 @@ public class InterlocutorSO: ScriptableObject
             {
                 Debug.Log("<color=red>ERROR :</color> Condition Bool manquante.");
             }
-            else if (!condition.IsValid())
+            else if (!condition.IsOneValid())
             {
                 Debug.Log("Condition Bool : OK");
                 return false;
