@@ -73,10 +73,10 @@ public class TestDialogueEvent : MonoBehaviour
         else
         {
             // TEST ACCESSIBILITÉ APPROCHE
-            if (m_approach.IsAccessible())
+            /*if (m_approach.IsAccessible())
                 Debug.Log("Approche accessible.");
             else
-                Debug.Log("Approche inaccessible.");
+                Debug.Log("Approche inaccessible.");*/
             
             // TEST RÉUSSITE APPROCHE
             if (m_approach.IsSuccessful())

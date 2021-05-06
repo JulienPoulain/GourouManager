@@ -9,7 +9,7 @@ public class DialogueSO : ScriptableObject
     //[SerializeField] private ExactionSO m_exactionPos;
     //[SerializeField] private ExactionSO m_exactionNeg;
 
-    public List<ApproachSO> GetAvailableApproches()
+    /*public List<ApproachSO> GetAvailableApproches()
     {
         List<ApproachSO> availableApproches = new List<ApproachSO>();
         
@@ -20,7 +20,7 @@ public class DialogueSO : ScriptableObject
         }
 
         return availableApproches;
-    }
+    }*/
 
     /*public ExactionSO tryApproach(ApproachSO p_approach)
     {
