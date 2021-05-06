@@ -6,23 +6,29 @@ using UnityEngine.EventSystems;
 public class Cursor : MonoBehaviour
 {
     CameraControler m_CameraScript;
+    private InterfaceManager m_InterfaceManager;
 
     bool _affiche = false;
+    
+    void Start()
+    {
+        
+        m_InterfaceManager = GameManager.Instance.u_InterfaceManager;   // raccourcis l'access à Interface Manager
+        m_InterfaceManager.Disallow();  // désafficher toutes les Interfaces
+        
+        m_CameraScript = GameManager.Instance.u_Camera.GetComponent<CameraControler>();
+        
+    }
+    
     public bool Affiche
     {
         get {return _affiche;}
         set 
         {
             if (value == _affiche) return;
-            if (!value) GameManager.Instance.u_InterfaceManager.Disallow();
+            if (!value) m_InterfaceManager.Disallow();
             _affiche = value;
         }
-    }
-
-    void Start()
-    {
-        GameManager.Instance.u_InterfaceManager.Disallow();
-        m_CameraScript = GameManager.Instance.u_Camera.GetComponent<CameraControler>();
     }
 
     // raycast
@@ -40,17 +46,25 @@ public class Cursor : MonoBehaviour
             // Possibilités lorsque la camera tourne autour de la carte
             if (hit.transform.gameObject.TryGetComponent(out InterfaceDisplay script))
             {
-                GameManager.Instance.u_InformationTarget = script;
-
+                if (!m_InterfaceManager.m_interfaceIsDisplay)
+                {
+                    // On fait appel à l'interface, via le script contenu dans le GameObject.
+                    // ça permet de faire la différence entre les institutions et les crises
+                    script.DisplayInterface();
+                }
+                
                 if (Input.GetMouseButtonDown(0))
                 {
                     m_CameraScript.FocusOnInstitution(hit.transform.position);
                 }
             }
         }
-        else
+        else // si le curseur ne pointe null part, toutes les interfaces sont désactivés
         {
-            GameManager.Instance.u_InformationTarget = null;
+            if (m_InterfaceManager.m_interfaceIsDisplay)
+            {
+                m_InterfaceManager.Disallow();
+            }
         }        
     }
 }

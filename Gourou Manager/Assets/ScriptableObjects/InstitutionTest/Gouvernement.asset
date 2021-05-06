@@ -21,3 +21,4 @@ MonoBehaviour:
   InterlocutorList:
   - {fileID: 11400000, guid: ce437b61f47e5ef439bdf76108f0ddb4, type: 2}
   - {fileID: 11400000, guid: 0400873e113651d46936c19c4dc9d7ac, type: 2}
+  m_opition: 2

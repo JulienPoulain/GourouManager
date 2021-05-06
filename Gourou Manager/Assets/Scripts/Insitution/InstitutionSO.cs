@@ -15,16 +15,9 @@ public class InstitutionSO : ScriptableObject
     [SerializeField] public SyncIntSO m_publicExposure;
     [SerializeField] public SyncIntSO m_corruption;
     [SerializeField] public List<InterlocutorSO> InterlocutorList;
+
+    [SerializeField] public OpinionOnTheCult m_opition;
     //impact ?
-    
-    enum OpinionOnTheCult
-    {
-        Hostile,
-        Suspicious,
-        Indifferent,
-        Complacent,
-        Devoted
-    }
 
     public List<DialogueSO> PossibleDialogues()
     {
