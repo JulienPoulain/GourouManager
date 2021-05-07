@@ -14,7 +14,8 @@ public class Cursor : MonoBehaviour
     {
         
         m_InterfaceManager = GameManager.Instance.u_InterfaceManager;   // raccourcis l'access à Interface Manager
-        m_InterfaceManager.DisallowInstitution();  // désafficher les Institutions
+        m_InterfaceManager.DisallowLightInstitution();  // désafficher les Institutions
+        m_InterfaceManager.DisallowHeavyInstitution();  // désafficher les Institutions
         m_InterfaceManager.DisallowCrisis();  // désafficher les Crises
         
         m_CameraScript = GameManager.Instance.u_Camera.GetComponent<CameraControler>();
@@ -34,34 +35,30 @@ public class Cursor : MonoBehaviour
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, m_layerMask))
         {
             // Possibilités lorsque la camera tourne autour de la carte
-            if (hit.transform.gameObject.TryGetComponent(out InterfaceDisplay script))
+            if (hit.transform.gameObject.TryGetComponent(out InterfaceInstitution script))
             {
-                if (!m_InterfaceManager.m_InstitutionIsDisplay)
+                if (!m_InterfaceManager.m_InstitutionLightIsDisplay && !m_InterfaceManager.m_InstitutionHeavyIsDisplay)
                 {
-                    // On fait appel à l'interface, via le script contenu dans le GameObject.
-                    // ça permet de faire la différence entre les institutions et les crises
-                    script.DisplayInterface();
+                    m_InterfaceManager.DisplayLightInstitution(script.gameObject, script.m_Institution);
                 }
                 
                 if (Input.GetMouseButtonDown(0))
                 {
-                    m_CameraScript.FocusOnInstitution(hit.transform.position);
+                    //m_CameraScript.FocusOnInstitution(hit.transform.position);
+                    m_InterfaceManager.DisplayHeavyInstitution(script.m_Institution);
                 }
             }
         }
         else // si le curseur ne pointe null part, toutes les interfaces sont désactivés
         {
             // desafficher les interfaces Institution
-            if (m_InterfaceManager.m_InstitutionIsDisplay)
-            {
-                m_InterfaceManager.DisallowInstitution();
-                Debug.Log("je desactive tout");
-            }
-
+            if (m_InterfaceManager.m_InstitutionLightIsDisplay) m_InterfaceManager.DisallowLightInstitution();
+     
             // desafficher l'interface de crise
-            if (Input.GetMouseButtonDown(0) && m_InterfaceManager.m_crisisIsDisplay)
+            if (Input.GetMouseButtonDown(0))
             {
-                m_InterfaceManager.DisallowCrisis();
+                if (m_InterfaceManager.m_crisisIsDisplay) m_InterfaceManager.DisallowCrisis();
+                if (m_InterfaceManager.m_InstitutionHeavyIsDisplay) m_InterfaceManager.DisallowHeavyInstitution();
             }
         }        
     }

@@ -36,7 +36,8 @@ public class InterfaceManager : MonoBehaviour
     public InterfaceMode m_InterfaceMode = InterfaceMode.Standard;
    
     [Tooltip("définit si l'interface affiche actuellement une information, permet d'éviter de rappeler la fonction d'affichage")]
-    public bool m_InstitutionIsDisplay = false;
+    public bool m_InstitutionLightIsDisplay = false;
+    public bool m_InstitutionHeavyIsDisplay = false;
     public bool m_crisisIsDisplay = false;
 
     void Start()
@@ -48,33 +49,20 @@ public class InterfaceManager : MonoBehaviour
     /// Envoi les données au bon Text
     /// </summary>
     /// <param name="Institution Display"></param>
-    public void DisplayInstitution(GameObject p_Institution, InstitutionSO p_InstitutionScriptable)
-    {
-        m_InstitutionIsDisplay = true;
-        // redirection du flux selon si la camera tourne autour de la carte
-        switch (m_InterfaceMode)
-        {
-            case InterfaceMode.Standard:
-                DisplayLightInstitution(p_Institution, p_InstitutionScriptable);
-                break;
-            
-            case InterfaceMode.FocusOnInstitution:
-                DisplayHeavyInstitution(p_InstitutionScriptable);
-                break;
-        }
-    }
 
-    void DisplayHeavyInstitution(InstitutionSO p_Institution)
+    public void DisplayHeavyInstitution(InstitutionSO p_Institution)
     {
         // ALL INFORMATION
+        m_InstitutionHeavyIsDisplay = true;
         m_InstitutionHeavyText.SetActive(true);
     }
 
-    void DisplayLightInstitution(GameObject p_Institution, InstitutionSO p_InstitutionScriptable)
+    public void DisplayLightInstitution(GameObject p_Institution, InstitutionSO p_InstitutionScriptable)
     {
+        m_InstitutionLightIsDisplay = true;
+
         // Placement du texte
         m_InstitutionLightText.SetActive(true);
-        
         // Définit la position de l'affichage par rapport au G.O.
         Vector3 position = m_Camera.WorldToScreenPoint(p_Institution.transform.position + Vector3.right * m_distanceRight);
         m_InstitutionLightText.transform.position = position;
@@ -91,12 +79,16 @@ public class InterfaceManager : MonoBehaviour
         m_CrisisText.GetComponent<TextCrisis>().Display(p_Crisis);
     }
 
-    public void DisallowInstitution() // call in Cursor.cs
+    public void DisallowLightInstitution() // call in Cursor.cs
     {
         m_InstitutionLightText.SetActive(false);
+        m_InstitutionLightIsDisplay = false;
+    }
+
+    public void DisallowHeavyInstitution()
+    {
         m_InstitutionHeavyText.SetActive(false);
-        
-        m_InstitutionIsDisplay = false;
+        m_InstitutionHeavyIsDisplay = false;
     }
 
     public void DisallowCrisis() // call in Cursor.cs
