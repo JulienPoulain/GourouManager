@@ -16,18 +16,6 @@ using Vector2 = UnityEngine.Vector2;
 
 public class InterfaceManager : MonoBehaviour
 {
-
-    
-
-    // Canvas Institution Local
-    /*
-    [SerializeField] TMP_Text m_textInstitutionNom;
-    [SerializeField] TMP_Text m_textInstitutionFonts;
-    [SerializeField] TMP_Text m_textInstitutionMembre;
-    [SerializeField] TMP_Text m_textInstitutionFanatique;
-    [SerializeField] TMP_Text m_textInstitutionExpositionPublic;
-    [SerializeField] TMP_Text m_textInstitutionCorruption;
-    */
     // text
     [Tooltip("Institution Texte en Standard mode")]
     [SerializeField] GameObject m_InstitutionLightText;
@@ -48,7 +36,8 @@ public class InterfaceManager : MonoBehaviour
     public InterfaceMode m_InterfaceMode = InterfaceMode.Standard;
    
     [Tooltip("définit si l'interface affiche actuellement une information, permet d'éviter de rappeler la fonction d'affichage")]
-    public bool m_interfaceIsDisplay;
+    public bool m_InstitutionIsDisplay = false;
+    public bool m_crisisIsDisplay = false;
 
     void Start()
     {
@@ -61,7 +50,7 @@ public class InterfaceManager : MonoBehaviour
     /// <param name="Institution Display"></param>
     public void DisplayInstitution(GameObject p_Institution, InstitutionSO p_InstitutionScriptable)
     {
-        m_interfaceIsDisplay = true;
+        m_InstitutionIsDisplay = true;
         // redirection du flux selon si la camera tourne autour de la carte
         switch (m_InterfaceMode)
         {
@@ -97,29 +86,22 @@ public class InterfaceManager : MonoBehaviour
 
     public void DisplayCrisis(StructEventCrisesSO p_Crisis)
     {
+        m_crisisIsDisplay = true;
         m_CrisisText.SetActive(true);
-
-        TextMesh[] textList = m_CrisisText.GetComponentsInChildren<TextMesh>();
-
-        textList[0].text = "" ;
-        textList[1].text = "Taux de la Crisis : ";
-        textList[2].text = "Effect : ";
+        m_CrisisText.GetComponent<TextCrisis>().Display(p_Crisis);
     }
 
-
-    public void Display(InterfaceDisplay p_Object) // call in Cursor.cs
+    public void DisallowInstitution() // call in Cursor.cs
     {
-        // switch(p_Object.m_type)
-        
-
-    }
-
-    public void Disallow() // call in Cursor.cs
-    {
-        m_CrisisText.SetActive(false);
         m_InstitutionLightText.SetActive(false);
         m_InstitutionHeavyText.SetActive(false);
         
-        m_interfaceIsDisplay = false;
+        m_InstitutionIsDisplay = false;
+    }
+
+    public void DisallowCrisis() // call in Cursor.cs
+    {
+        m_CrisisText.SetActive(false);
+        m_crisisIsDisplay = false;
     }
 }

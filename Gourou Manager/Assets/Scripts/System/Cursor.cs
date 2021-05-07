@@ -14,21 +14,11 @@ public class Cursor : MonoBehaviour
     {
         
         m_InterfaceManager = GameManager.Instance.u_InterfaceManager;   // raccourcis l'access à Interface Manager
-        m_InterfaceManager.Disallow();  // désafficher toutes les Interfaces
+        m_InterfaceManager.DisallowInstitution();  // désafficher les Institutions
+        m_InterfaceManager.DisallowCrisis();  // désafficher les Crises
         
         m_CameraScript = GameManager.Instance.u_Camera.GetComponent<CameraControler>();
         
-    }
-    
-    public bool Affiche
-    {
-        get {return _affiche;}
-        set 
-        {
-            if (value == _affiche) return;
-            if (!value) m_InterfaceManager.Disallow();
-            _affiche = value;
-        }
     }
 
     // raycast
@@ -46,7 +36,7 @@ public class Cursor : MonoBehaviour
             // Possibilités lorsque la camera tourne autour de la carte
             if (hit.transform.gameObject.TryGetComponent(out InterfaceDisplay script))
             {
-                if (!m_InterfaceManager.m_interfaceIsDisplay)
+                if (!m_InterfaceManager.m_InstitutionIsDisplay)
                 {
                     // On fait appel à l'interface, via le script contenu dans le GameObject.
                     // ça permet de faire la différence entre les institutions et les crises
@@ -61,9 +51,17 @@ public class Cursor : MonoBehaviour
         }
         else // si le curseur ne pointe null part, toutes les interfaces sont désactivés
         {
-            if (m_InterfaceManager.m_interfaceIsDisplay)
+            // desafficher les interfaces Institution
+            if (m_InterfaceManager.m_InstitutionIsDisplay)
             {
-                m_InterfaceManager.Disallow();
+                m_InterfaceManager.DisallowInstitution();
+                Debug.Log("je desactive tout");
+            }
+
+            // desafficher l'interface de crise
+            if (Input.GetMouseButtonDown(0) && m_InterfaceManager.m_crisisIsDisplay)
+            {
+                m_InterfaceManager.DisallowCrisis();
             }
         }        
     }
