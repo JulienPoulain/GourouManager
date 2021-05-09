@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 
 public class Cursor : MonoBehaviour
 {
-    CameraControler m_CameraScript;
     private InterfaceManager m_InterfaceManager;
 
     bool _affiche = false;
@@ -16,10 +15,7 @@ public class Cursor : MonoBehaviour
         m_InterfaceManager = GameManager.Instance.u_InterfaceManager;   // raccourcis l'access à Interface Manager
         m_InterfaceManager.DisallowLightInstitution();  // désafficher les Institutions
         m_InterfaceManager.DisallowHeavyInstitution();  // désafficher les Institutions
-        m_InterfaceManager.DisallowCrisis();  // désafficher les Crises
-        
-        m_CameraScript = GameManager.Instance.u_Camera.GetComponent<CameraControler>();
-        
+        m_InterfaceManager.DisallowCrisis();  // désafficher les Crises        
     }
 
     // raycast
@@ -34,7 +30,7 @@ public class Cursor : MonoBehaviour
         // Affiche les infos 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, m_layerMask))
         {
-            // Possibilités lorsque la camera tourne autour de la carte
+            // on regarde si le GO selectionner est une institution
             if (hit.transform.gameObject.TryGetComponent(out InterfaceInstitution script))
             {
                 if (!m_InterfaceManager.m_InstitutionLightIsDisplay && !m_InterfaceManager.m_InstitutionHeavyIsDisplay)
