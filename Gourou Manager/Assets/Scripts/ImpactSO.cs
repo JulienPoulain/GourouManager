@@ -4,16 +4,16 @@ using UnityEngine;
 public class ImpactSO : ScriptableObject
 {
     [SerializeField] private SyncIntSO m_ressource;
-    [SerializeField] private int m_magnitude;
-    
+    [SerializeField] private OperationSO m_magnitude;
+    [SerializeField] private int m_duration;
+
+    public SyncIntSO Ressource => m_ressource;
+    public OperationSO Magnitude => m_magnitude;
+    public int Duration => m_duration;
+
     public void OnEnable()
     {
         if (m_ressource == null)
             Debug.LogError($"<color=red>ERROR :</color> Ressource manquante dans {this.name}.");
-    }
-
-    public void Apply()
-    {
-        m_ressource.Value += m_magnitude;
     }
 }
