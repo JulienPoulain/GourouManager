@@ -20,6 +20,7 @@ public class TestDialogueEvent : MonoBehaviour
         }
         else
         {
+            Debug.Log(m_conditionInt.ToString());
             if (m_conditionInt.IsOneValid())
                 Debug.Log("Condition Int : OK");
             else
