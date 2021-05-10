@@ -21,8 +21,9 @@ public class InstitutionSO : ScriptableObject
     [SerializeField] [Tooltip("personnage appartenant à l'institution")] public List<InterlocutorSO> m_interlocutorList;
     [SerializeField] [Tooltip("exactions disponibles sans dialogue")] public List<ExactionSO> m_exactionList;
     [SerializeField] [Tooltip("en rapport avec l’Institution, déclenchés sous certaines conditions")] public List<EventSO> m_eventList;
+    [SerializeField] public OpinionOnTheCult m_option;
 
-    enum OpinionOnTheCult
+    public enum OpinionOnTheCult
     {
         Hostile,
         Suspicious,

@@ -913,7 +913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FieldTarget: {fileID: 807562133}
-  m_FocusInsitutionDistance: 7
+  m_FocusInsitutionDistance: 0
   m_cameraFocusOnInstitution: 0
 --- !u!54 &963194230
 Rigidbody:
@@ -1296,11 +1296,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a582c98f6159445a2b96444ed716e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InstitutionLightText: {fileID: 435390338}
-  m_InstitutionHeavyText: {fileID: 6743933233340636283}
-  m_CrisisText: {fileID: 945782781}
+  m_InstitutionLightObject: {fileID: 435390338}
+  m_InstitutionHeavyObject: {fileID: 6743933233340636283}
+  m_CrisisObject: {fileID: 945782781}
   m_decallingLightInstitution: 150
-  m_offset: {x: 0, y: -20, z: 0}
   m_InterfaceMode: 0
   m_InstitutionLightIsDisplay: 0
   m_InstitutionHeavyIsDisplay: 0
@@ -1410,6 +1409,10 @@ PrefabInstance:
     - target: {fileID: 1717367316760324691, guid: 81c0a3ca3088bfd4bb960db263b910d3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1717367316760324693, guid: 81c0a3ca3088bfd4bb960db263b910d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81c0a3ca3088bfd4bb960db263b910d3, type: 3}
@@ -1778,6 +1781,10 @@ PrefabInstance:
     - target: {fileID: 4100913577091558171, guid: 9663cc69bc376b94ca2d48c7d6f7d7e2, type: 3}
       propertyPath: m_Name
       value: Institution
+      objectReference: {fileID: 0}
+    - target: {fileID: 6044743972733442374, guid: 9663cc69bc376b94ca2d48c7d6f7d7e2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 7.2427554
       objectReference: {fileID: 0}
     - target: {fileID: 7613334340224226808, guid: 9663cc69bc376b94ca2d48c7d6f7d7e2, type: 3}
       propertyPath: m_Name
