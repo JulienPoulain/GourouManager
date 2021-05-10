@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36d38ef088e230848946b59d816ca3bc, type: 3}
   m_Name: Pourcentage
   m_EditorClassIdentifier: 
-  m_overview: 
-  m_operand: {fileID: 0}
-  m_percentage: 0
+  m_overview: "( Charisme : 50% de ( C\xF4tisation : 1000 + Bonus : 200 ) )"
+  m_operand: {fileID: 11400000, guid: 9161523922a2a974d9e0dc3f7454bfa6, type: 2}
+  m_percentage: {fileID: 11400000, guid: c9fb459d75f47c344a23299324604739, type: 2}

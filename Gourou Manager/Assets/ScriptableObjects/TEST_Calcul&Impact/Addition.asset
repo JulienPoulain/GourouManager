@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf03584afbf42145a0cd0da083d6a9f, type: 3}
   m_Name: Addition
   m_EditorClassIdentifier: 
-  m_overview: 
-  m_operation1: {fileID: 0}
-  m_operation2: {fileID: 0}
+  m_overview: "( C\xF4tisation : 1000 + Bonus : 200 )"
+  m_operation1: {fileID: 11400000, guid: 91f399fb367f246479415e47074d2ea1, type: 2}
+  m_operation2: {fileID: 11400000, guid: 5d108f4a0e981dd4caaf8d703416981f, type: 2}

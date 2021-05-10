@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ca324ff6d925dc40b280073ca94b863, type: 3}
   m_Name: OpSyncInt 1
   m_EditorClassIdentifier: 
-  m_overview: 
-  m_operand: {fileID: 0}
+  m_overview: "C\xF4tisation : 1000"
+  m_operand: {fileID: 11400000, guid: f2a2413a055d8a24488a66ddd18082d0, type: 2}

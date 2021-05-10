@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8840f20ebfff0664a8e8666f1b080ee8, type: 3}
   m_Name: Multiplication
   m_EditorClassIdentifier: 
-  m_overview: 
-  m_operation1: {fileID: 0}
-  m_operation2: {fileID: 0}
+  m_overview: "( NbAdh\xE9rents : 500 * ( Charisme : 50% de ( C\xF4tisation : 1000
+    + Bonus : 200 ) ) )"
+  m_operation1: {fileID: 11400000, guid: 24cabc63906adac439ec88708d440228, type: 2}
+  m_operation2: {fileID: 11400000, guid: 571335f5ad423554b89d02afec257af1, type: 2}
