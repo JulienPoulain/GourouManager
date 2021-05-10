@@ -8,6 +8,7 @@ using System;
 public class InterlocutorSO: ScriptableObject
 {
     [SerializeField] public string m_name;
+    [SerializeField] public string m_description;
     [SerializeField] [Tooltip("santé mentale de l'interlocuteur (0-100) 100 à l'initialisation")] public SyncIntSO m_sanity;
     [SerializeField] [Tooltip("approches débloquées par les conditions")] public List<ApproachSO> m_approach;
     [Header("conditions pour accéder à l'interlocuteur")]

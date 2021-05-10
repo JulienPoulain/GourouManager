@@ -16,6 +16,7 @@ public class Cursor : MonoBehaviour
         m_InterfaceManager.DisallowLightInstitution();  // désafficher les Institutions
         m_InterfaceManager.DisallowHeavyInstitution();  // désafficher les Institutions
         m_InterfaceManager.DisallowCrisis();  // désafficher les Crises        
+        m_InterfaceManager.DisallowInterlocutor();
     }
 
     // raycast
@@ -49,13 +50,14 @@ public class Cursor : MonoBehaviour
         {
             // desafficher les interfaces Institution
             if (m_InterfaceManager.m_InstitutionLightIsDisplay) m_InterfaceManager.DisallowLightInstitution();
-     
+
             // desafficher l'interface de crise
             if (Input.GetMouseButtonDown(0))
             {
                 if (m_InterfaceManager.m_crisisIsDisplay) m_InterfaceManager.DisallowCrisis();
                 if (m_InterfaceManager.m_InstitutionHeavyIsDisplay) m_InterfaceManager.DisallowHeavyInstitution();
+                // chercher comment détecter si le cursor pointe un boutton
             }
-        }        
+        }
     }
 }
