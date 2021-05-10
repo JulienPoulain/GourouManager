@@ -7,94 +7,146 @@ using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Vector3 = UnityEngine.Vector3;
 
+using TMPro;
+using UnityEditorInternal;
+using Vector2 = UnityEngine.Vector2;
+
 // local = text in front of the camera
 // global = text in map
 
 public class InterfaceManager : MonoBehaviour
 {
-    [SerializeField] GameObject m_InstitutionLocal;  // texte local
-    [SerializeField] GameObject m_InstitutionGlobal;    // texte global
+    // text
+    [Tooltip("Institution Texte en Standard mode")]
+    [SerializeField] GameObject m_InstitutionLightObject;
     
-    [SerializeField] GameObject m_Crisis;   // texte local
+    [Tooltip("Institution Texte en FocusOnInstitution mode")]
+    [SerializeField] GameObject m_InstitutionHeavyObject;
+
+    TextInstitutionLight m_InstitutionLightScript;
+    TextInstitutionHeavy m_InstitutionHeavyScript;
+    TextCrisis m_CrisisScript;
+
+
+    [Tooltip("Crises Texte")]
+    [SerializeField] GameObject m_CrisisObject;   // texte local
+
+    [Tooltip("définit la distance de  l'interface Institution par rapport au GO pointé")]
+    [SerializeField] float m_decallingLightInstitution = 5f;
+
+    private Camera m_Camera;
+
+    private RectTransform m_canvasSize;
+    
+    
+    
+    public InterfaceMode m_InterfaceMode = InterfaceMode.Standard;
+   
+    [Tooltip("définit si l'interface affiche actuellement une information, permet d'éviter de rappeler la fonction d'affichage")]
+    public bool m_InstitutionLightIsDisplay = false;
+    public bool m_InstitutionHeavyIsDisplay = false;
+    public bool m_crisisIsDisplay = false;
+
+    void Start()
+    {
+        m_Camera = GameManager.Instance.u_Camera.GetComponent<Camera>();
+        m_canvasSize = GetComponent<RectTransform>();
+
+        m_InstitutionLightScript = m_InstitutionLightObject.GetComponent<TextInstitutionLight>();
+        m_InstitutionHeavyScript = m_InstitutionHeavyObject.GetComponent<TextInstitutionHeavy>();
+        m_CrisisScript = m_CrisisObject.GetComponent<TextCrisis>();
+    }
 
     /// <summary>
-    /// Afficher l'institution : m_Institution -> TextContainer -> List<TextMesh> -> Modifier
+    /// Envoi les données au bon Text
     /// </summary>
     /// <param name="Institution Display"></param>
-    public void DisplayInstitution(GameObject p_Institution, InstitutionSO p_InstitutionScriptable)
+
+    public void DisplayHeavyInstitution(InstitutionSO p_Institution)
     {
-        // redirection du flux selon si la camera tourne autour de la carte
-        switch (GameManager.Instance.u_rotateAroundMap)
-        {
-            case true:
-                DisplayWorldInstitution(p_Institution, p_InstitutionScriptable);
-                break;
-            case false:
-                DisplayLocalInstitution(p_InstitutionScriptable);
-                break;
-        }
+        // ALL INFORMATION
+        m_InstitutionHeavyIsDisplay = true;
+        m_InstitutionHeavyObject.SetActive(true);
+
+        // envoie les informations pour les afficher
+        m_InstitutionHeavyScript.Display(p_Institution);
     }
 
-    void DisplayLocalInstitution(InstitutionSO p_Institution)
+    public void DisplayLightInstitution(GameObject p_Institution, InstitutionSO p_InstitutionScriptable)
     {
-        m_InstitutionLocal.SetActive(true);
-        // TextContainer TextBox = m_Institution.GetComponent<TextContainer>();
-        TextMesh[] textList = m_InstitutionLocal.GetComponentsInChildren<TextMesh>();
+        m_InstitutionLightIsDisplay = true;
 
-        // TextMesh test = TextBox.m_TextList[0];
-
-        textList[0].text = "Nom: " + p_Institution.m_name;
-        textList[1].text = "Fonts : " + p_Institution.m_funds.m_value;
-        textList[2].text = "Membre : " + p_Institution.m_members.m_value;
-        textList[3].text = "Fnatique : " + p_Institution.m_fanatics.m_value;
-        textList[4].text = "Exposition public : " + p_Institution.m_publicExposure.m_value;
-        textList[5].text = "Corruption : " + p_Institution.m_corruption.m_value;
-        // TextBox.m_TextList[6].text = "Etat : " + p_Institution.OpinionOnTheCult;
-    }
-
-    void DisplayWorldInstitution(GameObject p_Institution, InstitutionSO p_InstitutionScriptable)
-    {
         // Placement du texte
-        m_InstitutionGlobal.SetActive(true);
-        float distance = 2f;
-        Vector3 position = (GameManager.Instance.u_Camera.transform.right * distance) ;
+        m_InstitutionLightObject.SetActive(true);
 
-        m_InstitutionGlobal.transform.position = p_Institution.gameObject.transform.position + position;
-        m_InstitutionGlobal.transform.LookAt(p_Institution.transform.position, Vector3.left);
+        // Définit la position de l'affichage par rapport au G.O.
+        Vector3 position = CalculateWindowDimention(m_Camera.WorldToScreenPoint(p_Institution.transform.position));
 
-        // Changement du texte
-        TextMesh[] textList = m_InstitutionGlobal.GetComponentsInChildren<TextMesh>();
+        Debug.Log(position);
+        m_InstitutionLightObject.transform.position = position;
+
+        // envoie les informations pour les afficher
+        m_InstitutionLightScript.Display(p_InstitutionScriptable);        
+    }
+
+    private Vector3 CalculateWindowDimention(Vector3 p_focusPoint)
+    {
+        // on vérifie si la pos du GO est en haut / en bas / a droite ou a gauche par rapport au canvas
+        // si la pos est en haut, l'image sera affichée en bas
+
+        Vector3 position = Vector3.zero;
+
+        // HAUT BAS
+        if(p_focusPoint.y > m_canvasSize.rect.height / 2)
+        {
+            position.y = p_focusPoint.y - m_decallingLightInstitution;
+            Debug.Log("HAUT BAS - " + m_decallingLightInstitution);
+        }
+        else
+        {
+            position.y = p_focusPoint.y + m_decallingLightInstitution;
+            Debug.Log("HAUT BAS + " + m_decallingLightInstitution);
+        }
+
+        // DROITE GAUCHE
+        if (p_focusPoint.x > m_canvasSize.rect.width/2)
+        {
+            position.x = p_focusPoint.x - m_decallingLightInstitution;
+            Debug.Log("DROITE GAUCHE - " + m_decallingLightInstitution);
+        }
+        else
+        {
+            position.x = p_focusPoint.x + m_decallingLightInstitution;
+            Debug.Log("DROITE GAUCHE + " + m_decallingLightInstitution);
+        }
 
 
-
-        // ralentissement de la camera lorsque qu'on affiche une insitution:
-        // GameManager.Instance.u_Camera.GetComponent<CameraControler>().m_cameraRotationSpeed = 4f;
+        return position;
     }
 
 
     public void DisplayCrisis(StructEventCrisesSO p_Crisis)
     {
-        m_Crisis.SetActive(true);
-
-        TextMesh[] textList = m_Crisis.GetComponentsInChildren<TextMesh>();
-
-        textList[0].text = "" ;
-        textList[1].text = "Taux de la Crisis : ";
-        textList[2].text = "Effect : ";
+        m_crisisIsDisplay = true;
+        m_CrisisObject.SetActive(true);
+        m_CrisisScript.Display(p_Crisis);
     }
 
-
-    public void Display(InterfaceDisplay p_Object) // call in Cursor.cs
+    public void DisallowLightInstitution() // call in Cursor.cs
     {
-        // switch(p_Object.m_type)
-        
-
+        m_InstitutionLightObject.SetActive(false);
+        m_InstitutionLightIsDisplay = false;
     }
 
-    public void Disallow() // call in Cursor.cs
+    public void DisallowHeavyInstitution()
     {
-        m_Crisis.SetActive(false);
-        m_InstitutionLocal.SetActive(false);
-        m_InstitutionGlobal.SetActive(false);
+        m_InstitutionHeavyObject.SetActive(false);
+        m_InstitutionHeavyIsDisplay = false;
+    }
+
+    public void DisallowCrisis() // call in Cursor.cs
+    {
+        m_CrisisObject.SetActive(false);
+        m_crisisIsDisplay = false;
     }
 }
