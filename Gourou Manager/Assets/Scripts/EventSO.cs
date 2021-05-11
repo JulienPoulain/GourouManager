@@ -16,19 +16,5 @@ public class EventSO : ScriptableObject
     
     public int Duration => m_duration;
 
-    public void Apply()
-    {
-        if (m_duration == 0)
-        {
-            Debug.Log("<color=red>ERROR :</color> Évènement terminé.");
-        }
-        foreach (var impact in m_impacts)
-        {
-            impact.Apply();
-        }
-        if (m_duration > 0)
-        {
-            m_duration -= 1;
-        }
-    }
+    public List<ImpactSO> Impacts => m_impacts;
 }

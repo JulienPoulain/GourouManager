@@ -20,6 +20,7 @@ public class TestDialogueEvent : MonoBehaviour
         }
         else
         {
+            Debug.Log(m_conditionInt.ToString());
             if (m_conditionInt.IsOneValid())
                 Debug.Log("Condition Int : OK");
             else
@@ -100,10 +101,11 @@ public class TestDialogueEvent : MonoBehaviour
         }
         else
         {
+            Event event1 = new Event(m_event);
             while (m_event.Duration > 0)
             {
-                Debug.Log($"Application de l'évènement ({m_event.Duration}).");
-                m_event.Apply();
+                Debug.Log($"Application de l'évènement ({event1.Duration}).");
+                event1.Apply();
             }
         }
     }
