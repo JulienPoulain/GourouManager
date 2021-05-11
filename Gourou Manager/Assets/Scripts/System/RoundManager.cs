@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class RoundManager : Singleton<RoundManager>
 {
@@ -8,6 +6,9 @@ public class RoundManager : Singleton<RoundManager>
     
     public void NextTurn()
     {
+        // Ajout des nouveaux events actifs
+        GameManager.Instance.AddEvent();
+        
         // Ajout des nouveaux events actifs
         foreach (ExactionSO exactionSO in GameManager.Instance.m_pendingExactions)
         {
@@ -40,6 +41,7 @@ public class RoundManager : Singleton<RoundManager>
                 // /!\ Question garbage collector ?????? /!\
             }
         }
+        
         // Applique les changements de valeurs des ressources
         foreach (SyncIntSO ressource in pendingChanges.Keys)
         {
