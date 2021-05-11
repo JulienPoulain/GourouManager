@@ -39,21 +39,46 @@ public class InterfaceManager : MonoBehaviour
     [SerializeField] float m_decallingLightInstitution = 5f;
     
     [SerializeField] GameObject m_ButtonInterlocutorPrefab;
-    private List<GameObject> m_ButtonInterlocutorList;
+    private List<GameObject> m_ButtonInterlocutorList = new List<GameObject>();
 
     private Camera m_Camera;
 
-    private RectTransform m_canvasSize;
-    
-    
-    
+    public RectTransform m_canvasSize; 
+
     public InterfaceMode m_InterfaceMode = InterfaceMode.Standard;
    
     [Tooltip("définit si l'interface affiche actuellement une information, permet d'éviter de rappeler la fonction d'affichage")]
     public bool m_InstitutionLightIsDisplay = false;
-    public bool m_InstitutionHeavyIsDisplay = false;
+
+    // getter pour HeavyInstitution, servant à ne pas afficher la LightInstitution en même temps
+    bool institutionHeavyIsDisplay = false;
+    public bool m_InstitutionHeavyIsDisplay
+    {
+        get { return institutionHeavyIsDisplay; }
+        set
+        {
+            if (value == institutionHeavyIsDisplay) return;
+            if (value == true) DisallowLightInstitution();
+            institutionHeavyIsDisplay = value;
+        }
+    }
+    // -----------------------------------------------------------------------------------------
     public bool m_crisisIsDisplay = false;
-    public bool m_InterlocutorIsDisplay = false;
+
+    private bool interlocutorIsDisplay = false;
+
+    public bool m_InterlocutorIsDisplay
+    {
+        get { return interlocutorIsDisplay; }
+        set
+        {
+            if (value == true) DisallowHeavyInstitution();
+            interlocutorIsDisplay = value;
+        }
+    }
+    
+    
+    public bool m_cursorFocusHeavyInstitution; // utiliser dans Cursor.cs, pour définir si la fenêtre peut être enlever
 
     void Start()
     {
@@ -163,11 +188,11 @@ public class InterfaceManager : MonoBehaviour
 
     public void DisplayInterlocutor(InstitutionSO p_data)
     {
-        Debug.Log("JE TINVOQUE");
+        m_InterlocutorIsDisplay = true;
         m_InterlocutorObject.SetActive(true);
         
         RectTransform buttonDim = m_ButtonInterlocutorPrefab.GetComponent<RectTransform>();
-        float buttonWidth = buttonDim.rect.width;
+        float buttonWidth = buttonDim.rect.width + 5f;
         
         Vector3 firstPos = firstButtonPos(p_data, buttonWidth);
         
@@ -175,24 +200,28 @@ public class InterfaceManager : MonoBehaviour
         {
             // on créer + placer le boutton
             GameObject Button = Instantiate(m_ButtonInterlocutorPrefab, firstPos, Quaternion.identity);
+            Button.transform.parent = m_InterlocutorObject.transform;
+            
+            
+            // on décalle le boutton de la largeur
             firstPos.x += buttonWidth;
-            // on configure le texte pour y afficher le nom de l'interlocuteur
-            Button.GetComponentInChildren<TextMeshPro>().text = "" + p_data.m_interlocutorList[i].m_name;
             
             // on configure le boutton pour qu'il ai les informations de l'interlocuteur
             Button.gameObject.GetComponent<InterlocutorButton>().Configuration(p_data.m_interlocutorList[i]);
-
-            Button.transform.parent = m_ButtonInterlocutorPrefab.transform;
-            
             m_ButtonInterlocutorList.Add(Button);
         }
+    }
+
+    public void ConfigureInterlocutor()
+    {
+        
     }
 
     Vector3 firstButtonPos(InstitutionSO p_data, float p_buttonWidth)
     {
         // largeur canvas / 2 - (nbButton * dimButton)/2
-        float startX = m_canvasSize.rect.width / 2 - (p_data.m_interlocutorList.Count * p_buttonWidth) / 2;
-        float startY = m_canvasSize.rect.height / 10;
+        float startX = /*(m_canvasSize.rect.width / 2)*/ m_InstitutionHeavyObject.transform.position.x - ((p_data.m_interlocutorList.Count * p_buttonWidth) / 3);
+        float startY = m_canvasSize.rect.height - 50;
 
         return new Vector3(startX, startY, 0);
     }

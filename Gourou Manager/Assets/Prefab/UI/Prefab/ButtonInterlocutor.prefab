@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 3760982314631196298}
   - component: {fileID: 5624304661733702889}
   - component: {fileID: 5095277808024374345}
+  - component: {fileID: 4495507249758628752}
   - component: {fileID: 93683610435887819}
   m_Layer: 5
   m_Name: ButtonInterlocutor
@@ -162,7 +163,7 @@ RectTransform:
   m_GameObject: {fileID: 3381874221506486037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3004816265053202302}
   m_Father: {fileID: 0}
@@ -211,6 +212,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4495507249758628752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3381874221506486037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b937db54f2937c44bbfe72b95e17e833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TextContainer: {fileID: 4996777245300159916}
 --- !u!114 &93683610435887819
 MonoBehaviour:
   m_ObjectHideFlags: 0

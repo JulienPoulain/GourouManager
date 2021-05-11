@@ -1290,11 +1290,11 @@ MonoBehaviour:
   m_CrisisObject: {fileID: 945782781}
   m_decallingLightInstitution: 150
   m_ButtonInterlocutorPrefab: {fileID: 3381874221506486037, guid: f6d2ecc73c50d4e4d951dee69988c689, type: 3}
+  m_canvasSize: {fileID: 0}
   m_InterfaceMode: 0
   m_InstitutionLightIsDisplay: 0
-  m_InstitutionHeavyIsDisplay: 0
   m_crisisIsDisplay: 0
-  m_InterlocutorIsDisplay: 0
+  m_cursorFocusHeavyInstitution: 0
 --- !u!114 &2087433159 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5815625826173040588, guid: 889dec07010febd41a596547293f86a9, type: 3}
@@ -1866,11 +1866,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1128431596502848454, guid: 9663cc69bc376b94ca2d48c7d6f7d7e2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1128431596502848454, guid: 9663cc69bc376b94ca2d48c7d6f7d7e2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1128431596502848454, guid: 9663cc69bc376b94ca2d48c7d6f7d7e2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1935,6 +1935,10 @@ PrefabInstance:
     - target: {fileID: 7613334340224226808, guid: 9663cc69bc376b94ca2d48c7d6f7d7e2, type: 3}
       propertyPath: m_Name
       value: InstitutionHeavy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613334340224226808, guid: 9663cc69bc376b94ca2d48c7d6f7d7e2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9663cc69bc376b94ca2d48c7d6f7d7e2, type: 3}

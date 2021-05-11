@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class Cursor : MonoBehaviour
 {
     private InterfaceManager m_InterfaceManager;
+    private Camera m_Camera;
 
     bool _affiche = false;
     
@@ -17,12 +18,12 @@ public class Cursor : MonoBehaviour
         m_InterfaceManager.DisallowHeavyInstitution();  // désafficher les Institutions
         m_InterfaceManager.DisallowCrisis();  // désafficher les Crises        
         m_InterfaceManager.DisallowInterlocutor();
+        m_Camera = GameManager.Instance.GetComponent<Camera>();
     }
 
     // raycast
     [SerializeField] float m_raycastLenght = 10f;
     [SerializeField] LayerMask m_layerMask;
-
     void Update()
     {
         RaycastHit hit;
@@ -34,12 +35,12 @@ public class Cursor : MonoBehaviour
             // on regarde si le GO selectionner est une institution
             if (hit.transform.gameObject.TryGetComponent(out InterfaceInstitution script))
             {
-                if (!m_InterfaceManager.m_InstitutionLightIsDisplay && !m_InterfaceManager.m_InstitutionHeavyIsDisplay)
+                if (!m_InterfaceManager.m_InstitutionLightIsDisplay && !m_InterfaceManager.m_InstitutionHeavyIsDisplay && !m_InterfaceManager.m_InterlocutorIsDisplay)
                 {
                     m_InterfaceManager.DisplayLightInstitution(script.gameObject, script.m_Institution);
                 }
                 
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0) && !m_InterfaceManager.m_InstitutionHeavyIsDisplay)
                 {
                     //m_CameraScript.FocusOnInstitution(hit.transform.position);
                     m_InterfaceManager.DisplayHeavyInstitution(script.m_Institution);
@@ -55,7 +56,7 @@ public class Cursor : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 if (m_InterfaceManager.m_crisisIsDisplay) m_InterfaceManager.DisallowCrisis();
-                if (m_InterfaceManager.m_InstitutionHeavyIsDisplay) m_InterfaceManager.DisallowHeavyInstitution();
+                if (m_InterfaceManager.m_InstitutionHeavyIsDisplay && !m_InterfaceManager.m_cursorFocusHeavyInstitution) m_InterfaceManager.DisallowHeavyInstitution();
                 // chercher comment détecter si le cursor pointe un boutton
             }
         }

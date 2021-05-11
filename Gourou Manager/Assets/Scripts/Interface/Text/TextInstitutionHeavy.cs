@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
 
-public class TextInstitutionHeavy : MonoBehaviour
+public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPointerExitHandler 
 {
     [SerializeField] TMP_Text m_textNom;
     [SerializeField] TMP_Text m_textFonds;
@@ -15,7 +16,6 @@ public class TextInstitutionHeavy : MonoBehaviour
     [SerializeField] TMP_Text m_textCulte;
 
     private InstitutionSO m_InstitutionData;
-
 
     public void Display(InstitutionSO p_data)
     {
@@ -34,5 +34,15 @@ public class TextInstitutionHeavy : MonoBehaviour
     public void DisplayInterlocutor()
     {
         GameManager.Instance.u_InterfaceManager.DisplayInterlocutor(m_InstitutionData);
+    }
+    
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        GameManager.Instance.u_InterfaceManager.m_cursorFocusHeavyInstitution = true;
+    }
+    
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        GameManager.Instance.u_InterfaceManager.m_cursorFocusHeavyInstitution = false;
     }
 }
