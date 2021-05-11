@@ -14,6 +14,7 @@ public class InterlocutorSO: ScriptableObject
     [Header("conditions pour accéder à l'interlocuteur")]
     [SerializeField] [Tooltip("conditions dépendantes d'un entier")] public List<ConditionIntSO>  m_accesConditionInt;
     [SerializeField] [Tooltip("conditions dépendantes d'un booléen")] public List<ConditionBoolSO>  m_accesConditionBool;
+    [SerializeField] [Tooltip("Correspond à ce que le joueur risque s'il échou le dialogue")] public string m_risque;   // utiliser dans Textinterlocutor
 
     public bool IsAccessible()
     {

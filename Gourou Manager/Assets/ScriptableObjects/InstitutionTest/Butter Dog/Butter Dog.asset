@@ -16,5 +16,6 @@ MonoBehaviour:
   m_description: j'aime les beurres
   m_sanity: {fileID: 11400000, guid: bd1912c12c2298641a00ff6847e6d8cb, type: 2}
   m_approach: []
-  m_accesConditionInt: []
+  m_accesConditionInt:
+  - {fileID: 0}
   m_accesConditionBool: []
