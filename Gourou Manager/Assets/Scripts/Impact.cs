@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class Impact
 {
     private SyncIntSO m_ressource;
@@ -17,8 +15,8 @@ public class Impact
         m_duration = p_impactSO.Duration;
     }
     
-    public void Apply()
+    /*public void Apply()
     {
-        //m_ressource.Value += m_magnitude;
-    }
+        m_ressource.Value += m_magnitude;
+    }*/
 }

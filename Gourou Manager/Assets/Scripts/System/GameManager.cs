@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
@@ -9,8 +8,10 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] public ScriptableObject [] u_Institutions;
     [SerializeField] public ScriptableObject [] u_Crise;
     [SerializeField] public InterfaceManager u_InterfaceManager;
-
     [SerializeField] public GameObject u_Camera;
+    
+    [SerializeField] public List<ExactionSO> m_pendingExactions;
+    [SerializeField] public List<Event> m_activeEvents;
 
     // RoundManager c_RoundManager = new RoundManager;
 
@@ -27,17 +28,21 @@ public class GameManager : Singleton<GameManager>
             u_Camera.GetComponent<CameraControler>().m_cameraFocusOnMap = value;
         }
     }
-
-    // Fin de tour
-    bool _endTurn = false;
-    public bool u_endTurn
+    
+    public void AddEvent()
     {
-        get {return _endTurn;}
-        set 
+        foreach (ExactionSO exactionSO in m_pendingExactions)
         {
-            if (!value) return;
-
-            // RoundManager.nextTurn
+            foreach (EventSO eventSO in exactionSO.EventList)
+            {
+                m_activeEvents.Add(new Event(eventSO));
+            }
         }
+        m_pendingExactions.Clear();
+    }
+
+    public void EndTurn()
+    {
+        RoundManager.Instance.NextTurn();
     }
 }

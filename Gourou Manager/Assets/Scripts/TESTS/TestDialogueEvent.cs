@@ -105,7 +105,7 @@ public class TestDialogueEvent : MonoBehaviour
             while (m_event.Duration > 0)
             {
                 Debug.Log($"Application de l'évènement ({event1.Duration}).");
-                event1.Apply();
+                event1.AdvanceTime(1);
             }
         }
     }

@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "ExactionSO", menuName = "Exactions")]
 
 public class ExactionSO : ScriptableObject
 {
-    [SerializeField] private int duree;
+    [SerializeField] private List<EventSO> m_eventList;
 
-    [SerializeField] private List<ImpactSO> impactList;
+    public List<EventSO> EventList => m_eventList;
 }
