@@ -4,49 +4,61 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Cursor : MonoBehaviour
-{  
-    bool _affiche = false;
-    public bool Affiche
-    {
-        get {return _affiche;}
-        set 
-        {
-            if (value == _affiche) return;
-            if (!value) GameManager.Instance.u_InterfaceManager.Disallow();
-            _affiche = value;
-        }
-    }
+{
+    private InterfaceManager m_InterfaceManager;
+    private Camera m_Camera;
 
+    bool _affiche = false;
+    
     void Start()
     {
-        GameManager.Instance.u_InterfaceManager.Disallow();
+        
+        m_InterfaceManager = GameManager.Instance.u_InterfaceManager;   // raccourcis l'access à Interface Manager
+        m_InterfaceManager.DisallowLightInstitution();  // désafficher les Institutions
+        m_InterfaceManager.DisallowHeavyInstitution();  // désafficher les Institutions
+        m_InterfaceManager.DisallowCrisis();  // désafficher les Crises        
+        m_InterfaceManager.DisallowInterlocutor();
+        m_Camera = GameManager.Instance.GetComponent<Camera>();
     }
 
     // raycast
     [SerializeField] float m_raycastLenght = 10f;
     [SerializeField] LayerMask m_layerMask;
-
     void Update()
     {
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         
+        // Affiche les infos 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, m_layerMask))
         {
-            Affiche = true;
-            // hit.transform.gameObject.SetActive(true);
-            hit.transform.gameObject.GetComponent<InterfaceDisplay>().DisplayInterface();
+            // on regarde si le GO selectionner est une institution
+            if (hit.transform.gameObject.TryGetComponent(out InterfaceInstitution script))
+            {
+                if (!m_InterfaceManager.m_InstitutionLightIsDisplay && !m_InterfaceManager.m_InstitutionHeavyIsDisplay && !m_InterfaceManager.m_InterlocutorIsDisplay)
+                {
+                    m_InterfaceManager.DisplayLightInstitution(script.gameObject, script.m_Institution);
+                }
+                
+                if (Input.GetMouseButtonDown(0) && !m_InterfaceManager.m_InstitutionHeavyIsDisplay)
+                {
+                    //m_CameraScript.FocusOnInstitution(hit.transform.position);
+                    m_InterfaceManager.DisplayHeavyInstitution(script.m_Institution);
+                }
+            }
         }
-        else
+        else // si le curseur ne pointe null part, toutes les interfaces sont désactivés
         {
-            Affiche = false;
-        }
+            // desafficher les interfaces Institution
+            if (m_InterfaceManager.m_InstitutionLightIsDisplay) m_InterfaceManager.DisallowLightInstitution();
 
-        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit, Mathf.Infinity, m_layerMask))
-        {
-            if (!GameManager.Instance.u_rotateAroundMap)
-            // on active la rotation de la camera autour de la carte (obj 3d)
-            GameManager.Instance.u_rotateAroundMap = true;
+            // desafficher l'interface de crise
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (m_InterfaceManager.m_crisisIsDisplay) m_InterfaceManager.DisallowCrisis();
+                if (m_InterfaceManager.m_InstitutionHeavyIsDisplay && !m_InterfaceManager.m_cursorFocusHeavyInstitution) m_InterfaceManager.DisallowHeavyInstitution();
+                // chercher comment détecter si le cursor pointe un boutton
+            }
         }
     }
 }

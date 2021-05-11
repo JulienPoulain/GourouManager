@@ -31,7 +31,6 @@ public class Singleton<T> : MonoBehaviour where T : Component
             m_instance = FindObjectOfType<T>();
             if (m_instance != null)
             {
-                Debug.Log("T NUL MDR");
                 return m_instance;
             }
             CreateMySingleton();

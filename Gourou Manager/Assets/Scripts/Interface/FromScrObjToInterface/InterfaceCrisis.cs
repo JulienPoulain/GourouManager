@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InterfaceCrisis : InterfaceDisplay
+public class InterfaceCrisis : MonoBehaviour
 {
     [SerializeField] StructEventCrisesSO m_Crisis;
 
-    public override void DisplayInterface()
+    public void Display()
     {
         GameManager.Instance.u_InterfaceManager.DisplayCrisis(m_Crisis);
     }
