@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ExactionSO : ScriptableObject
 {
-    [SerializeField] private int duree;
+    [SerializeField] private List<EventSO> m_eventList;
 
-    [SerializeField] private List<ImpactSO> impactList;
+    public List<EventSO> EventList => m_eventList;
 }

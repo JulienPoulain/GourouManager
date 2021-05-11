@@ -9,8 +9,10 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] public ScriptableObject [] u_Institutions;
     [SerializeField] public ScriptableObject [] u_Crise;
     [SerializeField] public InterfaceManager u_InterfaceManager;
-
     [SerializeField] public GameObject u_Camera;
+    
+    [SerializeField] public List<ExactionSO> m_pendingExactions;
+    [SerializeField] public List<Event> m_activeEvents;
 
     // RoundManager c_RoundManager = new RoundManager;
 

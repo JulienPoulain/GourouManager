@@ -24,20 +24,19 @@ public class Event
             m_impacts.Add(new Impact(impact));
         }
     }
-    
-    public void Apply()
+
+    public void AdvanceTime(int p_duration)
     {
         if (m_duration == 0)
         {
-            Debug.Log("<color=red>ERROR :</color> Évènement terminé.");
+            Debug.Log("<color=red>ERROR :</color> Évènement terminé toujours présent.");
         }
-        foreach (var impact in m_impacts)
-        {
-            impact.Apply();
-        }
-        if (m_duration > 0)
-        {
-            m_duration -= 1;
-        }
+        // Évènement infini
+        if (Duration < 0) 
+            return;
+        // Évènement à durée limitée
+        m_duration -= p_duration;
+        if (m_duration < 0)
+            m_duration = 0;
     }
 }
