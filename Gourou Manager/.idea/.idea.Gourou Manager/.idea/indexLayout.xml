@@ -16,10 +16,7 @@
     </explicitIncludes>
     <explicitExcludes>
       <Path>.idea</Path>
-<<<<<<< HEAD
-=======
       <Path>.vs</Path>
->>>>>>> Interface
       <Path>Library</Path>
       <Path>Logs</Path>
       <Path>Temp</Path>

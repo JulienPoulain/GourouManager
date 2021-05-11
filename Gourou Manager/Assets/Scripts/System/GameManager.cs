@@ -15,21 +15,7 @@ public class GameManager : Singleton<GameManager>
 
     public bool m_focusOnInstitution = false;
 
-
-<<<<<<< HEAD
-            _rotateAroundMap = value;
-            u_Camera.GetComponent<CameraControler>().m_cameraFocusOnMap = value;
-        }
-    }
-    
     public void AddEvent()
-=======
-    // RoundManager c_RoundManager = new RoundManager;
-
-    // Fin de tour
-    bool _endTurn = false;
-    public bool u_endTurn
->>>>>>> Interface
     {
         foreach (ExactionSO exactionSO in m_pendingExactions)
         {

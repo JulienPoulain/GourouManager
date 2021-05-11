@@ -1003,9 +1003,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 372ffac4fe0b6354fbb79b4091ddfa54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TextMeshPrefab: {fileID: 1708117652344936777, guid: 2c4d1d6994964b747b0f8669ee140213, type: 3}
-  m_firstTextPos: {x: 0, y: 0, z: 0}
-  m_distance: 5
+  m_description: {fileID: 0}
+  m_accessibility: {fileID: 0}
 --- !u!1 &1898749164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,6 +1090,7 @@ MonoBehaviour:
   u_Crise: []
   u_InterfaceManager: {fileID: 2060777671}
   u_Camera: {fileID: 963194225}
+  m_pendingExactions: []
   m_focusOnInstitution: 0
 --- !u!4 &2009924893
 Transform:
