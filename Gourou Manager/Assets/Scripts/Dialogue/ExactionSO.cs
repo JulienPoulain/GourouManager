@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ExactionSO", menuName = "Exactions")]
+[CreateAssetMenu(fileName = "ExactionSO", menuName = "GourouManager/Dialogue/Exaction")]
 
 public class ExactionSO : ScriptableObject
 {

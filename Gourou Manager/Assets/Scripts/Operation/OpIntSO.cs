@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "OpInt", menuName = "GourouManager/Operation/Operand Int")]
+[CreateAssetMenu(fileName = "OpInt", menuName = "GourouManager/Operation/Operande Int")]
 public class OpIntSO : OperationSO
 {
     [SerializeField] private int m_operand;

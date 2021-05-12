@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewImpact", menuName = "GourouManager/Event/Impact")]
+[CreateAssetMenu(fileName = "NewImpact", menuName = "GourouManager/Evenement/Impact")]
 public class ImpactSO : ScriptableObject
 {
     [SerializeField] private SyncIntSO m_ressource;

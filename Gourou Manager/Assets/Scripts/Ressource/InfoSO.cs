@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewInfo", menuName = "GourouManager/Ressources/Info")]
+[CreateAssetMenu(fileName = "NewInfo", menuName = "GourouManager/Ressource/Info")]
 public class InfoSO : SyncBoolSO
 {
     [SerializeField] private string m_title;

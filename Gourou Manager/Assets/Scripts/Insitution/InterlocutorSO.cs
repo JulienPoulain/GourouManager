@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[CreateAssetMenu(fileName = "NewInterlocutor", menuName = "GourouManager/Interlocutor")]
+[CreateAssetMenu(fileName = "NewInterlocutor", menuName = "GourouManager/Institution/Interlocuteur")]
 
 public class InterlocutorSO: ScriptableObject
 {

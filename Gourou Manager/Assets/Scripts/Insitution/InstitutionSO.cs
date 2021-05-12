@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewInstitution", menuName = "GourouManager/Institution")]
+[CreateAssetMenu(fileName = "NewInstitution", menuName = "GourouManager/Institution/Institution")]
 
 public class InstitutionSO : ScriptableObject
 
