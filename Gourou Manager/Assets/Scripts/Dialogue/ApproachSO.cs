@@ -5,12 +5,18 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewApproche", menuName = "GourouManager/Dialogue/Approche")]
 public class ApproachSO : ScriptableObject
 {
-    [SerializeField] private string m_approach;
+    [SerializeField] private string m_name;
     [SerializeField] private ExactionSO m_exactionPos;
     [SerializeField] private ExactionSO m_exactionNeg;
     [SerializeField] private List<ConditionSO> m_cdtSuccess;
     [SerializeField] private int m_cooldown;
     private int m_remainingTime;
+
+    public string Name => m_name;
+
+    public int Cooldown => m_cooldown;
+    
+    public int RemainingTime => m_remainingTime;
 
     /// <summary>
     /// Renvoie le résultat d'une tentative de cette approche.

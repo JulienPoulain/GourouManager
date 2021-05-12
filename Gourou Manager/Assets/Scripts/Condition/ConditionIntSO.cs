@@ -42,13 +42,10 @@ public class ConditionIntSO : ConditionSO
         {
             case ConditionType.Lesser:
                 return m_ressource.Value < m_value;
-                break;
             case ConditionType.Equal:
                 return m_ressource.Value == m_value;
-                break;
             case ConditionType.Greater:
                 return m_ressource.Value > m_value;
-                break;
             default:
                 Debug.LogError("<color=red>ERROR :</color> ConditionType Inconnue.");
                 break;
