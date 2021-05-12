@@ -38,7 +38,6 @@ public class RoundManager : Singleton<RoundManager>
             if (evenement.Duration == 0)
             {
                 GameManager.Instance.m_activeEvents.Remove(evenement);
-                // /!\ Question garbage collector ?????? /!\
             }
         }
         
