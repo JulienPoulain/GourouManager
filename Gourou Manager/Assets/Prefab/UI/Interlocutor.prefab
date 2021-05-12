@@ -1207,12 +1207,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 372ffac4fe0b6354fbb79b4091ddfa54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_description: {fileID: 0}
-  m_accessibility: {fileID: 0}
-  m_condition1: {fileID: 0}
-  m_condition2: {fileID: 0}
-  m_condition3: {fileID: 0}
-  m_menace: {fileID: 0}
+  m_descriptionOb: {fileID: 7143077969724655739}
+  m_accessibilityOb:
+  - {fileID: 7143077969724655739}
+  - {fileID: 3429076651170323983}
+  - {fileID: 6521383297236477111}
+  m_conditionOb:
+  - {fileID: 7913143610529030951}
+  - {fileID: 5117467718366430627}
+  - {fileID: 396522453824015521}
+  m_menaceOb: {fileID: 858832959258154652}
 --- !u!1 &7913143610529030951
 GameObject:
   m_ObjectHideFlags: 0

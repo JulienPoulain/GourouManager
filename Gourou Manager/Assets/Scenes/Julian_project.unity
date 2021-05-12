@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -991,20 +991,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7424981301570921747, guid: 1e72b06db2487b14a80dbd13a561a30a, type: 3}
   m_PrefabInstance: {fileID: 2233067379286792978}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1803069492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1803069491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 372ffac4fe0b6354fbb79b4091ddfa54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_description: {fileID: 0}
-  m_accessibility: {fileID: 0}
 --- !u!1 &1898749164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,6 +1488,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DescriptionInterlocutor
       objectReference: {fileID: 0}
+    - target: {fileID: 6274149954991166051, guid: 1e72b06db2487b14a80dbd13a561a30a, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7424981301570921747, guid: 1e72b06db2487b14a80dbd13a561a30a, type: 3}
       propertyPath: m_Name
       value: Interlocutor
@@ -1509,6 +1499,10 @@ PrefabInstance:
     - target: {fileID: 7424981301570921747, guid: 1e72b06db2487b14a80dbd13a561a30a, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963386620289135838, guid: 1e72b06db2487b14a80dbd13a561a30a, type: 3}
+      propertyPath: m_text
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e72b06db2487b14a80dbd13a561a30a, type: 3}

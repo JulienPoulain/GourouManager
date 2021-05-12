@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a07221645fd8ad42978314f51634aaa, type: 3}
   m_Name: i_Condition2
   m_EditorClassIdentifier: 
-  m_ressource: {fileID: 11400000, guid: af543a0db4172ce4e8a6af25eba894b8, type: 2}
+  m_ressource: {fileID: 11400000, guid: 0ba2f262f275cb944ab1d81516ba37eb, type: 2}
   m_conditionType: 2
   m_value: 78

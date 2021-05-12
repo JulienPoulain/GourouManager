@@ -6,6 +6,7 @@ using UnityEngine;
 public class ApproachSO : ScriptableObject
 {
     [SerializeField] private string m_approach;
+    [SerializeField] [Tooltip("petite descrition de l'approche pour le joueur exemple : Si vous parvenez a l'intimider, vous obtiendrez des informations")] public string m_descriptionApproach; // utiliser dans TextInterlocutor
     [SerializeField] private ExactionSO m_exactionPos;
     [SerializeField] private ExactionSO m_exactionNeg;
     [SerializeField] private List<ConditionSO> m_cdtSuccess;

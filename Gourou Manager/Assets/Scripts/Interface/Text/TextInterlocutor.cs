@@ -6,75 +6,110 @@ using TMPro;
 public class TextInterlocutor : MonoBehaviour
 {
     [SerializeField] private GameObject m_descriptionOb;
-    [SerializeField] private GameObject m_accessibilityOb;
+    [SerializeField] private List<GameObject> m_accessibilityOb;
     [SerializeField] private List<GameObject> m_conditionOb = new List<GameObject>();
     [SerializeField] private GameObject m_menaceOb;
 
     private TMP_Text m_description;
-    private TMP_Text m_accessibility;
-    private List<TMP_Text> m_condition = new List<TMP_Text>(); 
+    private List<TMP_Text> m_accessibility = new List<TMP_Text>();
+    private List<TMP_Text> m_condition = new List<TMP_Text>();  
     private TMP_Text m_menace;
+
+    private InterlocutorSO m_Interlocutor;
+    
+    // si les interlocutor ne sont pas accessible : on affiche m_description + m_accessibility
+    // si les interlocuteurs sont accessible : on affiche en plus m_condition + m_menace
 
     void Start()
     {
+        // On récupère les texts des GO
         m_description = m_descriptionOb.GetComponent<TMP_Text>();
-        m_accessibility = m_accessibilityOb.GetComponent<TMP_Text>();
 
+        for (int i = 0; i < m_accessibilityOb.Count; i++)
+        {
+            m_accessibility.Add(m_accessibilityOb[i].GetComponent<TMP_Text>());
+        }
+        
         for (int i = 0; i < m_conditionOb.Count; i++)
         {
-            m_condition[i] = m_conditionOb[i].GetComponent<TMP_Text>();
+            m_condition.Add(m_conditionOb[i].GetComponent<TMP_Text>());
         }
-
+        
         m_menace = m_menaceOb.GetComponent<TMP_Text>();
     }
     
-    void Display(InterlocutorSO p_data)
+    public void Display(InterlocutorSO p_data) // appeler depuis InterlocutorButton
     {
+        m_Interlocutor = p_data;
+        
         DisallowAll();
         
+        // par default, l'interlocuteur est innaccessible, on affiche les 2 premières informations
+        DisplayNotAccessibleInterlocutorText();
+        InterlocutorIsNotAccessible();
+        
+        // Si l'interlocuteur est accessible, on affiche le reste
         if (p_data.IsAccessible())
         {
-            
-            InterlocutorIsAccessible(p_data);
+            DisplayAcessibleInterlocutorText();
+            InterlocutorIsAccessible();
         }
-        
-        m_description.text = "" + p_data.m_description;
-        m_accessibility.text = "" + p_data;
-        m_menace.text = "";
     }
 
-    void InterlocutorIsAccessible(InterlocutorSO p_data)
+    void InterlocutorIsAccessible()
     {
-        m_description.text = "" + p_data.m_description;
-        m_accessibility.text = "" + p_data;
-        
-        for (int i = 0; i < p_data.m_accesConditionInt.Count; i++)
+        // condition
+        for (int i = 0; i < m_Interlocutor.m_approach.Count; i++)
         {
-            m_condition[i].text = "";
+            m_condition[i].text = "" +  m_Interlocutor.m_approach[i].m_descriptionApproach;
         }
-        
-        m_menace.text = "";
+        // menace
+        m_menace.text = "" + m_Interlocutor.m_risque;
     }
 
     void InterlocutorIsNotAccessible()
     {
+        m_description.text = "" + m_Interlocutor.m_description;
         
+        for (int i = 0; i < m_accessibilityOb.Count; i++)
+        {
+            // On affiche : nom de la ressource / le tyle (> || < || =) / valeur de la ressource
+            string accessCondition = ConditionTypeToString(m_Interlocutor.m_accesConditionInt[i].m_conditionType);
+            m_accessibility[i].text = "" + m_Interlocutor.m_accesConditionInt[i].m_ressource.Name + " " + accessCondition + " " + m_Interlocutor.m_accesConditionInt[i].m_ressource.m_value;
+        }
     }
-
+    
     void DisplayAcessibleInterlocutorText()
     {
+        int count = m_Interlocutor.m_approach.Count;
         
+        for (int i = 0; i < count; i++)
+        {
+            m_conditionOb[i].SetActive(true);
+        }
+        
+        m_menaceOb.SetActive(true);
     }
 
     void DisplayNotAccessibleInterlocutorText()
     {
+        m_descriptionOb.SetActive(true);
         
+        int count = m_Interlocutor.m_accesConditionInt.Count;
+        for (int i = 0; i < m_accessibilityOb.Count; i++)
+        {
+            m_accessibilityOb[i].SetActive(true);
+        }
     }
 
     void DisallowAll()
     {
         m_descriptionOb.SetActive(false);
-        m_accessibilityOb.SetActive(false);
+        
+        for (int i = 0; i < m_accessibilityOb.Count; i++)
+        {
+            m_accessibilityOb[i].SetActive(false);
+        }
         
         for (int i = 0; i < m_conditionOb.Count; i++)
         {
@@ -82,5 +117,24 @@ public class TextInterlocutor : MonoBehaviour
         }
         
         m_menaceOb.SetActive(false);
+    }
+
+    string ConditionTypeToString(ConditionType p_condition)
+    {
+        switch (p_condition)
+        {
+            case ConditionType.Lesser:
+                return "<";
+                break;
+            case ConditionType.Equal:
+                return "=";
+                break;
+            case ConditionType.Greater:
+                return ">";
+                break;
+            default:
+                return "?";
+                break;
+        }
     }
 }

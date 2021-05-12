@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Soudoyer
   m_EditorClassIdentifier: 
   m_approach: Soudoyer
+  m_descriptionApproach: Ceci est la desciption d'une approach
   m_exactionPos: {fileID: 0}
   m_exactionNeg: {fileID: 0}
   m_cdtSuccess:
