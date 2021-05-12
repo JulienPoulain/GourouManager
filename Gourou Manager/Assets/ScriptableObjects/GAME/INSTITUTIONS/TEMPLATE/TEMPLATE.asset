@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f60d9fd165f1bf4a8d858defcd6937f, type: 3}
-  m_Name: INSTIT
+  m_Name: TEMPLATE
   m_EditorClassIdentifier: 
-  m_name: Institution Template
+  m_name: Template
   m_funds: {fileID: 11400000, guid: 87d283f57e09f564c8638c7f3450258c, type: 2}
   m_members: {fileID: 11400000, guid: 6f3ae65b011ad914bab06b213d511fa1, type: 2}
   m_fanatics: {fileID: 11400000, guid: dd7c5a5e3a2e36e42a3b5b1dce1d9b26, type: 2}
