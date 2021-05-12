@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 885772bd64b7b1348a7f3133ea46b0b4, type: 3}
-  m_Name: BRUTALITE
+  m_Script: {fileID: 11500000, guid: 65d02e6c45e7ab84a9e56bc495f4f42d, type: 3}
+  m_Name: IMP F
   m_EditorClassIdentifier: 
-  m_value: 0
+  m_ressource: {fileID: 11400000, guid: caa6baab0d7c19149b38b2c26a934853, type: 2}
+  m_magnitude: {fileID: 11400000, guid: 8ce49e0497ce86f44bec368d0d1cf4b1, type: 2}

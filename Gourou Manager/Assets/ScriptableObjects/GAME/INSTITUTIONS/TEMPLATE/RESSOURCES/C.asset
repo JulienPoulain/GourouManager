@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 885772bd64b7b1348a7f3133ea46b0b4, type: 3}
-  m_Name: FANATIQUES
+  m_Name: C
   m_EditorClassIdentifier: 
   m_value: 0
