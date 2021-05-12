@@ -5,14 +5,22 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewApproche", menuName = "GourouManager/Dialogue/Approche")]
 public class ApproachSO : ScriptableObject
 {
-    [SerializeField] private string m_approach;
-    [SerializeField] [Tooltip("petite descrition de l'approche pour le joueur exemple : Si vous parvenez a l'intimider, vous obtiendrez des informations")] public string m_descriptionApproach; // utiliser dans TextInterlocutor
+    [SerializeField] public string m_approach;  // utiliser dans TextAproachIndividual en temps que nom de l'approche
     [SerializeField] private ExactionSO m_exactionPos;
     [SerializeField] private ExactionSO m_exactionNeg;
     [SerializeField] private List<ConditionSO> m_cdtSuccess;
     [SerializeField] private int m_cooldown;
     private int m_remainingTime;
 
+    [SerializeField] [Tooltip("petite descrition de l'approche pour le joueur exemple : Si vous parvenez a l'intimider, vous obtiendrez des informations")] 
+    public string m_descriptionApproach; // utiliser dans TextInterlocutor
+    
+    [SerializeField] [Tooltip("Phrase du personnage lors du dialogue (Partie de Maxime)")] 
+    public string m_DialogueApproach; // utiliser dans TextApprocheIndividual
+    
+    [SerializeField] [Tooltip("Phrase au joueur pour lui indiquer ce qu'il reçois s'il réussit l'approche, ex: si vous parvenez à l'intimider, vous pourrez obtenir ceci")] 
+    public string m_resultatApproach; // utiliser dans TextApprocheIndividual
+    
     /// <summary>
     /// Renvoie le résultat d'une tentative de cette approche.
     /// </summary>

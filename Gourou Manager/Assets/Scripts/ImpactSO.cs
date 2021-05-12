@@ -10,10 +10,5 @@ public class ImpactSO : ScriptableObject
     public SyncIntSO Ressource => m_ressource;
     public OperationSO Magnitude => m_magnitude;
     public int Duration => m_duration;
-
-    public void OnEnable()
-    {
-        if (m_ressource == null)
-            Debug.LogError($"<color=red>ERROR :</color> Ressource manquante dans {this.name}.");
-    }
+    
 }

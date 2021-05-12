@@ -26,10 +26,13 @@ public class InterfaceManager : MonoBehaviour
 
     [SerializeField] GameObject m_InterlocutorObject;
 
+    [SerializeField] GameObject m_Approche;
+
     TextInstitutionLight m_InstitutionLightScript;
     TextInstitutionHeavy m_InstitutionHeavyScript;
     TextCrisis m_CrisisScript;
     TextInterlocutor m_InterlocutorScript;
+    TextApprocheMain m_ApprocheScript;
 
 
     [Tooltip("Crises Texte")]
@@ -76,7 +79,22 @@ public class InterfaceManager : MonoBehaviour
             interlocutorIsDisplay = value;
         }
     }
-    
+
+    bool m_ApprocheIsDisplay = false;
+
+    public bool ApprocheIsDisplay
+    {
+        get { return m_ApprocheIsDisplay; }
+        set
+        {
+            if (value == m_ApprocheIsDisplay) return;
+            
+            if (value == true) 
+                DisallowInterlocutor();
+            else
+                DisallowApproche();
+        }
+    }
     
     public bool m_cursorFocusHeavyInstitution; // utiliser dans Cursor.cs, pour définir si la fenêtre peut être enlever
 
@@ -89,6 +107,7 @@ public class InterfaceManager : MonoBehaviour
         m_InstitutionHeavyScript = m_InstitutionHeavyObject.GetComponent<TextInstitutionHeavy>();
         m_CrisisScript = m_CrisisObject.GetComponent<TextCrisis>();
         m_InterlocutorScript = m_InterlocutorObject.GetComponent<TextInterlocutor>();
+        m_ApprocheScript = m_Approche.GetComponent<TextApprocheMain>();
     }
 
     /// <summary>
@@ -184,7 +203,12 @@ public class InterfaceManager : MonoBehaviour
         m_InterlocutorObject.SetActive(false);
         m_InterlocutorIsDisplay = false;
     }
-
+    
+    public void DisallowApproche()
+    {
+        m_Approche.SetActive(false);
+        m_ApprocheIsDisplay = false;
+    }
 
     public void DisplayInterlocutor(InstitutionSO p_data)
     {
@@ -212,9 +236,10 @@ public class InterfaceManager : MonoBehaviour
         }
     }
 
-    public void ConfigureInterlocutor()
+    public void DisplayApproche(InterlocutorSO p_interlocutor) // appeler depuis textInterlocutor
     {
-        
+        m_Approche.SetActive(true);
+        m_ApprocheScript.Display(p_interlocutor);
     }
 
     Vector3 firstButtonPos(InstitutionSO p_data, float p_buttonWidth)
