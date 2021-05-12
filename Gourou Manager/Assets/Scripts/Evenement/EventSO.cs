@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewEvent", menuName = "GourouManager/Event/Event")]
+[CreateAssetMenu(fileName = "NewEvent", menuName = "GourouManager/Evenement/Evenement")]
 public class EventSO : ScriptableObject
 {
     [SerializeField] private string m_name;

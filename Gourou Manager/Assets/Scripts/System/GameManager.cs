@@ -3,15 +3,15 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    // GameManager.Instance.WhatYouWant
-
+    ///!\ Remplace les u_ par des m_ nom de Dieu /!\
     [SerializeField] public ScriptableObject[] u_Institutions;
     [SerializeField] public ScriptableObject[] u_Crise;
+    
     [SerializeField] public InterfaceManager u_InterfaceManager;
     [SerializeField] public GameObject u_Camera;
     
     [SerializeField] public List<ExactionSO> m_pendingExactions;
-    [SerializeField] public List<Event> m_activeEvents;
+    public List<Event> m_activeEvents;
 
     public bool m_focusOnInstitution = false;
 

@@ -2,19 +2,14 @@ using UnityEngine;
 
 public class SyncVar<T> : ScriptableObject
 {
+    [SerializeField] private string m_name;
     [SerializeField] public T m_value;
 
+    public string Name => m_name;
+    
     public T Value
     {
-        get
-        {
-            return m_value;
-        }
-        
-        set
-        {
-            if (m_value.Equals(value)) return;
-            m_value = value;
-        }
+        get => m_value;
+        set => m_value = value;
     }
 }

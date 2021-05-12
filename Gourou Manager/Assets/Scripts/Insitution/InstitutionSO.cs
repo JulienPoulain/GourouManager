@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewInstitution", menuName = "GourouManager/Institution")]
+[CreateAssetMenu(fileName = "NewInstitution", menuName = "GourouManager/Institution/Institution")]
 
 public class InstitutionSO : ScriptableObject
 
@@ -34,15 +34,15 @@ public class InstitutionSO : ScriptableObject
 
     public List<ApproachSO> PossibleDialogues()
     {
-        List<ApproachSO> DialoguesList = new List<ApproachSO>();
+        List<ApproachSO> dialoguesList = new List<ApproachSO>();
 
         foreach (InterlocutorSO interlocutor in m_interlocutorList)
         {
             if (interlocutor.IsAccessible())
-                DialoguesList.AddRange(interlocutor.m_approach);
+                dialoguesList.AddRange(interlocutor.m_approach);
         }
         
-        return DialoguesList;
+        return dialoguesList;
     }
     
 
