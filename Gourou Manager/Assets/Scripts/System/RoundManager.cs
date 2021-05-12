@@ -9,14 +9,6 @@ public class RoundManager : Singleton<RoundManager>
         // Ajout des nouveaux events actifs
         GameManager.Instance.AddEvent();
         
-        // Ajout des nouveaux events actifs
-        foreach (ExactionSO exactionSO in GameManager.Instance.m_pendingExactions)
-        {
-            foreach (EventSO eventSO in exactionSO.EventList)
-            {
-                GameManager.Instance.m_activeEvents.Add(new Event(eventSO));
-            }
-        }
         // Calcul des effets des events
         foreach (Event evenement in GameManager.Instance.m_activeEvents)
         {
