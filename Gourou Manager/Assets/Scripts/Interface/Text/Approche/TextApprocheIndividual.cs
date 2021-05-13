@@ -11,7 +11,7 @@ public class TextApprocheIndividual : MonoBehaviour
 
     public void Display(ApproachSO p_approach)
     {
-        m_name.text = "" + p_approach.m_approach;
+        m_name.text = "" + p_approach.Name;
         m_dialogueCharacter.text = "" + p_approach.m_DialogueApproach;
         m_gain.text = "" + p_approach.m_resultatApproach;
     }

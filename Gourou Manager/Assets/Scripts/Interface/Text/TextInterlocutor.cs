@@ -64,7 +64,7 @@ public class TextInterlocutor : MonoBehaviour
             m_condition[i].text = "" +  m_Interlocutor.m_approach[i].m_descriptionApproach;
         }
         // menace
-        m_menace.text = "" + m_Interlocutor.m_risque;
+        m_menace.text = "" + m_Interlocutor.m_description; // m_risque
     }
 
     void InterlocutorIsNotAccessible()
@@ -74,8 +74,8 @@ public class TextInterlocutor : MonoBehaviour
         for (int i = 0; i < m_accessibilityOb.Count; i++)
         {
             // On affiche : nom de la ressource / le tyle (> || < || =) / valeur de la ressource
-            string accessCondition = ConditionTypeToString(m_Interlocutor.m_accesConditionInt[i].m_conditionType);
-            m_accessibility[i].text = "" + m_Interlocutor.m_accesConditionInt[i].m_ressource.Name + " " + accessCondition + " " + m_Interlocutor.m_accesConditionInt[i].m_ressource.m_value;
+            string accessCondition = ConditionTypeToString(m_Interlocutor.m_accesConditions[i].m_conditionType);
+            m_accessibility[i].text = "" + m_Interlocutor.m_accesConditions[i].m_ressource.Name + " " + accessCondition + " " + m_Interlocutor.m_accesConditions[i].m_ressource.m_value;
         }
     }
     
@@ -95,7 +95,7 @@ public class TextInterlocutor : MonoBehaviour
     {
         m_descriptionOb.SetActive(true);
         
-        int count = m_Interlocutor.m_accesConditionInt.Count;
+        int count = m_Interlocutor.m_accesConditions.Count;
         for (int i = 0; i < m_accessibilityOb.Count; i++)
         {
             m_accessibilityOb[i].SetActive(true);

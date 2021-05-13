@@ -14,8 +14,8 @@ public class TextExactionIndividual : MonoBehaviour
     {
         m_ActualExaction = p_exaction;
 
-        m_textNom.text = "" + p_exaction.m_name;
-        m_textDescription.text = "" + p_exaction.m_description;
+        m_textNom.text = "" + p_exaction.Name;
+        m_textDescription.text = "" + p_exaction.Description;
     }
 
     public void ExecuteExaction()

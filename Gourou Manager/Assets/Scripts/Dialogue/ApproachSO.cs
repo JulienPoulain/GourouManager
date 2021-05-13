@@ -12,6 +12,18 @@ public class ApproachSO : ScriptableObject
     [SerializeField] private int m_cooldown;
     private int m_remainingTime;
 
+    [SerializeField]
+    [Tooltip("petite descrition de l'approche pour le joueur exemple : Si vous parvenez a l'intimider, vous obtiendrez des informations")]
+    public string m_descriptionApproach; // utiliser dans TextInterlocutor
+
+    [SerializeField]
+    [Tooltip("Phrase du personnage lors du dialogue (Partie de Maxime)")]
+    public string m_DialogueApproach; // utiliser dans TextApprocheIndividual
+
+    [SerializeField]
+    [Tooltip("Phrase au joueur pour lui indiquer ce qu'il reçois s'il réussit l'approche, ex: si vous parvenez à l'intimider, vous pourrez obtenir ceci")]
+    public string m_resultatApproach; // utiliser dans TextApprocheIndividual
+
     public string Name => m_name;
 
     public int Cooldown => m_cooldown;

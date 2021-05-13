@@ -9,7 +9,7 @@ public class InterlocutorSO: ScriptableObject
     [SerializeField] public string m_description;
     [SerializeField] [Tooltip("Santé mentale de l'interlocuteur (0-100) 100 à l'initialisation.")] public SyncIntSO m_sanity;
     [SerializeField] [Tooltip("Approches débloquées par les conditions.")] public List<ApproachSO> m_approach;
-    [SerializeField] [Tooltip("Conditions d'accès à l'interlocuteur.")] public List<ConditionSO>  m_accesConditions;
+    [SerializeField] [Tooltip("Conditions d'accès à l'interlocuteur.")] public List<ConditionIntSO>  m_accesConditions;
 
     public bool IsAccessible()
     {
