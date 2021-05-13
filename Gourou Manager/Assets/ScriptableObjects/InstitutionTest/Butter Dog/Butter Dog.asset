@@ -16,5 +16,8 @@ MonoBehaviour:
   m_description: j'aime les beurres
   m_sanity: {fileID: 11400000, guid: bd1912c12c2298641a00ff6847e6d8cb, type: 2}
   m_approach: []
-  m_accesConditionInt: []
+  m_accesConditionInt:
+  - {fileID: 11400000, guid: 9608e9b205e706f498f0506147bcfc4a, type: 2}
+  - {fileID: 11400000, guid: 739314c1bb1d37f4c948e9d1d34dfb84, type: 2}
   m_accesConditionBool: []
+  m_risque: "vous risquez de vivre avec du beurre sur la t\xEAte"

@@ -13,15 +13,11 @@ MonoBehaviour:
   m_Name: Soudoyer
   m_EditorClassIdentifier: 
   m_approach: Soudoyer
-  m_cdtAccessInt:
-  - {fileID: 11400000, guid: 822b6465733755645ae4cee5d5fa044f, type: 2}
-  - {fileID: 11400000, guid: da1d875fe316d2f4e969ccef0c6f877e, type: 2}
-  m_cdtAccessInfo:
-  - {fileID: 11400000, guid: 883bd66df48befc4bb15377fb09e1a2d, type: 2}
-  - {fileID: 11400000, guid: f2088643f9c41324ab036dc68b8205f0, type: 2}
-  m_cdtSuccessInt:
-  - {fileID: 11400000, guid: eb2f94477a1e23b498ae940d563548d8, type: 2}
-  - {fileID: 11400000, guid: 64ebe3d3dfe00164fbfa7a358067b338, type: 2}
-  m_cdtSuccessInfo:
-  - {fileID: 11400000, guid: 533006d9ddb0dc645a602e2fd71dc354, type: 2}
-  - {fileID: 11400000, guid: d126edf2ef7fd054d9bd06b2f0ec0b6b, type: 2}
+  m_exactionPos: {fileID: 0}
+  m_exactionNeg: {fileID: 0}
+  m_cdtSuccess:
+  - {fileID: 0}
+  m_cooldown: 5
+  m_descriptionApproach: Ceci est la desciption d'une approach
+  m_DialogueApproach: ceci est le dialogue de l'approche
+  m_resultatApproach: tu risque de mourrir
