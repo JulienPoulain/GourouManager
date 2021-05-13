@@ -19,6 +19,8 @@ public class Cursor : MonoBehaviour
         m_InterfaceManager.DisallowCrisis();  // désafficher les Crises        
         m_InterfaceManager.DisallowInterlocutor();
         m_InterfaceManager.DisallowApproche();
+        m_InterfaceManager.DisallowExaction();
+
         m_Camera = GameManager.Instance.GetComponent<Camera>();
     }
 

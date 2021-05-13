@@ -1133,7 +1133,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3308608383405920948}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3232617659581801107}
+        m_TargetAssemblyTypeName: TextInstitutionHeavy, Assembly-CSharp
+        m_MethodName: DisplayExaction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5333724200212092320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,7 +1670,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7243356557065413678}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3232617659581801107}
+        m_TargetAssemblyTypeName: TextInstitutionHeavy, Assembly-CSharp
+        m_MethodName: DisplayInterlocutor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6569560927143272522
 GameObject:
   m_ObjectHideFlags: 0
@@ -2057,6 +2081,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1128431596502848454}
+  - component: {fileID: 3232617659581801107}
   m_Layer: 5
   m_Name: InstitutionHeavy
   m_TagString: Untagged
@@ -2093,6 +2118,26 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 50, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3232617659581801107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7613334340224226808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50a54522fb9a5b946944e92d9b371b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_textNom: {fileID: 838250749352667417}
+  m_textFonds: {fileID: 7656041599859867260}
+  m_textMembres: {fileID: 1219912041659376307}
+  m_textFanatiques: {fileID: 553264544150319210}
+  m_textEtat: {fileID: 6043967575808291280}
+  m_textExpositionPublique: {fileID: 9219754361877499880}
+  m_textGouvernement: {fileID: 8837390675008330659}
+  m_textCulte: {fileID: 6342433605883936893}

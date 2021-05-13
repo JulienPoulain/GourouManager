@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1001,6 +1001,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7424981301570921747, guid: 1e72b06db2487b14a80dbd13a561a30a, type: 3}
   m_PrefabInstance: {fileID: 2233067379286792978}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1866272103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4063473944130934563, guid: 611ed6ea7f99e3d44b17b3ffc28270bc, type: 3}
+  m_PrefabInstance: {fileID: 8562788906214251624}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1898749164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,6 +1291,7 @@ MonoBehaviour:
   m_InstitutionHeavyObject: {fileID: 6743933233340636283}
   m_InterlocutorObject: {fileID: 1803069491}
   m_Approche: {fileID: 835355679}
+  m_Exaction: {fileID: 1866272103}
   m_CrisisObject: {fileID: 945782781}
   m_decallingLightInstitution: 150
   m_ButtonInterlocutorPrefab: {fileID: 3381874221506486037, guid: f6d2ecc73c50d4e4d951dee69988c689, type: 3}
@@ -2002,7 +2008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1128431596502848454, guid: 9663cc69bc376b94ca2d48c7d6f7d7e2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1128431596502848454, guid: 9663cc69bc376b94ca2d48c7d6f7d7e2, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2129,6 +2135,10 @@ PrefabInstance:
     - target: {fileID: 4063473944130934563, guid: 611ed6ea7f99e3d44b17b3ffc28270bc, type: 3}
       propertyPath: m_Name
       value: Exaction
+      objectReference: {fileID: 0}
+    - target: {fileID: 4063473944130934563, guid: 611ed6ea7f99e3d44b17b3ffc28270bc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4132952445909876002, guid: 611ed6ea7f99e3d44b17b3ffc28270bc, type: 3}
       propertyPath: m_Pivot.x
