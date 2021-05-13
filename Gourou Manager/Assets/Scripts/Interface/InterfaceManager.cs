@@ -180,12 +180,14 @@ public class InterfaceManager : MonoBehaviour
     {
         m_Approche.SetActive(true);
         m_ApprocheScript.Display(p_interlocutor);
+        DisallowHeavyInstitution();
     }
 
     public void DisplayExaction(InstitutionSO p_institution)
     {
         m_Exaction.SetActive(true);
         m_ExactionScript.Display(p_institution);
+        DisallowHeavyInstitution();
     }
 
     // -----------------------------------------------------------------------------------------
