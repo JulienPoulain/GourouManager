@@ -3,9 +3,14 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    ///!\ Remplace les u_ par des m_ nom de Dieu /!\
-    [SerializeField] public ScriptableObject[] m_Institutions;
-    [SerializeField] public ScriptableObject[] m_Crise;
+    [SerializeField] GameObject m_MainInstitution;
+    [SerializeField] List<GameObject> m_Institutions = new List<GameObject>();
+
+    InstitutionSO m_MainInstitutionSO;
+    List<InstitutionSO> m_InstitutionsSO = new List<InstitutionSO>();
+
+    //[SerializeField] public ScriptableObject[] m_Institutions;
+    //[SerializeField] public ScriptableObject[] m_Crise;
     
     [SerializeField] public InterfaceManager m_InterfaceManager;
     [SerializeField] public GameObject m_Camera;
@@ -15,6 +20,16 @@ public class GameManager : Singleton<GameManager>
 
     public bool m_focusOnInstitution = false;
     int m_turn = 0;
+
+    private void Start()
+    {
+        m_MainInstitutionSO = m_MainInstitution.GetComponent<InterfaceInstitution>().m_Institution;
+
+        foreach (GameObject Institution in m_Institutions)
+        {
+            m_InstitutionsSO.Add(Institution.GetComponent<InterfaceInstitution>().m_Institution);
+        }
+    }
 
     public void AddEvent()
     {
