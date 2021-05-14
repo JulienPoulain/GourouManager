@@ -74,8 +74,9 @@ public class TextInterlocutor : MonoBehaviour
         for (int i = 0; i < m_accessibilityOb.Count; i++)
         {
             // On affiche : nom de la ressource / le tyle (> || < || =) / valeur de la ressource
-            string accessCondition = ConditionTypeToString(m_Interlocutor.m_accesConditions[i].m_conditionType);
-            m_accessibility[i].text = "" + m_Interlocutor.m_accesConditions[i].m_ressource.Name + " " + accessCondition + " " + m_Interlocutor.m_accesConditions[i].m_ressource.m_value;
+            // string accessCondition = ConditionTypeToString(m_Interlocutor.AccessCondition[i].m_conditionType);
+            // m_accessibility[i].text = "" + m_Interlocutor.AccessCondition[i].m_ressource.Name + " " + accessCondition + " " + m_Interlocutor.AccessCondition[i].m_ressource.m_value;
+            m_accessibility[i].text = m_Interlocutor.AccessCondition[i].ToString();
         }
     }
     
@@ -95,7 +96,7 @@ public class TextInterlocutor : MonoBehaviour
     {
         m_descriptionOb.SetActive(true);
         
-        int count = m_Interlocutor.m_accesConditions.Count;
+        int count = m_Interlocutor.AccessCondition.Count;
         for (int i = 0; i < m_accessibilityOb.Count; i++)
         {
             m_accessibilityOb[i].SetActive(true);
@@ -119,6 +120,7 @@ public class TextInterlocutor : MonoBehaviour
         m_menaceOb.SetActive(false);
     }
 
+    /*
     string ConditionTypeToString(ConditionType p_condition)
     {
         switch (p_condition)
@@ -137,6 +139,7 @@ public class TextInterlocutor : MonoBehaviour
                 break;
         }
     }
+    */
 
     public void SpeekToInterlocutor()
     {

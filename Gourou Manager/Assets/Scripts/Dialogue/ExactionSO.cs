@@ -8,10 +8,10 @@ public class ExactionSO : ScriptableObject
     [SerializeField] private string m_name;
     [SerializeField] private string m_description;
     [SerializeField] private List<EventSO> m_eventList;
-    
-    public string Name => m_name;
+    [SerializeField] private List<ConditionSO> m_conditions;
 
+    public string Name => m_name;
     public string Description => m_description;
-    
     public List<EventSO> EventList => m_eventList;
+    public List<ConditionSO> Conditions => m_conditions;
 }

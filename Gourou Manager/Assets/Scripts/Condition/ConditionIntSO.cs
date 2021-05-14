@@ -52,4 +52,19 @@ public class ConditionIntSO : ConditionSO
         }
         return false;
     }
+
+    string ConditionTypeToString(ConditionType p_condition)
+    {
+        switch (p_condition)
+        {
+            case ConditionType.Lesser:
+                return "<";
+            case ConditionType.Equal:
+                return "=";
+            case ConditionType.Greater:
+                return ">";
+            default:
+                return "?";
+        }
+    }
 }
