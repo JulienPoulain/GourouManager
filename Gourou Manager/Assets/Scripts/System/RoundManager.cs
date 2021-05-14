@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEngine;
 
 public class RoundManager : Singleton<RoundManager>
 {
@@ -35,6 +34,13 @@ public class RoundManager : Singleton<RoundManager>
                     pendingChanges.Add(impact.Ressource, magnitude);
                 }
             }
+            
+            // Ajout des informations obtenues
+            foreach (InfoSO info in evenement.InfoGained)
+            {
+                info.obtain();
+            }
+            evenement.InfoGained.Clear();
 
             //Reduction du compteur d'events
             evenement.AdvanceTime(1);
