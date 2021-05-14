@@ -27,14 +27,17 @@ public class Event
     
     public void Apply()
     {
+        // Évènement fini (inactif).
         if (m_duration == 0)
         {
             Debug.Log("<color=red>ERROR :</color> Évènement terminé.");
+            return;
         }
         foreach (var impact in m_impacts)
         {
             impact.Apply();
         }
+        // Uniquement pour les évènements à durée finie.
         if (m_duration > 0)
         {
             m_duration -= 1;
