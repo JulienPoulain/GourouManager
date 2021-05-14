@@ -101,7 +101,7 @@ public class InterfaceManager : MonoBehaviour
 
     void Start()
     {
-        m_Camera = GameManager.Instance.u_Camera.GetComponent<Camera>();
+        m_Camera = GameManager.Instance.m_Camera.GetComponent<Camera>();
         m_canvasSize = GetComponent<RectTransform>();
 
         m_InstitutionLightScript = m_InstitutionLightObject.GetComponent<TextInstitutionLight>();

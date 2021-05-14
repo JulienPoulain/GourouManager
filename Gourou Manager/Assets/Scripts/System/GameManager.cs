@@ -4,16 +4,17 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     ///!\ Remplace les u_ par des m_ nom de Dieu /!\
-    [SerializeField] public ScriptableObject[] u_Institutions;
-    [SerializeField] public ScriptableObject[] u_Crise;
+    [SerializeField] public ScriptableObject[] m_Institutions;
+    [SerializeField] public ScriptableObject[] m_Crise;
     
-    [SerializeField] public InterfaceManager u_InterfaceManager;
-    [SerializeField] public GameObject u_Camera;
+    [SerializeField] public InterfaceManager m_InterfaceManager;
+    [SerializeField] public GameObject m_Camera;
     
-    [SerializeField] public List<ExactionSO> m_pendingExactions;
-    public List<Event> m_activeEvents;
+    [SerializeField] public List<ExactionSO> m_pendingExactions = new List<ExactionSO>();
+    public List<Event> m_activeEvents = new List<Event>();
 
     public bool m_focusOnInstitution = false;
+    int m_turn = 0;
 
     public void AddEvent()
     {
@@ -30,5 +31,8 @@ public class GameManager : Singleton<GameManager>
     public void EndTurn()
     {
         RoundManager.Instance.NextTurn();
+        m_turn++;
+        Debug.Log("FIN DU TOUR");
+        Debug.Log(m_turn);
     }
 }

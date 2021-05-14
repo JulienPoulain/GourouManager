@@ -8,6 +8,6 @@ public class InterfaceCrisis : MonoBehaviour
 
     public void Display()
     {
-        GameManager.Instance.u_InterfaceManager.DisplayCrisis(m_Crisis);
+        GameManager.Instance.m_InterfaceManager.DisplayCrisis(m_Crisis);
     }
 }

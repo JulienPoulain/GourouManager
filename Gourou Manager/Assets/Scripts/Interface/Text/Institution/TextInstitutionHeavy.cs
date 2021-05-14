@@ -33,21 +33,21 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
 
     public void DisplayInterlocutor()
     {
-        GameManager.Instance.u_InterfaceManager.DisplayInterlocutor(m_InstitutionData);
+        GameManager.Instance.m_InterfaceManager.DisplayInterlocutor(m_InstitutionData);
     }
 
     public void DisplayExaction()
     {
-        GameManager.Instance.u_InterfaceManager.DisplayExaction(m_InstitutionData);
+        GameManager.Instance.m_InterfaceManager.DisplayExaction(m_InstitutionData);
     }
     
     public void OnPointerEnter(PointerEventData eventData)
     {
-        GameManager.Instance.u_InterfaceManager.m_cursorFocusHeavyInstitution = true;
+        GameManager.Instance.m_InterfaceManager.m_cursorFocusHeavyInstitution = true;
     }
     
     public void OnPointerExit(PointerEventData eventData)
     {
-        GameManager.Instance.u_InterfaceManager.m_cursorFocusHeavyInstitution = false;
+        GameManager.Instance.m_InterfaceManager.m_cursorFocusHeavyInstitution = false;
     }
 }

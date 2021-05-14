@@ -13,7 +13,7 @@ public class Cursor : MonoBehaviour
     void Start()
     {
         
-        m_InterfaceManager = GameManager.Instance.u_InterfaceManager;   // raccourcis l'access à Interface Manager
+        m_InterfaceManager = GameManager.Instance.m_InterfaceManager;   // raccourcis l'access à Interface Manager
         m_InterfaceManager.DisallowLightInstitution();  // désafficher les Institutions
         m_InterfaceManager.DisallowHeavyInstitution();  // désafficher les Institutions
         m_InterfaceManager.DisallowCrisis();  // désafficher les Crises        

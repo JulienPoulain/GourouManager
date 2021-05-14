@@ -21,6 +21,6 @@ public class TextExactionIndividual : MonoBehaviour
     public void ExecuteExaction()
     {
         GameManager.Instance.m_pendingExactions.Add(m_ActualExaction);
-        GameManager.Instance.u_InterfaceManager.DisallowExaction();
+        GameManager.Instance.m_InterfaceManager.DisallowExaction();
     }
 }

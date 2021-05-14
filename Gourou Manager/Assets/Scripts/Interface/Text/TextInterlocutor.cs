@@ -142,17 +142,17 @@ public class TextInterlocutor : MonoBehaviour
     {
         if (m_Interlocutor.IsAccessible())
         {
-            GameManager.Instance.u_InterfaceManager.DisplayApproche(m_Interlocutor);
+            GameManager.Instance.m_InterfaceManager.DisplayApproche(m_Interlocutor);
         }
     }
 
     public void ExitInterlocutorInterface()
     {
-        GameManager.Instance.u_InterfaceManager.DisallowInterlocutor();
+        GameManager.Instance.m_InterfaceManager.DisallowInterlocutor();
     }
 
     public void ForcerApproche()
     {
-        GameManager.Instance.u_InterfaceManager.DisplayApproche(m_Interlocutor);
+        GameManager.Instance.m_InterfaceManager.DisplayApproche(m_Interlocutor);
     }
 }
