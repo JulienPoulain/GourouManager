@@ -30,6 +30,7 @@ public class Event
         if (m_duration == 0)
         {
             Debug.Log("<color=red>ERROR :</color> Évènement terminé toujours présent.");
+            return;
         }
         // Évènement infini
         if (Duration < 0) 
