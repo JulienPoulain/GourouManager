@@ -119,28 +119,6 @@ public class TextInterlocutor : MonoBehaviour
         
         m_menaceOb.SetActive(false);
     }
-
-    /*
-    string ConditionTypeToString(ConditionType p_condition)
-    {
-        switch (p_condition)
-        {
-            case ConditionType.Lesser:
-                return "<";
-                break;
-            case ConditionType.Equal:
-                return "=";
-                break;
-            case ConditionType.Greater:
-                return ">";
-                break;
-            default:
-                return "?";
-                break;
-        }
-    }
-    */
-
     public void SpeekToInterlocutor()
     {
         if (m_Interlocutor.IsAccessible())

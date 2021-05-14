@@ -25,14 +25,12 @@ public class InterfaceManager : MonoBehaviour
     [SerializeField] GameObject m_InstitutionHeavyObject;
     [SerializeField] GameObject m_InterlocutorObject;
     [SerializeField] GameObject m_Approche;
-    [SerializeField] GameObject m_Exaction;
 
     TextInstitutionLight m_InstitutionLightScript;
     TextInstitutionHeavy m_InstitutionHeavyScript;
     TextCrisis m_CrisisScript;
     TextInterlocutor m_InterlocutorScript;
     TextApprocheMain m_ApprocheScript;
-    TextExactionMain m_ExactionScript;
 
 
     [Tooltip("Crises Texte")]
@@ -109,7 +107,6 @@ public class InterfaceManager : MonoBehaviour
         m_CrisisScript = m_CrisisObject.GetComponent<TextCrisis>();
         m_InterlocutorScript = m_InterlocutorObject.GetComponent<TextInterlocutor>();
         m_ApprocheScript = m_Approche.GetComponent<TextApprocheMain>();
-        m_ExactionScript = m_Exaction.GetComponent<TextExactionMain>();
     }
 
     // -----------------------------------------------------------------------------------------
@@ -183,13 +180,6 @@ public class InterfaceManager : MonoBehaviour
         DisallowHeavyInstitution();
     }
 
-    public void DisplayExaction(InstitutionSO p_institution)
-    {
-        m_Exaction.SetActive(true);
-        m_ExactionScript.Display(p_institution);
-        DisallowHeavyInstitution();
-    }
-
     // -----------------------------------------------------------------------------------------
     // Dissalow interfaces
     // -----------------------------------------------------------------------------------------
@@ -224,11 +214,6 @@ public class InterfaceManager : MonoBehaviour
     {
         m_Approche.SetActive(false);
         m_ApprocheIsDisplay = false;
-    }
-
-    public void DisallowExaction()
-    {
-        m_Exaction.SetActive(false);
     }
 
     // -----------------------------------------------------------------------------------------
