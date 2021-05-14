@@ -7,14 +7,21 @@ public class RoundManager : Singleton<RoundManager>
     
     public void NextTurn()
     {
-        Debug.Log("AVANT ADD EVENT");
         // Ajout des nouveaux events actifs
         GameManager.Instance.AddEvent();
-        Debug.Log("après add event");
+
+        // Retirer les évènements fini de la liste
+        foreach (Event evenement in GameManager.Instance.m_activeEvents)
+        {
+            if (evenement.Duration == 0)
+            {
+                GameManager.Instance.m_activeEvents.Remove(evenement);
+            }
+        }
+
         // Calcul des effets des events
         foreach (Event evenement in GameManager.Instance.m_activeEvents)
         {
-            Debug.Log("0");
             // Stockage des modifications futures
             foreach (Impact impact in evenement.Impacts)
             {
@@ -29,27 +36,16 @@ public class RoundManager : Singleton<RoundManager>
                 }
             }
 
-            Debug.Log("1");
-            //Reduction du compteur d'events et retire les events "finis" de la liste
+            //Reduction du compteur d'events
             evenement.AdvanceTime(1);
-            if (evenement.Duration == 0)
-            {
-                GameManager.Instance.m_activeEvents.Remove(evenement);
-            }
-            Debug.Log("2");
         }
 
-        Debug.Log("3");
         // Applique les changements de valeurs des ressources
         foreach (SyncIntSO ressource in pendingChanges.Keys)
         {
             ressource.m_value += pendingChanges[ressource];
         }
-
-        Debug.Log("4");
-
         pendingChanges.Clear();
-        Debug.Log("FIN");
     }
 
 }
