@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c24071e31d0145f4cbd8e44ff65f85a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 4bf03584afbf42145a0cd0da083d6a9f, type: 3}
   m_Name: DialogueBorisJonson
   m_EditorClassIdentifier: 
-  m_approches:
-  - {fileID: 11400000, guid: e4dc82dfef861574591f813dfe30c8f6, type: 2}
-  - {fileID: 11400000, guid: c99f3f2da4eaf014584dc389b5865bf1, type: 2}
+  m_overview: (  +  )
+  m_operation1: {fileID: 0}
+  m_operation2: {fileID: 0}

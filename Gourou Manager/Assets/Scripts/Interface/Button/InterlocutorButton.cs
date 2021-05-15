@@ -20,7 +20,9 @@ public class InterlocutorButton : MonoBehaviour, IPointerClickHandler
     {
         if (pointerEventData.button == PointerEventData.InputButton.Left)
         {
-            GetComponentInParent<TextInterlocutor>().Display(m_Interlocutor);
+            // ici le probleme    
+            GameManager.Instance.m_InterfaceManager.m_InterlocutorScript.Display(m_Interlocutor);
+
         }
     }
 

@@ -23,6 +23,7 @@ public class TextInstitutionExactionManager : MonoBehaviour
     public void ExecuteExaction()
     {
         GameManager.Instance.m_pendingExactions.Add(m_exaction);
+        GameManager.Instance.m_InterfaceManager.DisallowHeavyInstitution();
         Debug.Log("Exaction lancée");
     }
 }

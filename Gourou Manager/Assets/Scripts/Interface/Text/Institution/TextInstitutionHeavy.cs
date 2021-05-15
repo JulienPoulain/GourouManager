@@ -37,6 +37,10 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
         {
             m_InterlocutorButton.SetActive(false);
         }
+        else
+        {
+            m_InterlocutorButton.SetActive(true);
+        }
 
         m_InstitutionData = p_data;
 

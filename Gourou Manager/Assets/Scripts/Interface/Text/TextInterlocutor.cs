@@ -9,11 +9,16 @@ public class TextInterlocutor : MonoBehaviour
     [SerializeField] private List<GameObject> m_accessibilityOb;
     [SerializeField] private List<GameObject> m_conditionOb = new List<GameObject>();
     [SerializeField] private GameObject m_menaceOb;
+    [SerializeField] private GameObject m_buttonSpeakToInterlocutor; // permettra de l'afficher lorsqu'un interlocuteur est selectionner
+
+    [SerializeField] [Tooltip("comprend les textes qui ne sont pas modifiers, pour les afficher dès que nécessaire")] private List<GameObject> m_TextAnnexe = new List<GameObject>();
 
     private TMP_Text m_description;
     private List<TMP_Text> m_accessibility = new List<TMP_Text>();
     private List<TMP_Text> m_condition = new List<TMP_Text>();  
     private TMP_Text m_menace;
+
+    [Tooltip("Definit si l'interface Interlocuteur cible un personnage ou non, utile pour éviter les bugs")] public bool m_InterlocutorSelected = false;
 
     private InterlocutorSO m_Interlocutor;
     
@@ -24,6 +29,12 @@ public class TextInterlocutor : MonoBehaviour
     {
         // On récupère les texts des GO
         m_description = m_descriptionOb.GetComponent<TMP_Text>();
+
+        // On affiche les textes annexes
+        for (int i = 0; i < m_TextAnnexe.Count; i++)
+        {
+            m_TextAnnexe[i].SetActive(true);
+        }
 
         for (int i = 0; i < m_accessibilityOb.Count; i++)
         {
@@ -36,23 +47,32 @@ public class TextInterlocutor : MonoBehaviour
         }
         
         m_menace = m_menaceOb.GetComponent<TMP_Text>();
+
+        m_buttonSpeakToInterlocutor.SetActive(false);
     }
     
     public void Display(InterlocutorSO p_data) // appeler depuis InterlocutorButton
     {
+        m_InterlocutorSelected = true;
         m_Interlocutor = p_data;
         
         DisallowAll();
-        
+
         // par default, l'interlocuteur est innaccessible, on affiche les 2 premières informations
         DisplayNotAccessibleInterlocutorText();
         InterlocutorIsNotAccessible();
-        
+
         // Si l'interlocuteur est accessible, on affiche le reste
         if (p_data.IsAccessible())
         {
             DisplayAcessibleInterlocutorText();
             InterlocutorIsAccessible();
+        }
+
+        // On affiche les text non modifiers
+        for (int i = 0; i < m_TextAnnexe.Count; i++)
+        {
+            m_TextAnnexe[i].SetActive(true);
         }
     }
 
@@ -65,18 +85,20 @@ public class TextInterlocutor : MonoBehaviour
         }
         // menace
         m_menace.text = "" + m_Interlocutor.m_description; // m_risque
+
+        m_buttonSpeakToInterlocutor.SetActive(true); // on affiche le boutton : Parler à l'interlocuteur
     }
 
     void InterlocutorIsNotAccessible()
     {
         m_description.text = "" + m_Interlocutor.m_description;
-        
-        for (int i = 0; i < m_accessibilityOb.Count; i++)
-        {
+
+        for (int i = 0; i < m_Interlocutor.AccessCondition.Count; i++)
+        {            
             // On affiche : nom de la ressource / le tyle (> || < || =) / valeur de la ressource
             // string accessCondition = ConditionTypeToString(m_Interlocutor.AccessCondition[i].m_conditionType);
             // m_accessibility[i].text = "" + m_Interlocutor.AccessCondition[i].m_ressource.Name + " " + accessCondition + " " + m_Interlocutor.AccessCondition[i].m_ressource.m_value;
-            m_accessibility[i].text = m_Interlocutor.AccessCondition[i].ToString();
+            m_accessibility[i].text = "" + m_Interlocutor.AccessCondition[i].ToString();
         }
     }
     
@@ -106,7 +128,12 @@ public class TextInterlocutor : MonoBehaviour
     void DisallowAll()
     {
         m_descriptionOb.SetActive(false);
-        
+
+        for (int i = 0; i < m_TextAnnexe.Count; i++)
+        {
+            m_TextAnnexe[i].SetActive(false);
+        }
+
         for (int i = 0; i < m_accessibilityOb.Count; i++)
         {
             m_accessibilityOb[i].SetActive(false);
@@ -118,22 +145,36 @@ public class TextInterlocutor : MonoBehaviour
         }
         
         m_menaceOb.SetActive(false);
+
+        m_buttonSpeakToInterlocutor.SetActive(false);
     }
     public void SpeekToInterlocutor()
     {
         if (m_Interlocutor.IsAccessible())
         {
             GameManager.Instance.m_InterfaceManager.DisplayApproche(m_Interlocutor);
+            GameManager.Instance.m_InterfaceManager.DisallowInterlocutor();
+        }
+        else
+        {
+            Debug.Log("Cet Interlocuteur n'est pas disponible");
         }
     }
 
     public void ExitInterlocutorInterface()
     {
         GameManager.Instance.m_InterfaceManager.DisallowInterlocutor();
+        m_InterlocutorSelected = false;
     }
 
     public void ForcerApproche()
     {
-        GameManager.Instance.m_InterfaceManager.DisplayApproche(m_Interlocutor);
+        if (m_InterlocutorSelected)
+        {
+            GameManager.Instance.m_InterfaceManager.DisallowInterlocutor();
+            GameManager.Instance.m_InterfaceManager.DisplayApproche(m_Interlocutor);
+        }
+        else
+            Debug.Log("Tu n as pas selectionner d'interlocuteurs");
     }
 }

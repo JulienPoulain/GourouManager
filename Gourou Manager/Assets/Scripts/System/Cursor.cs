@@ -37,12 +37,12 @@ public class Cursor : MonoBehaviour
             // on regarde si le GO selectionner est une institution
             if (hit.transform.gameObject.TryGetComponent(out InterfaceInstitution script))
             {
-                if (!m_InterfaceManager.m_InstitutionLightIsDisplay && !m_InterfaceManager.m_InstitutionHeavyIsDisplay && !m_InterfaceManager.m_InterlocutorIsDisplay)
+                if (!m_InterfaceManager.InterfaceIsDisplay())
                 {
                     m_InterfaceManager.DisplayLightInstitution(script.gameObject, script.m_Institution);
                 }
                 
-                if (Input.GetMouseButtonDown(0) && !m_InterfaceManager.m_InstitutionHeavyIsDisplay)
+                if (Input.GetMouseButtonDown(0) && !m_InterfaceManager.InterfaceIsDisplay())
                 {
                     //m_CameraScript.FocusOnInstitution(hit.transform.position);
                     m_InterfaceManager.DisplayHeavyInstitution(script.m_Institution);
