@@ -37,9 +37,9 @@ public class RoundManager : Singleton<RoundManager>
                 AddEvent(newTriggeredExactions, newTriggeredEvents);
                 ComputeEvent(newTriggeredEvents);
                 
+                ClearFinishedEvent(newTriggeredEvents);
                 GameManager.Instance.ActiveEvents.AddRange(newTriggeredEvents);
-                ClearFinishedEvent(GameManager.Instance.ActiveEvents);
-                
+
                 foreach (ExactionSO exaction in newTriggeredExactions)
                 {
                     institution.RemainingTriggeredExactions.Remove(exaction);
