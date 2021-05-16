@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
 
-public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPointerExitHandler 
+public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     // Text
     [SerializeField] TMP_Text m_textNom;
@@ -23,12 +23,16 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
     [SerializeField] List<GameObject> m_ExactionsObject = new List<GameObject>();
     List<TextInstitutionExactionManager> m_exactionInterfaceScript = new List<TextInstitutionExactionManager>();
 
+    RectTransform m_ThisRectangle;
+
     private void Start()
     {
         foreach (GameObject ExactionObject in m_ExactionsObject)
         {
             m_exactionInterfaceScript.Add(ExactionObject.GetComponent<TextInstitutionExactionManager>());
         }
+
+        m_ThisRectangle = GetComponent<RectTransform>();
     }
 
     public void Display(InstitutionSO p_data)
@@ -90,10 +94,48 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
     public void OnPointerEnter(PointerEventData eventData)
     {
         GameManager.Instance.m_InterfaceManager.m_cursorFocusHeavyInstitution = true;
+        Debug.Log("JE passe la souris dessus");
     }
-    
+
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        StartCoroutine("MousePressed");
+
+        Debug.Log("JE SUIS APPUIER");
+        MoveWindow();
+    }
+
+
     public void OnPointerExit(PointerEventData eventData)
     {
         GameManager.Instance.m_InterfaceManager.m_cursorFocusHeavyInstitution = false;
+    }
+
+    Vector3 oldMousePos;
+
+    void MoveWindow()
+    {
+        if (oldMousePos != Input.mousePosition)
+        {
+            // Vector3 vector = (Input.mousePosition - oldMousePos).normalized;
+
+            // transform.position += vector * 1.5f;
+
+            // m_ThisRectangle.pivot = new Vector2(Input.mousePosition.x, Input.mousePosition.y); 
+
+            transform.position = Input.mousePosition;
+
+           oldMousePos = Input.mousePosition;
+        }
+    }
+
+    IEnumerator MousePressed()
+    {
+        while (Input.GetMouseButton(0))
+        {
+            MoveWindow();
+            yield return new WaitForSeconds(0.000001f);
+        }
     }
 }
