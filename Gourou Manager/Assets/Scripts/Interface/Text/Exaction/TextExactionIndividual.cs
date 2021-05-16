@@ -20,7 +20,7 @@ public class TextExactionIndividual : MonoBehaviour
 
     public void ExecuteExaction()
     {
-        GameManager.Instance.m_pendingExactions.Add(m_ActualExaction);
+        GameManager.Instance.PendingExactions.Add(m_ActualExaction);
         GameManager.Instance.m_InterfaceManager.DisallowExaction();
     }
 }
