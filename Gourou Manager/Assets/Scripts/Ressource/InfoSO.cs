@@ -9,4 +9,9 @@ public class InfoSO : SyncBoolSO
     public string Title => m_title;
 
     public string Description => m_description;
+
+    public void obtain()
+    {
+        Value = true;
+    }
 }

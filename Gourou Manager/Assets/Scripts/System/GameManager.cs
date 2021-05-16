@@ -7,7 +7,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] List<GameObject> m_Institutions = new List<GameObject>();
 
     InstitutionSO m_MainInstitutionSO;
-    List<InstitutionSO> m_InstitutionsSO = new List<InstitutionSO>();
+    List<InstitutionSO> m_institutions = new List<InstitutionSO>();
 
     //[SerializeField] public ScriptableObject[] m_Institutions;
     //[SerializeField] public ScriptableObject[] m_Crise;
@@ -15,11 +15,17 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] public InterfaceManager m_InterfaceManager;
     [SerializeField] public GameObject m_Camera;
     
-    [SerializeField] public List<ExactionSO> m_pendingExactions = new List<ExactionSO>();
-    public List<Event> m_activeEvents = new List<Event>();
+    [SerializeField] private List<ExactionSO> m_pendingExactions = new List<ExactionSO>();
+    private List<Event> m_activeEvents = new List<Event>();
 
     public bool m_focusOnInstitution = false;
     int m_turn = 0;
+
+    public List<ExactionSO> PendingExactions => m_pendingExactions;
+
+    public List<Event> ActiveEvents => m_activeEvents;
+
+    public List<InstitutionSO> Institutions => m_institutions;
 
     private void Start()
     {
@@ -27,20 +33,14 @@ public class GameManager : Singleton<GameManager>
 
         foreach (GameObject Institution in m_Institutions)
         {
-            m_InstitutionsSO.Add(Institution.GetComponent<InterfaceInstitution>().m_Institution);
+            m_institutions.Add(Institution.GetComponent<InterfaceInstitution>().m_Institution);
+            
         }
-    }
 
-    public void AddEvent()
-    {
-        foreach (ExactionSO exactionSO in m_pendingExactions)
+        foreach (InstitutionSO institutionSO in m_institutions)
         {
-            foreach (EventSO eventSO in exactionSO.EventList)
-            {
-                m_activeEvents.Add(new Event(eventSO));
-            }
+            institutionSO.init();
         }
-        m_pendingExactions.Clear();
     }
 
     public void EndTurn()
