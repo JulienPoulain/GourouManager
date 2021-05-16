@@ -150,14 +150,16 @@ public class TextInterlocutor : MonoBehaviour
     }
     public void SpeekToInterlocutor()
     {
-        if (m_Interlocutor.IsAccessible())
+        if (m_Interlocutor.IsAccessible() && m_InterlocutorSelected  && !GameManager.Instance.m_PlayerHasExecuteApproche)
         {
             GameManager.Instance.m_InterfaceManager.DisplayApproche(m_Interlocutor);
             GameManager.Instance.m_InterfaceManager.DisallowInterlocutor();
+
+            GameManager.Instance.m_PlayerHasExecuteApproche = true;
         }
         else
         {
-            Debug.Log("Cet Interlocuteur n'est pas disponible");
+            Debug.Log("Cet Interlocuteur n'est pas disponible, ou tu n'as pas sélectionner d'interlocuteurs");
         }
     }
 
@@ -175,6 +177,9 @@ public class TextInterlocutor : MonoBehaviour
             GameManager.Instance.m_InterfaceManager.DisplayApproche(m_Interlocutor);
         }
         else
+        {
             Debug.Log("Tu n as pas selectionner d'interlocuteurs");
+        }
+            
     }
 }
