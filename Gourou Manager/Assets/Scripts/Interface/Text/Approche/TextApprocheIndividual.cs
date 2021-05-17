@@ -22,7 +22,7 @@ public class TextApprocheIndividual : MonoBehaviour
 
     public void ExecuteApproche()
     {
-        GameManager.Instance.m_pendingExactions.Add(m_Approche.TryApproach());
+        GameManager.Instance.PendingExactions.Add(m_Approche.TryApproach());
         Debug.Log("Approche fait");
         GameManager.Instance.m_InterfaceManager.DisallowApproche();
     }
