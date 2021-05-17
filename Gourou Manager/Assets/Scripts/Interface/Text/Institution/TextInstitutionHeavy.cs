@@ -72,10 +72,10 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
 
     public void DisplayExaction()
     {
-        // On désaffiche les exactions pour les afficher comme on veut
+        // On dÃ©saffiche les exactions pour les afficher comme on veut
         DisallowExaction();
 
-        // On affiche les exactions selon notre besoin & on les paramètre        
+        // On affiche les exactions selon notre besoin & on les paramÃ¨tre        
         for (int i = 0; i < m_InstitutionData.m_exactionList.Count; i++)
         {
             m_ExactionsObject[i].SetActive(true);
@@ -94,15 +94,12 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
     public void OnPointerEnter(PointerEventData eventData)
     {
         GameManager.Instance.m_InterfaceManager.m_cursorFocusHeavyInstitution = true;
-        Debug.Log("JE passe la souris dessus");
     }
 
 
     public void OnPointerDown(PointerEventData eventData)
     {
         StartCoroutine("MousePressed");
-
-        Debug.Log("JE SUIS APPUIER");
         MoveWindow();
     }
 

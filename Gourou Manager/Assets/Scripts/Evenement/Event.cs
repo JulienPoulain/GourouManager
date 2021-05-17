@@ -23,15 +23,15 @@ public class Event
         m_duration = p_eventSO.Duration;
         
         m_impacts = new List<Impact>();
-        foreach (var impact in p_eventSO.Impacts)
+        foreach (ImpactSO impact in p_eventSO.Impacts)
         {
             m_impacts.Add(new Impact(impact));
         }
         
-        m_impacts = new List<Impact>();
-        foreach (var impact in p_eventSO.Impacts)
+        m_infoGained = new List<InfoSO>();
+        foreach (InfoSO info in p_eventSO.InfoGained)
         {
-            m_impacts.Add(new Impact(impact));
+            m_infoGained.Add(info);
         }
     }
 

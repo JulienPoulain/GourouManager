@@ -8,7 +8,7 @@ public class TextApprocheMain : MonoBehaviour
     
     List<TextApprocheIndividual> m_approcheScript = new List<TextApprocheIndividual>();
 
-    // sert à faire une interface responsive
+    // sert Ã  faire une interface responsive
     RectTransform m_canvasSize;
 
     void Start()

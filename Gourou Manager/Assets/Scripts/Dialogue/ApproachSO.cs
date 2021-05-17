@@ -10,7 +10,7 @@ public class ApproachSO : ScriptableObject
     [SerializeField] private ExactionSO m_exactionNeg;
     [SerializeField] private List<ConditionSO> m_cdtSuccess;
     [SerializeField] private int m_cooldown;
-    private int m_remainingTime;
+    public int m_remainingTime = 0;
 
     [SerializeField]
     [Tooltip("petite descrition de l'approche pour le joueur exemple : Si vous parvenez a l'intimider, vous obtiendrez des informations")]
@@ -34,7 +34,9 @@ public class ApproachSO : ScriptableObject
     /// Renvoie le résultat d'une tentative de cette approche.
     /// </summary>
     /// <returns>L'exaction correspondante si l'approche n'est pas en récupération. Sinon null.</returns>
-    [CanBeNull] public ExactionSO TryApproach()
+   
+    /*
+    public ExactionSO TryApproach()
     {
         if (!(m_remainingTime > 0))
         {
@@ -44,6 +46,14 @@ public class ApproachSO : ScriptableObject
             return m_exactionNeg;
         }
         return null;
+    }
+    */
+    public ExactionSO TryApproach()
+    {
+        m_remainingTime = m_cooldown;
+        if (ConditionsReached(m_cdtSuccess))
+            return m_exactionPos;
+        return m_exactionNeg;
     }
 
     public bool IsSuccessful()

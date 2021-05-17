@@ -18,6 +18,7 @@ MonoBehaviour:
   m_cdtSuccess:
   - {fileID: 11400000, guid: bb5738ced7c23e341a5cad904d2c4fa9, type: 2}
   m_cooldown: 2
+  m_remainingTime: 0
   m_descriptionApproach: Intimider Jonny
   m_DialogueApproach: Bonjours, comment va Christelle aujourd'hui
   m_resultatApproach: Vous gagnez des fonds

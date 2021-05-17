@@ -15,5 +15,6 @@ MonoBehaviour:
   m_name: Fonds
   m_description: bfdhzVDHGZAV
   m_duration: 3
-  m_impacts: []
+  m_impacts:
+  - {fileID: 11400000, guid: 015e7c3fd1f4b984d989c7e831b9580e, type: 2}
   m_infoGained: []
