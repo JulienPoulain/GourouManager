@@ -25,15 +25,14 @@ public class InterfaceManager : MonoBehaviour
     [SerializeField] GameObject m_InstitutionHeavyObject;
     [SerializeField] GameObject m_InterlocutorObject;
     [SerializeField] GameObject m_Approche;
-    [SerializeField] GameObject m_Exaction;
 
     TextInstitutionLight m_InstitutionLightScript;
     TextInstitutionHeavy m_InstitutionHeavyScript;
     TextCrisis m_CrisisScript;
-    TextInterlocutor m_InterlocutorScript;
+    public TextInterlocutor m_InterlocutorScript; // seulement utiliser dans InterlocutorButton (vital)
     TextApprocheMain m_ApprocheScript;
-    TextExactionMain m_ExactionScript;
 
+    // public TextInterlocutor TextInterlocutor => m_InterlocutorScript;
 
     [Tooltip("Crises Texte")]
     [SerializeField] GameObject m_CrisisObject;   // texte local
@@ -99,7 +98,7 @@ public class InterfaceManager : MonoBehaviour
 
     // -----------------------------------------------------------------------------------------
 
-    void Start()
+    void Awake()
     {
         m_Camera = GameManager.Instance.m_Camera.GetComponent<Camera>();
         m_canvasSize = GetComponent<RectTransform>();
@@ -109,7 +108,6 @@ public class InterfaceManager : MonoBehaviour
         m_CrisisScript = m_CrisisObject.GetComponent<TextCrisis>();
         m_InterlocutorScript = m_InterlocutorObject.GetComponent<TextInterlocutor>();
         m_ApprocheScript = m_Approche.GetComponent<TextApprocheMain>();
-        m_ExactionScript = m_Exaction.GetComponent<TextExactionMain>();
     }
 
     // -----------------------------------------------------------------------------------------
@@ -156,7 +154,7 @@ public class InterfaceManager : MonoBehaviour
         m_InterlocutorObject.SetActive(true);
 
         RectTransform buttonDim = m_ButtonInterlocutorPrefab.GetComponent<RectTransform>();
-        float buttonWidth = buttonDim.rect.width + 5f;
+        float buttonWidth = buttonDim.rect.width + 3f;
 
         Vector3 firstPos = firstButtonPos(p_data, buttonWidth);
 
@@ -179,15 +177,20 @@ public class InterfaceManager : MonoBehaviour
     public void DisplayApproche(InterlocutorSO p_interlocutor) // appeler depuis textInterlocutor
     {
         m_Approche.SetActive(true);
+        m_ApprocheIsDisplay = true;
         m_ApprocheScript.Display(p_interlocutor);
         DisallowHeavyInstitution();
     }
 
-    public void DisplayExaction(InstitutionSO p_institution)
+    // Sert à savoir si une quelquonque interface est actuellement affichée (les LightInstitutions ne sont pas comprises
+    public bool InterfaceIsDisplay()
     {
-        m_Exaction.SetActive(true);
-        m_ExactionScript.Display(p_institution);
-        DisallowHeavyInstitution();
+        if (m_InstitutionHeavyIsDisplay || m_crisisIsDisplay || m_InterlocutorIsDisplay || m_ApprocheIsDisplay)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     // -----------------------------------------------------------------------------------------
@@ -214,8 +217,10 @@ public class InterfaceManager : MonoBehaviour
 
     public void DisallowInterlocutor()
     {
+        // On supprime les bouttons représentant les interlocutor
         if(m_ButtonInterlocutorList != null) m_ButtonInterlocutorList.Clear();
         
+        // On desaffiche les interlocutor
         m_InterlocutorObject.SetActive(false);
         m_InterlocutorIsDisplay = false;
     }
@@ -224,11 +229,6 @@ public class InterfaceManager : MonoBehaviour
     {
         m_Approche.SetActive(false);
         m_ApprocheIsDisplay = false;
-    }
-
-    public void DisallowExaction()
-    {
-        m_Exaction.SetActive(false);
     }
 
     // -----------------------------------------------------------------------------------------

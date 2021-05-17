@@ -27,6 +27,11 @@ public class GameManager : Singleton<GameManager>
 
     public List<InstitutionSO> Institutions => m_institutions;
 
+    // Player Variable //
+    
+    public bool m_PlayerHasExecuteExaction = false; // définit si le joueur à déjà fait une exaction ce tour ci
+    public bool m_PlayerHasExecuteApproche = false;    // Définit si le joueur à déjà fait un dialogue ce tour ci
+
     private void Start()
     {
         m_MainInstitutionSO = m_MainInstitution.GetComponent<InterfaceInstitution>().m_Institution;
@@ -49,5 +54,8 @@ public class GameManager : Singleton<GameManager>
         m_turn++;
         Debug.Log("FIN DU TOUR");
         Debug.Log(m_turn);
+
+        m_PlayerHasExecuteExaction = false;
+        m_PlayerHasExecuteApproche = false;
     }
 }

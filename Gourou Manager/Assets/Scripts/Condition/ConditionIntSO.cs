@@ -11,15 +11,22 @@ public class ConditionIntSO : ConditionSO
     public override string ToString()
     {
         string str = null;
+
+        /*
         Array conditionTypeValues = Enum.GetValues(typeof(ConditionType));
+        
         foreach (ConditionType cd in conditionTypeValues)
         {
             if ((cd & m_conditionType) == cd)
             {
                 if (str != null) str += " OU ";
-                str += m_ressource.name + " : " + m_ressource.Value + " " + cd + " " + m_value;
+                str += m_ressource.name + " : " + m_ressource.Value + " " + cd + " " + m_value;                
             }
         }
+        */
+
+        str = m_ressource.name + " " + ConditionTypeToString(m_conditionType) + " " + m_ressource.m_value;
+
         return str;
     }
 
