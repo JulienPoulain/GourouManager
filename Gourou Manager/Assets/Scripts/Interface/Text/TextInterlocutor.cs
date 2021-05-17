@@ -96,8 +96,6 @@ public class TextInterlocutor : MonoBehaviour
         for (int i = 0; i < m_Interlocutor.AccessCondition.Count; i++)
         {            
             // On affiche : nom de la ressource / le tyle (> || < || =) / valeur de la ressource
-            // string accessCondition = ConditionTypeToString(m_Interlocutor.AccessCondition[i].m_conditionType);
-            // m_accessibility[i].text = "" + m_Interlocutor.AccessCondition[i].m_ressource.Name + " " + accessCondition + " " + m_Interlocutor.AccessCondition[i].m_ressource.m_value;
             m_accessibility[i].text = "" + m_Interlocutor.AccessCondition[i].ToString();
         }
     }
