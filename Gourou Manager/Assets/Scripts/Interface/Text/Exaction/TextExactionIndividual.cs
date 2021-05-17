@@ -17,10 +17,4 @@ public class TextExactionIndividual : MonoBehaviour
         m_textNom.text = "" + p_exaction.Name;
         m_textDescription.text = "" + p_exaction.Description;
     }
-
-    public void ExecuteExaction()
-    {
-        GameManager.Instance.PendingExactions.Add(m_ActualExaction);
-        GameManager.Instance.m_InterfaceManager.DisallowExaction();
-    }
 }
