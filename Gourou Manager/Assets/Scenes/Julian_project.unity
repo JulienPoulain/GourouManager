@@ -986,6 +986,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1128431596502848454, guid: 9663cc69bc376b94ca2d48c7d6f7d7e2, type: 3}
   m_PrefabInstance: {fileID: 1802094150}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1708436012 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1409056815794804508, guid: 1e72b06db2487b14a80dbd13a561a30a, type: 3}
+  m_PrefabInstance: {fileID: 2233067379286792978}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1802094150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1087,7 +1092,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1128431596502848454, guid: 9663cc69bc376b94ca2d48c7d6f7d7e2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1208
+      value: 1020
       objectReference: {fileID: 0}
     - target: {fileID: 1128431596502848454, guid: 9663cc69bc376b94ca2d48c7d6f7d7e2, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1980,6 +1985,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 159918188968930858, guid: 1e72b06db2487b14a80dbd13a561a30a, type: 3}
+      propertyPath: m_TextAnnexe.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 159918188968930858, guid: 1e72b06db2487b14a80dbd13a561a30a, type: 3}
+      propertyPath: m_TextAnnexe.Array.data[1]
+      value: 
+      objectReference: {fileID: 1708436012}
     - target: {fileID: 1409056815794804508, guid: 1e72b06db2487b14a80dbd13a561a30a, type: 3}
       propertyPath: m_Name
       value: DescriptionInterlocutor
