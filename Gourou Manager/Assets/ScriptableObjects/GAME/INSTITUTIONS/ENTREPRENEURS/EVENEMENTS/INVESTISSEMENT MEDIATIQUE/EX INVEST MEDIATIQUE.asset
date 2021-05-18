@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
+  m_Name: EX INVEST MEDIATIQUE
+  m_EditorClassIdentifier: 
+  m_name: EX INVESTISSEMENT MEDIATIQUE
+  m_description: "Les Entrepreneurs financent des campagnes m\xE9diatiques contre
+    le Culte."
+  m_eventList:
+  - {fileID: 11400000, guid: 07c8a41cf28c398479e00cc4a8b8c8c5, type: 2}
+  m_conditions:
+  - {fileID: 11400000, guid: de8511874a89efd4786af9b94270808e, type: 2}
+  - {fileID: 11400000, guid: 78066c5883fd83144875c907b2413c45, type: 2}

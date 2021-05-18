@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
+  m_Name: EX PRESSION MANAGERIALE
+  m_EditorClassIdentifier: 
+  m_name: EX PRESSION MANAGERIALE
+  m_description: "Poussez les chef d'Entreprises \xE0 durcir leur m\xE9thodes manag\xE9riales,
+    \xE0 multiplier les licenciements... Les d\xE9g\xE2ts psychologiques vous rapporterons
+    des Adeptes, bris\xE9s par la maltraitance au travail et la violence du march\xE9
+    du travail d\xE9grad\xE9."
+  m_eventList:
+  - {fileID: 11400000, guid: 7c06c98d745a6be40b224e1c1623c7b8, type: 2}
+  m_conditions:
+  - {fileID: 11400000, guid: c957eb28b9180e84d937307682deeaaf, type: 2}
+  - {fileID: 11400000, guid: f76752b0ce627bc4b8b29247a6211a3c, type: 2}
