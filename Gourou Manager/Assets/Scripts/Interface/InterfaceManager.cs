@@ -26,6 +26,8 @@ public class InterfaceManager : MonoBehaviour
     [SerializeField] GameObject m_InterlocutorObject;
     [SerializeField] GameObject m_Approche;
     [SerializeField] GameObject m_EndTurn;
+    [SerializeField] GameObject m_Victory;
+    [SerializeField] GameObject m_Defeat;
 
     TextInstitutionLight m_InstitutionLightScript;
     TextInstitutionHeavy m_InstitutionHeavyScript;
@@ -157,8 +159,6 @@ public class InterfaceManager : MonoBehaviour
         RectTransform buttonDim = m_ButtonInterlocutorPrefab.GetComponent<RectTransform>();
         float buttonWidth = buttonDim.rect.width;
 
-        Debug.Log("LA LONGUEURE EST DE : " + buttonWidth);
-
         Vector3 firstPos = firstButtonPos(p_data, buttonWidth);
 
         for (int i = 0; i < p_data.m_interlocutorList.Count; i++)
@@ -188,6 +188,16 @@ public class InterfaceManager : MonoBehaviour
     public void DisplayEndTurn()
     {
         
+    }
+
+    public void DisplayVoctory()
+    {
+        m_Victory.SetActive(true);
+    }
+
+    public void DisplayDefeat()
+    {
+        m_Defeat.SetActive(false);
     }
 
     // Sert à savoir si une quelquonque interface est actuellement affichée (les LightInstitutions ne sont pas comprises
@@ -237,6 +247,12 @@ public class InterfaceManager : MonoBehaviour
     {
         m_Approche.SetActive(false);
         m_ApprocheIsDisplay = false;
+    }
+
+    public void DisallowVictoryDefeat()
+    {
+        m_Victory.SetActive(false);
+        m_Defeat.SetActive(false);
     }
 
     // -----------------------------------------------------------------------------------------

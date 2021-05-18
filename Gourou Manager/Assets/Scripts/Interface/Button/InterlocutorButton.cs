@@ -28,7 +28,6 @@ public class InterlocutorButton : MonoBehaviour, IPointerClickHandler
     // lorsque l'object est desafficher, on le supprime et on reset les statistiques de l'interface interlocutor
     void OnDisable()
     {
-        Debug.Log("CE GO est supprimer");
         Destroy (this.gameObject);
     }
 

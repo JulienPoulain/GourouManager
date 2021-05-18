@@ -16,5 +16,8 @@ MonoBehaviour:
   m_description: 
   m_descriptionFailure: 
   m_sanity: {fileID: 0}
-  m_approach: []
-  m_accesConditions: []
+  m_approach:
+  - {fileID: 11400000, guid: a684d81b98408af49a7e013c68bf44c4, type: 2}
+  m_accesConditions:
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 690fcce7082a3d943a1edfcd9f4a57fd, type: 2}
