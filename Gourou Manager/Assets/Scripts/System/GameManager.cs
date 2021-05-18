@@ -11,7 +11,8 @@ public class GameManager : Singleton<GameManager>
 
     //[SerializeField] public ScriptableObject[] m_Institutions;
     //[SerializeField] public ScriptableObject[] m_Crise;
-    
+
+    [SerializeField] public RoundManager m_roundManager;
     [SerializeField] public InterfaceManager m_InterfaceManager;
     [SerializeField] public GameObject m_Camera;
     
