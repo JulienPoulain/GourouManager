@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525d2b2df425485449ec8a12401c7c35, type: 3}
+  m_Name: DEMANDER_INVESTISSEMENT
+  m_EditorClassIdentifier: 
+  m_name: DEMANDER DE L'INVESTISSEMENT
+  m_exactionPos: {fileID: 11400000, guid: 30a6cf3ebb88e4941b8ce7ca3a50e642, type: 2}
+  m_exactionNeg: {fileID: 11400000, guid: 95133e1cd9efea0429f6b258085f45f5, type: 2}
+  m_cdtSuccess:
+  - {fileID: 11400000, guid: 81817e90bbd4e914c82f2270cf510b09, type: 2}
+  - {fileID: 11400000, guid: a81744682f6d2b14ba435ea5f14fb891, type: 2}
+  m_cooldown: 3
+  m_descriptionApproach: "Vous proposez des FANATIQUES comme gros bras en \xE9change
+    d'un soutien financier."
+  m_DialogueApproach: Maxime
+  m_resultatApproach: "Si vous r\xE9ussissez, vous obtiendrez 5 000 pendant 3 tours
+    cons\xE9cutifs."

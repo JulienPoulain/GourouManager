@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
+  m_Name: EV_ENTREE
+  m_EditorClassIdentifier: 
+  m_name: Convertir quelques investisseurs
+  m_description: Monte la corruption des entrepreneurs et un peu l'exposition publique
+    du Culte
+  m_duration: 1
+  m_impacts:
+  - {fileID: 11400000, guid: c8fbb49c32769524296d2fe684e12fec, type: 2}
+  - {fileID: 11400000, guid: e6b136b5e12e7ab4e806885738c3e386, type: 2}
+  m_infoGained: []

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
+  m_Name: EX NEGATIVE INTIM
+  m_EditorClassIdentifier: 
+  m_name: EX Negative Intim
+  m_description: "L'intimidation \xE0 \xE9chou\xE9, les Entrepreneurs et les m\xE9dias
+    se m\xE9fient de vous"
+  m_eventList:
+  - {fileID: 11400000, guid: c4b87201105804e47868c7632f3f572a, type: 2}
+  m_conditions: []

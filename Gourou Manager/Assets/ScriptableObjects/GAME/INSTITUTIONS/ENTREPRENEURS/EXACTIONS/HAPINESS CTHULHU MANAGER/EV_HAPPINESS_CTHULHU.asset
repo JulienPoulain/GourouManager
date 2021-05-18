@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
+  m_Name: EV_HAPPINESS_CTHULHU
+  m_EditorClassIdentifier: 
+  m_name: Creation du poste d'Happiness Cthulhu Manager
+  m_description: "Les entreprises cr\xE9ent un nouveau poste : Cthulhu Happiness
+    Manager"
+  m_duration: 1
+  m_impacts:
+  - {fileID: 11400000, guid: a6c5553007ae30e439acae819e809462, type: 2}
+  - {fileID: 11400000, guid: bb0f4163b2e49e54b9720753905903ab, type: 2}
+  m_infoGained: []
