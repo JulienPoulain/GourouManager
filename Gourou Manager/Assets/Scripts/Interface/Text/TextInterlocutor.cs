@@ -84,7 +84,7 @@ public class TextInterlocutor : MonoBehaviour
             m_condition[i].text = "" +  m_Interlocutor.m_approach[i].m_descriptionApproach;
         }
         // menace
-        m_menace.text = "" + m_Interlocutor.m_description; // m_risque
+        m_menace.text = "" + m_Interlocutor.m_descriptionFailure; // m_risque
 
         m_buttonSpeakToInterlocutor.SetActive(true); // on affiche le boutton : Parler à l'interlocuteur
     }
