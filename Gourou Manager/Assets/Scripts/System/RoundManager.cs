@@ -108,6 +108,7 @@ public class RoundManager : Singleton<RoundManager>
         foreach (SyncIntSO ressource in pendingChanges.Keys)
         {
             ressource.m_value += pendingChanges[ressource];
+            Debug.Log("CECI EST LA RESSOURCE : " + ressource.Name + "et son changement " + pendingChanges[ressource]);
         }
     }
 }

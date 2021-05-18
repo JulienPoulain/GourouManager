@@ -25,6 +25,7 @@ public class InterfaceManager : MonoBehaviour
     [SerializeField] GameObject m_InstitutionHeavyObject;
     [SerializeField] GameObject m_InterlocutorObject;
     [SerializeField] GameObject m_Approche;
+    [SerializeField] GameObject m_EndTurn;
 
     TextInstitutionLight m_InstitutionLightScript;
     TextInstitutionHeavy m_InstitutionHeavyScript;
@@ -180,6 +181,11 @@ public class InterfaceManager : MonoBehaviour
         m_ApprocheIsDisplay = true;
         m_ApprocheScript.Display(p_interlocutor);
         DisallowHeavyInstitution();
+    }
+
+    public void DisplayEndTurn()
+    {
+        
     }
 
     // Sert à savoir si une quelquonque interface est actuellement affichée (les LightInstitutions ne sont pas comprises

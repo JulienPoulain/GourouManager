@@ -60,6 +60,4 @@ public class InstitutionSO : ScriptableObject
         
         return dialoguesList;
     }
-    
-
 }
