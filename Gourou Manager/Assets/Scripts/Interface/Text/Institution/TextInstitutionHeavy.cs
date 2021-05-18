@@ -63,8 +63,6 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
         DisplayExaction();
     }
 
-
-
     public void DisplayInterlocutor()
     {
         GameManager.Instance.m_InterfaceManager.DisplayInterlocutor(m_InstitutionData);

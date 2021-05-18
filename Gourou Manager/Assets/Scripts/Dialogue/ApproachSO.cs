@@ -14,7 +14,7 @@ public class ApproachSO : ScriptableObject
 
     [SerializeField]
     [Tooltip("Phrase du personnage lors du dialogue (Partie de Maxime)")]
-    public string m_DialogueApproach; // utiliser dans TextApprocheIndividual
+    public string m_dialogueApproach; // utiliser dans TextApprocheIndividual
 
     [SerializeField]
     [Tooltip("Phrase au joueur pour lui indiquer ce qu'il reçois s'il réussit l'approche, ex: si vous parvenez à l'intimider, vous pourrez obtenir ceci")]

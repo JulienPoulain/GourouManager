@@ -155,7 +155,9 @@ public class InterfaceManager : MonoBehaviour
         m_InterlocutorObject.SetActive(true);
 
         RectTransform buttonDim = m_ButtonInterlocutorPrefab.GetComponent<RectTransform>();
-        float buttonWidth = buttonDim.rect.width + 3f;
+        float buttonWidth = buttonDim.rect.width;
+
+        Debug.Log("LA LONGUEURE EST DE : " + buttonWidth);
 
         Vector3 firstPos = firstButtonPos(p_data, buttonWidth);
 
@@ -271,8 +273,7 @@ public class InterfaceManager : MonoBehaviour
 
     Vector3 firstButtonPos(InstitutionSO p_data, float p_buttonWidth)
     {
-        // largeur canvas / 2 - (nbButton * dimButton)/2
-        float startX = /*(m_canvasSize.rect.width / 2)*/ m_InstitutionHeavyObject.transform.position.x - ((p_data.m_interlocutorList.Count * p_buttonWidth) / 3);
+        float startX = (m_canvasSize.rect.width / 2)  - ((p_data.m_interlocutorList.Count * p_buttonWidth)/3);
         float startY = m_canvasSize.rect.height - 50;
 
         return new Vector3(startX, startY, 0);

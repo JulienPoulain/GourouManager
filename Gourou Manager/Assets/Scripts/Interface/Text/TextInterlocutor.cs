@@ -30,12 +30,6 @@ public class TextInterlocutor : MonoBehaviour
         // On récupère les texts des GO
         m_description = m_descriptionOb.GetComponent<TMP_Text>();
 
-        // On affiche les textes annexes
-        for (int i = 0; i < m_TextAnnexe.Count; i++)
-        {
-            m_TextAnnexe[i].SetActive(true);
-        }
-
         for (int i = 0; i < m_accessibilityOb.Count; i++)
         {
             m_accessibility.Add(m_accessibilityOb[i].GetComponent<TMP_Text>());
@@ -81,7 +75,7 @@ public class TextInterlocutor : MonoBehaviour
         // condition
         for (int i = 0; i < m_Interlocutor.m_approach.Count; i++)
         {
-            m_condition[i].text = "" +  m_Interlocutor.m_approach[i].m_descriptionApproach;
+            m_condition[i].text = "" +  m_Interlocutor.m_approach[i].m_dialogueApproach;
         }
         // menace
         m_menace.text = "" + m_Interlocutor.m_descriptionFailure; // m_risque
@@ -146,6 +140,7 @@ public class TextInterlocutor : MonoBehaviour
 
         m_buttonSpeakToInterlocutor.SetActive(false);
     }
+
     public void SpeekToInterlocutor()
     {
         if (m_Interlocutor.IsAccessible() && m_InterlocutorSelected  && !GameManager.Instance.m_PlayerHasExecuteApproche)
@@ -163,10 +158,23 @@ public class TextInterlocutor : MonoBehaviour
 
     public void ExitInterlocutorInterface()
     {
-        GameManager.Instance.m_InterfaceManager.DisallowInterlocutor();
+        ResetInterlocutorInterface();
         m_InterlocutorSelected = false;
+        GameManager.Instance.m_InterfaceManager.DisallowInterlocutor();
     }
 
+    // remet l'interface Interlocutor à zero
+    public void ResetInterlocutorInterface()
+    {
+        m_Interlocutor = null;
+        m_description.text = "C'est Ici que vous retrouverez les informations concernant les interlocuteurs.";
+
+        // on desaffiche tout pour seulement afficher la description, comme au demarrage
+        DisallowAll();
+        m_descriptionOb.SetActive(true);
+    }
+
+    // appeler depuis un boutton, option de dev, à supprimer pour le public
     public void ForcerApproche()
     {
         if (m_InterlocutorSelected)
