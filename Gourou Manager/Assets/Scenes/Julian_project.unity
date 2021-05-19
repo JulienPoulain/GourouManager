@@ -626,6 +626,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InsitutionLight
       objectReference: {fileID: 0}
+    - target: {fileID: 4596427690896581639, guid: 889dec07010febd41a596547293f86a9, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 79fb3e26b2daafc48a166c2a1c2bd057, type: 3}
     - target: {fileID: 5534686930457139887, guid: 889dec07010febd41a596547293f86a9, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -916,7 +920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6771110931803590880, guid: b53b2417c57656648b71fc736368a3db, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 6771110931803590880, guid: b53b2417c57656648b71fc736368a3db, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1118,7 +1122,7 @@ RectTransform:
   - {fileID: 242952804338130746}
   - {fileID: 4257986475103663590}
   m_Father: {fileID: 2060777670}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1158,7 +1162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1128431596502848454, guid: 9663cc69bc376b94ca2d48c7d6f7d7e2, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1128431596502848454, guid: 9663cc69bc376b94ca2d48c7d6f7d7e2, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1626,9 +1630,9 @@ RectTransform:
   - {fileID: 945782783}
   - {fileID: 471878786}
   - {fileID: 2233067379286792979}
+  - {fileID: 1745589893}
   - {fileID: 918842238}
   - {fileID: 2135299847}
-  - {fileID: 1745589893}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1658,7 +1662,7 @@ MonoBehaviour:
   m_Defeat: {fileID: 4257986475103663591}
   m_InterlocutorScript: {fileID: 0}
   m_CrisisObject: {fileID: 945782781}
-  m_decallingLightInstitution: 150
+  m_decallingLightInstitution: 100
   m_ButtonInterlocutorPrefab: {fileID: 3381874221506486037, guid: f6d2ecc73c50d4e4d951dee69988c689, type: 3}
   m_canvasSize: {fileID: 0}
   m_InterfaceMode: 0
@@ -1807,7 +1811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717367316760324691, guid: 81c0a3ca3088bfd4bb960db263b910d3, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1717367316760324691, guid: 81c0a3ca3088bfd4bb960db263b910d3, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1904,7 +1908,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 30049161816834279, guid: 1e72b06db2487b14a80dbd13a561a30a, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 30049161816834279, guid: 1e72b06db2487b14a80dbd13a561a30a, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2062,7 +2066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4703994882369102615, guid: c0ef3dd4246e4cf4a9b05911937e283f, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4703994882369102615, guid: c0ef3dd4246e4cf4a9b05911937e283f, type: 3}
       propertyPath: m_AnchorMax.x
