@@ -26,6 +26,7 @@ public class TestSauvegarde : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.Keypad1))
         {
             Debug.Log("On sauvegarde !");
+            
             if (m_data1 == null)
             {
                 Debug.Log("<color=red>ERROR :</color> Data 1 manquante bordel !");
@@ -34,6 +35,7 @@ public class TestSauvegarde : MonoBehaviour
             {
                 m_data1.save();
             }
+            
             if (m_data2 == null)
             {
                 Debug.Log("<color=red>ERROR :</color> Data 2 manquante bordel !");
@@ -41,6 +43,27 @@ public class TestSauvegarde : MonoBehaviour
             else
             {
                 m_data2.save();
+            }
+        }
+
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.Keypad2))
+        {
+            if (m_data1 == null)
+            {
+                Debug.Log("<color=red>ERROR :</color> Data 1 manquante bordel !");
+            }
+            else
+            {
+                m_data1.load();
+            }
+            
+            if (m_data2 == null)
+            {
+                Debug.Log("<color=red>ERROR :</color> Data 2 manquante bordel !");
+            }
+            else
+            {
+                m_data2.load();
             }
         }
     }

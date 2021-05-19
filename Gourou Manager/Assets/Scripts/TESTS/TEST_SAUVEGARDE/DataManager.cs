@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class DataManager : Singleton<DataManager>
 {
-    [SerializeField] private string m_saveFilePath;
+    [SerializeField] private string m_saveFolderPath;
 
-    public string SaveFilePath => m_saveFilePath;
+    public string SaveFolderPath => m_saveFolderPath;
 
     private void Start()
     {
-        m_saveFilePath = Application.streamingAssetsPath;
+        m_saveFolderPath = Application.streamingAssetsPath;
     }
 }

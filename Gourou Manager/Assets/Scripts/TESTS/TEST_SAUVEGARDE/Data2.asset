@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae429e59570934419627c48585c159b, type: 3}
   m_Name: Data2
   m_EditorClassIdentifier: 
-  m_valInt: 0
-  m_valFloat: 0
-  valFloat: 
+  m_valInt: 2
+  m_valFloat: 2.2
+  m_valString: deux
+  m_valData: {fileID: 11400000, guid: 6726a448b76a0ad4cb5d1eda4769fa74, type: 2}
