@@ -3,13 +3,14 @@ using JetBrains.Annotations;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewApproche", menuName = "GourouManager/Dialogue/Approche")]
-public class ApproachSO : ScriptableObject
+public class ApproachSO : ScriptableObject, IInitializable
 {
     [SerializeField] private string m_name;
     [SerializeField] private ExactionSO m_exactionPos;
     [SerializeField] private ExactionSO m_exactionNeg;
     [SerializeField] private List<ConditionSO> m_cdtSuccess;
-    [SerializeField] private int m_cooldown;
+    [SerializeField] private int m_initCooldown;
+    private int m_cooldown;
     private int m_remainingTime;
 
     [SerializeField]
@@ -29,6 +30,18 @@ public class ApproachSO : ScriptableObject
     public int Cooldown => m_cooldown;
     
     public int RemainingTime => m_remainingTime;
+    
+    public void Initialize()
+    {
+        m_exactionPos.Initialize();
+        m_exactionNeg.Initialize();
+        foreach (ConditionSO condition in m_cdtSuccess)
+        {
+            condition.Initialize();
+        }
+        m_cooldown = m_initCooldown;
+        m_remainingTime = 0;
+    }
 
     /// <summary>
     /// Renvoie le résultat d'une tentative de cette approche.

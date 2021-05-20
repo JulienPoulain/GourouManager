@@ -1,4 +1,6 @@
 public interface IRecordable
 {
-    public void recordSave();
+    public int UUID { get; }
+    
+    public void recordSave(out string[] o_data);
 }

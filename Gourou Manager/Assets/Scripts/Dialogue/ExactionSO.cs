@@ -3,7 +3,7 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "ExactionSO", menuName = "GourouManager/Dialogue/Exaction")]
 
-public class ExactionSO : ScriptableObject
+public class ExactionSO : ScriptableObject, IInitializable
 {
     [SerializeField] private string m_name;
     [SerializeField] private string m_description;
@@ -16,6 +16,19 @@ public class ExactionSO : ScriptableObject
     public string Description => m_description;
     public List<EventSO> EventList => m_eventList;
     public List<ConditionSO> Conditions => m_conditions;
+    
+    public void Initialize()
+    {
+        foreach(EventSO eventSO in m_eventList)
+        {
+            eventSO.Initialize();
+        }
+
+        foreach (ConditionSO condition in m_conditions)
+        {
+            condition.Initialize();
+        }
+    }
 
     public bool IsValid()
     {

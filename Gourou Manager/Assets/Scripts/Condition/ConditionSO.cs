@@ -1,6 +1,8 @@
 using UnityEngine;
 
-public abstract class ConditionSO : ScriptableObject
+public abstract class ConditionSO : ScriptableObject, IInitializable
 {
+    public abstract void Initialize();
+    
     public abstract bool IsOneValid();
 }

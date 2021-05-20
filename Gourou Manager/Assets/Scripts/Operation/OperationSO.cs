@@ -1,8 +1,10 @@
 using UnityEngine;
 
-public abstract class OperationSO : ScriptableObject
+public abstract class OperationSO : ScriptableObject, IInitializable
 {
     [SerializeField] [TextArea(1,5)] private string m_overview;
+    
+    public abstract void Initialize();
 
     public abstract int Compute();
 

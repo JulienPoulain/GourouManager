@@ -21,7 +21,7 @@ public class TestSauvegarde : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.Keypad1))
         {
@@ -66,5 +66,5 @@ public class TestSauvegarde : MonoBehaviour
                 m_data2.load();
             }
         }
-    }
+    }*/
 }
