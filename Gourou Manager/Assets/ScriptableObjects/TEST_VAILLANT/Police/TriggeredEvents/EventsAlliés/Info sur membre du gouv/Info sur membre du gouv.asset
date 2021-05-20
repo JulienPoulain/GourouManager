@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
-  m_Name: "Sabotage de la propagande des m\xE9dias"
+  m_Name: Info sur membre du gouv
   m_EditorClassIdentifier: 
   m_name: 
   m_description: 
   m_eventList:
-  - {fileID: 11400000, guid: fc3683807ec1b7e489b418df583151c0, type: 2}
+  - {fileID: 11400000, guid: 2d35cda7516870648acf365fbc9af03f, type: 2}
   m_conditions:
-  - {fileID: 11400000, guid: 8a438352a8b668c48ae4e9a4e9b9d7d0, type: 2}
-  - {fileID: 11400000, guid: 306066fcd2a9ac642aa5bf14963ba4d4, type: 2}
+  - {fileID: 11400000, guid: 87af6617ca6c3934d9d3178cb90ec1dc, type: 2}
+  - {fileID: 11400000, guid: c70e045fa83d87341b69b65b70ffe9bc, type: 2}

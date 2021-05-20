@@ -29,5 +29,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 65221eafd33637b429b935b67866d543, type: 2}
   - {fileID: 11400000, guid: dcd520b71d91c8f41867fbedc38902d3, type: 2}
   - {fileID: 11400000, guid: 9b50879576092bc498ee7c33fb32a029, type: 2}
+  - {fileID: 11400000, guid: 228cd57e9a8f2644fbc0a7b6c07c907c, type: 2}
+  - {fileID: 11400000, guid: 27b1e2136222b1542a871f3c8c8f738b, type: 2}
+  - {fileID: 11400000, guid: 202839c20bfe1ea419e9201d91aca06a, type: 2}
   m_option: 2
   m_remainingTriggeredExactions: []

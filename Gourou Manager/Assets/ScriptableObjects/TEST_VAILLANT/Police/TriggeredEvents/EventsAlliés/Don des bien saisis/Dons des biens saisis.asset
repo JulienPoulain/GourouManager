@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
-  m_Name: "Sabotage de la propagande des m\xE9dias"
+  m_Name: Dons des biens saisis
   m_EditorClassIdentifier: 
   m_name: 
   m_description: 
   m_eventList:
-  - {fileID: 11400000, guid: fc3683807ec1b7e489b418df583151c0, type: 2}
+  - {fileID: 11400000, guid: 3fb828d189ae1ea46bca3046c50343d4, type: 2}
   m_conditions:
-  - {fileID: 11400000, guid: 8a438352a8b668c48ae4e9a4e9b9d7d0, type: 2}
-  - {fileID: 11400000, guid: 306066fcd2a9ac642aa5bf14963ba4d4, type: 2}
+  - {fileID: 11400000, guid: c0573f99877f41948ae90117cc13c9cd, type: 2}
+  - {fileID: 11400000, guid: fdc83ee8064f19a488b5c0964237780e, type: 2}
