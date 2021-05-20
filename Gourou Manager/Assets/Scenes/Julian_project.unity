@@ -1969,6 +1969,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1708436012}
     - target: {fileID: 159918188968930858, guid: 1e72b06db2487b14a80dbd13a561a30a, type: 3}
+      propertyPath: m_approachSceneToLoad
+      value: Approach
+      objectReference: {fileID: 0}
+    - target: {fileID: 159918188968930858, guid: 1e72b06db2487b14a80dbd13a561a30a, type: 3}
       propertyPath: m_TextAnnexe.Array.size
       value: 1
       objectReference: {fileID: 0}

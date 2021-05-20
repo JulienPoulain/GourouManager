@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TextInterlocutor : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class TextInterlocutor : MonoBehaviour
     [Tooltip("Definit si l'interface Interlocuteur cible un personnage ou non, utile pour éviter les bugs")] public bool m_InterlocutorSelected = false;
 
     private InterlocutorSO m_Interlocutor;
+
+    public string m_approachSceneToLoad;
     
     // si les interlocutor ne sont pas accessible : on affiche m_description + m_accessibility
     // si les interlocuteurs sont accessible : on affiche en plus m_condition + m_menace
@@ -149,6 +152,7 @@ public class TextInterlocutor : MonoBehaviour
             GameManager.Instance.m_InterfaceManager.DisallowInterlocutor();
 
             GameManager.Instance.m_PlayerHasExecuteApproche = true;
+            SceneManager.LoadScene(m_approachSceneToLoad);
         }
         else
         {
@@ -186,6 +190,5 @@ public class TextInterlocutor : MonoBehaviour
         {
             Debug.Log("Tu n as pas selectionner d'interlocuteurs");
         }
-            
     }
 }
