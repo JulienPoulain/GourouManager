@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: Exaction_Intimider_Positive
   m_EditorClassIdentifier: 
-  m_name: Augmenter les fonds
-  m_description: Augmente les fonds
+  m_name: 
+  m_description: 
   m_eventList:
   - {fileID: 11400000, guid: 0ef210b7058befe42aaef29a24e11ec4, type: 2}
   m_conditions: []

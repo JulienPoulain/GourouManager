@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Soudoyer
   m_EditorClassIdentifier: 
   m_name: Soudoyer
-  m_exactionPos: {fileID: 0}
-  m_exactionNeg: {fileID: 0}
+  m_exactionPos: {fileID: 11400000, guid: ccc82343b3575904f896e17475b73c77, type: 2}
+  m_exactionNeg: {fileID: 11400000, guid: 82f3cae86956f054e8cfcf224791e413, type: 2}
   m_cdtSuccess:
   - {fileID: 11400000, guid: 550e05300ca43d14f8d29f48c1fb044a, type: 2}
-  m_cooldown: 0
-  m_descriptionApproach: 
+  m_cooldown: 4
+  m_descriptionApproach: Soudoyer Micheal Thomas
   m_DialogueApproach: 
-  m_resultatApproach: 
+  m_resultatApproach: La corruption de la police augmentera un peu

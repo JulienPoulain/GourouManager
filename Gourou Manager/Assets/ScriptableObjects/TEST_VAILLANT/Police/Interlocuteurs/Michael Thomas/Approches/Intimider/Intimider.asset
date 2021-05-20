@@ -15,9 +15,9 @@ MonoBehaviour:
   m_name: Intimider
   m_exactionPos: {fileID: 11400000, guid: 5dbd677f5a1a5ad4d9d19a3590d9168c, type: 2}
   m_exactionNeg: {fileID: 11400000, guid: b831e8231a469f24a925f3837e0f0fe5, type: 2}
-  m_cdtSuccess: []
-  m_cooldown: 0
+  m_cdtSuccess:
+  - {fileID: 11400000, guid: 00652c8ca5ff3ce45be9df09c83a8377, type: 2}
+  m_cooldown: -1
   m_descriptionApproach: Intimider Michael Thomas
-  m_DialogueApproach: 'Mon cher Michael comment va votre femme Brigitte ? Ce serait
-    dommage qu''il lui arrive quelque chose de grave en allant travailler '
-  m_resultatApproach: 
+  m_DialogueApproach: 
+  m_resultatApproach: "Vous optiendrez peut \xEAtre une info importante..."

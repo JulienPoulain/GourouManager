@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
-  m_Name: NewEvent
+  m_Name: Coruption de la police ++
   m_EditorClassIdentifier: 
-  m_name: 
+  m_name: 'Soudoiement de Michael Thomas : Reussite'
   m_description: 
-  m_duration: 0
-  m_impacts: []
+  m_duration: 1
+  m_impacts:
+  - {fileID: 11400000, guid: 062e0b988b9715b4986dc36c0ca9ae05, type: 2}
   m_infoGained: []

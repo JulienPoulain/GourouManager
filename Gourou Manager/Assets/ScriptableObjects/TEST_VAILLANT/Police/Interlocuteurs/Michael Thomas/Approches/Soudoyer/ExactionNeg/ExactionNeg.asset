@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: 
   m_description: 
-  m_eventList: []
+  m_eventList:
+  - {fileID: 11400000, guid: 984b41aa6c6ac6347a590402e423ed6e, type: 2}
+  - {fileID: 11400000, guid: d9f2cab7992acba4c952e9f03f0aba01, type: 2}
   m_conditions: []

@@ -15,4 +15,6 @@ MonoBehaviour:
   m_name: Echec de l'approche
   m_description: "L'approche a \xE9chou\xE9e "
   m_duration: 1
-  m_impacts: []
+  m_impacts:
+  - {fileID: 11400000, guid: 641d8487e44180941bcef4a3e43c31e9, type: 2}
+  m_infoGained: []
