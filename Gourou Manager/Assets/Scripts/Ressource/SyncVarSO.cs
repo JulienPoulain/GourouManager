@@ -4,7 +4,7 @@ public class SyncVar<T> : ScriptableObject, IInitializable
 {
     [SerializeField] private string m_name;
     [SerializeField] public T m_initValue;
-    public T m_value;
+    [SerializeField] public T m_value;
 
     public string Name => m_name;
     

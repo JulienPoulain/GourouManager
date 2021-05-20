@@ -21,7 +21,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
     private List<Event> m_activeEvents = new List<Event>();
 
     public bool m_focusOnInstitution = false;
-    int m_turn = 0;
+    [SerializeField] int m_turn;
 
     public List<ExactionSO> PendingExactions => m_pendingExactions;
 
@@ -37,6 +37,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
 
     public void Initialize()
     {
+        m_turn = 0;
         foreach (InstitutionSO institution in m_institutions)
         {
             institution.Initialize();
@@ -45,8 +46,6 @@ public class GameManager : Singleton<GameManager>, IInitializable
     
     private void Start()
     {
-        Initialize();
-        
         m_MainInstitutionSO = m_MainInstitution.GetComponent<InterfaceInstitution>().m_Institution;
 
         foreach (GameObject Institution in m_Institutions)
@@ -55,10 +54,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
             
         }
 
-        foreach (InstitutionSO institutionSO in m_institutions)
-        {
-            institutionSO.init();
-        }
+        Initialize();
     }
 
     public void EndTurn()

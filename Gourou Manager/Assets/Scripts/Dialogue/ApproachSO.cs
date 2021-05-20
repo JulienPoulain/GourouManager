@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using JetBrains.Annotations;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewApproche", menuName = "GourouManager/Dialogue/Approche")]
@@ -12,7 +11,7 @@ public class ApproachSO : ScriptableObject, IInitializable
 
     [SerializeField] private int m_initCooldown;
     private int m_cooldown;
-    private int m_remainingTime;
+    [SerializeField] private int m_remainingTime;
 
     [SerializeField]
     [Tooltip("petite descrition de l'approche pour le joueur exemple : Si vous parvenez a l'intimider, vous obtiendrez des informations")]
