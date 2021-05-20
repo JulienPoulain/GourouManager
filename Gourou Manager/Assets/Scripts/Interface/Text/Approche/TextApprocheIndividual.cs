@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TextApprocheIndividual : MonoBehaviour
 {
@@ -22,10 +23,14 @@ public class TextApprocheIndividual : MonoBehaviour
 
     public void ExecuteApproche()
     {
+        Debug.Log("L'approach n'est pas faite !");
+        SceneManager.LoadScene("Julian_project");
+
+        /*
         GameManager.Instance.PendingExactions.Add(m_Approche.TryApproach());
         Debug.Log("Approche fait");
         GameManager.Instance.m_InterfaceManager.DisallowApproche();
-
+        */
         m_Approche = null;
     }
 }

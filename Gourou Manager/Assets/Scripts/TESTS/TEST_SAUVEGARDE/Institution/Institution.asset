@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f60d9fd165f1bf4a8d858defcd6937f, type: 3}
-  m_Name: NewInstitution
+  m_Name: Institution
   m_EditorClassIdentifier: 
   m_name: 
   m_funds: {fileID: 0}

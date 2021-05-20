@@ -49,11 +49,11 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
         m_InstitutionData = p_data;
 
         m_textNom.text = "" + p_data.m_name;
-        m_textFonds.text = "Fonds : " + p_data.m_funds.m_value;
-        m_textMembres.text = "Membres : " + p_data.m_members.m_value;
-        m_textFanatiques.text = "Fanatiques : " + p_data.m_fanatics.m_value;
+        m_textFonds.text = "Fonds : " + p_data.m_funds.Value;
+        m_textMembres.text = "Membres : " + p_data.m_members.Value;
+        m_textFanatiques.text = "Fanatiques : " + p_data.m_fanatics.Value;
         m_textEtat.text = "Etat : " + p_data.m_option.ToString();
-        m_textExpositionPublique.text = "Exposition publique : " + p_data.m_publicExposure.m_value;
+        m_textExpositionPublique.text = "Exposition publique : " + p_data.m_publicExposure.Value;
 
         /*
         m_textGouvernement.text = "Pour Gouvernements :";
