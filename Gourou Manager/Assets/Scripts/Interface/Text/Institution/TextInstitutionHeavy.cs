@@ -95,10 +95,11 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
     }
 
 
+    Vector2 m_dragOffset;
+
     public void OnPointerDown(PointerEventData eventData)
     {
-        StartCoroutine("MousePressed");
-        MoveWindow();
+        StartCoroutine(MousePressed());
     }
 
 
@@ -107,30 +108,36 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
         GameManager.Instance.m_InterfaceManager.m_cursorFocusHeavyInstitution = false;
     }
 
-    Vector3 oldMousePos;
+    Vector3 m_oldMousePos;
 
     void MoveWindow()
     {
-        if (oldMousePos != Input.mousePosition)
+        if (m_oldMousePos != Input.mousePosition)
         {
+
+            Vector3 mvt = Input.mousePosition - m_oldMousePos;
+
+
             // Vector3 vector = (Input.mousePosition - oldMousePos).normalized;
 
             // transform.position += vector * 1.5f;
 
             // m_ThisRectangle.pivot = new Vector2(Input.mousePosition.x, Input.mousePosition.y); 
 
-            transform.position = Input.mousePosition;
+           // Vector3 offset = new Vector3(m_dragOffset.x, m_dragOffset.y, 0);
 
-           oldMousePos = Input.mousePosition;
+            transform.position += mvt;
+
+            m_oldMousePos = Input.mousePosition;
         }
     }
 
     IEnumerator MousePressed()
     {
-        while (Input.GetMouseButton(0))
-        {
+        m_oldMousePos = Input.mousePosition;
+        while (Input.GetMouseButton(0)) {
             MoveWindow();
-            yield return new WaitForSeconds(0.000001f);
+            yield return null;
         }
     }
 }
