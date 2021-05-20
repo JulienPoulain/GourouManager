@@ -9,8 +9,7 @@ public class ApproachSO : ScriptableObject, IInitializable
     [SerializeField] private ExactionSO m_exactionNeg;
     [SerializeField] private List<ConditionSO> m_cdtSuccess;
 
-    [SerializeField] private int m_initCooldown;
-    private int m_cooldown;
+    [SerializeField] private int m_cooldown;
     [SerializeField] private int m_remainingTime;
 
     [SerializeField]
@@ -39,7 +38,6 @@ public class ApproachSO : ScriptableObject, IInitializable
         {
             condition.Initialize();
         }
-        m_cooldown = m_initCooldown;
         m_remainingTime = 0;
     }
 
