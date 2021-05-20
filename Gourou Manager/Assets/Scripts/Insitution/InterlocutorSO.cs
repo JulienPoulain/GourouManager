@@ -3,7 +3,7 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewInterlocutor", menuName = "GourouManager/Institution/Interlocuteur")]
 
-public class InterlocutorSO: ScriptableObject
+public class InterlocutorSO: ScriptableObject, IInitializable
 {
     [SerializeField] public string m_name;
     [SerializeField] public string m_description;
@@ -12,6 +12,20 @@ public class InterlocutorSO: ScriptableObject
     [SerializeField] [Tooltip("Conditions d'accès à l'interlocuteur.")] private List<ConditionIntSO>  m_accesConditions;
 
     public List<ConditionIntSO> AccessCondition => m_accesConditions;
+    
+    public void Initialize()
+    {
+        m_sanity.Initialize();
+        foreach (ApproachSO approach in m_approach)
+        {
+            approach.Initialize();
+        }
+
+        foreach (ConditionIntSO conditionInt in m_accesConditions)
+        {
+            conditionInt.Initialize();
+        }
+    }
 
     public bool IsAccessible()
     {

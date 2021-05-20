@@ -4,7 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewInstitution", menuName = "GourouManager/Institution/Institution")]
 
-public class InstitutionSO : ScriptableObject
+public class InstitutionSO : ScriptableObject, IInitializable
 
 {
     [SerializeField] public string m_name;
@@ -15,7 +15,7 @@ public class InstitutionSO : ScriptableObject
     [SerializeField] [Tooltip("Citoyens composant l’Institution")] public SyncIntSO m_members;
     [SerializeField] [Tooltip("Membres dévoués à l’Institution. 0 sauf pour religion, culte, BB.")] public SyncIntSO m_fanatics;
     [SerializeField] [Tooltip("Citoyens corrompus par l’Institution au prochain tour (+/-)")] public SyncIntSO m_impactOnPop;
-    [SerializeField] [Tooltip("Entier qui va venir alimenter la Crise à la fin de chaque tour")] public SyncIntSO m_impactOnCrise;
+    //[SerializeField] [Tooltip("Entier qui va venir alimenter la Crise à la fin de chaque tour")] public SyncIntSO m_impactOnCrise;
     [SerializeField] [Tooltip("Notoriété de l’Institution")] public SyncIntSO m_publicExposure;
     [SerializeField] [Tooltip("Entier représentant le niveau de corruption de l’Institution")] public SyncIntSO m_corruption;
     [SerializeField] [Tooltip("Entier entre 0 et 100. 10 à l'initialisation")] public SyncIntSO m_brutality;
@@ -40,6 +40,30 @@ public class InstitutionSO : ScriptableObject
     
     public List<ExactionSO> RemainingTriggeredExactions => m_remainingTriggeredExactions;
 
+    public void Initialize()
+    {
+        m_funds.Initialize();
+        m_members.Initialize();
+        m_fanatics.Initialize();
+        m_impactOnPop.Initialize();
+        //m_impactOnCrise.Initialize();
+        m_publicExposure.Initialize();
+        m_corruption.Initialize();
+        m_brutality.Initialize();
+        foreach (InterlocutorSO interlocutor in m_interlocutorList)
+        {
+            interlocutor.Initialize();
+        }
+        foreach (ExactionSO exaction in m_exactionList)
+        {
+            exaction.Initialize();
+        }
+        foreach (ExactionSO tExaction in m_triggeredExactions)
+        {
+            tExaction.Initialize();
+        }
+    }
+    
     public void init()
     {
         foreach (ExactionSO exaction in m_triggeredExactions)
@@ -60,6 +84,4 @@ public class InstitutionSO : ScriptableObject
         
         return dialoguesList;
     }
-    
-
 }

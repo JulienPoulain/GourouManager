@@ -5,8 +5,15 @@ using UnityEngine;
 public class ConditionIntSO : ConditionSO
 {
     [SerializeField] public RessourceSO m_ressource;    // utiliser dans TextInterlocutor
-    [SerializeField] public ConditionType m_conditionType;  // utiliser dans TextInterlocutor (interface)
-    [SerializeField] private int m_value;
+    [SerializeField] public ConditionType m_conditionType; // utiliser dans TextInterlocutor (interface)
+    [SerializeField] private int m_initValue;
+    private int m_value;
+    
+    public override void Initialize()
+    {
+        m_value = m_initValue;
+        m_ressource.Initialize();
+    }
 
     public override string ToString()
     {
@@ -42,7 +49,7 @@ public class ConditionIntSO : ConditionSO
         }
         return false;
     }
-    
+
     private bool Resolve(ConditionType p_conditionType)
     {
         switch (p_conditionType)
