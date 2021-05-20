@@ -9,6 +9,7 @@ public class ApproachSO : ScriptableObject, IInitializable
     [SerializeField] private ExactionSO m_exactionPos;
     [SerializeField] private ExactionSO m_exactionNeg;
     [SerializeField] private List<ConditionSO> m_cdtSuccess;
+
     [SerializeField] private int m_initCooldown;
     private int m_cooldown;
     private int m_remainingTime;
@@ -17,9 +18,12 @@ public class ApproachSO : ScriptableObject, IInitializable
     [Tooltip("petite descrition de l'approche pour le joueur exemple : Si vous parvenez a l'intimider, vous obtiendrez des informations")]
     public string m_descriptionApproach; // utiliser dans TextInterlocutor
 
+    [SerializeField] private int m_cooldown;
+    public int m_remainingTime = 0;
+
     [SerializeField]
     [Tooltip("Phrase du personnage lors du dialogue (Partie de Maxime)")]
-    public string m_DialogueApproach; // utiliser dans TextApprocheIndividual
+    public string m_dialogueApproach; // utiliser dans TextApprocheIndividual
 
     [SerializeField]
     [Tooltip("Phrase au joueur pour lui indiquer ce qu'il reçois s'il réussit l'approche, ex: si vous parvenez à l'intimider, vous pourrez obtenir ceci")]
@@ -47,7 +51,9 @@ public class ApproachSO : ScriptableObject, IInitializable
     /// Renvoie le résultat d'une tentative de cette approche.
     /// </summary>
     /// <returns>L'exaction correspondante si l'approche n'est pas en récupération. Sinon null.</returns>
-    [CanBeNull] public ExactionSO TryApproach()
+   
+    /*
+    public ExactionSO TryApproach()
     {
         if (!(m_remainingTime > 0))
         {
@@ -57,6 +63,14 @@ public class ApproachSO : ScriptableObject, IInitializable
             return m_exactionNeg;
         }
         return null;
+    }
+    */
+    public ExactionSO TryApproach()
+    {
+        m_remainingTime = m_cooldown;
+        if (ConditionsReached(m_cdtSuccess))
+            return m_exactionPos;
+        return m_exactionNeg;
     }
 
     public bool IsSuccessful()

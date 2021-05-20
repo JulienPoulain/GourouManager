@@ -8,7 +8,7 @@ public class TextApprocheMain : MonoBehaviour
     
     List<TextApprocheIndividual> m_approcheScript = new List<TextApprocheIndividual>();
 
-    // sert à faire une interface responsive
+    // sert Ã  faire une interface responsive
     RectTransform m_canvasSize;
 
     void Start()
@@ -27,11 +27,21 @@ public class TextApprocheMain : MonoBehaviour
         float posX = 0;
         float posY = 0;
 
+        // on desaffiche toute la liste
+        foreach (GameObject thisObject in m_approche)
+        {
+            thisObject.SetActive(false);
+        }
+
         transform.position = new Vector3(posX, posY, 0);
 
+        // Pour afficher ceux dont on a besoin 
         for (int i = 0; i < p_interlocutor.m_approach.Count; i++)
         {
             m_approcheScript[i].Display(p_interlocutor.m_approach[i]);
+            m_approche[i].SetActive(true);
         }
     }
+
+    
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 public class RoundManager : Singleton<RoundManager>
 {
@@ -50,6 +51,7 @@ public class RoundManager : Singleton<RoundManager>
 
     public void AddEvent(List<ExactionSO> p_exactions, List<Event> p_events)
     {
+        Debug.Log($"p_exaction {p_exactions} {p_exactions.Count}");
         foreach (ExactionSO exactionSO in p_exactions)
         {
             foreach (EventSO eventSO in exactionSO.EventList)
@@ -106,6 +108,7 @@ public class RoundManager : Singleton<RoundManager>
         foreach (SyncIntSO ressource in pendingChanges.Keys)
         {
             ressource.m_value += pendingChanges[ressource];
+            Debug.Log("CECI EST LA RESSOURCE : " + ressource.Name + "et son changement " + pendingChanges[ressource]);
         }
     }
 }

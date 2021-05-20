@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f60d9fd165f1bf4a8d858defcd6937f, type: 3}
+  m_Name: Police 1
+  m_EditorClassIdentifier: 
+  m_name: 
+  m_funds: {fileID: 0}
+  m_members: {fileID: 0}
+  m_fanatics: {fileID: 0}
+  m_impactOnPop: {fileID: 0}
+  m_impactOnCrise: {fileID: 0}
+  m_publicExposure: {fileID: 0}
+  m_corruption: {fileID: 0}
+  m_brutality: {fileID: 0}
+  m_interlocutorList: []
+  m_exactionList: []
+  m_eventList: []
+  m_option: 0

@@ -27,6 +27,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
 
     public List<Event> ActiveEvents => m_activeEvents;
 
+    public InstitutionSO MainInstitution => m_MainInstitutionSO;
     public List<InstitutionSO> Institutions => m_institutions;
 
     // Player Variable //

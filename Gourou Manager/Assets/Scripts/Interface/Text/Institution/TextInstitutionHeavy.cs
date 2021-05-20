@@ -63,8 +63,6 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
         DisplayExaction();
     }
 
-
-
     public void DisplayInterlocutor()
     {
         GameManager.Instance.m_InterfaceManager.DisplayInterlocutor(m_InstitutionData);
@@ -72,10 +70,10 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
 
     public void DisplayExaction()
     {
-        // On désaffiche les exactions pour les afficher comme on veut
+        // On dÃ©saffiche les exactions pour les afficher comme on veut
         DisallowExaction();
 
-        // On affiche les exactions selon notre besoin & on les paramètre        
+        // On affiche les exactions selon notre besoin & on les paramÃ¨tre        
         for (int i = 0; i < m_InstitutionData.m_exactionList.Count; i++)
         {
             m_ExactionsObject[i].SetActive(true);
@@ -94,16 +92,14 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
     public void OnPointerEnter(PointerEventData eventData)
     {
         GameManager.Instance.m_InterfaceManager.m_cursorFocusHeavyInstitution = true;
-        Debug.Log("JE passe la souris dessus");
     }
 
 
+    Vector2 m_dragOffset;
+
     public void OnPointerDown(PointerEventData eventData)
     {
-        StartCoroutine("MousePressed");
-
-        Debug.Log("JE SUIS APPUIER");
-        MoveWindow();
+        StartCoroutine(MousePressed());
     }
 
 
@@ -112,30 +108,36 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
         GameManager.Instance.m_InterfaceManager.m_cursorFocusHeavyInstitution = false;
     }
 
-    Vector3 oldMousePos;
+    Vector3 m_oldMousePos;
 
     void MoveWindow()
     {
-        if (oldMousePos != Input.mousePosition)
+        if (m_oldMousePos != Input.mousePosition)
         {
+
+            Vector3 mvt = Input.mousePosition - m_oldMousePos;
+
+
             // Vector3 vector = (Input.mousePosition - oldMousePos).normalized;
 
             // transform.position += vector * 1.5f;
 
             // m_ThisRectangle.pivot = new Vector2(Input.mousePosition.x, Input.mousePosition.y); 
 
-            transform.position = Input.mousePosition;
+           // Vector3 offset = new Vector3(m_dragOffset.x, m_dragOffset.y, 0);
 
-           oldMousePos = Input.mousePosition;
+            transform.position += mvt;
+
+            m_oldMousePos = Input.mousePosition;
         }
     }
 
     IEnumerator MousePressed()
     {
-        while (Input.GetMouseButton(0))
-        {
+        m_oldMousePos = Input.mousePosition;
+        while (Input.GetMouseButton(0)) {
             MoveWindow();
-            yield return new WaitForSeconds(0.000001f);
+            yield return null;
         }
     }
 }

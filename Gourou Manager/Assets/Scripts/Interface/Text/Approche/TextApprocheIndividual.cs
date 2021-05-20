@@ -16,7 +16,7 @@ public class TextApprocheIndividual : MonoBehaviour
         m_Approche = p_approach;
 
         m_name.text = "" + p_approach.Name;
-        m_dialogueCharacter.text = "" + p_approach.m_DialogueApproach;
+        m_dialogueCharacter.text = "" + p_approach.m_dialogueApproach;
         m_gain.text = "" + p_approach.m_resultatApproach;
     }
 
@@ -25,5 +25,7 @@ public class TextApprocheIndividual : MonoBehaviour
         GameManager.Instance.PendingExactions.Add(m_Approche.TryApproach());
         Debug.Log("Approche fait");
         GameManager.Instance.m_InterfaceManager.DisallowApproche();
+
+        m_Approche = null;
     }
 }

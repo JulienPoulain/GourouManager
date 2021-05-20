@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Julian_project.unity
+    guid: f8bf894f2be485c49aefea0ee2043341
+  - enabled: 1
+    path: Assets/Scenes/Approach.unity
+    guid: dc5de4ae8610d954d99a1cfcfc9c35ae
   m_configObjects: {}
