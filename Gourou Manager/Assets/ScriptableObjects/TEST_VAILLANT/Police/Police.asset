@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f60d9fd165f1bf4a8d858defcd6937f, type: 3}
+  m_Name: Police
+  m_EditorClassIdentifier: 
+  m_name: Police
+  m_funds: {fileID: 11400000, guid: 7ba4bd4060c32d54f863544caaf36aa3, type: 2}
+  m_members: {fileID: 0}
+  m_fanatics: {fileID: 0}
+  m_impactOnPop: {fileID: 11400000, guid: 61a90f88eca70fa4cac2ee4f06a5ccac, type: 2}
+  m_impactOnCrise: {fileID: 0}
+  m_publicExposure: {fileID: 11400000, guid: 06c0a45579e47cf4ebaf14a990e10951, type: 2}
+  m_corruption: {fileID: 11400000, guid: 06527bf37a213a648b5c325f45921c23, type: 2}
+  m_brutality: {fileID: 0}
+  m_interlocutorList:
+  - {fileID: 11400000, guid: 8b0cc57bafe1a0c4b9b85a44bd8c66b1, type: 2}
+  - {fileID: 11400000, guid: ba95949992ba0d94fba71bc8210b4032, type: 2}
+  m_exactionList: []
+  m_triggeredExactions:
+  - {fileID: 11400000, guid: 65221eafd33637b429b935b67866d543, type: 2}
+  - {fileID: 11400000, guid: dcd520b71d91c8f41867fbedc38902d3, type: 2}
+  - {fileID: 11400000, guid: 9b50879576092bc498ee7c33fb32a029, type: 2}
+  - {fileID: 11400000, guid: 228cd57e9a8f2644fbc0a7b6c07c907c, type: 2}
+  - {fileID: 11400000, guid: 27b1e2136222b1542a871f3c8c8f738b, type: 2}
+  - {fileID: 11400000, guid: 202839c20bfe1ea419e9201d91aca06a, type: 2}
+  m_option: 2
+  m_remainingTriggeredExactions: []
