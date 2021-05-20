@@ -14,18 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Police
   m_funds: {fileID: 11400000, guid: 7ba4bd4060c32d54f863544caaf36aa3, type: 2}
-  m_members: {fileID: 11400000, guid: 53dfa4f9c288ac44bb4f8ad2165dc0cc, type: 2}
-  m_fanatics: {fileID: 11400000, guid: 62bd1f06bbfa81e4085d4645401a4d38, type: 2}
+  m_members: {fileID: 0}
+  m_fanatics: {fileID: 0}
   m_impactOnPop: {fileID: 11400000, guid: 61a90f88eca70fa4cac2ee4f06a5ccac, type: 2}
   m_impactOnCrise: {fileID: 0}
   m_publicExposure: {fileID: 11400000, guid: 06c0a45579e47cf4ebaf14a990e10951, type: 2}
   m_corruption: {fileID: 11400000, guid: 06527bf37a213a648b5c325f45921c23, type: 2}
-  m_brutality: {fileID: 11400000, guid: 9aeb3d902a5dc5c4f8e923b1a6abb3aa, type: 2}
+  m_brutality: {fileID: 0}
   m_interlocutorList:
   - {fileID: 11400000, guid: 8b0cc57bafe1a0c4b9b85a44bd8c66b1, type: 2}
   - {fileID: 11400000, guid: ba95949992ba0d94fba71bc8210b4032, type: 2}
-  m_exactionList:
-  - {fileID: 11400000, guid: cddefca21260f634a95298ee17d1e653, type: 2}
-  m_triggeredExactions: []
+  m_exactionList: []
+  m_triggeredExactions:
+  - {fileID: 11400000, guid: 65221eafd33637b429b935b67866d543, type: 2}
+  - {fileID: 11400000, guid: dcd520b71d91c8f41867fbedc38902d3, type: 2}
+  - {fileID: 11400000, guid: 9b50879576092bc498ee7c33fb32a029, type: 2}
   m_option: 2
   m_remainingTriggeredExactions: []
