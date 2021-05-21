@@ -43,14 +43,62 @@ public class InstitutionSO : ScriptableObject, IInitializable
 
     public void Initialize()
     {
-        m_funds.Initialize();
-        m_members.Initialize();
-        m_fanatics.Initialize();
-        m_impactOnPop.Initialize();
-        //m_impactOnCrise.Initialize();
-        m_publicExposure.Initialize();
-        m_corruption.Initialize();
-        m_brutality.Initialize();
+        if (m_funds == null)
+        {
+            Debug.Log("<color=red>ERROR :</color> Fonds manquants.");
+        }
+        else
+        {
+            m_funds.Initialize();
+        }
+        if (m_members == null)
+        {
+            Debug.Log("<color=red>ERROR :</color> Membres manquants.");
+        }
+        else
+        {
+            m_members.Initialize();
+        }
+        if (m_fanatics == null)
+        {
+            Debug.Log("<color=red>ERROR :</color> Fanatiques manquants.");
+        }
+        else
+        {
+            m_fanatics.Initialize();
+        }
+        if (m_impactOnPop == null)
+        {
+            Debug.Log("<color=red>ERROR :</color> Impact population manquant.");
+        }
+        else
+        {
+            m_impactOnPop.Initialize();
+        }
+        if (m_publicExposure == null)
+        {
+            Debug.Log("<color=red>ERROR :</color> Exposition publique manquante.");
+        }
+        else
+        {
+            m_publicExposure.Initialize();
+        }
+        if (m_corruption == null)
+        {
+            Debug.Log("<color=red>ERROR :</color> Corruption manquante.");
+        }
+        else
+        {
+            m_corruption.Initialize();
+        }
+        if (m_brutality == null)
+        {
+            Debug.Log("<color=red>ERROR :</color> Brutalité manquante.");
+        }
+        else
+        {
+            m_brutality.Initialize();
+        }
         foreach (InterlocutorSO interlocutor in m_interlocutorList)
         {
             interlocutor.Initialize();
@@ -62,14 +110,6 @@ public class InstitutionSO : ScriptableObject, IInitializable
         foreach (ExactionSO tExaction in m_triggeredExactions)
         {
             tExaction.Initialize();
-        }
-    }
-    
-    public void init()
-    {
-        foreach (ExactionSO exaction in m_triggeredExactions)
-        {
-            m_remainingTriggeredExactions.Add(exaction);
         }
     }
 

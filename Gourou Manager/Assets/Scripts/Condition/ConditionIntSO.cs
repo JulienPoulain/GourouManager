@@ -6,12 +6,10 @@ public class ConditionIntSO : ConditionSO
 {
     [SerializeField] public RessourceSO m_ressource;    // utiliser dans TextInterlocutor
     [SerializeField] public ConditionType m_conditionType; // utiliser dans TextInterlocutor (interface)
-    [SerializeField] private int m_initValue;
-    private int m_value;
+    [SerializeField]private int m_value;
     
     public override void Initialize()
     {
-        m_value = m_initValue;
         m_ressource.Initialize();
     }
 
