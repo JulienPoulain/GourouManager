@@ -188,6 +188,11 @@ public class InterfaceManager : MonoBehaviour
         DisallowHeavyInstitution();
     }
 
+    public void DisplayNextTurnButton()
+    {
+        m_NextTurnButton.SetActive(true);
+    }
+
     public void DisplayEndTurn()
     {
         m_EndTurn.SetActive(true);
