@@ -41,7 +41,5 @@ public class TextApprocheMain : MonoBehaviour
             m_approcheScript[i].Display(p_interlocutor.m_approach[i]);
             m_approche[i].SetActive(true);
         }
-    }
-
-    
+    }    
 }

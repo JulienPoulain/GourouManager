@@ -27,7 +27,7 @@ public class TextEndTurn : MonoBehaviour
             m_textStatList.Add(thisObject.GetComponent<TMP_Text>());
         }
 
-        // Display();
+        Display();
     }
 
     void Display()
