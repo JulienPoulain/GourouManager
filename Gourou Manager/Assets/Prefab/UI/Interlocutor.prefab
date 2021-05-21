@@ -1861,7 +1861,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 48}
+  m_AnchoredPosition: {x: 0, y: 4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &159918188968930858
@@ -1890,6 +1890,7 @@ MonoBehaviour:
   m_TextAnnexe:
   - {fileID: 5149042823493943930}
   m_InterlocutorSelected: 0
+  m_approachSceneToLoad: 
 --- !u!1 &7913143610529030951
 GameObject:
   m_ObjectHideFlags: 0

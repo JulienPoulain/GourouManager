@@ -25,15 +25,17 @@ public class InterfaceManager : MonoBehaviour
     [SerializeField] GameObject m_InstitutionHeavyObject;
     [SerializeField] GameObject m_InterlocutorObject;
     [SerializeField] GameObject m_Approche;
-    [SerializeField] GameObject m_EndTurn;
+    [SerializeField] GameObject m_NextTurnButton;
     [SerializeField] GameObject m_Victory;
     [SerializeField] GameObject m_Defeat;
+    [SerializeField] GameObject m_EndTurn;
 
     TextInstitutionLight m_InstitutionLightScript;
     TextInstitutionHeavy m_InstitutionHeavyScript;
     TextCrisis m_CrisisScript;
     public TextInterlocutor m_InterlocutorScript; // seulement utiliser dans InterlocutorButton (vital)
     TextApprocheMain m_ApprocheScript;
+    TextEndTurn m_EndTurnScript;
 
     // public TextInterlocutor TextInterlocutor => m_InterlocutorScript;
 
@@ -111,6 +113,7 @@ public class InterfaceManager : MonoBehaviour
         m_CrisisScript = m_CrisisObject.GetComponent<TextCrisis>();
         m_InterlocutorScript = m_InterlocutorObject.GetComponent<TextInterlocutor>();
         m_ApprocheScript = m_Approche.GetComponent<TextApprocheMain>();
+        m_EndTurnScript = m_EndTurn.GetComponent<TextEndTurn>();
     }
 
     // -----------------------------------------------------------------------------------------
@@ -187,7 +190,8 @@ public class InterfaceManager : MonoBehaviour
 
     public void DisplayEndTurn()
     {
-        
+        m_EndTurn.SetActive(true);
+        m_EndTurnScript.Display();
     }
 
     public void DisplayVoctory()
@@ -255,6 +259,11 @@ public class InterfaceManager : MonoBehaviour
         m_Defeat.SetActive(false);
     }
 
+    public void DisallowEndTurn()
+    {
+        m_EndTurn.SetActive(false);
+    }
+
     // -----------------------------------------------------------------------------------------
     // Calcul
     // -----------------------------------------------------------------------------------------
@@ -289,8 +298,8 @@ public class InterfaceManager : MonoBehaviour
 
     Vector3 firstButtonPos(InstitutionSO p_data, float p_buttonWidth)
     {
-        float startX = (m_canvasSize.rect.width / 2)  - ((p_data.m_interlocutorList.Count * p_buttonWidth)/3);
-        float startY = m_canvasSize.rect.height - 50;
+        float startX = (m_canvasSize.rect.width / 3)  - ((p_data.m_interlocutorList.Count * p_buttonWidth)/3);
+        float startY = m_canvasSize.rect.height - m_canvasSize.rect.height/3;
 
         return new Vector3(startX, startY, 0);
     }

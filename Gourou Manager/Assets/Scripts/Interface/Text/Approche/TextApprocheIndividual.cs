@@ -31,6 +31,7 @@ public class TextApprocheIndividual : MonoBehaviour
         Debug.Log("Approche fait");
         GameManager.Instance.m_InterfaceManager.DisallowApproche();
         */
+
         m_Approche = null;
     }
 }

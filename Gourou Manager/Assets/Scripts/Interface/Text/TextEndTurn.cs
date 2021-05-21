@@ -30,7 +30,7 @@ public class TextEndTurn : MonoBehaviour
         Display();
     }
 
-    void Display()
+    public void Display()
     {
         DisallowAll();
         
@@ -45,6 +45,12 @@ public class TextEndTurn : MonoBehaviour
         m_textStatList[1].text = "Membres : " + GameManager.Instance.MainInstitution.m_members.Value.ToString();
         m_textStatList[2].text = "Fanatiques : " + GameManager.Instance.MainInstitution.m_fanatics.Value.ToString();
         m_textStatList[3].text = "Exposition Publique : " + GameManager.Instance.MainInstitution.m_publicExposure.Value.ToString();
+        m_textStatList[4].text = "Brutalité : " + GameManager.Instance.MainInstitution.m_brutality.Value;
+    }
+
+    public void Disallow()
+    {
+        GameManager.Instance.m_InterfaceManager.DisallowEndTurn();
     }
 
     void DisallowAll()

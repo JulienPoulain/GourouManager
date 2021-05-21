@@ -66,5 +66,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
 
         m_PlayerHasExecuteExaction = false;
         m_PlayerHasExecuteApproche = false;
+
+        m_InterfaceManager.DisplayEndTurn();
     }
 }
