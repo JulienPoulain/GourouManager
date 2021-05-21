@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
+  m_Name: EV_FINANCEMENT
+  m_EditorClassIdentifier: 
+  m_name: FINANCEMENT OBTENU
+  m_description: Vous obtenez un financement massif
+  m_duration: 3
+  m_impacts:
+  - {fileID: 11400000, guid: daad4e138f0a09e4b8c67f8df1ba5e5e, type: 2}
+  - {fileID: 11400000, guid: 37ab65aa7f6381b4f916387d31057061, type: 2}
+  m_infoGained: []

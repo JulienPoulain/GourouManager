@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525d2b2df425485449ec8a12401c7c35, type: 3}
+  m_Name: INTIMIDER LUIS
+  m_EditorClassIdentifier: 
+  m_name: INTIMIDER POUR DETOURNEMENT DE FONDS
+  m_exactionPos: {fileID: 11400000, guid: 01ed7a3e169a37447b334d795a8e475d, type: 2}
+  m_exactionNeg: {fileID: 11400000, guid: 55a6d43d6d55aa34d8e457b3511020d0, type: 2}
+  m_cdtSuccess:
+  - {fileID: 11400000, guid: 6dc0738c61426f74683bde11f20946f5, type: 2}
+  - {fileID: 11400000, guid: 4cb162c8a7e40ec49bf7b5fc9ad4568b, type: 2}
+  m_cooldown: 1000
+  m_descriptionApproach: "Vous essayez d'Intimider Luis, en lui imposant de d\xE9tourner
+    les fonds de la Conf\xE9d\xE9ration du Travail."
+  m_DialogueApproach: 
+  m_resultatApproach: "Si vous disposez de quoi intimider Luis, vous obtiendrez des
+    Fonds plusieurs tours cons\xE9cutifs provenant de d\xE9tournements de Fonds."

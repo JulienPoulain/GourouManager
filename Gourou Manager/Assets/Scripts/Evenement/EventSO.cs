@@ -6,8 +6,7 @@ public class EventSO : ScriptableObject, IInitializable
 {
     [SerializeField] private string m_name;
     [SerializeField] private string m_description;
-    [SerializeField] private int m_initDuration;
-    private int m_duration;
+    [SerializeField] private int m_duration;
     [SerializeField] private List<ImpactSO> m_impacts;
     [SerializeField] private List<InfoSO> m_infoGained;
 
@@ -19,7 +18,6 @@ public class EventSO : ScriptableObject, IInitializable
     
     public void Initialize()
     {
-        m_duration = m_initDuration;
         foreach (ImpactSO impact in m_impacts)
         {
             impact.Initialize();
