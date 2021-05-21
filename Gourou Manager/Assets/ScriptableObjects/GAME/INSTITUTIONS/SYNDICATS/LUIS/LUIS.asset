@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 471942724c89ca84486354cfe1a7022d, type: 3}
+  m_Name: LUIS
+  m_EditorClassIdentifier: 
+  m_name: LUIS
+  m_description: "Luis est le pr\xE9sident de la Conf\xE9d\xE9ration du Travail. "
+  m_sanity: {fileID: 11400000, guid: 3fa3bfe10c7a9bc4cbb0ec678361566c, type: 2}
+  m_approach:
+  - {fileID: 11400000, guid: 1fa6de69c7a6b034ba0e9189ea481444, type: 2}
+  - {fileID: 11400000, guid: 6f58411d899c27b4aa8a2766578aec4d, type: 2}
+  m_accesConditions:
+  - {fileID: 11400000, guid: 0d176f39705975941a6354ee56b57e1d, type: 2}
+  - {fileID: 11400000, guid: 2ddb7c36d19ceef4d876be5c5839394b, type: 2}
+  - {fileID: 11400000, guid: 917da132c3db8a04d9163fd025c91848, type: 2}

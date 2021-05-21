@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525d2b2df425485449ec8a12401c7c35, type: 3}
+  m_Name: SOUDOYER POUR FANATIQUES
+  m_EditorClassIdentifier: 
+  m_name: SOUDOYER POUR FANATIQUES
+  m_exactionPos: {fileID: 11400000, guid: 73c18363f6558d64ca03baf0c4af133a, type: 2}
+  m_exactionNeg: {fileID: 11400000, guid: 16a319bd2017649418e2b3d8df7b8ab3, type: 2}
+  m_cdtSuccess:
+  - {fileID: 11400000, guid: 664dbfa723e51dd4ca39353e4d818219, type: 2}
+  - {fileID: 11400000, guid: a33a14ba09fc46c4abd1036963443537, type: 2}
+  - {fileID: 11400000, guid: 918f61c75f3ffce47b3f6c78948831be, type: 2}
+  m_cooldown: 6
+  m_descriptionApproach: "Vous soudoyez Luis pour qu'il dirige l'action syndicale
+    vers des actions violentes, et qu'il encourage les casseurs \xE0 rejoindre le
+    Culte. Cela vous rapportera 3 Points de Fanatiques si vous r\xE9ussissez."
+  m_DialogueApproach: 
+  m_resultatApproach: 

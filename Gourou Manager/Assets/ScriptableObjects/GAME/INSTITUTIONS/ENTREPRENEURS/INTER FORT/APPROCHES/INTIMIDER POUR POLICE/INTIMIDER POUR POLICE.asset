@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525d2b2df425485449ec8a12401c7c35, type: 3}
+  m_Name: INTIMIDER POUR POLICE
+  m_EditorClassIdentifier: 
+  m_name: INTIMIDER POUR FINANCER LA POLICE
+  m_exactionPos: {fileID: 11400000, guid: 5719fb8555b54dc42a65bdc4fd8c4556, type: 2}
+  m_exactionNeg: {fileID: 11400000, guid: a0cb7a4c10918464a80be696833603db, type: 2}
+  m_cdtSuccess:
+  - {fileID: 11400000, guid: c4c32c3f5c2a8684dba7298d2dbfecd7, type: 2}
+  m_cooldown: 10
+  m_descriptionApproach: "Vous Intimidez l'Entrepreneur pour obtenir de l'argent
+    pour l'Institution souhait\xE9e"
+  m_DialogueApproach: 
+  m_resultatApproach: "Vous obteneez un financement massif pour l'Institution souhait\xE9e."

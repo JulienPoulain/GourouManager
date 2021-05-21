@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 471942724c89ca84486354cfe1a7022d, type: 3}
+  m_Name: INTER 2
+  m_EditorClassIdentifier: 
+  m_name: 'INTER ENTREP 2 '
+  m_description: 'Inter Entrepreneurs important '
+  m_sanity: {fileID: 11400000, guid: 43ef67fefc83d0a409dabfd3bd5d47d9, type: 2}
+  m_approach:
+  - {fileID: 11400000, guid: d446ab1d53a4b524ca4c64d2884a802e, type: 2}
+  m_accesConditions:
+  - {fileID: 11400000, guid: 9661e7debfc36ab428ddaaa218da0025, type: 2}
+  - {fileID: 11400000, guid: eee150ccae531184383cf54867a3a07d, type: 2}

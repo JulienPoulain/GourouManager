@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
+  m_Name: EV CASSEURS
+  m_EditorClassIdentifier: 
+  m_name: LACHEZ LES CASSEURS
+  m_description: Encouragez les comportements violents et financez les syndicalistes
+    les plus radicaux, afin de multiplier les casses en manifestations.
+  m_duration: 1
+  m_impacts:
+  - {fileID: 11400000, guid: a9f1634713ad3b74ea57774ccd72af41, type: 2}
+  - {fileID: 11400000, guid: 2b27a2a6f57595d4b824cdd4b308ea9e, type: 2}
+  - {fileID: 11400000, guid: a92702584205ff94883073689ab2adc4, type: 2}
+  m_infoGained: []
