@@ -8,6 +8,7 @@ public class InstitutionSO : ScriptableObject, IInitializable
 
 {
     [SerializeField] public string m_name;
+    [SerializeField] public string m_description;
     
     [Header("Variables")]
     
