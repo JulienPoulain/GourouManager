@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f60d9fd165f1bf4a8d858defcd6937f, type: 3}
+  m_Name: SYNDICATS
+  m_EditorClassIdentifier: 
+  m_name: SYNDICATS
+  m_funds: {fileID: 11400000, guid: 482290692feb8404293fe1542d558b45, type: 2}
+  m_members: {fileID: 11400000, guid: f66752d4851a05845bd824f4e0020a58, type: 2}
+  m_fanatics: {fileID: 11400000, guid: a866361d499e2354199ac9d2b54dd714, type: 2}
+  m_impactOnPop: {fileID: 11400000, guid: 040f5505b3b83e0409b6fb92fcdce97a, type: 2}
+  m_impactOnCrise: {fileID: 0}
+  m_publicExposure: {fileID: 11400000, guid: 8609a24bc19e7554b8ff735c3e08ed8c, type: 2}
+  m_corruption: {fileID: 11400000, guid: 21ad47f5055687847a07529f2f3a5940, type: 2}
+  m_brutality: {fileID: 11400000, guid: 880c86265720df24c96c0c8a82d30289, type: 2}
+  m_interlocutorList:
+  - {fileID: 11400000, guid: 74114e49a4a667345810723cfb24dd4b, type: 2}
+  - {fileID: 11400000, guid: d59c665754d867b4e8dce3a6a5b7f449, type: 2}
+  m_exactionList:
+  - {fileID: 11400000, guid: ed83ed014248bde499560d455e7b4e67, type: 2}
+  - {fileID: 11400000, guid: 87ae5ac93b0c0b14b88b184b18dca705, type: 2}
+  - {fileID: 11400000, guid: 56376be0435c28b4fb9ee0eeafaaf62c, type: 2}
+  m_triggeredExactions: []
+  m_option: 2
+  m_remainingTriggeredExactions: []

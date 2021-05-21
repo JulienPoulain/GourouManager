@@ -23,6 +23,7 @@ MonoBehaviour:
   m_brutality: {fileID: 11400000, guid: 89afece6b38d96a4a9bab6d98416a5b3, type: 2}
   m_interlocutorList:
   - {fileID: 11400000, guid: b48cd0de676896a4eba1f57c65962632, type: 2}
+  - {fileID: 11400000, guid: 342067e447fc6cf4fa254364f3fe20f2, type: 2}
   m_exactionList:
   - {fileID: 11400000, guid: f4e3a9bbcc286324ba1bbe8a0682a253, type: 2}
   - {fileID: 11400000, guid: b770547caa7e1f64a88d0cc208428126, type: 2}
@@ -30,5 +31,6 @@ MonoBehaviour:
   m_triggeredExactions:
   - {fileID: 11400000, guid: 9976ce3496b90994780cd7f646013f5b, type: 2}
   - {fileID: 11400000, guid: bac7e598642ae8d4facec7c6e130d14c, type: 2}
+  - {fileID: 11400000, guid: ece0d3773f8fe4e49b24b314af42e20b, type: 2}
   m_option: 1
   m_remainingTriggeredExactions: []

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525d2b2df425485449ec8a12401c7c35, type: 3}
+  m_Name: DEMANDER FONDS
+  m_EditorClassIdentifier: 
+  m_name: DEMANDER DES FONDS
+  m_exactionPos: {fileID: 11400000, guid: b687646faa9a73f499f6a690fd1aa8d3, type: 2}
+  m_exactionNeg: {fileID: 11400000, guid: 7b8d88ac695ef5140a4183b574a79f6e, type: 2}
+  m_cdtSuccess:
+  - {fileID: 11400000, guid: 931346b5e4f06b242a75dad44baef0a4, type: 2}
+  - {fileID: 11400000, guid: b83c4ff6da2c9c74a95ae438c3b291b6, type: 2}
+  m_cooldown: 8
+  m_descriptionApproach: Vous demandez un financement massif du Culte
+  m_DialogueApproach: 
+  m_resultatApproach: "Si vous r\xE9ussisez, vous obtiendrais des sommes consid\xE9rables
+    pendant 4 tours."

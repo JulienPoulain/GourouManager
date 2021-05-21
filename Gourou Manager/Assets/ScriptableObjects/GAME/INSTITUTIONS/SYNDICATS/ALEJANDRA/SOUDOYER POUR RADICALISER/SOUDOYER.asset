@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525d2b2df425485449ec8a12401c7c35, type: 3}
+  m_Name: SOUDOYER
+  m_EditorClassIdentifier: 
+  m_name: 'SOUDOYER POUR RADICALISER '
+  m_exactionPos: {fileID: 11400000, guid: eb6fbe187620bf34a83e3336827397f2, type: 2}
+  m_exactionNeg: {fileID: 0}
+  m_cdtSuccess:
+  - {fileID: 11400000, guid: 05b7c9f24478b9e45bddba8c8a4c2d8b, type: 2}
+  - {fileID: 11400000, guid: 74e59adc172b71041b25c1f4034c6b5c, type: 2}
+  m_cooldown: 6
+  m_descriptionApproach: Vous proposez a Alejandra 1200 Fonds par tour contre la
+    propagation d'un discours radical dans les organisations syndicales.
+  m_DialogueApproach: 
+  m_resultatApproach: "Vous corrompez d'avantage les syndicats et gagnez 3 de Brutalit\xE9
+    3 tours cons\xE9cutifs."

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
+  m_Name: EV NEGATIF
+  m_EditorClassIdentifier: 
+  m_name: Refus du financement
+  m_description: "Le financement est refus\xE9, et l'Entrepreneur compte bien vous
+    faire payer cette tentative d'intimidation gr\xE2ce \xE0 son r\xE9seau influent."
+  m_duration: 1
+  m_impacts:
+  - {fileID: 11400000, guid: 8a27dff2706a7624687c4010425feefa, type: 2}
+  - {fileID: 11400000, guid: c404cad629876c54db8d32741226a211, type: 2}
+  m_infoGained: []
