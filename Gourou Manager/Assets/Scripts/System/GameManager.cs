@@ -61,8 +61,6 @@ public class GameManager : Singleton<GameManager>, IInitializable
     {
         RoundManager.Instance.NextTurn();
         m_turn++;
-        Debug.Log("FIN DU TOUR");
-        Debug.Log(m_turn);
 
         m_PlayerHasExecuteExaction = false;
         m_PlayerHasExecuteApproche = false;

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Info +1
   m_EditorClassIdentifier: 
   m_name: Information sur le chef de la Police
-  m_value: 1
+  m_initValue: 0
+  m_value: 0
   m_title: Information sur le chef de la Police
   m_description: Information sur le chef de la Police

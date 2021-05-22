@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: POLICE_EXP
   m_EditorClassIdentifier: 
   m_name: PublicEX
+  m_initValue: 50
   m_value: 50
