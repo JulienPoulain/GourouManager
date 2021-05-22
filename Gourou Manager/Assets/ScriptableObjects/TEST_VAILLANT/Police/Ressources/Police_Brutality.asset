@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Police_Brutality
   m_EditorClassIdentifier: 
   m_name: 
+  m_initValue: 5
   m_value: 0

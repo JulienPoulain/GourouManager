@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: MEDIAS_ EXP
   m_EditorClassIdentifier: 
   m_name: Exposition publique
-  m_value: 50
+  m_initValue: 100
+  m_value: 100

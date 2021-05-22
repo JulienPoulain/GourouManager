@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: CULTE F
   m_EditorClassIdentifier: 
   m_name: Nom de ressource
-  m_value: 75
+  m_initValue: 50000
+  m_value: 0

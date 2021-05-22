@@ -8,7 +8,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
     [SerializeField] List<GameObject> m_Institutions = new List<GameObject>();
 
     InstitutionSO m_MainInstitutionSO;
-    List<InstitutionSO> m_institutions = new List<InstitutionSO>();
+    [SerializeField] List<InstitutionSO> m_institutions = new List<InstitutionSO>();
 
     //[SerializeField] public ScriptableObject[] m_Institutions;
     //[SerializeField] public ScriptableObject[] m_Crise;
