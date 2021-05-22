@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class TextInterlocutor : MonoBehaviour
 {
@@ -150,9 +149,8 @@ public class TextInterlocutor : MonoBehaviour
         {
             GameManager.Instance.m_InterfaceManager.DisplayApproche(m_Interlocutor);
             GameManager.Instance.m_InterfaceManager.DisallowInterlocutor();
-
+            // Il y avait le changement de scene ici
             GameManager.Instance.m_PlayerHasExecuteApproche = true;
-            SceneManager.LoadScene(m_approachSceneToLoad);
         }
         else
         {

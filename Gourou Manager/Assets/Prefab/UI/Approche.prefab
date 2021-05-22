@@ -841,7 +841,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 4599872902814425207}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -941,6 +941,7 @@ MonoBehaviour:
   m_approche:
   - {fileID: 8746288721693944745}
   - {fileID: 8895009879997607093}
+  m_approachSceneToLoad: Approach
 --- !u!1 &7306187275478912313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,6 +1394,7 @@ MonoBehaviour:
   m_name: {fileID: 478494416252816583}
   m_dialogueCharacter: {fileID: 308308970958542938}
   m_gain: {fileID: 1650625926463007401}
+  m_mainApproach: {fileID: 7683542492719939056}
 --- !u!1 &8895009879997607093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1440,6 +1442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836fceab650204340a6320ef8a78649d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_name: {fileID: 0}
+  m_name: {fileID: 1992302827198953459}
   m_dialogueCharacter: {fileID: 2421136114010614066}
   m_gain: {fileID: 1649943507663443279}
+  m_mainApproach: {fileID: 7683542492719939056}

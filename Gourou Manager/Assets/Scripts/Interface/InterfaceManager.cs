@@ -182,9 +182,10 @@ public class InterfaceManager : MonoBehaviour
 
     public void DisplayApproche(InterlocutorSO p_interlocutor) // appeler depuis textInterlocutor
     {
+        Debug.Log("on est dans interfacemanager");
         m_Approche.SetActive(true);
-        m_ApprocheIsDisplay = true;
-        m_ApprocheScript.Display(p_interlocutor);
+        // m_ApprocheIsDisplay = true;
+        m_ApprocheScript.StoreInterlocutor(p_interlocutor);
         DisallowHeavyInstitution();
     }
 

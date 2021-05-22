@@ -24,7 +24,6 @@ MonoBehaviour:
   m_interlocutorList:
   - {fileID: 11400000, guid: ce437b61f47e5ef439bdf76108f0ddb4, type: 2}
   - {fileID: 11400000, guid: 0400873e113651d46936c19c4dc9d7ac, type: 2}
-  - {fileID: 11400000, guid: 0400873e113651d46936c19c4dc9d7ac, type: 2}
   m_exactionList:
   - {fileID: 11400000, guid: 4de3e549bde37294e99a44ab9122027b, type: 2}
   - {fileID: 11400000, guid: 1c5757c9f42f44945b98a9236e69f642, type: 2}
