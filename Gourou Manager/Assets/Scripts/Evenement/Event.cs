@@ -14,7 +14,6 @@ public class Event
     public int Duration => m_duration;
     public List<Impact> Impacts => m_impacts;
     public List<InfoSO> InfoGained => m_infoGained;
-    
 
     public Event(EventSO p_eventSO)
     {
