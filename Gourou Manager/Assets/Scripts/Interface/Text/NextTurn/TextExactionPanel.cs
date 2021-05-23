@@ -21,7 +21,10 @@ public class TextExactionPanel : MonoBehaviour
     {
         DisallowAll();
 
-        Debug.Log(m_textExactionList[0]);
+        Debug.Log("CECI EST LE NB DE CASES DANSX LA LKISTE : " + p_exactionList.Count);
+
+        Debug.Log("L'exaction s'appelle : " + p_exactionList[0].Name);
+        Debug.Log("la description est : " + p_exactionList[0].Description);
 
         // Affichage des Exactions
         for (int i = 0; i < p_exactionList.Count; i++)
@@ -29,6 +32,10 @@ public class TextExactionPanel : MonoBehaviour
             m_objectExactionList[i].SetActive(true);
             m_textExactionList[i][0].text = "" + p_exactionList[i].Name;
             m_textExactionList[i][1].text = "" + p_exactionList[i].Description;
+
+
+            Debug.Log("L'exaction s'appelle : " + p_exactionList[i].Name);
+            Debug.Log("la description est : " + p_exactionList[i].Description);
         }
     }
 

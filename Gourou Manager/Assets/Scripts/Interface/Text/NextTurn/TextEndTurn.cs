@@ -38,7 +38,7 @@ public class TextEndTurn : MonoBehaviour
     public void Display(List<ExactionSO> p_exactionList)
     {
         DisallowAll();
-        
+
         // On affiche les Text dont on a besoin
         for (int i = 0; i < GameManager.Instance.Institutions.Count; i++)
         {

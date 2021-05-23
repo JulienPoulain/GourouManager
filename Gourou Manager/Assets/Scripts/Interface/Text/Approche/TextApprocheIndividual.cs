@@ -33,7 +33,6 @@ public class TextApprocheIndividual : MonoBehaviour
     public void StoreApproach(ApproachSO p_approach)
     {
         m_approachList.Add(p_approach);
-        Debug.Log("approach stocker ");
     }
 
     public void DisplayApproach()
@@ -42,8 +41,6 @@ public class TextApprocheIndividual : MonoBehaviour
 
         m_approche = m_approachList[0];
         m_approachList.RemoveAt(0);
-        
-        Debug.Log("l'approach est stockee");
 
         m_name.text = "" + m_approche.Name;
         m_dialogueCharacter.text = "" + m_approche.m_dialogueApproach;

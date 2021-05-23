@@ -100,6 +100,7 @@ public class InterfaceManager : MonoBehaviour
     }
     
     public bool m_cursorFocusHeavyInstitution; // utiliser dans Cursor.cs, pour définir si la fenêtre peut être enlever
+    public bool m_endTurnInsDisplay = false;
 
     // -----------------------------------------------------------------------------------------
 
@@ -182,7 +183,6 @@ public class InterfaceManager : MonoBehaviour
 
     public void DisplayApproche(InterlocutorSO p_interlocutor) // appeler depuis textInterlocutor
     {
-        Debug.Log("on est dans interfacemanager");
         m_Approche.SetActive(true);
         // m_ApprocheIsDisplay = true;
         m_ApprocheScript.StoreInterlocutor(p_interlocutor);
@@ -198,6 +198,7 @@ public class InterfaceManager : MonoBehaviour
     {
         m_EndTurn.SetActive(true);
         m_EndTurnScript.Display(p_exactionList);
+        m_endTurnInsDisplay = true;
     }
 
     public void DisplayVoctory()
@@ -268,6 +269,7 @@ public class InterfaceManager : MonoBehaviour
     public void DisallowEndTurn()
     {
         m_EndTurn.SetActive(false);
+        m_endTurnInsDisplay = false;
     }
 
     // -----------------------------------------------------------------------------------------

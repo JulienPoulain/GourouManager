@@ -34,8 +34,8 @@ public class TextApprocheMain : MonoBehaviour
         {
             Debug.Log("Approach executee");
             GameManager.Instance.PendingExactions.Add(m_approach.TryApproach());
-            m_approach = null;
-            m_interlocutor = null;
+            //m_approach = null;
+            //m_interlocutor = null;
         }
     }
     

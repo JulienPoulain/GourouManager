@@ -17,7 +17,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
     [SerializeField] public InterfaceManager m_InterfaceManager;
     [SerializeField] public GameObject m_Camera;
     
-    [SerializeField] private List<ExactionSO> m_pendingExactions = new List<ExactionSO>();
+    [SerializeField] private static List<ExactionSO> m_pendingExactions = new List<ExactionSO>();
     private List<Event> m_activeEvents = new List<Event>();
 
     public bool m_focusOnInstitution = false;
@@ -70,6 +70,8 @@ public class GameManager : Singleton<GameManager>, IInitializable
 
     public void EndTurn()
     {
+        Debug.Log("FIN DU TOUR");
+        
         // On copie la liste des exactions, pour afficher les exactions faites dans l'interface
         List<ExactionSO> exactionList = new List<ExactionSO>();
         foreach (ExactionSO exaction in m_pendingExactions)
@@ -78,6 +80,10 @@ public class GameManager : Singleton<GameManager>, IInitializable
         }
 
         RoundManager.Instance.NextTurn();
+
+        Debug.Log("LE NOMBRE D'ELEMENT DANS LE TABLEAU EST DE : " + exactionList.Count);
+
+        
         m_turn++;
 
         m_playerHasExecuteExaction = false;
