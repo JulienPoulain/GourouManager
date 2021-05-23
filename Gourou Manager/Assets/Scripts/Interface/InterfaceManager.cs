@@ -173,7 +173,7 @@ public class InterfaceManager : MonoBehaviour
 
 
             // on décalle le boutton de la largeur
-            firstPos.x += buttonWidth;
+            firstPos.x += buttonWidth * 0.25f; // on multiplie selon le scale du boutton (tout boutton à un scale de 0.25 pour le visuel)
 
             // on configure le boutton pour qu'il ai les informations de l'interlocuteur
             Button.gameObject.GetComponent<InterlocutorButton>().Configuration(p_data.m_interlocutorList[i]);
@@ -306,7 +306,7 @@ public class InterfaceManager : MonoBehaviour
 
     Vector3 firstButtonPos(InstitutionSO p_data, float p_buttonWidth)
     {
-        float startX = (m_canvasSize.rect.width / 3)  - ((p_data.m_interlocutorList.Count * p_buttonWidth)/3);
+        float startX = (m_canvasSize.rect.width / 3)  - ((p_data.m_interlocutorList.Count * p_buttonWidth)/4) * 0.25f;
         float startY = m_canvasSize.rect.height - m_canvasSize.rect.height/3;
 
         return new Vector3(startX, startY, 0);

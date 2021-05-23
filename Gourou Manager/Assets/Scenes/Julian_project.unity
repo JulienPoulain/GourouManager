@@ -1581,11 +1581,8 @@ MonoBehaviour:
   m_roundManager: {fileID: 0}
   m_InterfaceManager: {fileID: 2060777671}
   m_Camera: {fileID: 963194225}
-  m_pendingExactions: []
   m_focusOnInstitution: 0
   m_turn: 0
-  m_PlayerHasExecuteExaction: 0
-  m_PlayerHasExecuteApproche: 0
 --- !u!4 &2009924893
 Transform:
   m_ObjectHideFlags: 0
@@ -1804,12 +1801,13 @@ MonoBehaviour:
   m_InterlocutorScript: {fileID: 0}
   m_CrisisObject: {fileID: 945782781}
   m_decallingLightInstitution: 100
-  m_ButtonInterlocutorPrefab: {fileID: 3381874221506486037, guid: f6d2ecc73c50d4e4d951dee69988c689, type: 3}
+  m_ButtonInterlocutorPrefab: {fileID: 3033758971898248650, guid: b864858dc97db6d44a0a6fc8147413e5, type: 3}
   m_canvasSize: {fileID: 0}
   m_InterfaceMode: 0
   m_InstitutionLightIsDisplay: 0
   m_crisisIsDisplay: 0
   m_cursorFocusHeavyInstitution: 0
+  m_endTurnInsDisplay: 0
 --- !u!1001 &2100842810
 PrefabInstance:
   m_ObjectHideFlags: 0
