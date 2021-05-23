@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 885772bd64b7b1348a7f3133ea46b0b4, type: 3}
   m_Name: CULTE IPOP
   m_EditorClassIdentifier: 
-  m_value: 1
+  m_name: 
+  m_initValue: 1
+  m_value: 0
