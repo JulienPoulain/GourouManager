@@ -7,8 +7,8 @@ public class GameManager : Singleton<GameManager>, IInitializable
     [SerializeField] GameObject m_MainInstitution;
     [SerializeField] List<GameObject> m_Institutions = new List<GameObject>();
 
-    InstitutionSO m_MainInstitutionSO;
-    List<InstitutionSO> m_institutions = new List<InstitutionSO>();
+    [SerializeField] InstitutionSO m_MainInstitutionSO;
+    [SerializeField] List<InstitutionSO> m_institutions = new List<InstitutionSO>();
 
     //[SerializeField] public ScriptableObject[] m_Institutions;
     //[SerializeField] public ScriptableObject[] m_Crise;
@@ -18,14 +18,14 @@ public class GameManager : Singleton<GameManager>, IInitializable
     [SerializeField] public GameObject m_Camera;
     
     [SerializeField] private List<ExactionSO> m_pendingExactions = new List<ExactionSO>();
-    private List<Event> m_activeEvents = new List<Event>();
-
+    [SerializeField] private List<EventSO> m_activeEvents = new List<EventSO>();
+    
     public bool m_focusOnInstitution = false;
-    [SerializeField] int m_turn;
+    [SerializeField] private int m_turn;
 
     public List<ExactionSO> PendingExactions => m_pendingExactions;
-
-    public List<Event> ActiveEvents => m_activeEvents;
+    public List<EventSO> ActiveEvents => m_activeEvents;
+    public int Turn => m_turn;
 
     public InstitutionSO MainInstitution => m_MainInstitutionSO;
     public List<InstitutionSO> Institutions => m_institutions;
@@ -46,13 +46,12 @@ public class GameManager : Singleton<GameManager>, IInitializable
     
     private void Start()
     {
-        m_MainInstitutionSO = m_MainInstitution.GetComponent<InterfaceInstitution>().m_Institution;
+        //m_MainInstitutionSO = m_MainInstitution.GetComponent<InterfaceInstitution>().m_Institution;
 
-        foreach (GameObject Institution in m_Institutions)
+        /*foreach (GameObject Institution in m_Institutions)
         {
             m_institutions.Add(Institution.GetComponent<InterfaceInstitution>().m_Institution);
-            
-        }
+        }*/
 
         Initialize();
     }
