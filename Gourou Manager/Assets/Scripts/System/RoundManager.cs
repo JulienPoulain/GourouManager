@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using UnityEngine;
 
 public class RoundManager : Singleton<RoundManager>
@@ -7,108 +9,122 @@ public class RoundManager : Singleton<RoundManager>
     
     public void NextTurn()
     {
-        // Ajout des nouveaux évènements et exécution des évènements actifs
+        List<EventSO> newActiveEvents = new List<EventSO>();
         
-        AddEvent(GameManager.Instance.PendingExactions, GameManager.Instance.ActiveEvents);
-
-        GameManager.Instance.PendingExactions.Clear();
+        // 1. Ajout des nouveaux évènements d'exactions puis exécution des évènements actifs.
+        AddEvent(newActiveEvents, GameManager.Instance.PendingExactions);
         
-        ClearFinishedEvent(GameManager.Instance.ActiveEvents);
-        
-        ComputeEvent(GameManager.Instance.ActiveEvents);
-
-        // Calcul et effet des TriggeredExactions
-
-        foreach (InstitutionSO institution in GameManager.Instance.Institutions)
+        foreach (EventSO evenement in newActiveEvents)
         {
-            List<ExactionSO> newTriggeredExactions = new List<ExactionSO>();
-            List<Event> newTriggeredEvents = new List<Event>();
-            
-            do
+            if (GameManager.Instance.ActiveEvents.Contains(evenement))
             {
-                newTriggeredEvents.Clear();
-                foreach (ExactionSO exaction in institution.RemainingTriggeredExactions)
+                newActiveEvents.Remove(evenement);
+            }
+        }
+        
+        GameManager.Instance.ActiveEvents.AddRange(newActiveEvents);
+        
+        ComputeEvents(GameManager.Instance.ActiveEvents);
+        
+        GameManager.Instance.PendingExactions.Clear();
+
+        // 2. Calcul et effet des TriggeredEvents
+        List<TriggeredEventSO> newTEvents = new List<TriggeredEventSO>();
+        int nbTour = 1;
+        do
+        {
+            newTEvents.Clear();
+            foreach (InstitutionSO institution in GameManager.Instance.Institutions)
+            {
+                foreach (TriggeredEventSO tEventSO in institution.m_triggeredEvents)
                 {
-                    if (exaction.IsValid())
+                    if (!GameManager.Instance.ActiveEvents.Contains(tEventSO)
+                        && !tEventSO.IsExhausted()
+                        && tEventSO.IsTriggerable())
                     {
-                        newTriggeredExactions.Add(exaction);
+                        newTEvents.Add(tEventSO);
+                        tEventSO.UseOnce();
                     }
                 }
-                
-                AddEvent(newTriggeredExactions, newTriggeredEvents);
-                ComputeEvent(newTriggeredEvents);
-                
-                ClearFinishedEvent(newTriggeredEvents);
-                GameManager.Instance.ActiveEvents.AddRange(newTriggeredEvents);
-
-                foreach (ExactionSO exaction in newTriggeredExactions)
-                {
-                    institution.RemainingTriggeredExactions.Remove(exaction);
-                }
-            } while (newTriggeredEvents.Count > 0);
-        }
+            }
+            ComputeEvents(newTEvents);
+            GameManager.Instance.ActiveEvents.AddRange(newTEvents);
+        } while (newTEvents.Count > 0);
+        
+        ClearFinishedEvent(GameManager.Instance.ActiveEvents);
     }
 
-    public void AddEvent(List<ExactionSO> p_exactions, List<Event> p_events)
+    // Ajoute l'évènement p_event à la liste d'évènement p_events sans doublon.
+    public void AddEvent(List<EventSO> p_events, EventSO p_event)
     {
-        Debug.Log($"p_exaction {p_exactions} {p_exactions.Count}");
-        foreach (ExactionSO exactionSO in p_exactions)
+        if (!p_events.Contains(p_event))
+            p_events.Add(p_event);
+    }
+    
+    // Ajoute les évènements de la liste d'exactions p_exactions à la liste p_events sans doublon.
+    public void AddEvent(List<EventSO> p_events, List<ExactionSO> p_exactions)
+    {
+        foreach (ExactionSO exaction in p_exactions)
         {
-            foreach (EventSO eventSO in exactionSO.EventList)
+            foreach (EventSO evenement in exaction.EventList)
             {
-                p_events.Add(new Event(eventSO));
+                AddEvent(p_events, evenement);
             }
         }
     }
 
-    public void ClearFinishedEvent(List<Event> p_events)
+    // Réinitialise les évènements finis et les supprime de la liste p_events.
+    public void ClearFinishedEvent(List<EventSO> p_events)
     {
-        foreach (Event evenement in p_events)
+        foreach (EventSO evenement in p_events.ToList())
         {
             if (evenement.Duration == 0)
             {
                 p_events.Remove(evenement);
+                evenement.Reset();
             }
         }
     }
 
-    public void ComputeEvent(List<Event> p_events)
+    public void ComputeEvents(IEnumerable<EventSO> p_events)
     {
         Dictionary<SyncIntSO, int> pendingChanges = new Dictionary<SyncIntSO, int>();
         
-        // 1. Stocke les modifications futures de valeurs des ressources
-        foreach (Event evenement in p_events)
+        // 1. Stocke les futures modifications de valeurs des ressources
+        foreach (EventSO evenement in p_events)
         {
-            // Stockage des modifications futures
-            foreach (Impact impact in evenement.Impacts)
+            if (evenement.IsActive())
             {
-                int magnitude = impact.Magnitude.Compute();
-                if (pendingChanges.ContainsKey(impact.Ressource))
+                // Stockage des futures modifications
+                foreach (ImpactSO impact in evenement.Impacts)
                 {
-                    pendingChanges[impact.Ressource] += magnitude;
+                    int magnitude = impact.Magnitude.Compute();
+                    if (pendingChanges.ContainsKey(impact.Ressource))
+                    {
+                        pendingChanges[impact.Ressource] += magnitude;
+                    }
+                    else
+                    {
+                        pendingChanges.Add(impact.Ressource, magnitude);
+                    }
                 }
-                else
-                {
-                    pendingChanges.Add(impact.Ressource, magnitude);
-                }
-            }
             
-            // Ajout des informations obtenues
-            foreach (InfoSO info in evenement.InfoGained)
-            {
-                info.obtain();
-            }
-            evenement.InfoGained.Clear();
+                // Ajout des informations obtenues
+                foreach (InfoSO info in evenement.InfoGained)
+                {
+                    info.obtain();
+                }
+                evenement.InfoGained.Clear();
 
-            //Reduction du compteur d'events (sa durée d'activité)
-            evenement.AdvanceTime(1);
+                //Reduction du compteur d'events (sa durée d'activité)
+                evenement.AdvanceTime(1);
+            }
         }
         
         // 2. Applique les changements de valeurs des ressources
         foreach (SyncIntSO ressource in pendingChanges.Keys)
         {
             ressource.m_value += pendingChanges[ressource];
-            Debug.Log("CECI EST LA RESSOURCE : " + ressource.Name + "et son changement " + pendingChanges[ressource]);
         }
     }
 }
