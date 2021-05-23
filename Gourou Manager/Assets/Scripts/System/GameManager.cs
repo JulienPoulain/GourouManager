@@ -46,12 +46,12 @@ public class GameManager : Singleton<GameManager>, IInitializable
     
     private void Start()
     {
-        //m_MainInstitutionSO = m_MainInstitution.GetComponent<InterfaceInstitution>().m_Institution;
+        m_MainInstitutionSO = m_MainInstitution.GetComponent<InterfaceInstitution>().m_Institution;
 
-        /*foreach (GameObject Institution in m_Institutions)
+        foreach (GameObject Institution in m_Institutions)
         {
             m_institutions.Add(Institution.GetComponent<InterfaceInstitution>().m_Institution);
-        }*/
+        }
 
         Initialize();
     }
