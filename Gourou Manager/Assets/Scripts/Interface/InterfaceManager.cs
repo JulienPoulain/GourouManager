@@ -194,10 +194,10 @@ public class InterfaceManager : MonoBehaviour
         m_NextTurnButton.SetActive(true);
     }
 
-    public void DisplayEndTurn()
+    public void DisplayEndTurn(List<ExactionSO> p_exactionList)
     {
         m_EndTurn.SetActive(true);
-        m_EndTurnScript.Display();
+        m_EndTurnScript.Display(p_exactionList);
     }
 
     public void DisplayVoctory()

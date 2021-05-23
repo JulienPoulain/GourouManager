@@ -22,18 +22,17 @@ public class TextInstitutionExactionManager : MonoBehaviour
 
     public void ExecuteExaction()
     {
-        if (!GameManager.Instance.m_PlayerHasExecuteExaction)
+        if (!GameManager.Instance.PlayerHasExectuteExaction && m_exaction.IsValid())
         {
             GameManager.Instance.PendingExactions.Add(m_exaction);
             GameManager.Instance.m_InterfaceManager.DisallowHeavyInstitution();
             Debug.Log("Exaction lancée");
 
-            GameManager.Instance.m_PlayerHasExecuteExaction = true;
+            GameManager.Instance.PlayerHasExectuteExaction = true;
         }
         else
         {
-            Debug.Log("Vous avez déjà fait une exaction");
+            Debug.Log("Vous avez déjà fait une exaction ou cette exaction n'est pas valide");
         }
-        
     }
 }

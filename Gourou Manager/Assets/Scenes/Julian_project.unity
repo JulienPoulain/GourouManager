@@ -1574,7 +1574,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MainInstitution: {fileID: 895200239}
   m_Institutions:
-  - {fileID: 895200239}
   - {fileID: 28041743}
   - {fileID: 1744984346}
   - {fileID: 1145168608}

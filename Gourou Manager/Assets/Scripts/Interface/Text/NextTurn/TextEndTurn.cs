@@ -10,10 +10,15 @@ public class TextEndTurn : MonoBehaviour
     [SerializeField] private List<GameObject> m_objectEtatList;
     private List<TMP_Text> m_textEtatList = new List<TMP_Text>();
     
+    [SerializeField] GameObject m_objectMainInstitutionName;
+    private TMP_Text m_TextmainInstitutionName;
+    
     [SerializeField] private List<GameObject> m_objectStatList;
     private List<TMP_Text> m_textStatList = new List<TMP_Text>();
-    
-    
+
+    [SerializeField] TextExactionPanel m_exactionScript;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +32,10 @@ public class TextEndTurn : MonoBehaviour
             m_textStatList.Add(thisObject.GetComponent<TMP_Text>());
         }
 
-        Display();
+        m_TextmainInstitutionName = m_objectMainInstitutionName.GetComponent<TMP_Text>();
     }
 
-    public void Display()
+    public void Display(List<ExactionSO> p_exactionList)
     {
         DisallowAll();
         
@@ -40,12 +45,17 @@ public class TextEndTurn : MonoBehaviour
             m_objectEtatList[i].SetActive(true);
             m_textEtatList[i].text = "" + GameManager.Instance.Institutions[i].m_name + " : " + GameManager.Instance.Institutions[i].m_option.ToString();
         }
-        
+
+        // Affichage du Culthe
+        m_TextmainInstitutionName.text = "" + GameManager.Instance.MainInstitution.m_name;
+
         m_textStatList[0].text = "Fonds : " + GameManager.Instance.MainInstitution.m_funds.Value.ToString();
         m_textStatList[1].text = "Membres : " + GameManager.Instance.MainInstitution.m_members.Value.ToString();
         m_textStatList[2].text = "Fanatiques : " + GameManager.Instance.MainInstitution.m_fanatics.Value.ToString();
         m_textStatList[3].text = "Exposition Publique : " + GameManager.Instance.MainInstitution.m_publicExposure.Value.ToString();
         m_textStatList[4].text = "Brutalité : " + GameManager.Instance.MainInstitution.m_brutality.Value;
+
+        m_exactionScript.Display(p_exactionList);
     }
 
     public void Disallow()

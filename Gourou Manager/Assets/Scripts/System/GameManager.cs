@@ -32,8 +32,19 @@ public class GameManager : Singleton<GameManager>, IInitializable
 
     // Player Variable //
     
-    public bool m_PlayerHasExecuteExaction = false; // définit si le joueur à déjà fait une exaction ce tour ci
-    public bool m_PlayerHasExecuteApproche = false;    // Définit si le joueur à déjà fait un dialogue ce tour ci
+    private static bool m_playerHasExecuteExaction = false; // définit si le joueur à déjà fait une exaction ce tour ci, static pour que l'information ne change pas entre les changments de scènes
+    private static bool m_playerHasExecuteApproche = false;    // Définit si le joueur à déjà fait un dialogue ce tour ci
+    
+    public bool PlayerHasExecuteApproach
+    {
+        get { return m_playerHasExecuteApproche; }
+        set { m_playerHasExecuteApproche = value;}
+    }
+    public bool PlayerHasExectuteExaction
+    {
+        get { return m_playerHasExecuteExaction; }
+        set { m_playerHasExecuteExaction = value; }
+    }
 
     public void Initialize()
     {
@@ -59,12 +70,19 @@ public class GameManager : Singleton<GameManager>, IInitializable
 
     public void EndTurn()
     {
+        // On copie la liste des exactions, pour afficher les exactions faites dans l'interface
+        List<ExactionSO> exactionList = new List<ExactionSO>();
+        foreach (ExactionSO exaction in m_pendingExactions)
+        {
+            exactionList.Add(exaction);
+        }
+
         RoundManager.Instance.NextTurn();
         m_turn++;
 
-        m_PlayerHasExecuteExaction = false;
-        m_PlayerHasExecuteApproche = false;
+        m_playerHasExecuteExaction = false;
+        m_playerHasExecuteApproche = false;
 
-        m_InterfaceManager.DisplayEndTurn();
+        m_InterfaceManager.DisplayEndTurn(exactionList);
     }
 }

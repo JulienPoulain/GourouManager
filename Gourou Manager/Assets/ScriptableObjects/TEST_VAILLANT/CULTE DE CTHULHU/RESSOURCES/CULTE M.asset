@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 885772bd64b7b1348a7f3133ea46b0b4, type: 3}
   m_Name: CULTE M
   m_EditorClassIdentifier: 
-  m_name: Nom de ressources
-  m_value: 15
+  m_name: Ceci est une ressource
+  m_initValue: 7
+  m_value: 14
