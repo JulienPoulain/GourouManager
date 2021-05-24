@@ -13,19 +13,18 @@ MonoBehaviour:
   m_Name: Police
   m_EditorClassIdentifier: 
   m_name: Police
-  m_description: 
-  m_funds: {fileID: 11400000, guid: 5d7d34600bd47db4baac925a506195ce, type: 2}
+  m_description: "Le monopole de la violence l\xE9gitime de l'\xC9tat"
+  m_funds: {fileID: 11400000, guid: 7ba4bd4060c32d54f863544caaf36aa3, type: 2}
   m_members: {fileID: 0}
   m_fanatics: {fileID: 0}
-  m_impactOnPop: {fileID: 11400000, guid: 7a3ace2ee01fbf84e8f9c76f835858d9, type: 2}
-  m_publicExposure: {fileID: 11400000, guid: a2393f926bf6221458ee7743eb9715de, type: 2}
-  m_corruption: {fileID: 11400000, guid: d41a2973659a9d7458ed1ca4f7be6311, type: 2}
+  m_impactOnPop: {fileID: 11400000, guid: 61a90f88eca70fa4cac2ee4f06a5ccac, type: 2}
+  m_publicExposure: {fileID: 11400000, guid: 06c0a45579e47cf4ebaf14a990e10951, type: 2}
+  m_corruption: {fileID: 11400000, guid: 06527bf37a213a648b5c325f45921c23, type: 2}
   m_brutality: {fileID: 0}
   m_interlocutorList:
-  - {fileID: 11400000, guid: 7b2f6f1395b041e42b68a82f2ae23fd9, type: 2}
+  - {fileID: 11400000, guid: 8b0cc57bafe1a0c4b9b85a44bd8c66b1, type: 2}
   - {fileID: 11400000, guid: ba95949992ba0d94fba71bc8210b4032, type: 2}
-  m_exactionList:
-  - {fileID: 11400000, guid: 42344678ea460814bafb803485883d18, type: 2}
+  m_exactionList: []
   m_triggeredExactions:
   - {fileID: 11400000, guid: 65221eafd33637b429b935b67866d543, type: 2}
   - {fileID: 11400000, guid: dcd520b71d91c8f41867fbedc38902d3, type: 2}
