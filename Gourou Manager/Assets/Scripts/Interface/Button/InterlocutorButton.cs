@@ -20,7 +20,7 @@ public class InterlocutorButton : MonoBehaviour, IPointerClickHandler
     {
         if (pointerEventData.button == PointerEventData.InputButton.Left)
         {
-            GameManager.Instance.m_InterfaceManager.m_InterlocutorScript.Display(m_Interlocutor);
+            GameManager.Instance.m_InterfaceManager.m_interlocutorScript.Display(m_Interlocutor);
         }
     }
 

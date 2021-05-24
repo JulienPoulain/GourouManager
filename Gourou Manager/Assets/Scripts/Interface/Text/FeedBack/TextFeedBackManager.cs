@@ -1,0 +1,68 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+public class TextFeedBackManager : MonoBehaviour
+{
+
+    RectTransform m_canvasSize;
+    RectTransform m_textSize;
+
+    Vector3 m_textPosition;
+
+    [SerializeField] GameObject m_textPrefab;
+    [SerializeField] float m_textcooldown;
+
+    void Awake()
+    {
+        m_canvasSize = GetComponent<RectTransform>();
+        m_textSize = m_textPrefab.GetComponent<RectTransform>();
+
+        float posX = m_textSize.rect.width / 4;
+        float posY = m_canvasSize.rect.height - m_textSize.rect.height;
+
+        m_textPosition = new Vector3(posX, posY, 0);
+    }
+
+    public void FeedBackExaction()
+    {
+        DisplayText("Exaction faite");
+    }
+
+    public void FeedBackApproach()
+    {
+        DisplayText("Approche faite");
+    }
+
+    void DisplayText(string p_message)
+    {
+        GameObject text = Instantiate(m_textPrefab, m_textPosition, Quaternion.identity, GameManager.Instance.m_InterfaceManager.gameObject.transform);
+        TMP_Text textContain = text.GetComponent<TMP_Text>();
+        textContain.text = p_message;
+
+
+
+        StartCoroutine(CleanText(text, textContain));
+    }
+
+    IEnumerator CleanText(GameObject p_textContainer, TMP_Text p_text)
+    {
+        float counter = 0;
+        Image textImage = p_textContainer.GetComponent<Image>();
+
+        while (counter != m_textcooldown)
+        {
+            counter += Time.deltaTime;
+            yield return null;
+
+            // p_text.color.a = Time.deltaTime;
+            Debug.Log(p_text.color.a);
+
+        }
+
+
+    }
+
+}
