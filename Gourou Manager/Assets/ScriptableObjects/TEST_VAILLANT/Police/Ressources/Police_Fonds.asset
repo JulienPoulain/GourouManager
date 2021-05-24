@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Police_Fonds
   m_EditorClassIdentifier: 
   m_name: 
-  m_initValue: 50000
   m_value: 0

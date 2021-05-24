@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,8 +25,10 @@ public class InstitutionSO : ScriptableObject, IInitializable
     
     [SerializeField] [Tooltip("Personnages appartenant à l'institution")] public List<InterlocutorSO> m_interlocutorList;
     [SerializeField] [Tooltip("Exactions disponibles sans dialogue")] public List<ExactionSO> m_exactionList;
-    [SerializeField] [Tooltip("Évènements se déclenchants selon certaines conditions sans intervention directe du joueur")] public List<TriggeredEventSO> m_triggeredEvents;
+    [SerializeField] [Tooltip("Exactions se déclenchants selon certaines conditions sans intervention directe du joueur")] public List<ExactionSO> m_triggeredExactions;
     [SerializeField] public OpinionOnTheCult m_option;
+    
+    public List<ExactionSO> m_remainingTriggeredExactions = new List<ExactionSO>();
 
     public enum OpinionOnTheCult
     {
@@ -36,7 +39,7 @@ public class InstitutionSO : ScriptableObject, IInitializable
         Devoted
     }
     
-    public List<TriggeredEventSO> TriggeredEvents => m_triggeredEvents;
+    public List<ExactionSO> RemainingTriggeredExactions => m_remainingTriggeredExactions;
 
     public void Initialize()
     {
@@ -104,13 +107,9 @@ public class InstitutionSO : ScriptableObject, IInitializable
         {
             exaction.Initialize();
         }
-        /*foreach (ExactionSO tExaction in m_triggeredExactions)
+        foreach (ExactionSO tExaction in m_triggeredExactions)
         {
             tExaction.Initialize();
-        }*/
-        foreach (TriggeredEventSO tEventSO in m_triggeredEvents)
-        {
-            tEventSO.Initialize();
         }
     }
 

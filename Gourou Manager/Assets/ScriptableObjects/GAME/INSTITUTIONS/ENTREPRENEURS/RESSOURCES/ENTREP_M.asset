@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: ENTREP_M
   m_EditorClassIdentifier: 
   m_name: 
-  m_initValue: 25
-  m_value: 0
+  m_value: 25

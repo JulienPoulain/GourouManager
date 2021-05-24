@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: ENTREPRENEURS
   m_EditorClassIdentifier: 
   m_name: ENTREPRENEURS
-  m_description: Les investisseurs et capitaines d'industries
   m_funds: {fileID: 11400000, guid: a26544a9e213a0449ad68d4863f68928, type: 2}
   m_members: {fileID: 11400000, guid: 95dbcd9603641c8429ec884c45a1c9b4, type: 2}
   m_fanatics: {fileID: 11400000, guid: a9ade36058fe5bc4797862a8ce390b80, type: 2}
   m_impactOnPop: {fileID: 11400000, guid: 440507ec545663a48be6d45663203dfb, type: 2}
+  m_impactOnCrise: {fileID: 0}
   m_publicExposure: {fileID: 11400000, guid: 5840f8ad42d20664fa0a2e4262dab3f3, type: 2}
   m_corruption: {fileID: 11400000, guid: 19c0f0b6336e5c04d991dd3cc8e0a060, type: 2}
   m_brutality: {fileID: 11400000, guid: 89afece6b38d96a4a9bab6d98416a5b3, type: 2}
@@ -32,5 +32,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9976ce3496b90994780cd7f646013f5b, type: 2}
   - {fileID: 11400000, guid: bac7e598642ae8d4facec7c6e130d14c, type: 2}
   - {fileID: 11400000, guid: ece0d3773f8fe4e49b24b314af42e20b, type: 2}
-  m_option: 2
+  m_option: 1
   m_remainingTriggeredExactions: []

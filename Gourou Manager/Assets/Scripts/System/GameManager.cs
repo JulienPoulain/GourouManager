@@ -7,8 +7,8 @@ public class GameManager : Singleton<GameManager>, IInitializable
     [SerializeField] GameObject m_MainInstitution;
     [SerializeField] List<GameObject> m_Institutions = new List<GameObject>();
 
-    [SerializeField] InstitutionSO m_MainInstitutionSO;
-    [SerializeField] List<InstitutionSO> m_institutions = new List<InstitutionSO>();
+    InstitutionSO m_MainInstitutionSO;
+    List<InstitutionSO> m_institutions = new List<InstitutionSO>();
 
     //[SerializeField] public ScriptableObject[] m_Institutions;
     //[SerializeField] public ScriptableObject[] m_Crise;
@@ -18,14 +18,14 @@ public class GameManager : Singleton<GameManager>, IInitializable
     [SerializeField] public GameObject m_Camera;
     
     [SerializeField] private static List<ExactionSO> m_pendingExactions = new List<ExactionSO>();
-    [SerializeField] private List<EventSO> m_activeEvents = new List<EventSO>();
+    private List<Event> m_activeEvents = new List<Event>();
 
     public bool m_focusOnInstitution = false;
-    [SerializeField] private int m_turn;
+    [SerializeField] int m_turn;
 
     public List<ExactionSO> PendingExactions => m_pendingExactions;
-    public List<EventSO> ActiveEvents => m_activeEvents;
-    public int Turn => m_turn;
+
+    public List<Event> ActiveEvents => m_activeEvents;
 
     public InstitutionSO MainInstitution => m_MainInstitutionSO;
     public List<InstitutionSO> Institutions => m_institutions;
@@ -62,6 +62,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
         foreach (GameObject Institution in m_Institutions)
         {
             m_institutions.Add(Institution.GetComponent<InterfaceInstitution>().m_Institution);
+            
         }
 
         Initialize();

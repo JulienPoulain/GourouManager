@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Police_Corruption
   m_EditorClassIdentifier: 
   m_name: 
-  m_initValue: 50
   m_value: 0

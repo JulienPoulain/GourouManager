@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 885772bd64b7b1348a7f3133ea46b0b4, type: 3}
-  m_Name: CULTE M
+  m_Script: {fileID: 11500000, guid: 471942724c89ca84486354cfe1a7022d, type: 3}
+  m_Name: Bob
   m_EditorClassIdentifier: 
-  m_name: Ceci est une ressource
-  m_initValue: 7
-  m_value: 14
+  m_name: bob
+  m_description: 
+  m_descriptionFailure: 
+  m_sanity: {fileID: 0}
+  m_approach: []
+  m_accesConditions: []

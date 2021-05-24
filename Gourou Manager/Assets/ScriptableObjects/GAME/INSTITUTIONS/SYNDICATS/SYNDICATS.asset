@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: SYNDICATS
   m_EditorClassIdentifier: 
   m_name: SYNDICATS
-  m_description: "Si\xE8ge de la Conf\xE9d\xE9ration du Travail"
   m_funds: {fileID: 11400000, guid: 482290692feb8404293fe1542d558b45, type: 2}
   m_members: {fileID: 11400000, guid: f66752d4851a05845bd824f4e0020a58, type: 2}
   m_fanatics: {fileID: 11400000, guid: a866361d499e2354199ac9d2b54dd714, type: 2}
   m_impactOnPop: {fileID: 11400000, guid: 040f5505b3b83e0409b6fb92fcdce97a, type: 2}
+  m_impactOnCrise: {fileID: 0}
   m_publicExposure: {fileID: 11400000, guid: 8609a24bc19e7554b8ff735c3e08ed8c, type: 2}
   m_corruption: {fileID: 11400000, guid: 21ad47f5055687847a07529f2f3a5940, type: 2}
   m_brutality: {fileID: 11400000, guid: 880c86265720df24c96c0c8a82d30289, type: 2}

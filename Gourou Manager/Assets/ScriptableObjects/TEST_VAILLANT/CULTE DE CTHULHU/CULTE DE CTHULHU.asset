@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CULTE DE CTHULHU
   m_EditorClassIdentifier: 
   m_name: Culte de Cthulhu
-  m_description: Le Culte du Grand Ancien
+  m_description: il s'agit de votre institution
   m_funds: {fileID: 11400000, guid: caa6baab0d7c19149b38b2c26a934853, type: 2}
   m_members: {fileID: 11400000, guid: 9a39fbeee89981a4393543e0b21d335b, type: 2}
   m_fanatics: {fileID: 11400000, guid: c319fb0ef87343f40bc47b6d66d6c2e6, type: 2}
