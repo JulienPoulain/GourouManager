@@ -102,6 +102,10 @@ public class InterfaceManager : MonoBehaviour
     public bool m_cursorFocusHeavyInstitution; // utiliser dans Cursor.cs, pour définir si la fenêtre peut être enlever
     public bool m_endTurnIsDisplay = false;
 
+    // Sprite
+    [SerializeField] public Sprite m_redBackGroundSprite;
+    [SerializeField] public Sprite m_whiteBackGroundSprite;
+
     // -----------------------------------------------------------------------------------------
 
     void Awake()
@@ -162,8 +166,9 @@ public class InterfaceManager : MonoBehaviour
 
         RectTransform buttonDim = m_ButtonInterlocutorPrefab.GetComponent<RectTransform>();
         float buttonWidth = buttonDim.rect.width;
+        float buttonHeight = buttonDim.rect.height;
 
-        Vector3 firstPos = firstButtonPos(p_data, buttonWidth);
+        Vector3 firstPos = firstButtonPos(p_data, buttonWidth, buttonHeight);
 
         for (int i = 0; i < p_data.m_interlocutorList.Count; i++)
         {
@@ -194,10 +199,10 @@ public class InterfaceManager : MonoBehaviour
         m_NextTurnButton.SetActive(true);
     }
 
-    public void DisplayEndTurn(List<ExactionSO> p_exactionList)
+    public void DisplayEndTurn()
     {
         m_EndTurn.SetActive(true);
-        m_EndTurnScript.Display(p_exactionList);
+        m_EndTurnScript.Display();
         m_endTurnIsDisplay = true;
     }
 
@@ -304,10 +309,11 @@ public class InterfaceManager : MonoBehaviour
         return position;
     }
 
-    Vector3 firstButtonPos(InstitutionSO p_data, float p_buttonWidth)
+    Vector3 firstButtonPos(InstitutionSO p_data, float p_buttonWidth, float p_buttonHeight)
     {
-        float startX = (m_canvasSize.rect.width / 3)  - ((p_data.m_interlocutorList.Count * p_buttonWidth)/4) * 0.25f;
-        float startY = m_canvasSize.rect.height - m_canvasSize.rect.height/3;
+        float startX = (m_canvasSize.rect.width /2)  - ((p_data.m_interlocutorList.Count * p_buttonWidth)/2 * 0.25f);
+        float startY = m_canvasSize.rect.height - (p_buttonHeight * 0.25f);
+        Debug.Log("la taille du canvas est de  : " + m_canvasSize.rect.height);
 
         return new Vector3(startX, startY, 0);
     }

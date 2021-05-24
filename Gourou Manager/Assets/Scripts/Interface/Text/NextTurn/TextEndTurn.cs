@@ -35,7 +35,7 @@ public class TextEndTurn : MonoBehaviour
         m_TextmainInstitutionName = m_objectMainInstitutionName.GetComponent<TMP_Text>();
     }
 
-    public void Display(List<ExactionSO> p_exactionList)
+    public void Display()
     {
         DisallowAll();
 
@@ -55,7 +55,10 @@ public class TextEndTurn : MonoBehaviour
         m_textStatList[3].text = "Exposition Publique : " + GameManager.Instance.MainInstitution.m_publicExposure.Value.ToString();
         m_textStatList[4].text = "Brutalité : " + GameManager.Instance.MainInstitution.m_brutality.Value;
 
-        m_exactionScript.Display(p_exactionList);
+        // on récupère la liste d'event du tour qui vient de finir
+        List<EventSO> m_eventList = EventRegister.Instance.GetEvents(GameManager.Instance.Turn);
+
+        m_exactionScript.Display(m_eventList);
     }
 
     public void Disallow()

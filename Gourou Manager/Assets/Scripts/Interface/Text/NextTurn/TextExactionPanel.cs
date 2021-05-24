@@ -17,16 +17,16 @@ public class TextExactionPanel : MonoBehaviour
         }
     }
 
-    public void Display(List<ExactionSO> p_exactionList)
+    public void Display(List<EventSO> p_eventList)
     {
         DisallowAll();
 
         // Affichage des Exactions
-        for (int i = 0; i < p_exactionList.Count; i++)
+        for (int i = 0; i < p_eventList.Count; i++)
         {
             m_objectExactionList[i].SetActive(true);
-            m_textExactionList[i][0].text = "" + p_exactionList[i].Name;
-            m_textExactionList[i][1].text = "" + p_exactionList[i].Description;
+            m_textExactionList[i][0].text = "" + p_eventList[i].Name;
+            m_textExactionList[i][1].text = "" + p_eventList[i].Description;
         }
     }
 

@@ -63,7 +63,6 @@ public class GameManager : Singleton<GameManager>, IInitializable
         {
             m_institutions.Add(Institution.GetComponent<InterfaceInstitution>().m_Institution);
         }
-
         Initialize();
     }
 
@@ -78,6 +77,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
         m_playerHasExecuteExaction = false;
         m_playerHasExecuteApproche = false;
 
-        m_InterfaceManager.DisplayEndTurn(m_pendingExactions);
+        Debug.Log("DEBUT DU DISPLAy");
+        m_InterfaceManager.DisplayEndTurn();
     }
 }
