@@ -100,7 +100,7 @@ public class InterfaceManager : MonoBehaviour
     }
     
     public bool m_cursorFocusHeavyInstitution; // utiliser dans Cursor.cs, pour définir si la fenêtre peut être enlever
-    public bool m_endTurnInsDisplay = false;
+    public bool m_endTurnIsDisplay = false;
 
     // -----------------------------------------------------------------------------------------
 
@@ -198,7 +198,7 @@ public class InterfaceManager : MonoBehaviour
     {
         m_EndTurn.SetActive(true);
         m_EndTurnScript.Display(p_exactionList);
-        m_endTurnInsDisplay = true;
+        m_endTurnIsDisplay = true;
     }
 
     public void DisplayVoctory()
@@ -269,7 +269,7 @@ public class InterfaceManager : MonoBehaviour
     public void DisallowEndTurn()
     {
         m_EndTurn.SetActive(false);
-        m_endTurnInsDisplay = false;
+        m_endTurnIsDisplay = false;
     }
 
     // -----------------------------------------------------------------------------------------

@@ -11,6 +11,7 @@ public class InterlocutorSO: ScriptableObject, IInitializable
     [SerializeField] [Tooltip("Santé mentale de l'interlocuteur (0-100) 100 à l'initialisation.")] public SyncIntSO m_sanity;
     [SerializeField] [Tooltip("Approches débloquées par les conditions.")] public List<ApproachSO> m_approach;
     [SerializeField] [Tooltip("Conditions d'accès à l'interlocuteur.")] private List<ConditionIntSO>  m_accesConditions;
+    [SerializeField] [Tooltip("Nom de la scene de l'interlocuteur.")] public string m_sceneName;
 
     public List<ConditionIntSO> AccessCondition => m_accesConditions;
     

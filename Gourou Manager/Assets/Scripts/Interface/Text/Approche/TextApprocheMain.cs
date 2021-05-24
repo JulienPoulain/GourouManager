@@ -8,7 +8,7 @@ public class TextApprocheMain : MonoBehaviour
     [SerializeField] GameObject [] m_approche;
 
     [Tooltip("Definit la scene de l'interlocutor (à definir plus tard depuis l'interlocutorSO")]
-    [SerializeField] string m_approachSceneToLoad;
+    // [SerializeField] string m_approachSceneToLoad;
 
     List<TextApprocheIndividual> m_approcheScript = new List<TextApprocheIndividual>();
 
@@ -50,7 +50,7 @@ public class TextApprocheMain : MonoBehaviour
             m_approcheScript[i].StoreApproach(p_interlocutor.m_approach[i]);
         }
 
-        SceneManager.LoadScene(m_approachSceneToLoad);
+        SceneManager.LoadScene(p_interlocutor.m_sceneName);
     }
 
     /*  Je stocke ca auy cas où

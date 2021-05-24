@@ -10,7 +10,7 @@ public class TextApprocheIndividual : MonoBehaviour
     [SerializeField] TMP_Text m_dialogueCharacter;
     [SerializeField] TMP_Text m_gain;
 
-    [SerializeField] TextApprocheMain m_mainApproach;   // servira à stocker l'approach choisis
+    [SerializeField] TextApprocheMain m_mainApproach;   // servira ï¿½ stocker l'approach choisis
 
     ApproachSO m_approche;
     public static List<ApproachSO> m_approachList = new List<ApproachSO>();
@@ -51,7 +51,7 @@ public class TextApprocheIndividual : MonoBehaviour
     {
         // Debug.Log("L'approach n'est pas faite !");
         m_mainApproach.StoreApproach(m_approche);
-        SceneManager.LoadScene("Julian_project");
+        SceneManager.LoadScene("MAP_MAIN");
 
         /*
         GameManager.Instance.PendingExactions.Add(m_Approche.TryApproach());
@@ -65,6 +65,6 @@ public class TextApprocheIndividual : MonoBehaviour
 
 // fonctionnement de l'approache :
 // le principe est, avantr le changement de scene, envoyer les approach dans la 
-// list d'approach static, puis, une fois dans l'autre scene, récupérer les approach
-// pour les afficher, celui qui est retenu est envoyer dans le main, où on pourra l'ajouter
-// à la fin du tour
+// list d'approach static, puis, une fois dans l'autre scene, rï¿½cupï¿½rer les approach
+// pour les afficher, celui qui est retenu est envoyer dans le main, oï¿½ on pourra l'ajouter
+// ï¿½ la fin du tour

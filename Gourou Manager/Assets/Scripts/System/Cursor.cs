@@ -37,7 +37,7 @@ public class Cursor : MonoBehaviour
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, m_layerMask))
         {
             // on regarde si le GO selectionner est une institution
-            if (hit.transform.gameObject.TryGetComponent(out InterfaceInstitution script) && !m_interfaceManager.m_endTurnInsDisplay)
+            if (hit.transform.gameObject.TryGetComponent(out InterfaceInstitution script) && !m_interfaceManager.m_endTurnIsDisplay)
             {
                 if (!m_interfaceManager.InterfaceIsDisplay())
                 {

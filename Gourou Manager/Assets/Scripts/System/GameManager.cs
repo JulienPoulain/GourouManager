@@ -70,24 +70,14 @@ public class GameManager : Singleton<GameManager>, IInitializable
     public void EndTurn()
     {
         Debug.Log("FIN DU TOUR");
-        
-        // On copie la liste des exactions, pour afficher les exactions faites dans l'interface
-        List<ExactionSO> exactionList = new List<ExactionSO>();
-        foreach (ExactionSO exaction in m_pendingExactions)
-        {
-            exactionList.Add(exaction);
-        }
 
         RoundManager.Instance.NextTurn();
 
-        Debug.Log("LE NOMBRE D'ELEMENT DANS LE TABLEAU EST DE : " + exactionList.Count);
-
-        
         m_turn++;
 
         m_playerHasExecuteExaction = false;
         m_playerHasExecuteApproche = false;
 
-        m_InterfaceManager.DisplayEndTurn(exactionList);
+        m_InterfaceManager.DisplayEndTurn(m_pendingExactions);
     }
 }

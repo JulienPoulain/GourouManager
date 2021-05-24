@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Corruption--
   m_EditorClassIdentifier: 
   m_ressource: {fileID: 11400000, guid: 06527bf37a213a648b5c325f45921c23, type: 2}
-  m_magnitude: {fileID: 11400000, guid: a9881998516f9dd4ebe7d5666c83a333, type: 2}
+  m_magnitude: {fileID: 11400000, guid: a3e92c86b81ca084bb9ee6d405a70eaa, type: 2}
