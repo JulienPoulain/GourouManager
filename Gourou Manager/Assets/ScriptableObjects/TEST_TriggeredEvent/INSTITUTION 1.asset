@@ -25,4 +25,5 @@ MonoBehaviour:
   m_exactionList: []
   m_triggeredEvents:
   - {fileID: 11400000, guid: 0ffc54116a52c214fa39386836801a9f, type: 2}
+  - {fileID: 11400000, guid: cf58adef4e231a8458c3083924163a15, type: 2}
   m_option: 0

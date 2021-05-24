@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b647af1624fef43bcaf750a89ff899, type: 3}
   m_Name: TRIG EVENT 2
   m_EditorClassIdentifier: 
-  m_name: 
-  m_description: 
-  m_initDuration: 0
-  m_duration: 0
-  m_impacts: []
+  m_name: Triggered event 2
+  m_description: Description de triggered event 2
+  m_initDuration: 1
+  m_duration: 1
+  m_impacts:
+  - {fileID: 11400000, guid: 9068219b536286f4ab4a42a95d911fee, type: 2}
   m_infoGained: []
   m_initNbUse: -1
-  m_nbUse: 0
-  m_cdtActivation: {fileID: 0}
+  m_nbUse: -1
+  m_cdtActivation: {fileID: 11400000, guid: 96bb39ad954e8f54a948feab3d9816f2, type: 2}

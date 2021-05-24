@@ -14,6 +14,7 @@ public class TriggeredEventSO : EventSO
     public override void Initialize()
     {
         m_nbUse = m_initNbUse;
+        base.Initialize();
         if (m_cdtActivation != null)
             m_cdtActivation.Initialize();
     }
