@@ -15,11 +15,11 @@ public class Singleton<T> : MonoBehaviour where T : Component
         DontDestroyOnLoad(gameObject);
     }
 
-
     public static T Instance
     {
         get
         {
+            Debug.LogFormat("Instance ?");
             if (m_instance != null)
             {
                 return m_instance;

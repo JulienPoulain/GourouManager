@@ -1,8 +1,14 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 public class RoundManager : Singleton<RoundManager>
 {
+    private void Awake()
+    {
+        name = "RoundManager";
+    }
+
     public void NextTurn()
     {
         List<EventSO> newActiveEvents = new List<EventSO>();
