@@ -1,16 +1,15 @@
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
-using UnityEngine;
 
 public class RoundManager : Singleton<RoundManager>
 {
-    //private Dictionary<SyncIntSO, int> m_pendingChanges = new Dictionary<SyncIntSO, int>();
-    
     public void NextTurn()
     {
         List<EventSO> newActiveEvents = new List<EventSO>();
         
+        EventRegister.Instance.AddDay(GameManager.Instance.Turn);
+        EventRegister.Instance.Add(GameManager.Instance.Turn, GameManager.Instance.PendingExactions);
+
         // 1. Ajout des nouveaux évènements d'exactions puis exécution des évènements actifs.
         AddEvent(newActiveEvents, GameManager.Instance.PendingExactions);
         
@@ -51,6 +50,8 @@ public class RoundManager : Singleton<RoundManager>
             GameManager.Instance.ActiveEvents.AddRange(newTEvents);
         } while (newTEvents.Count > 0);
         
+        EventRegister.Instance.Add(GameManager.Instance.Turn, GameManager.Instance.ActiveEvents);
+        
         ClearFinishedEvent(GameManager.Instance.ActiveEvents);
     }
 
@@ -73,7 +74,7 @@ public class RoundManager : Singleton<RoundManager>
         }
     }
 
-    // Réinitialise les évènements finis et les supprime de la liste p_events.
+    // Réinitialise les évènements finis puis les supprime de la liste p_events.
     public void ClearFinishedEvent(List<EventSO> p_events)
     {
         foreach (EventSO evenement in p_events.ToList())
@@ -86,6 +87,7 @@ public class RoundManager : Singleton<RoundManager>
         }
     }
 
+    // Stocke les effets des évènements puis les applique d'un coup à la fin.
     public void ComputeEvents(IEnumerable<EventSO> p_events)
     {
         Dictionary<SyncIntSO, int> pendingChanges = new Dictionary<SyncIntSO, int>();
