@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Butter Dog
   m_description: j'aime les beurres
+  m_descriptionFailure: ceci est la description en cas d'echec
   m_sanity: {fileID: 11400000, guid: bd1912c12c2298641a00ff6847e6d8cb, type: 2}
   m_approach:
   - {fileID: 11400000, guid: c933cf22a29e3ba4785844cd7fa28d35, type: 2}
-  - {fileID: 11400000, guid: c933cf22a29e3ba4785844cd7fa28d35, type: 2}
-  - {fileID: 11400000, guid: c933cf22a29e3ba4785844cd7fa28d35, type: 2}
-  m_accesConditions: []
+  m_accesConditions:
+  - {fileID: 11400000, guid: 9608e9b205e706f498f0506147bcfc4a, type: 2}
+  - {fileID: 11400000, guid: 739314c1bb1d37f4c948e9d1d34dfb84, type: 2}

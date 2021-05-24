@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class TextInterlocutor : MonoBehaviour
 {
@@ -146,13 +145,13 @@ public class TextInterlocutor : MonoBehaviour
 
     public void SpeekToInterlocutor()
     {
-        if (m_Interlocutor.IsAccessible() && m_InterlocutorSelected  && !GameManager.Instance.m_PlayerHasExecuteApproche)
+        if (m_Interlocutor.IsAccessible() && m_InterlocutorSelected  && !GameManager.Instance.PlayerHasExecuteApproach)
         {
             GameManager.Instance.m_InterfaceManager.DisplayApproche(m_Interlocutor);
             GameManager.Instance.m_InterfaceManager.DisallowInterlocutor();
-
-            GameManager.Instance.m_PlayerHasExecuteApproche = true;
-            SceneManager.LoadScene(m_approachSceneToLoad);
+            // Il y avait le changement de scene ici
+            GameManager.Instance.PlayerHasExecuteApproach = true;
+            Debug.Log("Institution : " + GameManager.Instance.PlayerHasExecuteApproach);
         }
         else
         {

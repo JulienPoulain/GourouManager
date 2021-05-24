@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Carmichael Johnson Smith
   m_description: Chef de la police
+  m_descriptionFailure: 
   m_sanity: {fileID: 11400000, guid: 67f8b183b28615744bdac72ea3952e01, type: 2}
-  m_approach: []
+  m_approach:
+  - {fileID: 11400000, guid: cb6a58d2c1b9cae4299e1e7e1e814eaf, type: 2}
+  - {fileID: 11400000, guid: 43fd2a536ccb5a443824ba874e4ab3c1, type: 2}
   m_accesConditions: []
+  m_sceneName: CARMICHAEL

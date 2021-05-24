@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: LUIS
   m_description: "Luis est le pr\xE9sident de la Conf\xE9d\xE9ration du Travail. "
+  m_descriptionFailure: 
   m_sanity: {fileID: 11400000, guid: 3fa3bfe10c7a9bc4cbb0ec678361566c, type: 2}
   m_approach:
   - {fileID: 11400000, guid: 1fa6de69c7a6b034ba0e9189ea481444, type: 2}
@@ -22,3 +23,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0d176f39705975941a6354ee56b57e1d, type: 2}
   - {fileID: 11400000, guid: 2ddb7c36d19ceef4d876be5c5839394b, type: 2}
   - {fileID: 11400000, guid: 917da132c3db8a04d9163fd025c91848, type: 2}
+  m_sceneName: SYNDIC_LUIS

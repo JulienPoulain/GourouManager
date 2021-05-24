@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Toute corruption a un prix ...
   m_description: 
-  m_duration: 1
+  m_duration: 0
   m_impacts:
   - {fileID: 11400000, guid: c5defd068dcc2db41b289350c92332d4, type: 2}
   m_infoGained: []

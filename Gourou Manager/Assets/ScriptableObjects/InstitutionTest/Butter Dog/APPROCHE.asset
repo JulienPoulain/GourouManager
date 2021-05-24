@@ -18,6 +18,7 @@ MonoBehaviour:
   m_cdtSuccess:
   - {fileID: 11400000, guid: 883bd66df48befc4bb15377fb09e1a2d, type: 2}
   m_cooldown: 2
+  m_remainingTime: 0
   m_descriptionApproach: Bonjour, je suis la descripotion de l'approche
-  m_DialogueApproach: Bonjours cher aventurier, n'auriez vous pas faim?
+  m_dialogueApproach: bonjour, ceci est un dialogue
   m_resultatApproach: Vous risquez de mourrir de faim :/

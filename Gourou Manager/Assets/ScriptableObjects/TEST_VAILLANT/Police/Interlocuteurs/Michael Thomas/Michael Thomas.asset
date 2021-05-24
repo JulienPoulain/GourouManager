@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 471942724c89ca84486354cfe1a7022d, type: 3}
   m_Name: Michael Thomas
   m_EditorClassIdentifier: 
-  m_name: Jonny Pact
+  m_name: Michael Tomas
   m_description: Inspezcteur de Police
-  m_sanity: {fileID: 11400000, guid: b8f9f21919a566648ba3a03f15e0a640, type: 2}
+  m_descriptionFailure: Si vous echouez, ce n'est pas bien
+  m_sanity: {fileID: 0}
   m_approach:
-  - {fileID: 11400000, guid: 1426958f4e7cd0b49b54830091897c6d, type: 2}
+  - {fileID: 11400000, guid: 22d5bb00e2abb6f46947a70c8410230a, type: 2}
+  - {fileID: 11400000, guid: de54daabc67d6494e84aedd514780be2, type: 2}
   m_accesConditions: []

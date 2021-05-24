@@ -1,20 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     // Text
     [SerializeField] TMP_Text m_textNom;
     [SerializeField] TMP_Text m_textFonds;
-    [SerializeField] TMP_Text m_textMembres;
-    [SerializeField] TMP_Text m_textFanatiques;
     [SerializeField] TMP_Text m_textEtat;
     [SerializeField] TMP_Text m_textExpositionPublique;
 
     [SerializeField] GameObject m_InterlocutorButton;
+    
+    [SerializeField] GameObject m_backGround;   // permettra de modifier la couleur, celon si le cursor est dessus ou non
+    Image m_backGroundImage;
 
     private InstitutionSO m_InstitutionData;
 
@@ -33,6 +35,8 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
         }
 
         m_ThisRectangle = GetComponent<RectTransform>();
+
+        m_backGroundImage = m_backGround.GetComponent<Image>();
     }
 
     public void Display(InstitutionSO p_data)
@@ -50,8 +54,6 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
 
         m_textNom.text = "" + p_data.m_name;
         m_textFonds.text = "Fonds : " + p_data.m_funds.Value;
-        m_textMembres.text = "Membres : " + p_data.m_members.Value;
-        m_textFanatiques.text = "Fanatiques : " + p_data.m_fanatics.Value;
         m_textEtat.text = "Etat : " + p_data.m_option.ToString();
         m_textExpositionPublique.text = "Exposition publique : " + p_data.m_publicExposure.Value;
 
@@ -92,6 +94,7 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
     public void OnPointerEnter(PointerEventData eventData)
     {
         GameManager.Instance.m_InterfaceManager.m_cursorFocusHeavyInstitution = true;
+        m_backGroundImage.sprite = GameManager.Instance.m_InterfaceManager.m_redBackGroundSprite;
     }
 
 
@@ -106,6 +109,7 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
     public void OnPointerExit(PointerEventData eventData)
     {
         GameManager.Instance.m_InterfaceManager.m_cursorFocusHeavyInstitution = false;
+        m_backGroundImage.sprite = GameManager.Instance.m_InterfaceManager.m_whiteBackGroundSprite;
     }
 
     Vector3 m_oldMousePos;

@@ -10,27 +10,61 @@ public class TextApprocheIndividual : MonoBehaviour
     [SerializeField] TMP_Text m_dialogueCharacter;
     [SerializeField] TMP_Text m_gain;
 
-    ApproachSO m_Approche;
+    [SerializeField] TextApprocheMain m_mainApproach;   // servira � stocker l'approach choisis
 
-    public void Display(ApproachSO p_approach)
+    ApproachSO m_approche;
+    public static List<ApproachSO> m_approachList = new List<ApproachSO>();
+
+    void Start()
     {
-        m_Approche = p_approach;
+        this.gameObject.SetActive(false);
 
-        m_name.text = "" + p_approach.Name;
-        m_dialogueCharacter.text = "" + p_approach.m_dialogueApproach;
-        m_gain.text = "" + p_approach.m_resultatApproach;
+        // Si la liste d'approach n'est pas vide, on affiche
+        if (m_approachList.Count != 0)
+        {
+            DisplayApproach();
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+    public void StoreApproach(ApproachSO p_approach)
+    {
+        m_approachList.Add(p_approach);
+    }
+
+    public void DisplayApproach()
+    {
+        this.gameObject.SetActive(true);
+
+        m_approche = m_approachList[0];
+        m_approachList.RemoveAt(0);
+
+        m_name.text = "" + m_approche.Name;
+        m_dialogueCharacter.text = "" + m_approche.m_dialogueApproach;
+        m_gain.text = "" + m_approche.m_resultatApproach;
     }
 
     public void ExecuteApproche()
     {
-        Debug.Log("L'approach n'est pas faite !");
-        SceneManager.LoadScene("Julian_project");
+        // Debug.Log("L'approach n'est pas faite !");
+        m_mainApproach.StoreApproach(m_approche);
+        SceneManager.LoadScene("MAP_MAIN");
 
         /*
         GameManager.Instance.PendingExactions.Add(m_Approche.TryApproach());
         Debug.Log("Approche fait");
         GameManager.Instance.m_InterfaceManager.DisallowApproche();
         */
-        m_Approche = null;
+
+        m_approche = null;
     }
 }
+
+// fonctionnement de l'approache :
+// le principe est, avantr le changement de scene, envoyer les approach dans la 
+// list d'approach static, puis, une fois dans l'autre scene, r�cup�rer les approach
+// pour les afficher, celui qui est retenu est envoyer dans le main, o� on pourra l'ajouter
+// � la fin du tour

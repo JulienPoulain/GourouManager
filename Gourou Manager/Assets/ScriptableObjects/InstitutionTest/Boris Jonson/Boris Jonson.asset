@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Boris Jonson
   m_description: j'aime les enfants
+  m_descriptionFailure: si tu echous, tu resteras dans ma cave
   m_sanity: {fileID: 11400000, guid: bd1912c12c2298641a00ff6847e6d8cb, type: 2}
-  m_approach: []
-  m_accesConditionInt: []
-  m_accesConditionBool: []
+  m_approach:
+  - {fileID: 11400000, guid: c99f3f2da4eaf014584dc389b5865bf1, type: 2}
+  - {fileID: 11400000, guid: df665fde32a99884e8075f50c5dc52a4, type: 2}
+  m_accesConditions:
+  - {fileID: 11400000, guid: a33a14ba09fc46c4abd1036963443537, type: 2}
+  - {fileID: 11400000, guid: 917da132c3db8a04d9163fd025c91848, type: 2}

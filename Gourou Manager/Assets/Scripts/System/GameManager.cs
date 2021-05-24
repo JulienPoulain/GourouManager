@@ -17,9 +17,9 @@ public class GameManager : Singleton<GameManager>, IInitializable
     [SerializeField] public InterfaceManager m_InterfaceManager;
     [SerializeField] public GameObject m_Camera;
     
-    [SerializeField] private List<ExactionSO> m_pendingExactions = new List<ExactionSO>();
+    [SerializeField] private static List<ExactionSO> m_pendingExactions = new List<ExactionSO>();
     [SerializeField] private List<EventSO> m_activeEvents = new List<EventSO>();
-    
+
     public bool m_focusOnInstitution = false;
     [SerializeField] private int m_turn;
 
@@ -32,8 +32,19 @@ public class GameManager : Singleton<GameManager>, IInitializable
 
     // Player Variable //
     
-    public bool m_PlayerHasExecuteExaction = false; // définit si le joueur à déjà fait une exaction ce tour ci
-    public bool m_PlayerHasExecuteApproche = false;    // Définit si le joueur à déjà fait un dialogue ce tour ci
+    private static bool m_playerHasExecuteExaction = false; // définit si le joueur à déjà fait une exaction ce tour ci, static pour que l'information ne change pas entre les changments de scènes
+    private static bool m_playerHasExecuteApproche = false;    // Définit si le joueur à déjà fait un dialogue ce tour ci
+    
+    public bool PlayerHasExecuteApproach
+    {
+        get { return m_playerHasExecuteApproche; }
+        set { m_playerHasExecuteApproche = value;}
+    }
+    public bool PlayerHasExectuteExaction
+    {
+        get { return m_playerHasExecuteExaction; }
+        set { m_playerHasExecuteExaction = value; }
+    }
 
     public void Initialize()
     {
@@ -52,18 +63,21 @@ public class GameManager : Singleton<GameManager>, IInitializable
         {
             m_institutions.Add(Institution.GetComponent<InterfaceInstitution>().m_Institution);
         }
-
         Initialize();
     }
 
     public void EndTurn()
     {
-        RoundManager.Instance.NextTurn();
-        m_turn++;
         Debug.Log("FIN DU TOUR");
-        Debug.Log(m_turn);
 
-        m_PlayerHasExecuteExaction = false;
-        m_PlayerHasExecuteApproche = false;
+        RoundManager.Instance.NextTurn();
+
+        m_turn++;
+
+        m_playerHasExecuteExaction = false;
+        m_playerHasExecuteApproche = false;
+
+        Debug.Log("DEBUT DU DISPLAy");
+        m_InterfaceManager.DisplayEndTurn();
     }
 }

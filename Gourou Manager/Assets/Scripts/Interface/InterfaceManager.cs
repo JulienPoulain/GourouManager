@@ -25,15 +25,17 @@ public class InterfaceManager : MonoBehaviour
     [SerializeField] GameObject m_InstitutionHeavyObject;
     [SerializeField] GameObject m_InterlocutorObject;
     [SerializeField] GameObject m_Approche;
-    [SerializeField] GameObject m_EndTurn;
+    [SerializeField] GameObject m_NextTurnButton;
     [SerializeField] GameObject m_Victory;
     [SerializeField] GameObject m_Defeat;
+    [SerializeField] GameObject m_EndTurn;
 
     TextInstitutionLight m_InstitutionLightScript;
     TextInstitutionHeavy m_InstitutionHeavyScript;
     TextCrisis m_CrisisScript;
     public TextInterlocutor m_InterlocutorScript; // seulement utiliser dans InterlocutorButton (vital)
     TextApprocheMain m_ApprocheScript;
+    TextEndTurn m_EndTurnScript;
 
     // public TextInterlocutor TextInterlocutor => m_InterlocutorScript;
 
@@ -98,6 +100,11 @@ public class InterfaceManager : MonoBehaviour
     }
     
     public bool m_cursorFocusHeavyInstitution; // utiliser dans Cursor.cs, pour définir si la fenêtre peut être enlever
+    public bool m_endTurnIsDisplay = false;
+
+    // Sprite
+    [SerializeField] public Sprite m_redBackGroundSprite;
+    [SerializeField] public Sprite m_whiteBackGroundSprite;
 
     // -----------------------------------------------------------------------------------------
 
@@ -111,6 +118,7 @@ public class InterfaceManager : MonoBehaviour
         m_CrisisScript = m_CrisisObject.GetComponent<TextCrisis>();
         m_InterlocutorScript = m_InterlocutorObject.GetComponent<TextInterlocutor>();
         m_ApprocheScript = m_Approche.GetComponent<TextApprocheMain>();
+        m_EndTurnScript = m_EndTurn.GetComponent<TextEndTurn>();
     }
 
     // -----------------------------------------------------------------------------------------
@@ -158,8 +166,9 @@ public class InterfaceManager : MonoBehaviour
 
         RectTransform buttonDim = m_ButtonInterlocutorPrefab.GetComponent<RectTransform>();
         float buttonWidth = buttonDim.rect.width;
+        float buttonHeight = buttonDim.rect.height;
 
-        Vector3 firstPos = firstButtonPos(p_data, buttonWidth);
+        Vector3 firstPos = firstButtonPos(p_data, buttonWidth, buttonHeight);
 
         for (int i = 0; i < p_data.m_interlocutorList.Count; i++)
         {
@@ -169,7 +178,7 @@ public class InterfaceManager : MonoBehaviour
 
 
             // on décalle le boutton de la largeur
-            firstPos.x += buttonWidth;
+            firstPos.x += buttonWidth * 0.25f; // on multiplie selon le scale du boutton (tout boutton à un scale de 0.25 pour le visuel)
 
             // on configure le boutton pour qu'il ai les informations de l'interlocuteur
             Button.gameObject.GetComponent<InterlocutorButton>().Configuration(p_data.m_interlocutorList[i]);
@@ -180,14 +189,21 @@ public class InterfaceManager : MonoBehaviour
     public void DisplayApproche(InterlocutorSO p_interlocutor) // appeler depuis textInterlocutor
     {
         m_Approche.SetActive(true);
-        m_ApprocheIsDisplay = true;
-        m_ApprocheScript.Display(p_interlocutor);
+        // m_ApprocheIsDisplay = true;
+        m_ApprocheScript.StoreInterlocutor(p_interlocutor);
         DisallowHeavyInstitution();
+    }
+
+    public void DisplayNextTurnButton()
+    {
+        m_NextTurnButton.SetActive(true);
     }
 
     public void DisplayEndTurn()
     {
-        
+        m_EndTurn.SetActive(true);
+        m_EndTurnScript.Display();
+        m_endTurnIsDisplay = true;
     }
 
     public void DisplayVoctory()
@@ -255,6 +271,12 @@ public class InterfaceManager : MonoBehaviour
         m_Defeat.SetActive(false);
     }
 
+    public void DisallowEndTurn()
+    {
+        m_EndTurn.SetActive(false);
+        m_endTurnIsDisplay = false;
+    }
+
     // -----------------------------------------------------------------------------------------
     // Calcul
     // -----------------------------------------------------------------------------------------
@@ -287,10 +309,11 @@ public class InterfaceManager : MonoBehaviour
         return position;
     }
 
-    Vector3 firstButtonPos(InstitutionSO p_data, float p_buttonWidth)
+    Vector3 firstButtonPos(InstitutionSO p_data, float p_buttonWidth, float p_buttonHeight)
     {
-        float startX = (m_canvasSize.rect.width / 2)  - ((p_data.m_interlocutorList.Count * p_buttonWidth)/3);
-        float startY = m_canvasSize.rect.height - 50;
+        float startX = (m_canvasSize.rect.width /2)  - ((p_data.m_interlocutorList.Count * p_buttonWidth)/2 * 0.25f);
+        float startY = m_canvasSize.rect.height - (p_buttonHeight * 0.25f);
+        Debug.Log("la taille du canvas est de  : " + m_canvasSize.rect.height);
 
         return new Vector3(startX, startY, 0);
     }

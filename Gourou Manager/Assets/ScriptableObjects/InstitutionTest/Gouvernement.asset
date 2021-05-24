@@ -13,21 +13,21 @@ MonoBehaviour:
   m_Name: Gouvernement
   m_EditorClassIdentifier: 
   m_name: Gouvernement
+  m_description: WIR MUSSEN DIE JUDEN AUSROTTEN
   m_funds: {fileID: 11400000, guid: d62b01ebffb7cf24085bd44e327775c7, type: 2}
   m_members: {fileID: 11400000, guid: 380b9174691822b4ea47e13468467882, type: 2}
   m_fanatics: {fileID: 11400000, guid: 08559802550b6574abfdaa29b9d8feb6, type: 2}
   m_impactOnPop: {fileID: 0}
-  m_impactOnCrise: {fileID: 0}
   m_publicExposure: {fileID: 11400000, guid: caf0a690e3beb764eb883e4c57733d87, type: 2}
   m_corruption: {fileID: 11400000, guid: 40955120802f797458ca15c929f2537d, type: 2}
   m_brutality: {fileID: 0}
   m_interlocutorList:
   - {fileID: 11400000, guid: ce437b61f47e5ef439bdf76108f0ddb4, type: 2}
   - {fileID: 11400000, guid: 0400873e113651d46936c19c4dc9d7ac, type: 2}
-  - {fileID: 11400000, guid: 0400873e113651d46936c19c4dc9d7ac, type: 2}
   m_exactionList:
   - {fileID: 11400000, guid: 4de3e549bde37294e99a44ab9122027b, type: 2}
   - {fileID: 11400000, guid: 1c5757c9f42f44945b98a9236e69f642, type: 2}
   - {fileID: 11400000, guid: ba48e962726a3bf4980010f40ff60bbd, type: 2}
-  m_eventList: []
+  m_triggeredExactions: []
   m_option: 1
+  m_remainingTriggeredExactions: []

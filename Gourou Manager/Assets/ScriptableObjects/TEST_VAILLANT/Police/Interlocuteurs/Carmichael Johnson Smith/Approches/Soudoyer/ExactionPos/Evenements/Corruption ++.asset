@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: "La corruption de la Police a augment\xE9"
   m_description: 
-  m_duration: 1
+  m_duration: 0
   m_impacts:
   - {fileID: 11400000, guid: 658bc386149ecfc4585e3849265ebc07, type: 2}
   m_infoGained: []
