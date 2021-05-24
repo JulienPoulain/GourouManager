@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Medias
   m_EditorClassIdentifier: 
   m_name: Medias
-  m_description: 
+  m_description: Les groupes de presse mainstream
   m_funds: {fileID: 11400000, guid: ef56b524d9546714dbd69b287da8a1ae, type: 2}
   m_members: {fileID: 0}
   m_fanatics: {fileID: 0}
@@ -21,9 +21,7 @@ MonoBehaviour:
   m_publicExposure: {fileID: 11400000, guid: f5e58cc468f223140a4ac9b0c0130582, type: 2}
   m_corruption: {fileID: 11400000, guid: 0598033080ff97845b2f79930a2ef7d6, type: 2}
   m_brutality: {fileID: 0}
-  m_interlocutorList:
-  - {fileID: 11400000, guid: a31fac44da6044f43b2bb0db09dcd4d8, type: 2}
-  - {fileID: 11400000, guid: c746c8494d1de4d4ba7f96357f9fb205, type: 2}
+  m_interlocutorList: []
   m_exactionList: []
   m_triggeredExactions: []
   m_option: 0

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 885772bd64b7b1348a7f3133ea46b0b4, type: 3}
   m_Name: CULTE F
   m_EditorClassIdentifier: 
-  m_name: Fonds
-  m_initValue: 5
-  m_value: 5
+  m_name: Nom de ressource
+  m_initValue: 50000
+  m_value: 0
