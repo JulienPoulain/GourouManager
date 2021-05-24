@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ca324ff6d925dc40b280073ca94b863, type: 3}
   m_Name: Sync Police_F
   m_EditorClassIdentifier: 
-  m_overview: 
-  m_operand: {fileID: 0}
+  m_overview: 'POLICE_F : 0'
+  m_operand: {fileID: 11400000, guid: 5d7d34600bd47db4baac925a506195ce, type: 2}

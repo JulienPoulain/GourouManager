@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
-  m_Name: NewEvent
+  m_Name: Media_IMP --
   m_EditorClassIdentifier: 
   m_name: 
   m_description: 
-  m_duration: 0
-  m_impacts: []
+  m_initDuration: 0
+  m_duration: 3
+  m_impacts:
+  - {fileID: 11400000, guid: 823bfbb36e835494f9309caf48d5d5b5, type: 2}
   m_infoGained: []

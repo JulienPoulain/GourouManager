@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
-  m_Name: ExactionSO
+  m_Name: "Faire \xE9crire un article positif sur le culte"
   m_EditorClassIdentifier: 
-  m_name: 
-  m_description: 
-  m_eventList: []
+  m_name: "Faire \xE9crire un article positif sur le culte"
+  m_description: 'Ganger de l''exposition publique '
+  m_eventList:
+  - {fileID: 11400000, guid: dab474088cd3c8848ae44442e8137650, type: 2}
   m_conditions: []

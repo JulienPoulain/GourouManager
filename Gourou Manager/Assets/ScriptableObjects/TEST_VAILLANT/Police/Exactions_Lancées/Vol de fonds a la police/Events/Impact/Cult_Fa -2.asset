@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65d02e6c45e7ab84a9e56bc495f4f42d, type: 3}
   m_Name: Cult_Fa -2
   m_EditorClassIdentifier: 
-  m_ressource: {fileID: 0}
-  m_magnitude: {fileID: 0}
+  m_ressource: {fileID: 11400000, guid: c319fb0ef87343f40bc47b6d66d6c2e6, type: 2}
+  m_magnitude: {fileID: 11400000, guid: 873e48013ac1edd47b1ff669912ddf2c, type: 2}

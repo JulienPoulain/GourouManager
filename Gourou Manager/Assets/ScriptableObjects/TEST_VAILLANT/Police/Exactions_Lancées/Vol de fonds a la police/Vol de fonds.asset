@@ -17,4 +17,7 @@ MonoBehaviour:
     que les affaiblir
   m_eventList:
   - {fileID: 11400000, guid: c54fd80a4dbcda44898ffcc4162aebf8, type: 2}
-  m_conditions: []
+  - {fileID: 11400000, guid: 2621c7f3d82a0854791ecf01966975d0, type: 2}
+  - {fileID: 11400000, guid: 6710141d2e3d7a94f842f6804c03992e, type: 2}
+  m_conditions:
+  - {fileID: 11400000, guid: f551036aa7291bc4fbd3fd0cda9c3a29, type: 2}

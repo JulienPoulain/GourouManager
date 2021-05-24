@@ -9,8 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65d02e6c45e7ab84a9e56bc495f4f42d, type: 3}
-  m_Name: NewImpact
+  m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
+  m_Name: Police_EXP --
   m_EditorClassIdentifier: 
-  m_ressource: {fileID: 0}
-  m_magnitude: {fileID: 0}
+  m_name: 
+  m_description: 
+  m_initDuration: 1
+  m_duration: 1
+  m_impacts:
+  - {fileID: 11400000, guid: d4f269c1e16ef3441a6f9c0294b29375, type: 2}
+  m_infoGained: []

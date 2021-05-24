@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36d38ef088e230848946b59d816ca3bc, type: 3}
-  m_Name: Pourcentage
+  m_Name: 20% Police_F
   m_EditorClassIdentifier: 
-  m_overview: 
-  m_operand: {fileID: 0}
-  m_percentage: {fileID: 0}
+  m_overview: '( 20 : 20% de POLICE_F : 0 )'
+  m_operand: {fileID: 11400000, guid: 6f8f8f1b8d391ce4b9648f063d3ba587, type: 2}
+  m_percentage: {fileID: 11400000, guid: d2f890c3000dbd647ba3e2d43eb94387, type: 2}

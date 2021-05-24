@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a07221645fd8ad42978314f51634aaa, type: 3}
-  m_Name: CinditionSoudoyer
+  m_Name: Cult_F 40000+
   m_EditorClassIdentifier: 
   m_ressource: {fileID: 11400000, guid: caa6baab0d7c19149b38b2c26a934853, type: 2}
   m_conditionType: 6
