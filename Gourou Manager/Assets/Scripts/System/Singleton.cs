@@ -19,7 +19,6 @@ public class Singleton<T> : MonoBehaviour where T : Component
     {
         get
         {
-            Debug.LogFormat("Instance ?");
             if (m_instance != null)
             {
                 return m_instance;

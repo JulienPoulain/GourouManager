@@ -72,12 +72,11 @@ public class GameManager : Singleton<GameManager>, IInitializable
 
         RoundManager.Instance.NextTurn();
 
-        m_turn++;
-
         m_playerHasExecuteExaction = false;
         m_playerHasExecuteApproche = false;
 
-        Debug.Log("DEBUT DU DISPLAy");
         m_InterfaceManager.DisplayEndTurn();
+
+        m_turn++;
     }
 }

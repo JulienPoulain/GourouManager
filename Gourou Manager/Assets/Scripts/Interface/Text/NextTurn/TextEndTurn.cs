@@ -20,7 +20,7 @@ public class TextEndTurn : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         foreach (GameObject thisObject in m_objectEtatList)
         {
@@ -45,7 +45,7 @@ public class TextEndTurn : MonoBehaviour
             m_objectEtatList[i].SetActive(true);
             m_textEtatList[i].text = "" + GameManager.Instance.Institutions[i].m_name + " : " + GameManager.Instance.Institutions[i].m_option.ToString();
         }
-
+        
         // Affichage du Culthe
         m_TextmainInstitutionName.text = "" + GameManager.Instance.MainInstitution.m_name;
 
