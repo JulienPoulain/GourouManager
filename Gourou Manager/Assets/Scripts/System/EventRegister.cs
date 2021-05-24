@@ -6,6 +6,24 @@ public class EventRegister : Singleton<EventRegister>
 {
     private SortedDictionary<int, Register> m_registers = new SortedDictionary<int, Register>();
 
+    /*public Register this[int p_turn]
+    {
+        get
+        {
+            Debug.Log("Dans le get");
+            if (!m_registers.ContainsKey(p_turn))
+                m_registers[p_turn] = new Register();
+            return m_registers[p_turn];
+        }
+        set
+        {
+            Debug.Log("Dans le set");
+            if (!m_registers.ContainsKey(p_turn))
+                m_registers[p_turn] = new Register();
+            m_registers[p_turn] = value;
+        }
+    }*/
+
     private class Register
     {
         private HashSet<ExactionSO> m_exactions = new HashSet<ExactionSO>();
@@ -22,7 +40,6 @@ public class EventRegister : Singleton<EventRegister>
 
     public void AddDay(int p_turn)
     {
-        Debug.Log("AddDay");
         if (!m_registers.ContainsKey(p_turn))
             m_registers.Add(p_turn, new Register());
     }
@@ -34,6 +51,8 @@ public class EventRegister : Singleton<EventRegister>
     /// <returns>Les exactions provoquées au tour p_turn.</returns>
     public List<ExactionSO> GetExactions(int p_turn)
     {
+        if (!m_registers.ContainsKey(p_turn))
+            m_registers.Add(p_turn, new Register());
         return m_registers[p_turn].Exactions.ToList();
     }
 
@@ -44,6 +63,8 @@ public class EventRegister : Singleton<EventRegister>
     /// <returns>Les évènements ayant eu une activité durant le tour p_turn.</returns>
     public List<EventSO> GetEvents(int p_turn)
     {
+        if (!m_registers.ContainsKey(p_turn))
+            m_registers.Add(p_turn, new Register());
         return m_registers[p_turn].Events.ToList();
     }
 
