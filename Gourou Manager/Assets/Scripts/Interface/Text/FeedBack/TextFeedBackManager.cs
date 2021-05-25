@@ -14,7 +14,7 @@ public class TextFeedBackManager : MonoBehaviour
 
     [SerializeField] GameObject m_textPrefab;
     [SerializeField] float m_textcooldown;
-
+    
     void Awake()
     {
         m_canvasSize = GetComponent<RectTransform>();
@@ -52,15 +52,16 @@ public class TextFeedBackManager : MonoBehaviour
         float counter = 0;
         Image textImage = p_textContainer.GetComponent<Image>();
 
-        while (counter != m_textcooldown)
+        while (counter <= m_textcooldown)
         {
             counter += Time.deltaTime;
             yield return null;
-
-            // p_text.color.a = Time.deltaTime;
-            Debug.Log(p_text.color.a);
-
+            
+            p_text.alpha -= Time.deltaTime;
+            p_textContainer.transform.position += new Vector3(0, 0.01f, 0);
         }
+
+        Destroy (p_textContainer);
 
 
     }

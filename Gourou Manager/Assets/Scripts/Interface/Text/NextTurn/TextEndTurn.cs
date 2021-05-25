@@ -64,6 +64,7 @@ public class TextEndTurn : MonoBehaviour
     public void Disallow()
     {
         GameManager.Instance.m_InterfaceManager.DisallowEndTurn();
+        m_exactionScript.DestroyAll();
     }
 
     void DisallowAll()

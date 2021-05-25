@@ -15,7 +15,7 @@ public class TextApprocheIndividual : MonoBehaviour
     ApproachSO m_approche;
     public static List<ApproachSO> m_approachList = new List<ApproachSO>();
 
-    void Start()
+    void Awake()
     {
         this.gameObject.SetActive(false);
 

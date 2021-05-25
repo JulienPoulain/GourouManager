@@ -20,6 +20,9 @@ public class GameManager : Singleton<GameManager>, IInitializable
     [SerializeField] private static List<ExactionSO> m_pendingExactions = new List<ExactionSO>();
     [SerializeField] private List<EventSO> m_activeEvents = new List<EventSO>();
 
+    [SerializeField] private List<ConditionSO> m_cdtVictory;
+    [SerializeField] private List<ConditionSO> m_cdtDefeat;
+
     public bool m_focusOnInstitution = false;
     [SerializeField] private int m_turn;
 
@@ -49,10 +52,24 @@ public class GameManager : Singleton<GameManager>, IInitializable
     public void Initialize()
     {
         m_turn = 0;
+        
         foreach (InstitutionSO institution in m_institutions)
-        {
             institution.Initialize();
-        }
+
+        // Initializastion des conditions de victoire.
+        if (m_cdtVictory.Count < 1)
+            Debug.Log("<color=red>ERROR :</color> Aucune condition de victoire.");
+        else
+            foreach (ConditionSO condition in m_cdtVictory)
+                condition.Initialize();
+
+        // Initialisation des conditions de défaite.
+        if (m_cdtDefeat.Count < 1)
+            Debug.Log("<color=red>ERROR :</color> Aucune condition de défaite.");
+        else
+            foreach (ConditionSO condition in m_cdtDefeat)
+                condition.Initialize();
+            
     }
     
     private void Start()
@@ -70,13 +87,51 @@ public class GameManager : Singleton<GameManager>, IInitializable
     {
         Debug.Log("FIN DU TOUR");
 
-        RoundManager.Instance.NextTurn();
-
         m_playerHasExecuteExaction = false;
         m_playerHasExecuteApproche = false;
 
+        RoundManager.Instance.NextTurn();
+
+        TryEndGame();
+        
+        Debug.Log("DEBUT DU DISPLAy");
         m_InterfaceManager.DisplayEndTurn();
 
         m_turn++;
+    }
+
+    
+    // GESTION DES CONDITIONS DE VICTOIRE ET DÉFAITE
+    
+    private void TryEndGame()
+    {
+        if (IsVictory())
+            Victory();
+        else if (IsDefeat())
+            Defeat();
+    }
+
+    private bool IsVictory()
+    {
+        if (m_cdtVictory.Count > 0)
+            return ConditionSO.IsAllValid(m_cdtVictory);
+        return false;
+    }
+
+    private bool IsDefeat()
+    {
+        if (m_cdtDefeat.Count > 0)
+            return ConditionSO.IsAllValid(m_cdtDefeat);
+        return false;
+    }
+
+    private void Victory()
+    {
+        Debug.Log("### VICTOIRE ###");
+    }
+
+    private void Defeat()
+    {
+        Debug.Log("### DEFAITE ###");
     }
 }

@@ -182,8 +182,11 @@ public class TextInterlocutor : MonoBehaviour
     {
         if (m_InterlocutorSelected)
         {
-            GameManager.Instance.m_InterfaceManager.DisallowInterlocutor();
             GameManager.Instance.m_InterfaceManager.DisplayApproche(m_Interlocutor);
+            GameManager.Instance.m_InterfaceManager.DisallowInterlocutor();
+            // Il y avait le changement de scene ici
+            GameManager.Instance.PlayerHasExecuteApproach = true;
+            Debug.Log("Institution : " + GameManager.Instance.PlayerHasExecuteApproach);
         }
         else
         {

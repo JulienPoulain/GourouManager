@@ -34,7 +34,7 @@ public class ExactionSO : ScriptableObject, IInitializable
     {
         foreach (ConditionSO condition in m_conditions)
         {
-            if (!condition.IsOneValid())
+            if (!condition.IsValid())
                 return false;
         }
         return true;
