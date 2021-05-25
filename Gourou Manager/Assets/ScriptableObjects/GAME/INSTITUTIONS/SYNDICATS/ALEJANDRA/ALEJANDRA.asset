@@ -15,8 +15,10 @@ MonoBehaviour:
   m_name: ALEJANDRA
   m_description: Syndicaliste proche des militants pronant la violence et les actions
     radicales.
+  m_descriptionFailure: 
   m_sanity: {fileID: 11400000, guid: 7d9ae2e7dadca5644b04ca898d377ed3, type: 2}
   m_approach:
   - {fileID: 11400000, guid: 2ecd90e7853e0c54db63783866babd21, type: 2}
   m_accesConditions:
   - {fileID: 11400000, guid: 8af3c4b127dc8dd44992e9af1e6c5041, type: 2}
+  m_sceneName: ALEJENDRA
