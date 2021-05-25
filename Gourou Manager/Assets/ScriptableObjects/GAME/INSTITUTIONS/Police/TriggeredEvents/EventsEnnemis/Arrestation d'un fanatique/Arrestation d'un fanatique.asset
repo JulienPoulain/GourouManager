@@ -16,8 +16,12 @@ MonoBehaviour:
   m_description: "La Police a trouv\xE9 et captur\xE9 un de vos fanatiques "
   m_initDuration: 1
   m_duration: 0
-  m_impacts: []
+  m_impacts:
+  - {fileID: 11400000, guid: 426f82f388282c54fa0cef18cab84e8e, type: 2}
   m_infoGained: []
   m_initNbUse: 1
   m_nbUse: 0
-  m_cdtActivation: []
+  m_cdtActivation:
+  - {fileID: 11400000, guid: 7ecfcac4b1de27841b352ca6a0d93604, type: 2}
+  - {fileID: 11400000, guid: ddb8a6fa59b619441a66507c3e1fc125, type: 2}
+  - {fileID: 11400000, guid: 286557206e949d9498233d8a1a407c41, type: 2}
