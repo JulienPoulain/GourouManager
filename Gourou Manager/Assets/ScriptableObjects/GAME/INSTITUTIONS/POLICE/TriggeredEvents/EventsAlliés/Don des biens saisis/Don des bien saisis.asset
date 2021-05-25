@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b647af1624fef43bcaf750a89ff899, type: 3}
+  m_Name: Don des bien saisis
+  m_EditorClassIdentifier: 
+  m_name: 'Don des biens saisis '
+  m_description: "La police vous donne une partie des biens qu'elle a saisi lors
+    d'arr\xE9station "
+  m_initDuration: 1
+  m_duration: 0
+  m_impacts:
+  - {fileID: 11400000, guid: 3a665574badf62543be82575316d1263, type: 2}
+  m_infoGained: []
+  m_initNbUse: 1
+  m_nbUse: 0
+  m_cdtActivation:
+  - {fileID: 11400000, guid: 76bb1cf5d5f404b42b98cb575164c5be, type: 2}
+  - {fileID: 11400000, guid: 4ec3873be8b36ba4fa9e20fa4b7130b3, type: 2}
