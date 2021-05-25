@@ -37,7 +37,7 @@ public class InterlocutorSO: ScriptableObject, IInitializable
             {
                 Debug.Log("<color=red>ERROR :</color> Condition manquante.");
             }
-            else if (!condition.IsOneValid())
+            else if (!condition.IsValid())
             {
                 return false;
             }
