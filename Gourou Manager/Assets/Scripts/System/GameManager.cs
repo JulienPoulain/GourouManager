@@ -70,10 +70,10 @@ public class GameManager : Singleton<GameManager>, IInitializable
     {
         Debug.Log("FIN DU TOUR");
 
-        RoundManager.Instance.NextTurn();
-
         m_playerHasExecuteExaction = false;
         m_playerHasExecuteApproche = false;
+
+        RoundManager.Instance.NextTurn();
 
         m_InterfaceManager.DisplayEndTurn();
 

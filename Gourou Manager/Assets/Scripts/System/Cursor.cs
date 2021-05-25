@@ -48,9 +48,6 @@ public class Cursor : MonoBehaviour
                 {
                     //m_CameraScript.FocusOnInstitution(hit.transform.position);
                     m_interfaceManager.DisplayHeavyInstitution(script.m_Institution);
-
-                    m_interfaceManager.m_feedBackScript.FeedBackExaction();
-                    Debug.Log("ON A LE FEEDBACK");
                 }
             }
         }

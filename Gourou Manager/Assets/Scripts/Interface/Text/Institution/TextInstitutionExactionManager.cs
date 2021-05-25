@@ -42,7 +42,7 @@ public class TextInstitutionExactionManager : MonoBehaviour
         {
             GameManager.Instance.PendingExactions.Add(m_exaction);
             GameManager.Instance.m_InterfaceManager.DisallowHeavyInstitution();
-            Debug.Log("Exaction lancée");
+            GameManager.Instance.m_InterfaceManager.m_feedBackScript.FeedBackExaction();
 
             GameManager.Instance.PlayerHasExectuteExaction = true;
         }
