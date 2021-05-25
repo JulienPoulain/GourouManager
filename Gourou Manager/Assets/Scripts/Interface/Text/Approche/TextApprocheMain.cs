@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class TextApprocheMain : MonoBehaviour
@@ -11,6 +12,8 @@ public class TextApprocheMain : MonoBehaviour
     // [SerializeField] string m_approachSceneToLoad;
 
     List<TextApprocheIndividual> m_approcheScript = new List<TextApprocheIndividual>();
+
+    [SerializeField] Image m_interlocutorImage;
 
     void Awake()
     {
@@ -34,5 +37,7 @@ public class TextApprocheMain : MonoBehaviour
             m_approche[i].SetActive(true);
             m_approcheScript[i].DisplayApproach(p_interlocutor.m_approach[i]);
         }
+
+        m_interlocutorImage.sprite = p_interlocutor.m_sprite;
     }
 }
