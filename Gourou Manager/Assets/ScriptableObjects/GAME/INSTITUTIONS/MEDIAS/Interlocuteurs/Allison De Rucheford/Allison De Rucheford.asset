@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 471942724c89ca84486354cfe1a7022d, type: 3}
   m_Name: Allison De Rucheford
   m_EditorClassIdentifier: 
-  m_name: Allison de Rucheford
+  m_name: Marcus Grandbergson
   m_description: Chef du journal local
   m_descriptionFailure: 
   m_sanity: {fileID: 0}
@@ -21,3 +21,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e548b8018f09872418fe460722e00542, type: 2}
   m_accesConditions:
   - {fileID: 11400000, guid: 6d71533de751a6f459cb29735f0a6889, type: 2}
+  m_sceneName: MARCUS

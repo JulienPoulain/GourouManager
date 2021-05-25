@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 525d2b2df425485449ec8a12401c7c35, type: 3}
   m_Name: Soudoyer
   m_EditorClassIdentifier: 
-  m_name: Soudoyer Allison
+  m_name: Soudoyer Marcus
   m_exactionPos: {fileID: 11400000, guid: ef82621b127caca439cba1b762bd8131, type: 2}
   m_exactionNeg: {fileID: 11400000, guid: f7dc32be220683b478887f02b9013a05, type: 2}
   m_cdtSuccess:
   - {fileID: 11400000, guid: 0497af65b16c37841976650cbda9b738, type: 2}
   m_cooldown: 3
   m_remainingTime: 0
-  m_descriptionApproach: Soudoyer Allison
+  m_descriptionApproach: Soudoyer Marcus
   m_dialogueApproach: 
-  m_resultatApproach: Elle pourra augmenter votre impact sur la population pendant
+  m_resultatApproach: Il pourra augmenter votre impact sur la population pendant
     plusieur tours

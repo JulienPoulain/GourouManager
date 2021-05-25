@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 525d2b2df425485449ec8a12401c7c35, type: 3}
   m_Name: Intimider
   m_EditorClassIdentifier: 
-  m_name: 
+  m_name: Intimider Marcus
   m_exactionPos: {fileID: 11400000, guid: 97765497b15a19348b971c136277366c, type: 2}
   m_exactionNeg: {fileID: 11400000, guid: a661190126f02cf4b9e4a91fd1fe8a3c, type: 2}
   m_cdtSuccess:
@@ -20,7 +20,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 729ff9feebb3f3b4bb3e0d8e86532f1f, type: 2}
   m_cooldown: 5
   m_remainingTime: 0
-  m_descriptionApproach: 'Intimider Allison '
+  m_descriptionApproach: Intimider Marcus
   m_dialogueApproach: 
-  m_resultatApproach: "Reussir a intimider Allison peut vous faire ganer \xE9norm\xE9ment
+  m_resultatApproach: "Reussir a intimider Marcus peut vous faire ganer \xE9norm\xE9ment
     en popularit\xE9 aupr\xE9s du peuple "

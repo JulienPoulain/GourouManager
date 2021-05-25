@@ -20,3 +20,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ce60528cce40d254a8cd252603d955df, type: 2}
   - {fileID: 11400000, guid: 03dc581abdc20394f9e24d8bfddf3257, type: 2}
   m_accesConditions: []
+  m_sceneName: HECTOR
