@@ -13,7 +13,7 @@ public class RoundManager : Singleton<RoundManager>
     {
         List<EventSO> newActiveEvents = new List<EventSO>();
         
-        EventRegister.Instance.AddDay(GameManager.Instance.Turn);
+        //EventRegister.Instance.AddDay(GameManager.Instance.Turn);
         EventRegister.Instance.Add(GameManager.Instance.Turn, GameManager.Instance.PendingExactions);
 
         // 1. Ajout des nouveaux évènements d'exactions puis exécution des évènements actifs.

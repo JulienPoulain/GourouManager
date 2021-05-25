@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TestTriggeredEvent : MonoBehaviour
+public class TestVictoireDefaite : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,6 +15,8 @@ public class TestTriggeredEvent : MonoBehaviour
         {
             GameManager.Instance.EndTurn();
             Debug.Log($"Tour : {GameManager.Instance.Turn}");
+            Debug.Log($"Exactions  : {EventRegister.Instance.GetExactions(GameManager.Instance.Turn-1).Count}");
+            Debug.Log($"Évènements : {EventRegister.Instance.GetEvents(GameManager.Instance.Turn-1).Count}");
         }
     }
 }

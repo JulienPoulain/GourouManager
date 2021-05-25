@@ -104,10 +104,6 @@ public class InstitutionSO : ScriptableObject, IInitializable
         {
             exaction.Initialize();
         }
-        /*foreach (ExactionSO tExaction in m_triggeredExactions)
-        {
-            tExaction.Initialize();
-        }*/
         foreach (TriggeredEventSO tEventSO in m_triggeredEvents)
         {
             tEventSO.Initialize();
