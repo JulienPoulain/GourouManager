@@ -15,8 +15,8 @@ MonoBehaviour:
   m_name: EV INVESTISSEMENT MEDIATIQUE
   m_description: "Les Entrepreneurs financent des campagnes m\xE9diatiques contre
     le Culte."
-  m_initDuration: 0
-  m_duration: 3
+  m_initDuration: 3
+  m_duration: 0
   m_impacts:
   - {fileID: 11400000, guid: e8b6480a0c4f710469e68a3f2764972c, type: 2}
   - {fileID: 11400000, guid: c82830cc1e2165b4fb1d7f7f0765c8d1, type: 2}
@@ -24,7 +24,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a3d997d81083eec4fbb4df6120864bdc, type: 2}
   m_infoGained: []
   m_initNbUse: -1
-  m_nbUse: 0
+  m_nbUse: -1
   m_cdtActivation:
   - {fileID: 11400000, guid: 78066c5883fd83144875c907b2413c45, type: 2}
   - {fileID: 11400000, guid: de8511874a89efd4786af9b94270808e, type: 2}

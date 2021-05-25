@@ -15,7 +15,8 @@ MonoBehaviour:
   m_name: EV NEGATIF INTIMIDATION POUR ARMES
   m_description: "Vous avez \xE9chou\xE9 \xE0 intimider Entrepreneur, il se m\xE9fieras
     de vous et \xE0 averti la Police."
-  m_duration: 1
+  m_initDuration: 1
+  m_duration: 0
   m_impacts:
   - {fileID: 11400000, guid: ac54b19c7d553b84abaf0aaa400183bb, type: 2}
   m_infoGained: []

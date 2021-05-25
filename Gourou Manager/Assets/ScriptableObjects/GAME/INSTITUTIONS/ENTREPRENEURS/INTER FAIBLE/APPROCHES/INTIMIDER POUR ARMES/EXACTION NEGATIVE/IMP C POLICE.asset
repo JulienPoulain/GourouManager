@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65d02e6c45e7ab84a9e56bc495f4f42d, type: 3}
   m_Name: IMP C POLICE
   m_EditorClassIdentifier: 
-  m_ressource: {fileID: 0}
+  m_ressource: {fileID: 11400000, guid: d41a2973659a9d7458ed1ca4f7be6311, type: 2}
   m_magnitude: {fileID: 11400000, guid: 689896debf5cfa04ea2d0eef1290652d, type: 2}

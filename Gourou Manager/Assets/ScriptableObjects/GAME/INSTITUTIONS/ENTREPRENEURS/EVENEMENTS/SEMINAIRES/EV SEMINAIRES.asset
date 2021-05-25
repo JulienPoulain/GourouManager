@@ -15,14 +15,14 @@ MonoBehaviour:
   m_name: Seminaires Anti-Cthulhu
   m_description: "Les Entrepreneurs organisent des s\xE9minaires pour contrer la
     mont\xE9e en puissance du Grand Ancien"
-  m_initDuration: 0
-  m_duration: 2
+  m_initDuration: 3
+  m_duration: 0
   m_impacts:
   - {fileID: 11400000, guid: 61dadfdc2732e4c4290046001280b99d, type: 2}
   - {fileID: 11400000, guid: 623948cd6cc02f346b1debd6c8c9027a, type: 2}
   m_infoGained: []
   m_initNbUse: -1
-  m_nbUse: 0
+  m_nbUse: -1
   m_cdtActivation:
   - {fileID: 11400000, guid: c05585db4e334334e9df16d5774522ff, type: 2}
   - {fileID: 11400000, guid: f049916448607e849a981f3b939e04ae, type: 2}

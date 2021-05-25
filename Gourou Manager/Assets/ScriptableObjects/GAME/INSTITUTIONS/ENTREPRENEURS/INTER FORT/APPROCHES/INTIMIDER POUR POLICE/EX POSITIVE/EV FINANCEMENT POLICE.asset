@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: FINANCEMENT DE LA POLICE
   m_description: "La Police re\xE7oit des sommes massives"
-  m_duration: 3
+  m_initDuration: 5
+  m_duration: 0
   m_impacts:
   - {fileID: 11400000, guid: e04fb6ca3bb208b49926b6833a4b9067, type: 2}
   m_infoGained: []

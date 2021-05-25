@@ -15,13 +15,13 @@ MonoBehaviour:
   m_name: SABOTAGE DES TRANSACTIONS FINANCIERES
   m_description: "Les Entrepreneurs contactent leur relais dans les banques et sabotent
     les transactions financi\xE8res appartenant au Culte."
-  m_initDuration: 0
-  m_duration: 4
+  m_initDuration: 3
+  m_duration: 0
   m_impacts:
   - {fileID: 11400000, guid: c37d1d685a1c160428cd1afb0102dccf, type: 2}
   m_infoGained: []
   m_initNbUse: -1
-  m_nbUse: 0
+  m_nbUse: -1
   m_cdtActivation:
   - {fileID: 11400000, guid: 1491bda2d026d384daf3d5bef9b3bf75, type: 2}
   - {fileID: 11400000, guid: 4883bcdc173c127498220d37d2770f37, type: 2}

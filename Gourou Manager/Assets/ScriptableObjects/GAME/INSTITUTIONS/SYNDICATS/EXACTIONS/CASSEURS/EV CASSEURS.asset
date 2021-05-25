@@ -15,7 +15,8 @@ MonoBehaviour:
   m_name: LACHEZ LES CASSEURS
   m_description: Encouragez les comportements violents et financez les syndicalistes
     les plus radicaux, afin de multiplier les casses en manifestations.
-  m_duration: 1
+  m_initDuration: 1
+  m_duration: 0
   m_impacts:
   - {fileID: 11400000, guid: a9f1634713ad3b74ea57774ccd72af41, type: 2}
   - {fileID: 11400000, guid: 2b27a2a6f57595d4b824cdd4b308ea9e, type: 2}
