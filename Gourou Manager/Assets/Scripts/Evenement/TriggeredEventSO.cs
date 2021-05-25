@@ -36,7 +36,7 @@ public class TriggeredEventSO : EventSO
             return true;
         foreach (ConditionSO condition in m_cdtActivation)
         {
-            if (!condition.IsOneValid())
+            if (!condition.IsValid())
                 return false;
         }
         return true;

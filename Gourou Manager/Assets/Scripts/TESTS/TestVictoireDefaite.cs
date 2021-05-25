@@ -15,8 +15,6 @@ public class TestVictoireDefaite : MonoBehaviour
         {
             GameManager.Instance.EndTurn();
             Debug.Log($"Tour : {GameManager.Instance.Turn}");
-            Debug.Log($"Exactions  : {EventRegister.Instance.GetExactions(GameManager.Instance.Turn-1).Count}");
-            Debug.Log($"Évènements : {EventRegister.Instance.GetEvents(GameManager.Instance.Turn-1).Count}");
         }
     }
 }

@@ -78,7 +78,7 @@ public class ApproachSO : ScriptableObject, IInitializable
         
         foreach (var cdt in p_cdt)
         {
-            success &= cdt.IsOneValid();
+            success &= cdt.IsValid();
         }
 
         return success;
