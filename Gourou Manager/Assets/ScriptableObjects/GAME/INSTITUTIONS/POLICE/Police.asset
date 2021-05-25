@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f60d9fd165f1bf4a8d858defcd6937f, type: 3}
+  m_Name: Police
+  m_EditorClassIdentifier: 
+  m_name: Police
+  m_description: "Le monopole de la violence l\xE9gitime de l'\xC9tat"
+  m_funds: {fileID: 11400000, guid: 5d7d34600bd47db4baac925a506195ce, type: 2}
+  m_members: {fileID: 0}
+  m_fanatics: {fileID: 0}
+  m_impactOnPop: {fileID: 11400000, guid: 7a3ace2ee01fbf84e8f9c76f835858d9, type: 2}
+  m_publicExposure: {fileID: 11400000, guid: a2393f926bf6221458ee7743eb9715de, type: 2}
+  m_corruption: {fileID: 11400000, guid: d41a2973659a9d7458ed1ca4f7be6311, type: 2}
+  m_brutality: {fileID: 0}
+  m_interlocutorList:
+  - {fileID: 11400000, guid: 7b2f6f1395b041e42b68a82f2ae23fd9, type: 2}
+  - {fileID: 11400000, guid: ba95949992ba0d94fba71bc8210b4032, type: 2}
+  m_exactionList:
+  - {fileID: 11400000, guid: f0915f85d8b4936429dd4b07851f286e, type: 2}
+  - {fileID: 11400000, guid: d769de198bced944ab5cca51062d6c07, type: 2}
+  - {fileID: 11400000, guid: c0a7c05a660b35d4fad7491218dee6c0, type: 2}
+  m_triggeredEvents:
+  - {fileID: 11400000, guid: ed073883adbc1334db211991c47d5126, type: 2}
+  - {fileID: 11400000, guid: 6b472a58c1dbfa242b4dbd6106dd7d96, type: 2}
+  - {fileID: 11400000, guid: 7a74586e6c44a9a4b83f0aaa87911dc3, type: 2}
+  - {fileID: 11400000, guid: 57ca02ac882d3754c8d5840744ae0931, type: 2}
+  - {fileID: 11400000, guid: 34d8abb715197ba43ab8e0d2dea345ad, type: 2}
+  - {fileID: 11400000, guid: affa7181eb3ddd347b43f1337d82aa43, type: 2}
+  - {fileID: 11400000, guid: 3808929adda2180459577bc4fd62fc99, type: 2}
+  - {fileID: 11400000, guid: a3cdd0dfe449de64188bcd8cf4f56a73, type: 2}
+  m_option: 2

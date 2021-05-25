@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b647af1624fef43bcaf750a89ff899, type: 3}
+  m_Name: "Lib\xE9rer un fanatique de prison"
+  m_EditorClassIdentifier: 
+  m_name: Liberation d'un fanatique
+  m_description: "La police lib\xE8re un fanatique de prison pour vous aider"
+  m_initDuration: 1
+  m_duration: 0
+  m_impacts:
+  - {fileID: 11400000, guid: ebec91336f7cff4499a9c0bb30bbb4a3, type: 2}
+  m_infoGained: []
+  m_initNbUse: 1
+  m_nbUse: 0
+  m_cdtActivation:
+  - {fileID: 11400000, guid: f5e687103e795eb45ad2f9effd1d2103, type: 2}
+  - {fileID: 11400000, guid: 671edbe49685d7044b3bd684ac8fd04c, type: 2}
