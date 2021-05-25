@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TestTriggeredEvent : MonoBehaviour
+public class TestVictoireDefaite : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

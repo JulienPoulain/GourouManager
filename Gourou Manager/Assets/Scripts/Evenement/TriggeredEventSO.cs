@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 
@@ -6,18 +7,19 @@ public class TriggeredEventSO : EventSO
 {
     [SerializeField] private int m_initNbUse = -1;
     [SerializeField] private int m_nbUse;
-    [SerializeField] [CanBeNull] private ConditionSO m_cdtActivation;
+    [SerializeField] [CanBeNull] private List<ConditionSO> m_cdtActivation;
     
     public int NbUse => m_nbUse;
-    public ConditionSO CdtActivation => m_cdtActivation;
+    public List<ConditionSO> CdtActivation => m_cdtActivation;
 
     public override void Initialize()
     {
         m_nbUse = m_initNbUse;
         base.Initialize();
-        if (m_cdtActivation != null)
-            m_cdtActivation.Initialize();
-    }
+        if (m_cdtActivation.Count > 0)
+            foreach (ConditionSO condition in m_cdtActivation)
+                condition.Initialize();
+        }
     public bool IsUnlimited()
     {
         return m_initNbUse < 0;
@@ -32,7 +34,12 @@ public class TriggeredEventSO : EventSO
     {
         if (m_cdtActivation == null)
             return true;
-        return m_cdtActivation.IsOneValid();
+        foreach (ConditionSO condition in m_cdtActivation)
+        {
+            if (!condition.IsOneValid())
+                return false;
+        }
+        return true;
     }
     
     public void UseOnce()
