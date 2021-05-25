@@ -15,8 +15,9 @@ public class TextApprocheMain : MonoBehaviour
     static InterlocutorSO m_interlocutor;
     public static ApproachSO m_approach;
 
-    void Start()
+    void Awake()
     {
+        Debug.Log("LE MAIN START");
         foreach (GameObject thisObject in m_approche)
         {
             m_approcheScript.Add(thisObject.GetComponent<TextApprocheIndividual>());
@@ -49,7 +50,6 @@ public class TextApprocheMain : MonoBehaviour
             m_approche[i].SetActive(true);
             m_approcheScript[i].StoreApproach(p_interlocutor.m_approach[i]);
         }
-
         SceneManager.LoadScene(p_interlocutor.m_sceneName);
     }
 

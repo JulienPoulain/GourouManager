@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Hector Bloomberg
   m_description: "Pigiste ind\xE9pendant"
-  m_descriptionFailure: 
+  m_descriptionFailure: description random failure
   m_sanity: {fileID: 0}
   m_approach:
   - {fileID: 11400000, guid: ce60528cce40d254a8cd252603d955df, type: 2}
   - {fileID: 11400000, guid: 03dc581abdc20394f9e24d8bfddf3257, type: 2}
-  m_accesConditions: []
+  m_accesConditions:
+  - {fileID: 0}
+  m_sceneName: HECTOR
