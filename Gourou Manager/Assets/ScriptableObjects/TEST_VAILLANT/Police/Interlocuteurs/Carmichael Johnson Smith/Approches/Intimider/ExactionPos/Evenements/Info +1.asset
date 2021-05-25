@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Gain d'info sur un membre du gouvernement
   m_description: 
-  m_duration: 0
+  m_duration: 1
   m_impacts: []
   m_infoGained:
   - {fileID: 11400000, guid: 10289abc5bae02442bb1004d3f37b75f, type: 2}
