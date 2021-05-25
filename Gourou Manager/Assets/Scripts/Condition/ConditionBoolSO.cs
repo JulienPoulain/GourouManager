@@ -11,7 +11,7 @@ public class ConditionBoolSO : ConditionSO
         m_ressource.Initialize();
     }
     
-    public override bool IsOneValid()
+    public override bool IsValid()
     {
         return m_ressource.Value;
     }
