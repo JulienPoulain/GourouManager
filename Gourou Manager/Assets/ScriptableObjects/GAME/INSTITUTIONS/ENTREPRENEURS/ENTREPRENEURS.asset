@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f60d9fd165f1bf4a8d858defcd6937f, type: 3}
   m_Name: ENTREPRENEURS
   m_EditorClassIdentifier: 
-  m_name: ENTREPRENEURS
+  m_name: Entrepreneurs
   m_description: Les investisseurs et capitaines d'industries
   m_funds: {fileID: 11400000, guid: a26544a9e213a0449ad68d4863f68928, type: 2}
   m_members: {fileID: 11400000, guid: 95dbcd9603641c8429ec884c45a1c9b4, type: 2}
@@ -28,9 +28,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f4e3a9bbcc286324ba1bbe8a0682a253, type: 2}
   - {fileID: 11400000, guid: b770547caa7e1f64a88d0cc208428126, type: 2}
   - {fileID: 11400000, guid: d6c397d498b5af14ea3bd8cf0ae98cc6, type: 2}
-  m_triggeredExactions:
-  - {fileID: 11400000, guid: 9976ce3496b90994780cd7f646013f5b, type: 2}
-  - {fileID: 11400000, guid: bac7e598642ae8d4facec7c6e130d14c, type: 2}
-  - {fileID: 11400000, guid: ece0d3773f8fe4e49b24b314af42e20b, type: 2}
+  m_triggeredEvents:
+  - {fileID: 11400000, guid: 56fc5bd139d6d2441bb1897902ad61f0, type: 2}
+  - {fileID: 11400000, guid: 9842333f9f0706d4593fed97806dd574, type: 2}
+  - {fileID: 11400000, guid: edc7a05f6fcc38741bdadefc0474d625, type: 2}
   m_option: 2
-  m_remainingTriggeredExactions: []
