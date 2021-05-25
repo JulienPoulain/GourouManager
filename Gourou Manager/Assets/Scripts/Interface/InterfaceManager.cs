@@ -30,12 +30,13 @@ public class InterfaceManager : MonoBehaviour
     [SerializeField] GameObject m_Defeat;
     [SerializeField] GameObject m_EndTurn;
 
-    TextInstitutionLight m_InstitutionLightScript;
-    TextInstitutionHeavy m_InstitutionHeavyScript;
-    TextCrisis m_CrisisScript;
-    public TextInterlocutor m_InterlocutorScript; // seulement utiliser dans InterlocutorButton (vital)
-    TextApprocheMain m_ApprocheScript;
-    TextEndTurn m_EndTurnScript;
+    TextInstitutionLight m_institutionLightScript;
+    TextInstitutionHeavy m_institutionHeavyScript;
+    TextCrisis m_crisisScript;
+    public TextInterlocutor m_interlocutorScript; // seulement utiliser dans InterlocutorButton (vital)
+    TextApprocheMain m_approcheScript;
+    TextEndTurn m_endTurnScript;
+    public TextFeedBackManager m_feedBackScript; // sera appeler lorsque le joueur fait une action
 
     // public TextInterlocutor TextInterlocutor => m_InterlocutorScript;
 
@@ -51,8 +52,6 @@ public class InterfaceManager : MonoBehaviour
     private Camera m_Camera;
 
     public RectTransform m_canvasSize; 
-
-    public InterfaceMode m_InterfaceMode = InterfaceMode.Standard;
    
     [Tooltip("définit si l'interface affiche actuellement une information, permet d'éviter de rappeler la fonction d'affichage")]
     public bool m_InstitutionLightIsDisplay = false;
@@ -113,12 +112,12 @@ public class InterfaceManager : MonoBehaviour
         m_Camera = GameManager.Instance.m_Camera.GetComponent<Camera>();
         m_canvasSize = GetComponent<RectTransform>();
 
-        m_InstitutionLightScript = m_InstitutionLightObject.GetComponent<TextInstitutionLight>();
-        m_InstitutionHeavyScript = m_InstitutionHeavyObject.GetComponent<TextInstitutionHeavy>();
-        m_CrisisScript = m_CrisisObject.GetComponent<TextCrisis>();
-        m_InterlocutorScript = m_InterlocutorObject.GetComponent<TextInterlocutor>();
-        m_ApprocheScript = m_Approche.GetComponent<TextApprocheMain>();
-        m_EndTurnScript = m_EndTurn.GetComponent<TextEndTurn>();
+        m_institutionLightScript = m_InstitutionLightObject.GetComponent<TextInstitutionLight>();
+        m_institutionHeavyScript = m_InstitutionHeavyObject.GetComponent<TextInstitutionHeavy>();
+        m_crisisScript = m_CrisisObject.GetComponent<TextCrisis>();
+        m_interlocutorScript = m_InterlocutorObject.GetComponent<TextInterlocutor>();
+        m_approcheScript = m_Approche.GetComponent<TextApprocheMain>();
+        m_endTurnScript = m_EndTurn.GetComponent<TextEndTurn>();
     }
 
     // -----------------------------------------------------------------------------------------
@@ -132,7 +131,7 @@ public class InterfaceManager : MonoBehaviour
         m_InstitutionHeavyObject.SetActive(true);
 
         // envoie les informations pour les afficher
-        m_InstitutionHeavyScript.Display(p_Institution);
+        m_institutionHeavyScript.Display(p_Institution);
     }
 
     public void DisplayLightInstitution(GameObject p_Institution, InstitutionSO p_InstitutionScriptable)
@@ -148,7 +147,7 @@ public class InterfaceManager : MonoBehaviour
         m_InstitutionLightObject.transform.position = position;
 
         // envoie les informations pour les afficher
-        m_InstitutionLightScript.Display(p_InstitutionScriptable);        
+        m_institutionLightScript.Display(p_InstitutionScriptable);        
     }
     
     // Fonction affiche / desaffiche
@@ -156,7 +155,7 @@ public class InterfaceManager : MonoBehaviour
     {
         m_crisisIsDisplay = true;
         m_CrisisObject.SetActive(true);
-        m_CrisisScript.Display(p_Crisis);
+        m_crisisScript.Display(p_Crisis);
     }
 
     public void DisplayInterlocutor(InstitutionSO p_data)
@@ -190,7 +189,7 @@ public class InterfaceManager : MonoBehaviour
     {
         m_Approche.SetActive(true);
         // m_ApprocheIsDisplay = true;
-        m_ApprocheScript.StoreInterlocutor(p_interlocutor);
+        m_approcheScript.StoreInterlocutor(p_interlocutor);
         DisallowHeavyInstitution();
     }
 
@@ -202,7 +201,7 @@ public class InterfaceManager : MonoBehaviour
     public void DisplayEndTurn()
     {
         m_EndTurn.SetActive(true);
-        m_EndTurnScript.Display();
+        m_endTurnScript.Display();
         m_endTurnIsDisplay = true;
     }
 

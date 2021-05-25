@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 471942724c89ca84486354cfe1a7022d, type: 3}
+  m_Name: Hector Bloomberg
+  m_EditorClassIdentifier: 
+  m_name: Hector Bloomberg
+  m_description: "Pigiste ind\xE9pendant"
+  m_descriptionFailure: 
+  m_sanity: {fileID: 0}
+  m_approach:
+  - {fileID: 11400000, guid: ce60528cce40d254a8cd252603d955df, type: 2}
+  - {fileID: 11400000, guid: 03dc581abdc20394f9e24d8bfddf3257, type: 2}
+  m_accesConditions: []

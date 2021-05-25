@@ -966,11 +966,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5534686930457139887, guid: 889dec07010febd41a596547293f86a9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 181.625
+      value: 184
       objectReference: {fileID: 0}
     - target: {fileID: 5534686930457139887, guid: 889dec07010febd41a596547293f86a9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -236.125
+      value: -512.82
       objectReference: {fileID: 0}
     - target: {fileID: 5534686930457139887, guid: 889dec07010febd41a596547293f86a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2072,6 +2072,7 @@ GameObject:
   - component: {fileID: 2060777668}
   - component: {fileID: 2060777667}
   - component: {fileID: 2060777671}
+  - component: {fileID: 2060777672}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2188,18 +2189,32 @@ MonoBehaviour:
   m_Victory: {fileID: 242952804338130747}
   m_Defeat: {fileID: 4257986475103663591}
   m_EndTurn: {fileID: 432179643}
-  m_InterlocutorScript: {fileID: 0}
+  m_interlocutorScript: {fileID: 0}
+  m_feedBackScript: {fileID: 2060777672}
   m_CrisisObject: {fileID: 945782781}
   m_decallingLightInstitution: 100
   m_ButtonInterlocutorPrefab: {fileID: 3033758971898248650, guid: b864858dc97db6d44a0a6fc8147413e5, type: 3}
   m_canvasSize: {fileID: 0}
-  m_InterfaceMode: 0
   m_InstitutionLightIsDisplay: 0
   m_crisisIsDisplay: 0
   m_cursorFocusHeavyInstitution: 0
   m_endTurnIsDisplay: 0
   m_redBackGroundSprite: {fileID: 21300000, guid: e559703c21cce554faa15e79a2212736, type: 3}
   m_whiteBackGroundSprite: {fileID: 21300000, guid: 7f5fbc70a91164e40abdfe3542dbfa76, type: 3}
+--- !u!114 &2060777672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060777666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f30f1c6b8b106484684f565f98d8518e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_textPrefab: {fileID: 1708117652344936777, guid: 2c4d1d6994964b747b0f8669ee140213, type: 3}
+  m_textcooldown: 0
 --- !u!1001 &242952804338130745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3000,11 +3015,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7846191970672023853, guid: 72714935181560742b22c12d4448c878, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -837.12585
+      value: -839
       objectReference: {fileID: 0}
     - target: {fileID: 7846191970672023853, guid: 72714935181560742b22c12d4448c878, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -404.24075
+      value: -432
       objectReference: {fileID: 0}
     - target: {fileID: 7891688460178978501, guid: 72714935181560742b22c12d4448c878, type: 3}
       propertyPath: m_SizeDelta.x
