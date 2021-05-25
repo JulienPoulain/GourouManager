@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Allison De Rucheford
   m_EditorClassIdentifier: 
   m_name: Allison de Rucheford
-  m_description: 
+  m_description: Chef du journal local
   m_descriptionFailure: 
   m_sanity: {fileID: 0}
   m_approach:

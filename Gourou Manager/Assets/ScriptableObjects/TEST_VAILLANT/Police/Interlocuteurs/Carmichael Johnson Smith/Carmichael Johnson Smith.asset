@@ -19,5 +19,5 @@ MonoBehaviour:
   m_approach:
   - {fileID: 11400000, guid: cb6a58d2c1b9cae4299e1e7e1e814eaf, type: 2}
   - {fileID: 11400000, guid: 43fd2a536ccb5a443824ba874e4ab3c1, type: 2}
-  m_accesConditions: []
-  m_sceneName: CARMICHAEL
+  m_accesConditions:
+  - {fileID: 11400000, guid: 2b049c422b9acdd46815860f2cdac66e, type: 2}
