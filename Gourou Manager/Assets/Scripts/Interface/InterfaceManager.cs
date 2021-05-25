@@ -189,7 +189,7 @@ public class InterfaceManager : MonoBehaviour
     {
         m_Approche.SetActive(true);
         // m_ApprocheIsDisplay = true;
-        m_approcheScript.StoreInterlocutor(p_interlocutor);
+        m_approcheScript.Display(p_interlocutor);
         DisallowHeavyInstitution();
     }
 

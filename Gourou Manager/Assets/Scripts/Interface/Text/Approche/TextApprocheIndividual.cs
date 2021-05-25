@@ -13,34 +13,17 @@ public class TextApprocheIndividual : MonoBehaviour
     [SerializeField] TextApprocheMain m_mainApproach;   // servira � stocker l'approach choisis
 
     ApproachSO m_approche;
-    public static List<ApproachSO> m_approachList = new List<ApproachSO>();
 
-    void Awake()
+    void Start()
     {
         this.gameObject.SetActive(false);
-
-        // Si la liste d'approach n'est pas vide, on affiche
-        if (m_approachList.Count != 0)
-        {
-            DisplayApproach();
-        }
-        else
-        {
-            gameObject.SetActive(false);
-        }
     }
 
-    public void StoreApproach(ApproachSO p_approach)
-    {
-        m_approachList.Add(p_approach);
-    }
-
-    public void DisplayApproach()
+    public void DisplayApproach(ApproachSO p_approach)
     {
         this.gameObject.SetActive(true);
 
-        m_approche = m_approachList[0];
-        m_approachList.RemoveAt(0);
+        m_approche = p_approach;
 
         m_name.text = "" + m_approche.Name;
         m_dialogueCharacter.text = "" + m_approche.m_dialogueApproach;
@@ -49,22 +32,9 @@ public class TextApprocheIndividual : MonoBehaviour
 
     public void ExecuteApproche()
     {
-        // Debug.Log("L'approach n'est pas faite !");
-        m_mainApproach.StoreApproach(m_approche);
-        SceneManager.LoadScene("MAP_MAIN");
-
-        /*
-        GameManager.Instance.PendingExactions.Add(m_Approche.TryApproach());
-        Debug.Log("Approche fait");
+        GameManager.Instance.PendingExactions.Add(m_approche.TryApproach());
         GameManager.Instance.m_InterfaceManager.DisallowApproche();
-        */
-
+        GameManager.Instance.m_InterfaceManager.m_feedBackScript.FeedBackApproach();
         m_approche = null;
     }
 }
-
-// fonctionnement de l'approache :
-// le principe est, avantr le changement de scene, envoyer les approach dans la 
-// list d'approach static, puis, une fois dans l'autre scene, r�cup�rer les approach
-// pour les afficher, celui qui est retenu est envoyer dans le main, o� on pourra l'ajouter
-// � la fin du tour
