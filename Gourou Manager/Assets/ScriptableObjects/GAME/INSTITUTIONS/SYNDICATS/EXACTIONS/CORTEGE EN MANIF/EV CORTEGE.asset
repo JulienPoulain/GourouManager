@@ -15,7 +15,8 @@ MonoBehaviour:
   m_name: LE CULTE DE CTHULHU DANS UN CORTEGE
   m_description: "Vous graissez la pate des Syndicats pour avoir votre place dans
     le cort\xE8ge d'une manifestation contre le Gouvernement."
-  m_duration: 1
+  m_initDuration: 1
+  m_duration: 0
   m_impacts:
   - {fileID: 11400000, guid: e7ed929037b080f4ba91b316b14e14fb, type: 2}
   - {fileID: 11400000, guid: f9ba77559c0dbd745b931f8dfab193ca, type: 2}

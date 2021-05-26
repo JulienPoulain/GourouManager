@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: DETOURNEMENT DE FONDS
   m_description: "Luis d\xE9tourne les fonds de la CT pour vous financer"
-  m_duration: 3
+  m_initDuration: 3
+  m_duration: 0
   m_impacts:
   - {fileID: 11400000, guid: 97420ed92c6bab5448e7ca0d1f13c276, type: 2}
   - {fileID: 11400000, guid: 5ce6a711a0bc97c4b87eb8769bf0f0e2, type: 2}

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: EV INVEST Refuse
   m_description: Baisse de Corruption des Entrepreneurs
-  m_duration: 1
+  m_initDuration: 1
+  m_duration: 0
   m_impacts:
   - {fileID: 11400000, guid: 010eb28a8bb5e944dbac8f559c50611b, type: 2}
   m_infoGained: []

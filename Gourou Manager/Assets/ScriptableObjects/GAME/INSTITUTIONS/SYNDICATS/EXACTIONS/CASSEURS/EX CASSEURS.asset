@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: EX CASSEURS
   m_EditorClassIdentifier: 
-  m_name: LACHEZ LES CASSEURS
-  m_description: Encouragez les comportements violents et financez les syndicalistes
-    les plus radicaux, afin de multiplier les casses en manifestations.
+  m_name: LACHER LES CASSEURS
+  m_description: "Vous payez les Syndicalistes pour qu'ils laissent les casseurs
+    se d\xE9fouler dans leur prochaine manifestation"
   m_eventList:
-  - {fileID: 11400000, guid: bad4c2133e2ac3645b83c2017e86e462, type: 2}
+  - {fileID: 11400000, guid: 10e84920bd9fd3147bfd0ddf6c585612, type: 2}
   m_conditions: []
