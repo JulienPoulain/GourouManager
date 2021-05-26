@@ -4,8 +4,18 @@ using UnityEngine;
 public class OpSyncIntSO : OperationSO
 {
     [SerializeField] private SyncIntSO m_operand;
-    
-    public override void Initialize() {}
+
+    public override void Initialize()
+    {
+        if (m_operand == null)
+        {
+            Debug.Log($"<color=red>ERROR :</color> {name} Opérande manquante.");
+        }
+        else
+        {
+            m_operand.Initialize();
+        }
+    }
 
     public override int Compute()
     {
