@@ -21,4 +21,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 43fd2a536ccb5a443824ba874e4ab3c1, type: 2}
   m_accesConditions:
   - {fileID: 11400000, guid: 2b049c422b9acdd46815860f2cdac66e, type: 2}
-  m_sceneName: CARMICHAEL
+  m_sprite: {fileID: 21300000, guid: 3c98d4dcdd2203645964c8f29e30eeac, type: 3}

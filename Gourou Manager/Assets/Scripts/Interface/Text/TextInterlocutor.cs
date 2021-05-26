@@ -153,9 +153,14 @@ public class TextInterlocutor : MonoBehaviour
             GameManager.Instance.PlayerHasExecuteApproach = true;
             Debug.Log("Institution : " + GameManager.Instance.PlayerHasExecuteApproach);
         }
-        else
+        else if (!m_Interlocutor.IsAccessible())
         {
+            GameManager.Instance.m_InterfaceManager.m_feedBackScript.FeedBackApproachNotValid();
             Debug.Log("Cet Interlocuteur n'est pas disponible, ou tu n'as pas sélectionner d'interlocuteurs");
+        }
+        else if (GameManager.Instance.PlayerHasExecuteApproach)
+        {
+            GameManager.Instance.m_InterfaceManager.m_feedBackScript.FeedBackApproachDouble();
         }
     }
 
