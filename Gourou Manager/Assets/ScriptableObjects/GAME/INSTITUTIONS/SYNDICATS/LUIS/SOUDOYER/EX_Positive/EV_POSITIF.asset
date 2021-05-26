@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: 'Event positif '
   m_description: "Vous obtenez 3 Points de Fanatiques en \xE9change de 20 000 Fonds."
-  m_duration: 1
+  m_initDuration: 1
+  m_duration: 0
   m_impacts:
   - {fileID: 11400000, guid: 10ca86f2340650742a262cd734807a8b, type: 2}
   - {fileID: 11400000, guid: 574b653437f2b6645b582a7f9c884cfa, type: 2}

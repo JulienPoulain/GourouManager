@@ -15,7 +15,8 @@ MonoBehaviour:
   m_name: Soudoyement d'un syndicat ouvrier
   m_description: "Vous offrez une coquette somme \xE0 un petit syndicat ouvrier connu
     pour ces id\xE9es radicales."
-  m_duration: 1
+  m_initDuration: 1
+  m_duration: 0
   m_impacts:
   - {fileID: 11400000, guid: 9ec267a1260a7c741a60d41244557c33, type: 2}
   - {fileID: 11400000, guid: 9f0a8a8e3e8c75f48bb5de58e6bca2eb, type: 2}

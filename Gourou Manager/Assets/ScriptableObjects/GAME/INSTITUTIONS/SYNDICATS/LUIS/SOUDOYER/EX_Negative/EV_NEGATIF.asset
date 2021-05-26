@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: 'Event positif '
   m_description: Vous perdez une partie de la confiance des Syndicats
-  m_duration: 1
+  m_initDuration: 1
+  m_duration: 0
   m_impacts:
   - {fileID: 11400000, guid: a144139fcf41d1f40aa7020f1b5ee59d, type: 2}
   - {fileID: 11400000, guid: c75e80fd349d8364ba437d4d1272b5ab, type: 2}

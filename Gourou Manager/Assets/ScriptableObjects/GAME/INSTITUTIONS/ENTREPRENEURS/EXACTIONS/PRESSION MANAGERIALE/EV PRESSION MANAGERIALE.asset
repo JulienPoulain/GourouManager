@@ -17,7 +17,8 @@ MonoBehaviour:
     \xE0 multiplier les licenciements... Les d\xE9g\xE2ts psychologiques vous rapporterons
     des Adeptes, bris\xE9s par la maltraitance au travail et la violence du march\xE9
     du travail d\xE9grad\xE9."
-  m_duration: 3
+  m_initDuration: 3
+  m_duration: 0
   m_impacts:
   - {fileID: 11400000, guid: 6bd715f580cd1b241b51511681da95b4, type: 2}
   m_infoGained: []

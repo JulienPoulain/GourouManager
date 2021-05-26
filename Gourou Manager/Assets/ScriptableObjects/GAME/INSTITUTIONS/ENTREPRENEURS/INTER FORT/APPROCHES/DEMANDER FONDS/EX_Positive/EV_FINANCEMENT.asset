@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: FINANCEMENT OBTENU
   m_description: Vous obtenez un financement massif
-  m_duration: 3
+  m_initDuration: 3
+  m_duration: 0
   m_impacts:
   - {fileID: 11400000, guid: daad4e138f0a09e4b8c67f8df1ba5e5e, type: 2}
   - {fileID: 11400000, guid: 37ab65aa7f6381b4f916387d31057061, type: 2}

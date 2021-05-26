@@ -28,6 +28,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ed83ed014248bde499560d455e7b4e67, type: 2}
   - {fileID: 11400000, guid: 87ae5ac93b0c0b14b88b184b18dca705, type: 2}
   - {fileID: 11400000, guid: 56376be0435c28b4fb9ee0eeafaaf62c, type: 2}
-  m_triggeredExactions: []
+  m_triggeredEvents: []
   m_option: 2
-  m_remainingTriggeredExactions: []

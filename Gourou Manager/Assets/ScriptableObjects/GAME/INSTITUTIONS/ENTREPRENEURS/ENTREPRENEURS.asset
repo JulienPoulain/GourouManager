@@ -28,9 +28,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f4e3a9bbcc286324ba1bbe8a0682a253, type: 2}
   - {fileID: 11400000, guid: b770547caa7e1f64a88d0cc208428126, type: 2}
   - {fileID: 11400000, guid: d6c397d498b5af14ea3bd8cf0ae98cc6, type: 2}
-  m_triggeredExactions:
-  - {fileID: 11400000, guid: 9976ce3496b90994780cd7f646013f5b, type: 2}
-  - {fileID: 11400000, guid: bac7e598642ae8d4facec7c6e130d14c, type: 2}
-  - {fileID: 11400000, guid: ece0d3773f8fe4e49b24b314af42e20b, type: 2}
+  m_triggeredEvents:
+  - {fileID: 11400000, guid: 68a1194ed0f9d2a43866ac3af7a587bb, type: 2}
+  - {fileID: 11400000, guid: 20ec0f7674c93c4499902857a4cd72fb, type: 2}
+  - {fileID: 11400000, guid: a2f031d6b6f80ea489780654cb7d7eba, type: 2}
   m_option: 2
-  m_remainingTriggeredExactions: []
