@@ -61,7 +61,7 @@ public class TextFeedBackManager : MonoBehaviour
     // Display Function
     void DisplayText(string p_message)
     {
-        GameObject text = Instantiate(m_textPrefab, m_textPosition, Quaternion.identity, GameManager.Instance.m_InterfaceManager.gameObject.transform);
+        GameObject text = Instantiate(m_textPrefab, m_textPosition, Quaternion.identity, GameManager.Instance.m_interfaceManager.gameObject.transform);
         TMP_Text textContain = text.GetComponent<TMP_Text>();
         textContain.text = p_message;
 

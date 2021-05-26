@@ -20,6 +20,12 @@ public class InterlocutorSO: ScriptableObject, IInitializable
     public void Initialize()
     {
         m_sanity.Initialize();
+
+        if (m_cameraPlacement == null)
+        {
+            Debug.Log($"<color=red>ERROR :</color> {name} Caméra manquante.");
+        }
+        
         foreach (ApproachSO approach in m_approach)
         {
             approach.Initialize();

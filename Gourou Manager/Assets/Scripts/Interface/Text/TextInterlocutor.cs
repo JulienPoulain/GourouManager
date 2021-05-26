@@ -149,20 +149,20 @@ public class TextInterlocutor : MonoBehaviour
         {
             
             GameManager.Instance.CameraScript.ChangePosition(m_Interlocutor.CameraPlacement);
-            GameManager.Instance.m_InterfaceManager.DisplayApproche(m_Interlocutor);
-            GameManager.Instance.m_InterfaceManager.DisallowInterlocutor();
+            GameManager.Instance.m_interfaceManager.DisplayApproche(m_Interlocutor);
+            GameManager.Instance.m_interfaceManager.DisallowInterlocutor();
 
             GameManager.Instance.PlayerHasExecuteApproach = true;
             Debug.Log("Institution : " + GameManager.Instance.PlayerHasExecuteApproach);
         }
         else if (!m_Interlocutor.IsAccessible())
         {
-            GameManager.Instance.m_InterfaceManager.m_feedBackScript.FeedBackApproachNotValid();
+            GameManager.Instance.m_interfaceManager.m_feedBackScript.FeedBackApproachNotValid();
             Debug.Log("Cet Interlocuteur n'est pas disponible, ou tu n'as pas sélectionner d'interlocuteurs");
         }
         else if (GameManager.Instance.PlayerHasExecuteApproach)
         {
-            GameManager.Instance.m_InterfaceManager.m_feedBackScript.FeedBackApproachDouble();
+            GameManager.Instance.m_interfaceManager.m_feedBackScript.FeedBackApproachDouble();
         }
     }
 
@@ -170,7 +170,7 @@ public class TextInterlocutor : MonoBehaviour
     {
         ResetInterlocutorInterface();
         m_InterlocutorSelected = false;
-        GameManager.Instance.m_InterfaceManager.DisallowInterlocutor();
+        GameManager.Instance.m_interfaceManager.DisallowInterlocutor();
     }
 
     // remet l'interface Interlocutor à zero
@@ -189,8 +189,8 @@ public class TextInterlocutor : MonoBehaviour
     {
         if (m_InterlocutorSelected)
         {
-            GameManager.Instance.m_InterfaceManager.DisplayApproche(m_Interlocutor);
-            GameManager.Instance.m_InterfaceManager.DisallowInterlocutor();
+            GameManager.Instance.m_interfaceManager.DisplayApproche(m_Interlocutor);
+            GameManager.Instance.m_interfaceManager.DisallowInterlocutor();
             // Il y avait le changement de scene ici
             GameManager.Instance.PlayerHasExecuteApproach = true;
             Debug.Log("Institution : " + GameManager.Instance.PlayerHasExecuteApproach);

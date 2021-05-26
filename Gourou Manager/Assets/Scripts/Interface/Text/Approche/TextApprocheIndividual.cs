@@ -33,8 +33,8 @@ public class TextApprocheIndividual : MonoBehaviour
     public void ExecuteApproche()
     {
         GameManager.Instance.PendingExactions.Add(m_approche.TryApproach());
-        GameManager.Instance.m_InterfaceManager.DisallowApproche();
-        GameManager.Instance.m_InterfaceManager.m_feedBackScript.FeedBackApproach();
+        GameManager.Instance.m_interfaceManager.DisallowApproche();
+        GameManager.Instance.m_interfaceManager.m_feedBackScript.FeedBackApproach();
 
         GameManager.Instance.CameraScript.ResetPosition();
         m_approche = null;

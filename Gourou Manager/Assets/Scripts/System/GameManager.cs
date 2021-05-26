@@ -5,17 +5,17 @@ using UnityEngine.Serialization;
 
 public class GameManager : Singleton<GameManager>, IInitializable
 {
-    [SerializeField] GameObject m_MainInstitution;
-    [SerializeField] List<GameObject> m_Institutions = new List<GameObject>();
+    [SerializeField] GameObject m_mainInstitutionObject;
+    [SerializeField] List<GameObject> m_institutionsObjectList = new List<GameObject>();
 
-    [SerializeField] InstitutionSO m_MainInstitutionSO;
+    [SerializeField] InstitutionSO m_mainInstitution;
     [SerializeField] List<InstitutionSO> m_institutions = new List<InstitutionSO>();
 
     //[SerializeField] public ScriptableObject[] m_Institutions;
     //[SerializeField] public ScriptableObject[] m_Crise;
 
     [SerializeField] public RoundManager m_roundManager;
-    [SerializeField] public InterfaceManager m_InterfaceManager;
+    [SerializeField] public InterfaceManager m_interfaceManager;
     
     [SerializeField] public GameObject m_camera;
     private CameraManager m_cameraScript;
@@ -33,7 +33,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
     public List<EventSO> ActiveEvents => m_activeEvents;
     public int Turn => m_turn;
 
-    public InstitutionSO MainInstitution => m_MainInstitutionSO;
+    public InstitutionSO MainInstitution => m_mainInstitution;
     public List<InstitutionSO> Institutions => m_institutions;
 
     public CameraManager CameraScript => m_cameraScript;
@@ -80,9 +80,9 @@ public class GameManager : Singleton<GameManager>, IInitializable
     
     private void Start()
     {
-        m_MainInstitutionSO = m_MainInstitution.GetComponent<InterfaceInstitution>().m_Institution;
+        m_mainInstitution = m_mainInstitutionObject.GetComponent<InterfaceInstitution>().m_Institution;
 
-        foreach (GameObject Institution in m_Institutions)
+        foreach (GameObject Institution in m_institutionsObjectList)
         {
             m_institutions.Add(Institution.GetComponent<InterfaceInstitution>().m_Institution);
         }
@@ -104,7 +104,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
         TryEndGame();
         
         Debug.Log("DEBUT DU DISPLAy");
-        m_InterfaceManager.DisplayEndTurn();
+        m_interfaceManager.DisplayEndTurn();
 
         m_turn++;
     }

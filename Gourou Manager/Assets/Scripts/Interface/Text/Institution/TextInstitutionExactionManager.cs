@@ -28,11 +28,11 @@ public class TextInstitutionExactionManager : MonoBehaviour
         // Changement de la couleur selon si l'exaction est valide ou non
         if (p_exaction.IsValid())
         {
-            m_thisImage.sprite = GameManager.Instance.m_InterfaceManager.m_redBackGroundSprite;
+            m_thisImage.sprite = GameManager.Instance.m_interfaceManager.m_redBackGroundSprite;
         }
         else
         {
-            m_thisImage.sprite = GameManager.Instance.m_InterfaceManager.m_whiteBackGroundSprite;
+            m_thisImage.sprite = GameManager.Instance.m_interfaceManager.m_whiteBackGroundSprite;
         }
     }
 
@@ -41,18 +41,18 @@ public class TextInstitutionExactionManager : MonoBehaviour
         if (!GameManager.Instance.PlayerHasExectuteExaction && m_exaction.IsValid())
         {
             GameManager.Instance.PendingExactions.Add(m_exaction);
-            GameManager.Instance.m_InterfaceManager.DisallowHeavyInstitution();
-            GameManager.Instance.m_InterfaceManager.m_feedBackScript.FeedBackExaction();
+            GameManager.Instance.m_interfaceManager.DisallowHeavyInstitution();
+            GameManager.Instance.m_interfaceManager.m_feedBackScript.FeedBackExaction();
 
             GameManager.Instance.PlayerHasExectuteExaction = true;
         } 
         else if (!m_exaction.IsValid())
         {
-            GameManager.Instance.m_InterfaceManager.m_feedBackScript.FeedBackExactionNotValid();
+            GameManager.Instance.m_interfaceManager.m_feedBackScript.FeedBackExactionNotValid();
         }
         else if (GameManager.Instance.PlayerHasExectuteExaction)
         {
-            GameManager.Instance.m_InterfaceManager.m_feedBackScript.FeedBackExactionDouble();
+            GameManager.Instance.m_interfaceManager.m_feedBackScript.FeedBackExactionDouble();
         }
         
     }

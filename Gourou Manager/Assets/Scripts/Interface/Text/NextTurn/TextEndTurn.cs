@@ -53,9 +53,9 @@ public class TextEndTurn : MonoBehaviour
         m_textStatList[1].text = "Membres : " + GameManager.Instance.MainInstitution.m_members.Value.ToString();
         m_textStatList[2].text = "Fanatiques : " + GameManager.Instance.MainInstitution.m_fanatics.Value.ToString();
         m_textStatList[3].text = "Exposition Publique : " + GameManager.Instance.MainInstitution.m_publicExposure.Value.ToString();
-        m_textStatList[4].text = "Brutalité : " + GameManager.Instance.MainInstitution.m_brutality.Value;
+        m_textStatList[4].text = "BrutalitÃ© : " + GameManager.Instance.MainInstitution.m_brutality.Value;
 
-        // on récupère la liste d'event du tour qui vient de finir
+        // on rÃ©cupÃ¨re la liste d'event du tour qui vient de finir
         List<EventSO> m_eventList = EventRegister.Instance.GetEvents(GameManager.Instance.Turn);
 
         m_exactionScript.Display(m_eventList);
@@ -63,7 +63,7 @@ public class TextEndTurn : MonoBehaviour
 
     public void Disallow()
     {
-        GameManager.Instance.m_InterfaceManager.DisallowEndTurn();
+        GameManager.Instance.m_interfaceManager.DisallowEndTurn();
         m_exactionScript.DestroyAll();
     }
 

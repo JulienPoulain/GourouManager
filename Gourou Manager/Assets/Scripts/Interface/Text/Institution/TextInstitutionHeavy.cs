@@ -67,7 +67,7 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
 
     public void DisplayInterlocutor()
     {
-        GameManager.Instance.m_InterfaceManager.DisplayInterlocutor(m_InstitutionData);
+        GameManager.Instance.m_interfaceManager.DisplayInterlocutor(m_InstitutionData);
     }
 
     public void DisplayExaction()
@@ -93,8 +93,8 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
     
     public void OnPointerEnter(PointerEventData eventData)
     {
-        GameManager.Instance.m_InterfaceManager.m_cursorFocusHeavyInstitution = true;
-        m_backGroundImage.sprite = GameManager.Instance.m_InterfaceManager.m_redBackGroundSprite;
+        GameManager.Instance.m_interfaceManager.m_cursorFocusHeavyInstitution = true;
+        m_backGroundImage.sprite = GameManager.Instance.m_interfaceManager.m_redBackGroundSprite;
     }
 
 
@@ -108,8 +108,8 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        GameManager.Instance.m_InterfaceManager.m_cursorFocusHeavyInstitution = false;
-        m_backGroundImage.sprite = GameManager.Instance.m_InterfaceManager.m_whiteBackGroundSprite;
+        GameManager.Instance.m_interfaceManager.m_cursorFocusHeavyInstitution = false;
+        m_backGroundImage.sprite = GameManager.Instance.m_interfaceManager.m_whiteBackGroundSprite;
     }
 
     Vector3 m_oldMousePos;
