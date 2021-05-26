@@ -9,39 +9,42 @@ EditorBuildSettings:
     path: Assets/Scenes/MAP_MAIN.unity
     guid: f8bf894f2be485c49aefea0ee2043341
   - enabled: 1
-    path: Assets/Scenes/INTERLOCUTEURS/SYNDIC_LUIS.unity
-    guid: 720254b28532f734fa27f1e1ba5acdf6
-  - enabled: 1
-    path: Assets/Scenes/INTERLOCUTEURS/CARMICHAEL.unity
-    guid: 6d59a3735e195244094c84d41845e307
-  - enabled: 1
-    path: Assets/Scenes/INTERLOCUTEURS/AEMILIA.unity
-    guid: ee766fa4aa8142e4c9af23822420c9fd
-  - enabled: 1
-    path: Assets/Scenes/INTERLOCUTEURS/HERBERT.unity
-    guid: d63ee1e18edc6324c814d2bb5b368c14
-  - enabled: 1
-    path: Assets/Scenes/INTERLOCUTEURS/ALEJENDRA.unity
-    guid: 6385f089ca9c1224399dc06ca50a1a72
-  - enabled: 1
-    path: Assets/Scenes/INTERLOCUTEURS/CECILIA.unity
-    guid: edb353b2e4a693b4987e5d89d1fffe8b
-  - enabled: 1
-    path: Assets/Scenes/INTERLOCUTEURS/JAQUES.unity
-    guid: 5838171d53750784b8f497812286242d
-  - enabled: 1
-    path: Assets/Scenes/INTERLOCUTEURS/MARCUS.unity
-    guid: fa294b73e3b3b9542a18cc84165a7bdc
-  - enabled: 1
-    path: Assets/Scenes/INTERLOCUTEURS/POLICIER.unity
-    guid: 501f71e48a212584eb8af8517fe2df00
-  - enabled: 1
-    path: Assets/Scenes/INTERLOCUTEURS/MIGUEL.unity
-    guid: 526cc2c9ff2273847bc8a631905747ec
-  - enabled: 1
-    path: Assets/Scenes/INTERLOCUTEURS/KATE.unity
-    guid: 136906e7f9043124d878c6708182eee6
-  - enabled: 1
-    path: Assets/Scenes/INTERLOCUTEURS/HECTOR.unity
-    guid: e12e1ce4ed2cad24d977ecb765f4faa4
+    path: Assets/Scenes/MENU_MAIN.unity
+    guid: 14afd8254f7573e4ab1c66efd964b70b
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
