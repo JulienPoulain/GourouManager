@@ -147,9 +147,11 @@ public class TextInterlocutor : MonoBehaviour
     {
         if (m_Interlocutor.IsAccessible() && m_InterlocutorSelected  && !GameManager.Instance.PlayerHasExecuteApproach)
         {
+            
+            GameManager.Instance.CameraScript.ChangePosition(m_Interlocutor.CameraPlacement);
             GameManager.Instance.m_InterfaceManager.DisplayApproche(m_Interlocutor);
             GameManager.Instance.m_InterfaceManager.DisallowInterlocutor();
-            // Il y avait le changement de scene ici
+
             GameManager.Instance.PlayerHasExecuteApproach = true;
             Debug.Log("Institution : " + GameManager.Instance.PlayerHasExecuteApproach);
         }

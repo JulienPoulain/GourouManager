@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GameManager : Singleton<GameManager>, IInitializable
 {
@@ -15,9 +16,11 @@ public class GameManager : Singleton<GameManager>, IInitializable
 
     [SerializeField] public RoundManager m_roundManager;
     [SerializeField] public InterfaceManager m_InterfaceManager;
-    [SerializeField] public GameObject m_Camera;
     
-    [SerializeField] private static List<ExactionSO> m_pendingExactions = new List<ExactionSO>();
+    [SerializeField] public GameObject m_camera;
+    private CameraManager m_cameraScript;
+    
+    [SerializeField] private List<ExactionSO> m_pendingExactions = new List<ExactionSO>();
     [SerializeField] private List<EventSO> m_activeEvents = new List<EventSO>();
 
     [SerializeField] private List<ConditionSO> m_cdtVictory;
@@ -32,6 +35,9 @@ public class GameManager : Singleton<GameManager>, IInitializable
 
     public InstitutionSO MainInstitution => m_MainInstitutionSO;
     public List<InstitutionSO> Institutions => m_institutions;
+
+    public CameraManager CameraScript => m_cameraScript;
+    
 
     // Player Variable //
     
@@ -80,6 +86,9 @@ public class GameManager : Singleton<GameManager>, IInitializable
         {
             m_institutions.Add(Institution.GetComponent<InterfaceInstitution>().m_Institution);
         }
+        
+        m_cameraScript = m_camera.GetComponent<CameraManager>();
+
         Initialize();
     }
 

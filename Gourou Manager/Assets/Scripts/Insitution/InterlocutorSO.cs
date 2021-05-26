@@ -12,8 +12,10 @@ public class InterlocutorSO: ScriptableObject, IInitializable
     [SerializeField] [Tooltip("Approches débloquées par les conditions.")] public List<ApproachSO> m_approach;
     [SerializeField] [Tooltip("Conditions d'accès à l'interlocuteur.")] private List<ConditionIntSO>  m_accesConditions;
     [SerializeField] [Tooltip("Sprite du visuel de l'interlocutor.")] public Sprite m_sprite;
+    [SerializeField] CameraPlacement m_cameraPlacement;
 
     public List<ConditionIntSO> AccessCondition => m_accesConditions;
+    public CameraPlacement CameraPlacement => m_cameraPlacement;
     
     public void Initialize()
     {
