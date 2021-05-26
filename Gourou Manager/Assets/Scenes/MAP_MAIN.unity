@@ -1406,8 +1406,8 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  - component: {fileID: 963194229}
   - component: {fileID: 963194230}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1489,12 +1489,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 642033d508175914f95d9502bad565ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b80b8c9a2b8774459edc49d59918c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FieldTarget: {fileID: 807562133}
-  m_FocusInsitutionDistance: 0
-  m_cameraFocusOnInstitution: 0
+  m_defaultPlacement: {fileID: 11400000, guid: 9d22dcbc39021334e95026a8960059ed, type: 2}
 --- !u!54 &963194230
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2601,18 +2599,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dce8e22d1e6a64f45a6d8756dd19a323, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MainInstitution: {fileID: 1687875935}
-  m_Institutions:
-  - {fileID: 1913247310}
-  - {fileID: 1081732356}
-  - {fileID: 314529762547947377}
+  m_mainInstitutionObject: {fileID: 1687875935}
+  m_institutionsObjectList:
   - {fileID: 319329696}
+  - {fileID: 314529762547947377}
+  - {fileID: 1081732356}
+  - {fileID: 1913247310}
   - {fileID: 446163453}
-  m_MainInstitutionSO: {fileID: 0}
+  m_mainInstitution: {fileID: 0}
   m_institutions: []
   m_roundManager: {fileID: 0}
-  m_InterfaceManager: {fileID: 2060777671}
-  m_Camera: {fileID: 963194225}
+  m_interfaceManager: {fileID: 2060777671}
+  m_camera: {fileID: 963194225}
+  m_pendingExactions: []
   m_activeEvents: []
   m_cdtVictory: []
   m_cdtDefeat: []
@@ -2795,7 +2794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2060777667
 MonoBehaviour:
   m_ObjectHideFlags: 0
