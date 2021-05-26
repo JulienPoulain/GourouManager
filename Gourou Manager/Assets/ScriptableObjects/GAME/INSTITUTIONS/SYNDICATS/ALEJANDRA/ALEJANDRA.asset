@@ -21,4 +21,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2ecd90e7853e0c54db63783866babd21, type: 2}
   m_accesConditions:
   - {fileID: 11400000, guid: 8af3c4b127dc8dd44992e9af1e6c5041, type: 2}
-  m_sceneName: ALEJENDRA
+  m_sprite: {fileID: 21300000, guid: 200a44462a43c574c8b1b3a9207f31d9, type: 3}

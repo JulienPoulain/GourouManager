@@ -23,4 +23,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0d176f39705975941a6354ee56b57e1d, type: 2}
   - {fileID: 11400000, guid: 2ddb7c36d19ceef4d876be5c5839394b, type: 2}
   - {fileID: 11400000, guid: 917da132c3db8a04d9163fd025c91848, type: 2}
-  m_sceneName: SYNDIC_LUIS
+  m_sprite: {fileID: 21300000, guid: 5b994d903b1df7542865e8c24bf43f54, type: 3}

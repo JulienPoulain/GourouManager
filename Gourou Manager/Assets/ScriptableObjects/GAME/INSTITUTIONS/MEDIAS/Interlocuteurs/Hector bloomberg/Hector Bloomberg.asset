@@ -19,10 +19,5 @@ MonoBehaviour:
   m_approach:
   - {fileID: 11400000, guid: ce60528cce40d254a8cd252603d955df, type: 2}
   - {fileID: 11400000, guid: 03dc581abdc20394f9e24d8bfddf3257, type: 2}
- Police_Media-V4
   m_accesConditions: []
-
- m_accesConditions:
-  - {fileID: 0}
- main
-  m_sceneName: HECTOR
+  m_sprite: {fileID: 21300000, guid: 5b957dcbb5f193648a4d5030e70eef17, type: 3}
