@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac9b26ad5daf94540818a32d10c38f60, type: 3}
   m_Name: Default
   m_EditorClassIdentifier: 
-  m_position: {x: 0, y: 15, z: -19.38}
-  m_rotation: {x: 0.4, y: 0, z: 0, w: 0.9}
+  m_position: {x: -1.2, y: 16.8, z: -23.1}
+  m_rotation: {x: 0.3, y: 0, z: 0, w: 0.9}
