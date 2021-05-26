@@ -45,10 +45,15 @@ public class TextInstitutionExactionManager : MonoBehaviour
             GameManager.Instance.m_InterfaceManager.m_feedBackScript.FeedBackExaction();
 
             GameManager.Instance.PlayerHasExectuteExaction = true;
-        }
-        else
+        } 
+        else if (!m_exaction.IsValid())
         {
-            Debug.Log("Vous avez déjà fait une exaction ou cette exaction n'est pas valide");
+            GameManager.Instance.m_InterfaceManager.m_feedBackScript.FeedBackExactionNotValid();
         }
+        else if (GameManager.Instance.PlayerHasExectuteExaction)
+        {
+            GameManager.Instance.m_InterfaceManager.m_feedBackScript.FeedBackExactionDouble();
+        }
+        
     }
 }

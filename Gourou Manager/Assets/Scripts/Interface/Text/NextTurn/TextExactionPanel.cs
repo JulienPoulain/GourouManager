@@ -14,11 +14,9 @@ public class TextExactionPanel : MonoBehaviour
     {
         DestroyAll();
 
-        Debug.Log("DEBUT DES EVENT");
-
         for (int i = 0; i < p_eventList.Count; i++)
         {
-            // on instancie un GO contenant 2 textes en fils de m_textContainer pour qu'il se mette à la suite sans faire d'histoire
+            // on instancie un GO contenant 2 textes en fils de m_textContainer pour qu'il se mette ï¿½ la suite sans faire d'histoire
             GameObject text = Instantiate(m_textEndTurnEventPrefab, Vector3.zero, Quaternion.identity, m_textContainer.transform);
 
             m_objectEventList.Add(text);
@@ -34,9 +32,7 @@ public class TextExactionPanel : MonoBehaviour
 
     public void DestroyAll()    // Appeler lorsque le joueur quitte l'interface
     {
-        // Pour remettre la liste à 0, on détruit tous les Objets avant de clear la list
-        Debug.Log("ON DETRUIT TOUT");
-        
+        // Pour remettre la liste ï¿½ 0, on dï¿½truit tous les Objets avant de clear la list
         foreach (GameObject thisObject in m_objectEventList)
         {
             Destroy(thisObject);
