@@ -6,11 +6,18 @@ public class ConditionIntSO : ConditionSO
 {
     [SerializeField] public RessourceSO m_ressource;    // utiliser dans TextInterlocutor
     [SerializeField] public ConditionType m_conditionType; // utiliser dans TextInterlocutor (interface)
-    [SerializeField]private int m_value;
+    [SerializeField] private int m_value;
     
     public override void Initialize()
     {
-        m_ressource.Initialize();
+        if (m_ressource == null)
+        {
+            Debug.Log($"<color=red>ERROR :</color> {name} Ressource manquante.");
+        }
+        else
+        {
+            m_ressource.Initialize();
+        }
     }
 
     public override string ToString()

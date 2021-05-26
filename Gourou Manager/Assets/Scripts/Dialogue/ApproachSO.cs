@@ -13,7 +13,7 @@ public class ApproachSO : ScriptableObject, IInitializable
     [SerializeField] private int m_remainingTime;
 
     [SerializeField]
-    [Tooltip("petite descrition de l'approche pour le joueur exemple : Si vous parvenez a l'intimider, vous obtiendrez des informations")]
+    [Tooltip("Petite descrition de l'approche pour le joueur exemple : Si vous parvenez a l'intimider, vous obtiendrez des informations")]
     public string m_descriptionApproach; // utiliser dans TextInterlocutor
 
     [SerializeField]
@@ -32,33 +32,37 @@ public class ApproachSO : ScriptableObject, IInitializable
     
     public void Initialize()
     {
-        m_exactionPos.Initialize();
-        m_exactionNeg.Initialize();
+        if (m_exactionPos == null)
+        {
+            Debug.Log($"<color=red>ERROR :</color> {name} Exaction positive manquante.");
+        }
+        else
+        {
+            m_exactionPos.Initialize();
+        }
+        
+        if (m_exactionNeg == null)
+        {
+            Debug.Log($"<color=red>ERROR :</color> {name} Exaction négative manquante.");
+        }
+        else
+        {
+            m_exactionNeg.Initialize();
+        }
+        
         foreach (ConditionSO condition in m_cdtSuccess)
         {
             condition.Initialize();
         }
+        
         m_remainingTime = 0;
     }
 
     /// <summary>
     /// Renvoie le résultat d'une tentative de cette approche.
+    /// ATTENTION : Met l'approche en temps de récupération quoi qu'il arrive (ne vérifie pas que celui-ci est bon à ce moment).
     /// </summary>
-    /// <returns>L'exaction correspondante si l'approche n'est pas en récupération. Sinon null.</returns>
-   
-    /*
-    public ExactionSO TryApproach()
-    {
-        if (!(m_remainingTime > 0))
-        {
-            m_remainingTime = m_cooldown;
-            if (ConditionsReached(m_cdtSuccess))
-                return m_exactionPos;
-            return m_exactionNeg;
-        }
-        return null;
-    }
-    */
+    /// <returns>L'exaction correspondante au résultat de la condition.</returns>
     public ExactionSO TryApproach()
     {
         m_remainingTime = m_cooldown;

@@ -11,7 +11,22 @@ public class ImpactSO : ScriptableObject, IInitializable
     
     public void Initialize()
     {
-        m_ressource.Initialize();
-        m_magnitude.Initialize();
+        if (m_ressource == null)
+        {
+            Debug.Log($"<color=red>ERROR :</color> {name} Ressource manquante.");
+        }
+        else
+        {
+            m_ressource.Initialize();
+        }
+        
+        if (m_magnitude == null)
+        {
+            Debug.Log($"<color=red>ERROR :</color> {name} Magnitude manquante.");
+        }
+        else
+        {
+            m_magnitude.Initialize();
+        }
     }
 }

@@ -15,11 +15,13 @@ public class TriggeredEventSO : EventSO
     public override void Initialize()
     {
         m_nbUse = m_initNbUse;
+        
         base.Initialize();
+        
         if (m_cdtActivation.Count > 0)
             foreach (ConditionSO condition in m_cdtActivation)
                 condition.Initialize();
-        }
+    }
     public bool IsUnlimited()
     {
         return m_initNbUse < 0;

@@ -8,7 +8,14 @@ public class ConditionBoolSO : ConditionSO
     
     public override void Initialize()
     {
-        m_ressource.Initialize();
+        if (m_ressource == null)
+        {
+            Debug.Log($"<color=red>ERROR :</color> {name} Ressource manquante.");
+        }
+        else
+        {
+            m_ressource.Initialize();
+        }
     }
     
     public override bool IsValid()

@@ -17,7 +17,15 @@ public class InterlocutorSO: ScriptableObject, IInitializable
     
     public void Initialize()
     {
-        m_sanity.Initialize();
+        if (m_sanity == null)
+        {
+            Debug.Log($"<color=red>ERROR :</color> {name} Santé mentale manquante.");
+        }
+        else
+        {
+            m_sanity.Initialize();
+        }
+        
         foreach (ApproachSO approach in m_approach)
         {
             approach.Initialize();

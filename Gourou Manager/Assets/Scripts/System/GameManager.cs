@@ -51,7 +51,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
 
     public void Initialize()
     {
-        m_turn = 0;
+        m_turn = 1;
         
         foreach (InstitutionSO institution in m_institutions)
             institution.Initialize();
@@ -74,7 +74,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
     
     private void Start()
     {
-        m_MainInstitutionSO = m_MainInstitution.GetComponent<InterfaceInstitution>().m_Institution;
+        //m_MainInstitutionSO = m_MainInstitution.GetComponent<InterfaceInstitution>().m_Institution;
 
         foreach (GameObject Institution in m_Institutions)
         {
@@ -95,7 +95,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
         TryEndGame();
         
         Debug.Log("DEBUT DU DISPLAy");
-        m_InterfaceManager.DisplayEndTurn();
+        //m_InterfaceManager.DisplayEndTurn();
 
         m_turn++;
     }
