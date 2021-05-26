@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: Cult_IMP ++
   m_EditorClassIdentifier: 
-  m_name: 
-  m_description: 
+  m_name: 'Soudoiement Marcus : Reussite'
+  m_description: L'impact sur la population du culte augmente sur 3 tours
+  m_initDuration: 3
   m_duration: 3
   m_impacts:
   - {fileID: 11400000, guid: 7b44deb7802e0e64c8d2408381708bbe, type: 2}

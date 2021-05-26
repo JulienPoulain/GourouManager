@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: Police_C--
   m_EditorClassIdentifier: 
-  m_name: Echec de la du soudoiement de Carmichael
-  m_description: 
-  m_initDuration: 0
+  m_name: 'Soudoiement Carmichael : Echec'
+  m_description: "La corruption de la police a diminu\xE9"
+  m_initDuration: 3
   m_duration: 3
   m_impacts:
   - {fileID: 11400000, guid: 35dad945c96bf5d4cbf70ec8640697c6, type: 2}

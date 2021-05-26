@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: Cult_EXP --
   m_EditorClassIdentifier: 
-  m_name: 
-  m_description: 
+  m_name: 'Intimider Marcus : Echec'
+  m_description: L'exposition publique du culte diminue
+  m_initDuration: 1
   m_duration: 1
   m_impacts:
   - {fileID: 11400000, guid: f87da0e9aa0418a478a8f2cf8c3b983f, type: 2}

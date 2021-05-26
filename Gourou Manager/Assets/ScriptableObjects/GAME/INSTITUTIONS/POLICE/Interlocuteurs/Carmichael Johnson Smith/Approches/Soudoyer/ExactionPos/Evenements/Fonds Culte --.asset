@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Fonds Culte --
   m_EditorClassIdentifier: 
   m_name: Toute corruption a un prix ...
-  m_description: 
+  m_description: "Vous avez d\xE9pens\xE9 40000 afin de corrompre Carmichael"
+  m_initDuration: 1
   m_duration: 1
   m_impacts:
   - {fileID: 11400000, guid: c5defd068dcc2db41b289350c92332d4, type: 2}

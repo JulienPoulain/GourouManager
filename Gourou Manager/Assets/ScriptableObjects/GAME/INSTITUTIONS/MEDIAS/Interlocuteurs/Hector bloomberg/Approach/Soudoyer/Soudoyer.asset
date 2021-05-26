@@ -19,6 +19,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c123159b091882e40a13e3ee1cfb24ad, type: 2}
   m_cooldown: 3
   m_remainingTime: 0
-  m_descriptionApproach: 
+  m_descriptionApproach: Soudoyer Hector
   m_dialogueApproach: 
-  m_resultatApproach: 
+  m_resultatApproach: Soudoyer Hector fera
