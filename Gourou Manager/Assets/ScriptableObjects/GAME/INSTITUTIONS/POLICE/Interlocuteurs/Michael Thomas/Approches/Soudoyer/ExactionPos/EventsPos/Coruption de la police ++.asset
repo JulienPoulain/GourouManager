@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Coruption de la police ++
   m_EditorClassIdentifier: 
   m_name: 'Soudoiement de Michael Thomas : Reussite'
-  m_description: 
+  m_description: Vous soudoyez Tomas
+  m_initDuration: 0
   m_duration: 1
   m_impacts:
   - {fileID: 11400000, guid: 062e0b988b9715b4986dc36c0ca9ae05, type: 2}
