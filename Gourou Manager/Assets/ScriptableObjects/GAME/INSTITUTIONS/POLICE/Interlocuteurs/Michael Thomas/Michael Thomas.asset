@@ -17,8 +17,8 @@ MonoBehaviour:
   m_descriptionFailure: 
   m_sanity: {fileID: 0}
   m_approach:
-  - {fileID: 11400000, guid: de54daabc67d6494e84aedd514780be2, type: 2}
   - {fileID: 11400000, guid: 22d5bb00e2abb6f46947a70c8410230a, type: 2}
+  - {fileID: 11400000, guid: de54daabc67d6494e84aedd514780be2, type: 2}
   m_accesConditions: []
   m_sprite: {fileID: 21300000, guid: 22983d99f0383964884f234d710604e4, type: 3}
   m_cameraPlacement: {fileID: 11400000, guid: 8ce3f7eb1408b74499381359da5d2906, type: 2}
