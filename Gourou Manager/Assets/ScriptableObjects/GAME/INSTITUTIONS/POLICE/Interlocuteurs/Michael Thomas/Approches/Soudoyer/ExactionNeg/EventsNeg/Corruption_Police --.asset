@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Corruption_Police --
   m_EditorClassIdentifier: 
   m_name: 'Soudoiement Michael : Echec'
-  m_description: La corruption d ela Police diminue
+  m_description: La corruption de la Police diminue
   m_initDuration: 1
   m_duration: 0
   m_impacts:
