@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: REFUS DU FINANCEMENT
   m_description: "Vous avez pris un sacr\xE9 vent"
-  m_duration: 1
+  m_initDuration: 1
+  m_duration: 0
   m_impacts:
   - {fileID: 11400000, guid: 2262afb7b6fbfb04ea461176592e944b, type: 2}
   - {fileID: 11400000, guid: 268c33ca69ed50c468d630b0b1cb9880, type: 2}

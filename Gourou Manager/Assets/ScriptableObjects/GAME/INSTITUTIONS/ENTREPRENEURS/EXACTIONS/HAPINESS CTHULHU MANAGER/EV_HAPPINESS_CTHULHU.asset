@@ -15,7 +15,8 @@ MonoBehaviour:
   m_name: Creation du poste d'Happiness Cthulhu Manager
   m_description: "Les entreprises cr\xE9ent un nouveau poste : Cthulhu Happiness
     Manager"
-  m_duration: 1
+  m_initDuration: 1
+  m_duration: 0
   m_impacts:
   - {fileID: 11400000, guid: a6c5553007ae30e439acae819e809462, type: 2}
   - {fileID: 11400000, guid: bb0f4163b2e49e54b9720753905903ab, type: 2}
