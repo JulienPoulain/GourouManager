@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Michael Thomas
   m_description: Inspecteur de Police
-  m_descriptionFailure: 
+  m_descriptionFailure: "Si vous \xE9chouez dans les n\xE9gociations, la police deviendra
+    de plus en plus hostile"
   m_sanity: {fileID: 0}
   m_approach:
   - {fileID: 11400000, guid: de54daabc67d6494e84aedd514780be2, type: 2}

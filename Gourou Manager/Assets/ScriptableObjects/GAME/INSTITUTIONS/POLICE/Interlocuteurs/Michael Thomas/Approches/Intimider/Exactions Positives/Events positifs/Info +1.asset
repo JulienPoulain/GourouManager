@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: Info +1
   m_EditorClassIdentifier: 
-  m_name: Info +1
-  m_description: 
-  m_duration: 3
+  m_name: 'Intimidation Michael : Reussite'
+  m_description: Vous obtenez une information sur le chef de la police
+  m_initDuration: 1
+  m_duration: 1
   m_impacts: []
   m_infoGained:
   - {fileID: 11400000, guid: 7469adb9dafaec743b11dd29d9bb0e75, type: 2}

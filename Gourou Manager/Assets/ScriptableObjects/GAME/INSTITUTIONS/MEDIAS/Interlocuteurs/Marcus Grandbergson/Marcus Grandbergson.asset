@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Marcus Grandbergson
   m_description: Chef du journal local
-  m_descriptionFailure: 
+  m_descriptionFailure: "Si vous \xE9chouez dans les n\xE9gociations il fera son
+    possible pour vous exposer n\xE9gativement"
   m_sanity: {fileID: 0}
   m_approach:
   - {fileID: 11400000, guid: 7107f77b534063a459fa76a2edce1c29, type: 2}
   - {fileID: 11400000, guid: e548b8018f09872418fe460722e00542, type: 2}
   m_accesConditions:
   - {fileID: 11400000, guid: 6d71533de751a6f459cb29735f0a6889, type: 2}
-  m_sceneName: MARCUS
+  m_sprite: {fileID: 21300000, guid: cbcfa57483eb9c24da58bad452fd5342, type: 3}

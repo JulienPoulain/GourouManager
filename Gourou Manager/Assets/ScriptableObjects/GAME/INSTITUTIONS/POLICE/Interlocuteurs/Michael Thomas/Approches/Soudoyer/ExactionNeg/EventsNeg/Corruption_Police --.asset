@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: Corruption_Police --
   m_EditorClassIdentifier: 
-  m_name: 
-  m_description: 
+  m_name: 'Soudoiement Michael : Echec'
+  m_description: La corruption d ela Police diminue
+  m_initDuration: 1
   m_duration: 0
   m_impacts:
   - {fileID: 11400000, guid: b1c2832070fc32a45919e74c1cce3843, type: 2}
