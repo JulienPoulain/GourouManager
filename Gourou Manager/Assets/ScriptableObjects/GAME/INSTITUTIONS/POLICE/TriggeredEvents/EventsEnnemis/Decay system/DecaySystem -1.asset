@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b647af1624fef43bcaf750a89ff899, type: 3}
+  m_Name: DecaySystem -1
+  m_EditorClassIdentifier: 
+  m_name: 'Decay system '
+  m_description: Decay system
+  m_initDuration: 1
+  m_duration: 0
+  m_impacts:
+  - {fileID: 11400000, guid: 6fa2608200eb50f49a13c271a5c022b2, type: 2}
+  m_infoGained: []
+  m_initNbUse: -1
+  m_nbUse: 0
+  m_cdtActivation:
+  - {fileID: 11400000, guid: f31fbaa3569858d48bb66f92cf62faa9, type: 2}
+  - {fileID: 11400000, guid: 4f185bb0421933148aa920b1c5a147db, type: 2}

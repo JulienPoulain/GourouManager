@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65d02e6c45e7ab84a9e56bc495f4f42d, type: 3}
-  m_Name: Police_C -2
+  m_Script: {fileID: 11500000, guid: 4a07221645fd8ad42978314f51634aaa, type: 3}
+  m_Name: Police_C 44-
   m_EditorClassIdentifier: 
   m_ressource: {fileID: 11400000, guid: d41a2973659a9d7458ed1ca4f7be6311, type: 2}
-  m_magnitude: {fileID: 11400000, guid: 137c6dfafb460794fac7585e0c19c6da, type: 2}
+  m_conditionType: 3
+  m_value: 44
