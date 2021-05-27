@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: IMP_C
   m_EditorClassIdentifier: 
   m_ressource: {fileID: 11400000, guid: bd3fdc65a15d9934cad34a7d62c5a6a8, type: 2}
-  m_magnitude: {fileID: 11400000, guid: 7949cf308b49a3c4590fd3a1989fd7e5, type: 2}
+  m_magnitude: {fileID: 11400000, guid: 7dfee0bca486f1848b59486eda646555, type: 2}
