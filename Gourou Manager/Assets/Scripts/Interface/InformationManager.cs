@@ -13,6 +13,7 @@ public class InformationManager : MonoBehaviour
     void Start()
     {
         m_window.SetActive(false);
+        m_infoList = GetInfoSO();
     }
 
     List<InfoSO> GetInfoSO()
@@ -21,10 +22,7 @@ public class InformationManager : MonoBehaviour
 
         foreach (InfoSO info in Resources.FindObjectsOfTypeAll(typeof(InfoSO)) as InfoSO[])
         {
-            if (info.Value)
-            {
-                infoInScene.Add(info);
-            }
+            infoInScene.Add(info);
         }
 
         return infoInScene;
@@ -48,7 +46,10 @@ public class InformationManager : MonoBehaviour
                 m_infoText.text = null;
                 foreach (InfoSO info in m_infoList)
                 {
-                    m_infoText.text += $"<b>{info.Title}</b>" + "\n" + info.Description + "\n\n";
+                    if (info.Value)
+                    {
+                        m_infoText.text += $"<b>{info.Title}</b>" + "\n" + info.Description + "\n\n";
+                    }
                 }
             }
         
