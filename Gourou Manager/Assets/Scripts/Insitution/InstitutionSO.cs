@@ -11,15 +11,14 @@ public class InstitutionSO : ScriptableObject, IInitializable
     
     [Header("Variables")]
     
-    [SerializeField] [Tooltip("Montant d’argent dont dispose l’Institution")] private RessourceSO m_funds;
-    [SerializeField] [Tooltip("Citoyens composant l’Institution")] private RessourceSO m_members;
-    [SerializeField] [Tooltip("Membres dévoués à l’Institution. 0 sauf pour religion, culte, BB.")] private RessourceSO m_fanatics;
-    //[SerializeField] [Tooltip("Citoyens corrompus par l’Institution au prochain tour (+/-)")] private SyncIntSO m_impactOnPop;
+    [SerializeField] [Tooltip("Montant d’argent dont dispose l’Institution")] public SyncIntSO m_funds;
+    [SerializeField] [Tooltip("Citoyens composant l’Institution")] public SyncIntSO m_members;
+    [SerializeField] [Tooltip("Membres dévoués à l’Institution. 0 sauf pour religion, culte, BB.")] public SyncIntSO m_fanatics;
+    [SerializeField] [Tooltip("Citoyens corrompus par l’Institution au prochain tour (+/-)")] public SyncIntSO m_impactOnPop;
     //[SerializeField] [Tooltip("Entier qui va venir alimenter la Crise à la fin de chaque tour")] public SyncIntSO m_impactOnCrise;
-    [SerializeField] [Tooltip("Notoriété de l’Institution")] private RessourceSO m_publicExposure;
-    [SerializeField] [Tooltip("Entier représentant le niveau de corruption de l’Institution")] private SyncIntSO m_corruption;
-    [SerializeField] [Tooltip("Entier entre 0 et 100. 10 à l'initialisation")] private RessourceSO m_brutality;
-    [SerializeField] private DecaySO m_decay;
+    [SerializeField] [Tooltip("Notoriété de l’Institution")] public SyncIntSO m_publicExposure;
+    [SerializeField] [Tooltip("Entier représentant le niveau de corruption de l’Institution")] public SyncIntSO m_corruption;
+    [SerializeField] [Tooltip("Entier entre 0 et 100. 10 à l'initialisation")] public SyncIntSO m_brutality;
     
     [Header("Objets liés à l'institution")]
     
@@ -28,25 +27,14 @@ public class InstitutionSO : ScriptableObject, IInitializable
     [SerializeField] [Tooltip("Évènements se déclenchants selon certaines conditions sans intervention directe du joueur")] public List<TriggeredEventSO> m_triggeredEvents;
     [SerializeField] public OpinionOnTheCult m_option;
 
-    /*public enum OpinionOnTheCult
+    public enum OpinionOnTheCult
     {
         Hostile,
         Suspicious,
         Indifferent,
         Complacent,
         Devoted
-<<<<<<< HEAD:Gourou Manager/Assets/Scripts/Insitution/InstitutionSO.cs
     }
-=======
-    }*/
-
-    public RessourceSO Funds => m_funds;
-    public RessourceSO Members => m_members;
-    public RessourceSO Fanatics => m_fanatics;
-    public RessourceSO PublicExposure => m_publicExposure;
-    public RessourceSO Brutality => m_brutality;
-
-    public DecaySO Decay => m_decay;
 
     public List<TriggeredEventSO> TriggeredEvents => m_triggeredEvents;
 
@@ -54,86 +42,68 @@ public class InstitutionSO : ScriptableObject, IInitializable
     {
         if (m_funds == null)
         {
-            Debug.Log($"<color=red>ERROR :</color> {name} Fonds manquants.");
+            Debug.Log("<color=red>ERROR :</color> Fonds manquants.");
         }
         else
         {
             m_funds.Initialize();
         }
-        
         if (m_members == null)
         {
-            Debug.Log($"<color=red>ERROR :</color> {name} Membres manquants.");
+            Debug.Log("<color=red>ERROR :</color> Membres manquants.");
         }
         else
         {
             m_members.Initialize();
         }
-        
         if (m_fanatics == null)
         {
-            Debug.Log($"<color=red>ERROR :</color> {name} Fanatiques manquants.");
+            Debug.Log("<color=red>ERROR :</color> Fanatiques manquants.");
         }
         else
         {
             m_fanatics.Initialize();
         }
-        
-        /*if (m_impactOnPop == null)
+        if (m_impactOnPop == null)
         {
             Debug.Log("<color=red>ERROR :</color> Impact population manquant.");
         }
         else
         {
             m_impactOnPop.Initialize();
-        }*/
-        
+        }
         if (m_publicExposure == null)
         {
-            Debug.Log($"<color=red>ERROR :</color> {name} Exposition publique manquante.");
+            Debug.Log("<color=red>ERROR :</color> Exposition publique manquante.");
         }
         else
         {
             m_publicExposure.Initialize();
         }
-        
         if (m_corruption == null)
         {
-            Debug.Log($"<color=red>ERROR :</color> {name} Corruption manquante.");
+            Debug.Log("<color=red>ERROR :</color> Corruption manquante.");
         }
         else
         {
             m_corruption.Initialize();
         }
-        
         if (m_brutality == null)
         {
-            Debug.Log($"<color=red>ERROR :</color> {name} Brutalité manquante.");
+            Debug.Log("<color=red>ERROR :</color> Brutalité manquante.");
         }
         else
         {
             m_brutality.Initialize();
         }
-
-        if (m_decay == null)
-        {
-            Debug.Log($"<color=red>ERROR :</color> {name} Niveau de corruption manquant.");
-        }
-        else
-        {
-            m_decay.Initialize();
-        }
-        
         foreach (InterlocutorSO interlocutor in m_interlocutorList)
         {
             interlocutor.Initialize();
         }
-        
         foreach (ExactionSO exaction in m_exactionList)
         {
             exaction.Initialize();
         }
-        
         foreach (TriggeredEventSO tEventSO in m_triggeredEvents)
         {
             tEventSO.Initialize();

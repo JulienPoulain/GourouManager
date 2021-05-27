@@ -32,29 +32,12 @@ public class ApproachSO : ScriptableObject, IInitializable
     
     public void Initialize()
     {
-        if (m_exactionPos == null)
-        {
-            Debug.Log($"<color=red>ERROR :</color> {name} Exaction positive manquante.");
-        }
-        else
-        {
-            m_exactionPos.Initialize();
-        }
-        
-        if (m_exactionNeg == null)
-        {
-            Debug.Log($"<color=red>ERROR :</color> {name} Exaction négative manquante.");
-        }
-        else
-        {
-            m_exactionNeg.Initialize();
-        }
-        
+        m_exactionPos.Initialize();
+        m_exactionNeg.Initialize();
         foreach (ConditionSO condition in m_cdtSuccess)
         {
             condition.Initialize();
         }
-        
         m_remainingTime = 0;
     }
 

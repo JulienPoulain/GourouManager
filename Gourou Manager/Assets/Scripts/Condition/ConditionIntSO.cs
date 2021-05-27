@@ -4,27 +4,20 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewConditionInt", menuName = "GourouManager/Condition/ConditionInt")]
 public class ConditionIntSO : ConditionSO
 {
-    [SerializeField] private SyncIntSO m_syncInt;    // utiliser dans TextInterlocutor
-    [SerializeField] private ConditionType m_conditionType; // utiliser dans TextInterlocutor (interface)
-    [SerializeField] private int m_value;
+    [SerializeField] public RessourceSO m_ressource;    // utiliser dans TextInterlocutor
+    [SerializeField] public ConditionType m_conditionType; // utiliser dans TextInterlocutor (interface)
+    [SerializeField]private int m_value;
     
     public override void Initialize()
     {
-        if (m_syncInt == null)
-        {
-            Debug.Log($"<color=red>ERROR :</color> {name} SyncInt manquant.");
-        }
-        else
-        {
-            m_syncInt.Initialize();
-        }
+        m_ressource.Initialize();
     }
 
     public override string ToString()
     {
         string str = null;
 
-        str = m_syncInt.name + ":" + m_syncInt.Value + " " + ConditionTypeToString(m_conditionType) + " " + m_value;
+        str = m_ressource.name + ":" + m_ressource.m_value + " " + ConditionTypeToString(m_conditionType) + " " + m_value;
 
         return str;
     }
@@ -47,11 +40,11 @@ public class ConditionIntSO : ConditionSO
         switch (p_conditionType)
         {
             case ConditionType.Lesser:
-                return m_syncInt.Value < m_value;
+                return m_ressource.Value < m_value;
             case ConditionType.Equal:
-                return m_syncInt.Value == m_value;
+                return m_ressource.Value == m_value;
             case ConditionType.Greater:
-                return m_syncInt.Value > m_value;
+                return m_ressource.Value > m_value;
             default:
                 Debug.LogError("<color=red>ERROR :</color> ConditionType Inconnue.");
                 break;

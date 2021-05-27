@@ -6,8 +6,10 @@ using UnityEngine.EventSystems;
 public class Cursor : MonoBehaviour
 {
     private InterfaceManager m_interfaceManager;
-    private Camera m_camera;
+    private Camera m_Camera;
 
+    bool _affiche = false;
+    
     void Start()
     {
         m_interfaceManager = GameManager.Instance.m_interfaceManager;   // raccourcis l'access à Interface Manager
@@ -19,10 +21,11 @@ public class Cursor : MonoBehaviour
         m_interfaceManager.DisallowVictoryDefeat();
         m_interfaceManager.DisallowEndTurn();
 
-        m_camera = GameManager.Instance.GetComponent<Camera>();
+        m_Camera = GameManager.Instance.GetComponent<Camera>();
     }
 
     // raycast
+    [SerializeField] float m_raycastLenght = 10f;
     [SerializeField] LayerMask m_layerMask;
     void Update()
     {

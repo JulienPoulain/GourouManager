@@ -8,23 +8,8 @@ public class MultiplicationSO : OperationSO
 
     public override void Initialize()
     {
-        if (m_operation1 == null)
-        {
-            Debug.Log($"<color=red>ERROR :</color> {name} Opération 1 manquante.");
-        }
-        else
-        {
-            m_operation1.Initialize();
-        }
-        
-        if (m_operation2 == null)
-        {
-            Debug.Log($"<color=red>ERROR :</color> {name} Opération 2 manquante.");
-        }
-        else
-        {
-            m_operation2.Initialize();
-        }
+        m_operation1.Initialize();
+        m_operation2.Initialize();
     }
 
     public override int Compute()
