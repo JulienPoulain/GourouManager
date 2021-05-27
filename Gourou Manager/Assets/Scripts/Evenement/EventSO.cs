@@ -49,13 +49,13 @@ public class EventSO : ScriptableObject, IInitializable
             Debug.Log("<color=red>ERROR :</color> Évènement terminé toujours présent.");
             return;
         }
-        // Évènement infini
-        if (Duration < 0) 
-            return;
         // Évènement à durée limitée
-        m_duration -= p_duration;
-        if (m_duration < 0)
-            m_duration = 0;
+        if (m_duration > 0)
+        {
+            m_duration -= p_duration;
+            if (m_duration < 0)
+                m_duration = 0;
+        }
         // Évènement délayé
         m_delay -= p_duration;
         if (m_delay < 0)
