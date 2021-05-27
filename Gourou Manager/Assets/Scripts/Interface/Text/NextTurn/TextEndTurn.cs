@@ -49,11 +49,11 @@ public class TextEndTurn : MonoBehaviour
         // Affichage du Culthe
         m_TextmainInstitutionName.text = "" + GameManager.Instance.MainInstitution.m_name;
 
-        m_textStatList[0].text = "Fonds : " + GameManager.Instance.MainInstitution.m_funds.Value.ToString();
-        m_textStatList[1].text = "Membres : " + GameManager.Instance.MainInstitution.m_members.Value.ToString();
-        m_textStatList[2].text = "Fanatiques : " + GameManager.Instance.MainInstitution.m_fanatics.Value.ToString();
-        m_textStatList[3].text = "Exposition Publique : " + GameManager.Instance.MainInstitution.m_publicExposure.Value.ToString();
-        m_textStatList[4].text = "Brutalité : " + GameManager.Instance.MainInstitution.m_brutality.Value;
+        m_textStatList[0].text = "Fonds : " + GameManager.Instance.MainInstitution.Funds.Value.ToString();
+        m_textStatList[1].text = "Membres : " + GameManager.Instance.MainInstitution.Members.Value.ToString();
+        m_textStatList[2].text = "Fanatiques : " + GameManager.Instance.MainInstitution.Fanatics.Value.ToString();
+        m_textStatList[3].text = "Exposition Publique : " + GameManager.Instance.MainInstitution.PublicExposure.Value.ToString();
+        m_textStatList[4].text = "Brutalité : " + GameManager.Instance.MainInstitution.Brutality.Value;
 
         // on récupère la liste d'event du tour qui vient de finir
         List<EventSO> m_eventList = EventRegister.Instance.GetEvents(GameManager.Instance.Turn);
@@ -63,7 +63,7 @@ public class TextEndTurn : MonoBehaviour
 
     public void Disallow()
     {
-        GameManager.Instance.m_interfaceManager.DisallowEndTurn();
+        GameManager.Instance.m_InterfaceManager.DisallowEndTurn();
         m_exactionScript.DestroyAll();
     }
 

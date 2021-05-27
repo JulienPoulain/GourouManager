@@ -35,7 +35,6 @@ public class RoundManager : Singleton<RoundManager>
 
         // 2. Calcul et effet des TriggeredEvents
         List<TriggeredEventSO> newTEvents = new List<TriggeredEventSO>();
-        int nbTour = 1;
         do
         {
             newTEvents.Clear();
@@ -132,7 +131,7 @@ public class RoundManager : Singleton<RoundManager>
         // 2. Applique les changements de valeurs des ressources
         foreach (SyncIntSO ressource in pendingChanges.Keys)
         {
-            ressource.m_value += pendingChanges[ressource];
+            ressource.Value += pendingChanges[ressource];
         }
     }
 }

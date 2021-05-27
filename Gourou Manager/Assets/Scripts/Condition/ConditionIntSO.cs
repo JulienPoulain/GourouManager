@@ -4,9 +4,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewConditionInt", menuName = "GourouManager/Condition/ConditionInt")]
 public class ConditionIntSO : ConditionSO
 {
-    [SerializeField] public RessourceSO m_ressource;    // utiliser dans TextInterlocutor
-    [SerializeField] public ConditionType m_conditionType; // utiliser dans TextInterlocutor (interface)
-    [SerializeField]private int m_value;
+    [SerializeField] private RessourceSO m_ressource;    // utiliser dans TextInterlocutor
+    [SerializeField] private ConditionType m_conditionType; // utiliser dans TextInterlocutor (interface)
+    [SerializeField] private int m_value;
     
     public override void Initialize()
     {
@@ -17,7 +17,7 @@ public class ConditionIntSO : ConditionSO
     {
         string str = null;
 
-        str = m_ressource.name + ":" + m_ressource.m_value + " " + ConditionTypeToString(m_conditionType) + " " + m_value;
+        str = m_ressource.name + ":" + m_ressource.Value + " " + ConditionTypeToString(m_conditionType) + " " + m_value;
 
         return str;
     }
