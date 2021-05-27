@@ -100,7 +100,7 @@ public class RoundManager : Singleton<RoundManager>
         // 1. Stocke les futures modifications de valeurs des ressources
         foreach (EventSO evenement in p_events)
         {
-            if (evenement.IsActive())
+            if (!evenement.IsFinished())
             {
                 // Stockage des futures modifications
                 foreach (ImpactSO impact in evenement.Impacts)

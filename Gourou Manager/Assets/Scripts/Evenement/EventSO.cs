@@ -39,6 +39,7 @@ public class EventSO : ScriptableObject, IInitializable
     public void Reset()
     {
         m_duration = m_initDuration;
+        m_delay = m_initDelay;
     }
     
     public void AdvanceTime(int p_duration)
@@ -61,14 +62,13 @@ public class EventSO : ScriptableObject, IInitializable
             m_delay = 0;
     }
 
-    public bool IsActive()
+    public bool IsFinished()
     {
-        return m_duration != 0;
+        return m_duration == 0;
     }
 
     public bool IsDelayed()
     {
-        // TODO
-        return false;
+        return m_delay > 0;
     }
 }
