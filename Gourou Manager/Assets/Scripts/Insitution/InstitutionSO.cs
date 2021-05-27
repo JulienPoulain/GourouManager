@@ -19,6 +19,7 @@ public class InstitutionSO : ScriptableObject, IInitializable
     [SerializeField] [Tooltip("Notoriété de l’Institution")] public SyncIntSO m_publicExposure;
     [SerializeField] [Tooltip("Entier représentant le niveau de corruption de l’Institution")] public SyncIntSO m_corruption;
     [SerializeField] [Tooltip("Entier entre 0 et 100. 10 à l'initialisation")] public SyncIntSO m_brutality;
+    [SerializeField] private DecaySO m_decay;
     
     [Header("Objets liés à l'institution")]
     
@@ -35,7 +36,9 @@ public class InstitutionSO : ScriptableObject, IInitializable
         Complacent,
         Devoted
     }
-    
+
+    public DecaySO Decay => m_decay;
+
     public List<TriggeredEventSO> TriggeredEvents => m_triggeredEvents;
 
     public void Initialize()

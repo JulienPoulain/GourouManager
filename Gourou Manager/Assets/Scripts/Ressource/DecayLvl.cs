@@ -1,5 +1,3 @@
-using System;
-
 public enum DecayLvl
 {
     None = 0,
@@ -10,17 +8,10 @@ public enum DecayLvl
     Hostile
 }
 
-namespace MyNamespace
+namespace DecayLvlMethods
 {
-    static class DecayLvlExtension
+    static class DecayLvlExtensions
     {
-        public static DecayLvl GetDecayLvl(this DecayLvl p_decayLvl, int p_lvl)
-        {
-            foreach (DecayLvl iDecayLvl in Enum.GetValues(typeof(DecayLvl)))
-                if (iDecayLvl.lvlMin() <= p_lvl && p_lvl <= iDecayLvl.lvlMax())
-                    return iDecayLvl;
-            return DecayLvl.None;
-        }
         public static string GetString(this DecayLvl p_decayLvl) => p_decayLvl switch
         {
             DecayLvl.Devoue => "Dévoué",

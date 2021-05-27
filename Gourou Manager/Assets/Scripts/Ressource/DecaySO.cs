@@ -1,4 +1,5 @@
-using MyNamespace;
+using System;
+using DecayLvlMethods;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewDecay", menuName = "GourouManager/Ressource/Corruption")]
@@ -10,11 +11,11 @@ public class DecaySO : SyncIntSO
         set => m_value = Mathf.Clamp(value, 0, 100);
     }
 
-    public void Test()
+    public DecayLvl GetDecayLvl()
     {
-        int i = 10;
-        int dl = DecayLvl.Complaisant.lvlMax();
-        DecayLvl.Complaisant.GetDecayLvl(10);
-        DecayLvl dl2 = DecayLvlExtension.GetDecayLvl(DecayLvl.Complaisant, 10);
+        foreach (DecayLvl iDecayLvl in Enum.GetValues(typeof(DecayLvl)))
+            if (iDecayLvl.lvlMin() <= Value && Value <= iDecayLvl.lvlMax())
+                return iDecayLvl;
+        return DecayLvl.None;
     }
 }
