@@ -18,14 +18,12 @@ public class ButtonBehavior : MonoBehaviour, IPointerDownHandler, IPointerExitHa
     
     public void OnPointerDown(PointerEventData eventData)
     {
-        m_image.sprite = MenuManager.Instance.RedSprite;
         MenuManager.Instance.LoadScene(m_SceneName);
         Debug.Log("je clicke dessus");
     }
     
     public void OnPointerExit(PointerEventData eventData)
     {
-        m_image.sprite = MenuManager.Instance.WhiteSprite;
         StartCoroutine(ReverseScaleChange());
     }
 
