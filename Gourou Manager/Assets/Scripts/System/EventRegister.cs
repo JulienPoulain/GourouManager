@@ -52,7 +52,8 @@ public class EventRegister : Singleton<EventRegister>
     public List<ExactionSO> GetExactions(int p_turn)
     {
         if (!m_registers.ContainsKey(p_turn))
-            m_registers.Add(p_turn, new Register());
+            return new List<ExactionSO>();
+            //m_registers.Add(p_turn, new Register());
         return m_registers[p_turn].Exactions.ToList();
     }
 
@@ -64,7 +65,8 @@ public class EventRegister : Singleton<EventRegister>
     public List<EventSO> GetEvents(int p_turn)
     {
         if (!m_registers.ContainsKey(p_turn))
-            m_registers.Add(p_turn, new Register());
+            //m_registers.Add(p_turn, new Register());
+            return new List<EventSO>();
         return m_registers[p_turn].Events.ToList();
     }
 

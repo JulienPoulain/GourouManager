@@ -1,18 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
+using MyNamespace;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewDecay", menuName = "GourouManager/Ressource/Corruption")]
 public class DecaySO : SyncIntSO
 {
-    public int Value
+    public override int Value
     {
-        set
-        {
-            if (m_value < 0)
-                m_value = 0;
-            else if (m_value > 100)
-                m_value = 100;
-        }
+        get => m_value;
+        set => m_value = Mathf.Clamp(value, 0, 100);
+    }
+
+    public void Test()
+    {
+        int i = 10;
+        int dl = DecayLvl.Complaisant.lvlMax();
+        DecayLvl.Complaisant.GetDecayLvl(10);
+        DecayLvl dl2 = DecayLvlExtension.GetDecayLvl(DecayLvl.Complaisant, 10);
     }
 }

@@ -17,7 +17,7 @@ public class ConditionIntSO : ConditionSO
     {
         string str = null;
 
-        str = m_ressource.name + ":" + m_ressource.m_value + " " + ConditionTypeToString(m_conditionType) + " " + m_value;
+        str = m_ressource.name + ":" + m_ressource.Value + " " + ConditionTypeToString(m_conditionType) + " " + m_value;
 
         return str;
     }
