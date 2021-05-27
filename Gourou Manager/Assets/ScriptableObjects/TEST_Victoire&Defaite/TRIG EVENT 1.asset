@@ -16,9 +16,11 @@ MonoBehaviour:
   m_description: Description de triggered event 1
   m_initDuration: 3
   m_duration: 3
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 9068219b536286f4ab4a42a95d911fee, type: 2}
   m_infoGained: []
   m_initNbUse: 3
   m_nbUse: 3
-  m_cdtActivation: {fileID: 0}
+  m_cdtActivation: []

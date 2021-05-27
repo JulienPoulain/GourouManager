@@ -51,7 +51,7 @@ public class InstitutionSO : ScriptableObject, IInitializable
     {
         if (m_funds == null)
         {
-            Debug.Log("<color=red>ERROR :</color> Fonds manquants.");
+            Debug.Log($"<color=red>ERROR :</color> {name} Fonds manquants.");
         }
         else
         {
@@ -60,7 +60,7 @@ public class InstitutionSO : ScriptableObject, IInitializable
         
         if (m_members == null)
         {
-            Debug.Log("<color=red>ERROR :</color> Membres manquants.");
+            Debug.Log($"<color=red>ERROR :</color> {name} Membres manquants.");
         }
         else
         {
@@ -69,7 +69,7 @@ public class InstitutionSO : ScriptableObject, IInitializable
         
         if (m_fanatics == null)
         {
-            Debug.Log("<color=red>ERROR :</color> Fanatiques manquants.");
+            Debug.Log($"<color=red>ERROR :</color> {name} Fanatiques manquants.");
         }
         else
         {
@@ -87,7 +87,7 @@ public class InstitutionSO : ScriptableObject, IInitializable
         
         if (m_publicExposure == null)
         {
-            Debug.Log("<color=red>ERROR :</color> Exposition publique manquante.");
+            Debug.Log($"<color=red>ERROR :</color> {name} Exposition publique manquante.");
         }
         else
         {
@@ -96,7 +96,7 @@ public class InstitutionSO : ScriptableObject, IInitializable
         
         if (m_corruption == null)
         {
-            Debug.Log("<color=red>ERROR :</color> Corruption manquante.");
+            Debug.Log($"<color=red>ERROR :</color> {name} Corruption manquante.");
         }
         else
         {
@@ -105,16 +105,16 @@ public class InstitutionSO : ScriptableObject, IInitializable
         
         if (m_brutality == null)
         {
-            Debug.Log("<color=red>ERROR :</color> Brutalité manquante.");
+            Debug.Log($"<color=red>ERROR :</color> {name} Brutalité manquante.");
         }
         else
         {
             m_brutality.Initialize();
         }
 
-        if (m_decay)
+        if (m_decay == null)
         {
-            Debug.Log("<color=red>ERROR :</color> Niveau de corruption manquant.");
+            Debug.Log($"<color=red>ERROR :</color> {name} Niveau de corruption manquant.");
         }
         else
         {

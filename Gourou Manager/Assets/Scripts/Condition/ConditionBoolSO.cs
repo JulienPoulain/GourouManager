@@ -4,15 +4,22 @@ using UnityEngine.EventSystems;
 [CreateAssetMenu(fileName = "NewConditionBool", menuName = "GourouManager/Condition/ConditionBool")]
 public class ConditionBoolSO : ConditionSO
 {
-    [SerializeField] private SyncBoolSO m_ressource;
+    [SerializeField] private SyncBoolSO m_syncBool;
     
     public override void Initialize()
     {
-        m_ressource.Initialize();
+        if (m_syncBool == null)
+        {
+            Debug.Log($"<color=red>ERROR :</color> {name} SyncBool manquant.");
+        }
+        else
+        {
+            m_syncBool.Initialize();
+        }
     }
     
     public override bool IsValid()
     {
-        return m_ressource.Value;
+        return m_syncBool.Value;
     }
 }
