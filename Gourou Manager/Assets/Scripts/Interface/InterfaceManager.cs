@@ -104,6 +104,9 @@ public class InterfaceManager : MonoBehaviour
     // Sprite
     [SerializeField] public Sprite m_redBackGroundSprite;
     [SerializeField] public Sprite m_whiteBackGroundSprite;
+    
+    // Institution actuellement sélectionnée
+    public InstitutionScript m_institutionSelected;     // Definit dans Cursor.cs 
 
     // -----------------------------------------------------------------------------------------
 
@@ -118,6 +121,26 @@ public class InterfaceManager : MonoBehaviour
         m_interlocutorScript = m_InterlocutorObject.GetComponent<TextInterlocutor>();
         m_approcheScript = m_Approche.GetComponent<TextApprocheMain>();
         m_endTurnScript = m_EndTurn.GetComponent<TextEndTurn>();
+    }
+    
+    // Change la camera actuelle avec celle de l'institution cibée
+    public void CameraChange()
+    {
+        if (m_institutionSelected.m_cameraObject != null)
+        {
+            m_institutionSelected.m_cameraObject.SetActive(true);
+            GameManager.Instance.m_camera.SetActive(false);
+        }
+    }
+
+    public void CameraReset()
+    {
+        if (m_institutionSelected.m_cameraObject != null)
+        {
+            GameManager.Instance.m_camera.SetActive(true);
+            m_institutionSelected.m_cameraObject.SetActive(false);
+        }
+        
     }
 
     // -----------------------------------------------------------------------------------------

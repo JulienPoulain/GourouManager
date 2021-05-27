@@ -11,7 +11,7 @@ public class ImpactSO : ScriptableObject, IInitializable
     
     public void Initialize()
     {
-        m_ressource.Initialize();
-        m_magnitude.Initialize();
+        if (m_ressource != null) m_ressource.Initialize();
+        if (m_magnitude != null)  m_magnitude.Initialize();
     }
 }

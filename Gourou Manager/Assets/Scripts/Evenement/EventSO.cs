@@ -10,12 +10,15 @@ public class EventSO : ScriptableObject, IInitializable
     [SerializeField] protected int m_duration;
     [SerializeField] protected List<ImpactSO> m_impacts;
     [SerializeField] protected List<InfoSO> m_infoGained;
+    [SerializeField] protected bool m_IsDisplayed = true;
 
     public string Name => m_name;
     public string Description => m_description;
     public int Duration => m_duration;
     public List<ImpactSO> Impacts => m_impacts;
     public List<InfoSO> InfoGained => m_infoGained;
+    public bool IsDisplayed => m_IsDisplayed;
+    
 
     public virtual void Initialize()
     {

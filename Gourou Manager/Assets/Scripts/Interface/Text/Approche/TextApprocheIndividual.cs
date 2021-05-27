@@ -36,7 +36,7 @@ public class TextApprocheIndividual : MonoBehaviour
         GameManager.Instance.m_interfaceManager.DisallowApproche();
         GameManager.Instance.m_interfaceManager.m_feedBackScript.FeedBackApproach();
 
-        GameManager.Instance.CameraScript.ResetPosition();
+        GameManager.Instance.m_interfaceManager.CameraReset();
         m_approche = null;
     }
 }

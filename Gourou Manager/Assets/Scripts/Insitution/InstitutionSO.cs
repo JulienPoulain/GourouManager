@@ -35,7 +35,7 @@ public class InstitutionSO : ScriptableObject, IInitializable
         Complacent,
         Devoted
     }
-    
+
     public List<TriggeredEventSO> TriggeredEvents => m_triggeredEvents;
 
     public void Initialize()

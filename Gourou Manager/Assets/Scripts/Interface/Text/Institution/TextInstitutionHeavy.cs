@@ -76,11 +76,11 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
         DisallowExaction();
 
         // On affiche les exactions selon notre besoin & on les paramètre        
-        for (int i = 0; i < m_InstitutionData.m_exactionList.Count; i++)
+     /*   for (int i = 0; i < m_InstitutionData.m_exactionList.Count; i++)
         {
             m_ExactionsObject[i].SetActive(true);
             m_exactionInterfaceScript[i].Display(m_InstitutionData.m_exactionList[i]);
-        }
+        }/**/
     }
 
     public void DisallowExaction()
