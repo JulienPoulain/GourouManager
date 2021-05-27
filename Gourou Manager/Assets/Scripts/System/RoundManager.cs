@@ -35,7 +35,6 @@ public class RoundManager : Singleton<RoundManager>
 
         // 2. Calcul et effet des TriggeredEvents
         List<TriggeredEventSO> newTEvents = new List<TriggeredEventSO>();
-        int nbTour = 1;
         do
         {
             newTEvents.Clear();
