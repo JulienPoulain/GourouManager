@@ -119,13 +119,13 @@ public class RoundManager : Singleton<RoundManager>
                     foreach (ImpactSO impact in evenement.Impacts)
                     {
                         int magnitude = impact.Magnitude.Compute();
-                        if (pendingChanges.ContainsKey(impact.Ressource))
+                        if (pendingChanges.ContainsKey(impact.SyncInt))
                         {
-                            pendingChanges[impact.Ressource] += magnitude;
+                            pendingChanges[impact.SyncInt] += magnitude;
                         }
                         else
                         {
-                            pendingChanges.Add(impact.Ressource, magnitude);
+                            pendingChanges.Add(impact.SyncInt, magnitude);
                         }
                     }
 

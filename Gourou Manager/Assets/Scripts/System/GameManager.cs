@@ -80,14 +80,14 @@ public class GameManager : Singleton<GameManager>, IInitializable
     
     private void Start()
     {
-        m_mainInstitution = m_mainInstitutionObject.GetComponent<InterfaceInstitution>().m_Institution;
+        //m_mainInstitution = m_mainInstitutionObject.GetComponent<InterfaceInstitution>().m_Institution;
 
         foreach (GameObject Institution in m_institutionsObjectList)
         {
             m_institutions.Add(Institution.GetComponent<InterfaceInstitution>().m_Institution);
         }
         
-        m_cameraScript = m_camera.GetComponent<CameraManager>();
+        //m_cameraScript = m_camera.GetComponent<CameraManager>();
 
         Initialize();
     }

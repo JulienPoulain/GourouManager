@@ -10,7 +10,14 @@ public class ConditionIntSO : ConditionSO
     
     public override void Initialize()
     {
-        m_syncInt.Initialize();
+        if (m_syncInt == null)
+        {
+            Debug.Log($"<color=red>ERROR :</color> {name} SyncInt manquant.");
+        }
+        else
+        {
+            m_syncInt.Initialize();
+        }
     }
 
     public override string ToString()
