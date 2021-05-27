@@ -8,8 +8,23 @@ public class PercentageSO : OperationSO
 
     public override void Initialize()
     {
-        m_operand.Initialize();
-        m_percentage.Initialize();
+        if (m_operand == null)
+        {
+            Debug.Log($"<color=red>ERROR :</color> {name} Opérande manquant.");
+        }
+        else
+        {
+            m_operand.Initialize();
+        }
+        
+        if (m_percentage == null)
+        {
+            Debug.Log($"<color=red>ERROR :</color> {name} Opération manquante.");
+        }
+        else
+        {
+            m_percentage.Initialize();
+        }
     }
 
     public override int Compute()

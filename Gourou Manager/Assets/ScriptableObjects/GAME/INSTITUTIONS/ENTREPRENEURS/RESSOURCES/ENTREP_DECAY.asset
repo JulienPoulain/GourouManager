@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65d02e6c45e7ab84a9e56bc495f4f42d, type: 3}
-  m_Name: IMP_C
+  m_Script: {fileID: 11500000, guid: 70a0977cda155f549a226bea8b00e089, type: 3}
+  m_Name: ENTREP_DECAY
   m_EditorClassIdentifier: 
-  m_ressource: {fileID: 11400000, guid: bd3fdc65a15d9934cad34a7d62c5a6a8, type: 2}
-  m_magnitude: {fileID: 11400000, guid: 7949cf308b49a3c4590fd3a1989fd7e5, type: 2}
+  m_name: 
+  m_initValue: 50
+  m_value: 0
