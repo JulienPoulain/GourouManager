@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Echec_Approche
   m_EditorClassIdentifier: 
   m_name: 'Intimidation Michael : Echec '
-  m_description: La crruption de la police diminue
+  m_description: La corruption de la police diminue
   m_initDuration: 1
   m_duration: 1
   m_impacts:
