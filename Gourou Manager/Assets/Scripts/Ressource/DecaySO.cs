@@ -2,7 +2,7 @@ using System;
 using DecayLvlMethods;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewDecay", menuName = "GourouManager/Ressource/Corruption")]
+[CreateAssetMenu(fileName = "NewDecay", menuName = "GourouManager/Attribut/Corruption")]
 public class DecaySO : SyncIntSO
 {
     public override int Value

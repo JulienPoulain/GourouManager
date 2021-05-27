@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewRessource", menuName = "GourouManager/Ressource/Ressource")]
+[CreateAssetMenu(fileName = "NewRessource", menuName = "GourouManager/Attribut/Ressource")]
 public class RessourceSO : SyncIntSO
 {
     public override int Value
