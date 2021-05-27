@@ -6,10 +6,8 @@ using UnityEngine.EventSystems;
 public class Cursor : MonoBehaviour
 {
     private InterfaceManager m_interfaceManager;
-    private Camera m_Camera;
+    private Camera m_camera;
 
-    bool _affiche = false;
-    
     void Start()
     {
         
@@ -22,11 +20,10 @@ public class Cursor : MonoBehaviour
         m_interfaceManager.DisallowVictoryDefeat();
         m_interfaceManager.DisallowEndTurn();
 
-        m_Camera = GameManager.Instance.GetComponent<Camera>();
+        m_camera = GameManager.Instance.GetComponent<Camera>();
     }
 
     // raycast
-    [SerializeField] float m_raycastLenght = 10f;
     [SerializeField] LayerMask m_layerMask;
     void Update()
     {
