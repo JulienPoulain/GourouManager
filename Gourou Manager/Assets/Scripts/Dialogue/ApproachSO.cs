@@ -32,8 +32,8 @@ public class ApproachSO : ScriptableObject, IInitializable
     
     public void Initialize()
     {
-        if (m_exactionPos != null) m_exactionPos.Initialize();
-        if (m_exactionNeg != null) m_exactionNeg.Initialize();
+        m_exactionPos.Initialize();
+        m_exactionNeg.Initialize();
         foreach (ConditionSO condition in m_cdtSuccess)
         {
             condition.Initialize();

@@ -43,6 +43,7 @@ public class Cursor : MonoBehaviour
                 {
                     if (!m_interfaceManager.InterfaceIsDisplay())
                     {
+                        m_interfaceManager.m_institutionSelected = script;    // On definit cette Institution comme celle actuellement selectionnee
                         m_interfaceManager.DisplayLightInstitution(script.gameObject, script.m_Institution);
                     }
                 
@@ -50,7 +51,6 @@ public class Cursor : MonoBehaviour
                     {
                         //m_CameraScript.FocusOnInstitution(hit.transform.position);
                         m_interfaceManager.DisplayHeavyInstitution(script.m_Institution);
-                        m_interfaceManager.m_institutionSelected = script;    // On definit cette Institution comme celle actuellement selectionnee
                     }
                 }
             }

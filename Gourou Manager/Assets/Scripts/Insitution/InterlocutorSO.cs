@@ -19,7 +19,7 @@ public class InterlocutorSO: ScriptableObject, IInitializable
     
     public void Initialize()
     {
-        if (m_sanity !=null) m_sanity.Initialize();
+        m_sanity.Initialize();
 
         if (m_cameraPlacement == null)
         {

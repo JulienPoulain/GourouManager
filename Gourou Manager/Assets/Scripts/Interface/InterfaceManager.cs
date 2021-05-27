@@ -100,10 +100,6 @@ public class InterfaceManager : MonoBehaviour
     
     public bool m_cursorFocusHeavyInstitution; // utiliser dans Cursor.cs, pour définir si la fenêtre peut être enlever
     public bool m_endTurnIsDisplay = false;
-
-    // Sprite
-    [SerializeField] public Sprite m_redBackGroundSprite;
-    [SerializeField] public Sprite m_whiteBackGroundSprite;
     
     // Institution actuellement sélectionnée
     public InstitutionScript m_institutionSelected;     // Definit dans Cursor.cs 
@@ -141,6 +137,19 @@ public class InterfaceManager : MonoBehaviour
             m_institutionSelected.m_cameraObject.SetActive(false);
         }
         
+    }
+
+    public void ChangeColorInstitution(List<Image> p_imageList, List<TMP_Text> p_text)
+    {
+        foreach (Image image in p_imageList)
+        {
+            image.color = m_institutionSelected.InstitutionColor;
+        }
+
+        foreach (TMP_Text text in p_text)
+        {
+            text.color = m_institutionSelected.InstitutionColor;
+        }
     }
 
     // -----------------------------------------------------------------------------------------

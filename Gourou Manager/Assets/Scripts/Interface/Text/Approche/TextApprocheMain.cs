@@ -14,6 +14,7 @@ public class TextApprocheMain : MonoBehaviour
     List<TextApprocheIndividual> m_approcheScript = new List<TextApprocheIndividual>();
 
     [SerializeField] Image m_interlocutorImage;
+    [SerializeField] List<Image> m_imageList = new List<Image>();
 
     void Awake()
     {
@@ -39,5 +40,7 @@ public class TextApprocheMain : MonoBehaviour
         }
 
         m_interlocutorImage.sprite = p_interlocutor.m_sprite;
+
+        // GameManager.Instance.m_interfaceManager.ChangeColorInstitution(m_imageList);
     }
 }

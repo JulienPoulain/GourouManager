@@ -8,7 +8,7 @@ public class ConditionBoolSO : ConditionSO
     
     public override void Initialize()
     {
-        if (m_ressource!=null) m_ressource.Initialize();
+        m_ressource.Initialize();
     }
     
     public override bool IsValid()

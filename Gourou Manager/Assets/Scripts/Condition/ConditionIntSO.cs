@@ -10,7 +10,7 @@ public class ConditionIntSO : ConditionSO
     
     public override void Initialize()
     {
-        if (m_ressource != null)m_ressource.Initialize();
+        m_ressource.Initialize();
     }
 
     public override string ToString()
