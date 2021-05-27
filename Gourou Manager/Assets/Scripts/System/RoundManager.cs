@@ -13,7 +13,7 @@ public class RoundManager : Singleton<RoundManager>
     {
         List<EventSO> newActiveEvents = new List<EventSO>();
         
-        //EventRegister.Instance.AddDay(GameManager.Instance.Turn);
+        // Ajout d'une nouvelle entrée dans le registre des évènements.
         EventRegister.Instance.Add(GameManager.Instance.Turn, GameManager.Instance.PendingExactions);
 
         // 1. Ajout des nouveaux évènements d'exactions puis exécution des évènements actifs.
@@ -59,15 +59,23 @@ public class RoundManager : Singleton<RoundManager>
         
         ClearFinishedEvent(GameManager.Instance.ActiveEvents);
     }
-
-    // Ajoute l'évènement p_event à la liste d'évènement p_events sans doublon.
+    
+    /// <summary>
+    /// Ajoute l'évènement p_event à la liste d'évènement p_events sans doublon.
+    /// </summary>
+    /// <param name="p_events">Liste d'évènements</param>
+    /// <param name="p_event">Évènement</param>
     public void AddEvent(List<EventSO> p_events, EventSO p_event)
     {
         if (!p_events.Contains(p_event))
             p_events.Add(p_event);
     }
     
-    // Ajoute les évènements de la liste d'exactions p_exactions à la liste p_events sans doublon.
+    /// <summary>
+    /// Ajoute à la liste d'évènements p_events les évènements contenus dans les exactions de la liste d'exactions p_exactions sans doublon.
+    /// </summary>
+    /// <param name="p_events">Liste d'évènements</param>
+    /// <param name="p_exactions">Liste d'exactions</param>
     public void AddEvent(List<EventSO> p_events, List<ExactionSO> p_exactions)
     {
         foreach (ExactionSO exaction in p_exactions)
@@ -78,8 +86,11 @@ public class RoundManager : Singleton<RoundManager>
             }
         }
     }
-
-    // Réinitialise les évènements finis puis les supprime de la liste p_events.
+    
+    /// <summary>
+    /// Réinitialise les évènements finis puis les supprime de la liste p_events.
+    /// </summary>
+    /// <param name="p_events">Liste d'évènements à clear</param>
     public void ClearFinishedEvent(List<EventSO> p_events)
     {
         foreach (EventSO evenement in p_events.ToList())
@@ -100,28 +111,31 @@ public class RoundManager : Singleton<RoundManager>
         // 1. Stocke les futures modifications de valeurs des ressources
         foreach (EventSO evenement in p_events)
         {
-            if (evenement.IsActive())
+            if (!evenement.IsFinished())
             {
-                // Stockage des futures modifications
-                foreach (ImpactSO impact in evenement.Impacts)
+                if (!evenement.IsDelayed())
                 {
-                    int magnitude = impact.Magnitude.Compute();
-                    if (pendingChanges.ContainsKey(impact.Ressource))
+                    // Stockage des futures modifications
+                    foreach (ImpactSO impact in evenement.Impacts)
                     {
-                        pendingChanges[impact.Ressource] += magnitude;
+                        int magnitude = impact.Magnitude.Compute();
+                        if (pendingChanges.ContainsKey(impact.Ressource))
+                        {
+                            pendingChanges[impact.Ressource] += magnitude;
+                        }
+                        else
+                        {
+                            pendingChanges.Add(impact.Ressource, magnitude);
+                        }
                     }
-                    else
+
+                    // Ajout des informations obtenues
+                    foreach (InfoSO info in evenement.InfoGained)
                     {
-                        pendingChanges.Add(impact.Ressource, magnitude);
+                        info.obtain();
                     }
+                    evenement.InfoGained.Clear();
                 }
-            
-                // Ajout des informations obtenues
-                foreach (InfoSO info in evenement.InfoGained)
-                {
-                    info.obtain();
-                }
-                evenement.InfoGained.Clear();
 
                 //Reduction du compteur d'events (sa durée d'activité)
                 evenement.AdvanceTime(1);
