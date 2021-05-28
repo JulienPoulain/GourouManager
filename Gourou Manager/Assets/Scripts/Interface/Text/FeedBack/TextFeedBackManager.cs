@@ -34,7 +34,7 @@ public class TextFeedBackManager : MonoBehaviour
 
     public void FeedBackExactionDouble()
     {
-        DisplayText("Exaction déjà faite!");
+        DisplayText("Action déjà faite!");
     }
     
     public void FeedBackExactionNotValid()
@@ -50,7 +50,7 @@ public class TextFeedBackManager : MonoBehaviour
     
     public void FeedBackApproachDouble()
     {
-        DisplayText("Approche déjà tentée ce tour!");
+        DisplayText("Action déjà faite!");
     }
     
     public void FeedBackApproachNotValid()

@@ -38,19 +38,19 @@ public class TextInstitutionExactionManager : MonoBehaviour
 
     public void ExecuteExaction()
     {
-        if (!GameManager.Instance.PlayerHasExectuteExaction && m_exaction.IsValid())
+        if (!GameManager.Instance.PlayerHasExecuteAction && m_exaction.IsValid())
         {
             GameManager.Instance.PendingExactions.Add(m_exaction);
             GameManager.Instance.m_interfaceManager.DisallowHeavyInstitution();
             GameManager.Instance.m_interfaceManager.m_feedBackScript.FeedBackExaction();
 
-            GameManager.Instance.PlayerHasExectuteExaction = true;
+            GameManager.Instance.PlayerHasExecuteAction = true;
         } 
         else if (!m_exaction.IsValid())
         {
             GameManager.Instance.m_interfaceManager.m_feedBackScript.FeedBackExactionNotValid();
         }
-        else if (GameManager.Instance.PlayerHasExectuteExaction)
+        else if (GameManager.Instance.PlayerHasExecuteAction)
         {
             GameManager.Instance.m_interfaceManager.m_feedBackScript.FeedBackExactionDouble();
         }

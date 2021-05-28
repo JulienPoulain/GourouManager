@@ -37,18 +37,12 @@ public class GameManager : Singleton<GameManager>, IInitializable
 
     // Player Variable //
     
-    private static bool m_playerHasExecuteExaction = false; // définit si le joueur à déjà fait une exaction ce tour ci, static pour que l'information ne change pas entre les changments de scènes
-    private static bool m_playerHasExecuteApproche = false;    // Définit si le joueur à déjà fait un dialogue ce tour ci
+    private bool m_playerHasExecuteAction = false; 
     
-    public bool PlayerHasExecuteApproach
+    public bool PlayerHasExecuteAction
     {
-        get { return m_playerHasExecuteApproche; }
-        set { m_playerHasExecuteApproche = value;}
-    }
-    public bool PlayerHasExectuteExaction
-    {
-        get { return m_playerHasExecuteExaction; }
-        set { m_playerHasExecuteExaction = value; }
+        get { return m_playerHasExecuteAction; }
+        set { m_playerHasExecuteAction = value;}
     }
 
     public void Initialize()
@@ -94,8 +88,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
     {
         Debug.Log("FIN DU TOUR");
 
-        m_playerHasExecuteExaction = false;
-        m_playerHasExecuteApproche = false;
+        m_playerHasExecuteAction = false;
 
         RoundManager.Instance.NextTurn();
 
