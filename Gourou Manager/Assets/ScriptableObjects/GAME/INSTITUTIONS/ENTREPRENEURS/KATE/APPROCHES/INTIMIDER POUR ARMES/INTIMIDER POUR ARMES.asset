@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525d2b2df425485449ec8a12401c7c35, type: 3}
+  m_Name: INTIMIDER POUR ARMES
+  m_EditorClassIdentifier: 
+  m_name: INTIMIDER POUR ARMES
+  m_exactionPos: {fileID: 11400000, guid: 56d4553f07c17c04db4c34706bec0d2b, type: 2}
+  m_exactionNeg: {fileID: 11400000, guid: ee6acf93e9632384b8acb634d7b09b3b, type: 2}
+  m_cdtSuccess:
+  - {fileID: 11400000, guid: ec66d62ce78814941b9eb6fd3044f8c2, type: 2}
+  - {fileID: 11400000, guid: 9c04bf60e804bf04e9868094feb02670, type: 2}
+  m_cooldown: 900
+  m_remainingTime: 0
+  m_descriptionApproach: "Intimidez Interlocuteur pour obtenir un contact qui vous
+    fourniras des armes, augmentant fortement la Brutalit\xE9 du Culte. Vous devez
+    \xEAtre suffisamment Brutal et Connu pour qu'il c\xE8de."
+  m_dialogueApproach: 
+  m_resultatApproach: "Si vous \xE9chouez, cet Entrepreneur pr\xE9viendras la Police,
+    qui deviendras tr\xE8s vigilante vis-\xE0-vis du Culte."
