@@ -13,7 +13,7 @@ public class TextInstitutionExactionManager : MonoBehaviour
 
     ExactionSO m_exaction;
 
-    private void Start()
+    private void Awake()
     {
         m_thisImage = GetComponentInChildren<Image>();
     }
@@ -28,11 +28,11 @@ public class TextInstitutionExactionManager : MonoBehaviour
         // Changement de la couleur selon si l'exaction est valide ou non
         if (p_exaction.IsValid())
         {
-            m_thisImage.sprite = GameManager.Instance.m_interfaceManager.m_redBackGroundSprite;
+            m_thisImage.color = GameManager.Instance.m_interfaceManager.m_institutionSelected.InstitutionColor;
         }
         else
         {
-            m_thisImage.sprite = GameManager.Instance.m_interfaceManager.m_whiteBackGroundSprite;
+            m_thisImage.color = Color.white;
         }
     }
 

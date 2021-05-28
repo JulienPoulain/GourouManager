@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 525d2b2df425485449ec8a12401c7c35, type: 3}
   m_Name: Soudoyer
   m_EditorClassIdentifier: 
-  m_approach: Soudoyer
-  m_exactionPos: {fileID: 0}
-  m_exactionNeg: {fileID: 0}
+  m_name: Soudoyer
+  m_exactionPos: {fileID: 11400000, guid: ed83ed014248bde499560d455e7b4e67, type: 2}
+  m_exactionNeg: {fileID: 11400000, guid: a0cb7a4c10918464a80be696833603db, type: 2}
   m_cdtSuccess:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: c793061d672d2d84d96924bb0d43650e, type: 2}
   m_cooldown: 5
+  m_remainingTime: 0
   m_descriptionApproach: Ceci est la desciption d'une approach
-  m_DialogueApproach: ceci est le dialogue de l'approche
+  m_dialogueApproach: ceci est un dialogue
   m_resultatApproach: tu risque de mourrir

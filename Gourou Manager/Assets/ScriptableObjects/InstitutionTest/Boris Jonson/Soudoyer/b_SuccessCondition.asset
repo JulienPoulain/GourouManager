@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 305aa538d4407b149bac159b7c5e8197, type: 3}
   m_Name: b_SuccessCondition
   m_EditorClassIdentifier: 
-  m_ressource: {fileID: 11400000, guid: 9c59ef2d2e4fc4648b79669ad27d7e28, type: 2}
+  m_syncBool: {fileID: 11400000, guid: 1a8fb14f1cbeaa842bfa3ebe0c98725d, type: 2}

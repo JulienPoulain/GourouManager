@@ -19,6 +19,7 @@ MonoBehaviour:
   m_impacts:
   - {fileID: 11400000, guid: 6fa2608200eb50f49a13c271a5c022b2, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1
   m_initNbUse: -1
   m_nbUse: 0
   m_cdtActivation:

@@ -18,7 +18,6 @@ public class GameManager : Singleton<GameManager>, IInitializable
     [SerializeField] public InterfaceManager m_interfaceManager;
     
     [SerializeField] public GameObject m_camera;
-    private CameraManager m_cameraScript;
     
     [SerializeField] private List<ExactionSO> m_pendingExactions = new List<ExactionSO>();
     [SerializeField] private List<EventSO> m_activeEvents = new List<EventSO>();
@@ -34,10 +33,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
     public int Turn => m_turn;
 
     public InstitutionSO MainInstitution => m_mainInstitution;
-    public List<InstitutionSO> Institutions => m_institutions;
-
-    public CameraManager CameraScript => m_cameraScript;
-    
+    public List<InstitutionSO> Institutions => m_institutions;    
 
     // Player Variable //
     
@@ -84,9 +80,11 @@ public class GameManager : Singleton<GameManager>, IInitializable
 
         foreach (GameObject Institution in m_institutionsObjectList)
         {
-            m_institutions.Add(Institution.GetComponent<InterfaceInstitution>().m_Institution);
+            m_institutions.Add(Institution.GetComponent<InstitutionScript>().m_Institution);
         }
-        
+
+        m_mainInstitution = m_mainInstitutionObject.GetComponent<InstitutionScript>().m_Institution; 
+
         //m_cameraScript = m_camera.GetComponent<CameraManager>();
 
         Initialize();
@@ -101,10 +99,9 @@ public class GameManager : Singleton<GameManager>, IInitializable
 
         RoundManager.Instance.NextTurn();
 
-        TryEndGame();
-        
-        Debug.Log("DEBUT DU DISPLAy");
         m_interfaceManager.DisplayEndTurn();
+
+        TryEndGame();
 
         m_turn++;
     }
@@ -137,10 +134,12 @@ public class GameManager : Singleton<GameManager>, IInitializable
     private void Victory()
     {
         Debug.Log("### VICTOIRE ###");
+        m_interfaceManager.DisplayVictory();
     }
 
     private void Defeat()
     {
         Debug.Log("### DEFAITE ###");
+        m_interfaceManager.DisplayDefeat();
     }
 }

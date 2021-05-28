@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2628634674178316858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2628634674178316805}
+  - component: {fileID: 2628634674178316807}
+  - component: {fileID: 2628634674178316804}
+  m_Layer: 3
+  m_Name: CULTE DE CTHULHU
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2628634674178316805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2628634674178316858}
+  m_LocalRotation: {x: -0, y: -0.88506484, z: -0, w: 0.46546775}
+  m_LocalPosition: {x: 6.480659, y: 0.34000003, z: -9.850631}
+  m_LocalScale: {x: 2.3, y: 2.3, z: 2.3}
+  m_Children:
+  - {fileID: 2589693147010754669}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -124.519, z: 0}
+--- !u!65 &2628634674178316807
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2628634674178316858}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.216348, y: 0.8975191, z: 1.8767786}
+  m_Center: {x: -0.005693376, y: 0.42700243, z: 0.02846694}
+--- !u!114 &2628634674178316804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2628634674178316858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e2db75d40c61bc4081eccfaf18eed2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Institution: {fileID: 11400000, guid: 02a825d5b5d4172469e4848fc7f78b55, type: 2}
+  m_cameraObject: {fileID: 0}
+  m_institutionColor: {r: 0.79607844, g: 0.5294118, b: 0.1882353, a: 1}
+--- !u!1001 &2628634674576723846
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2628634674178316805}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 5360de716c78616438f6cf94d571fe60, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5360de716c78616438f6cf94d571fe60, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5360de716c78616438f6cf94d571fe60, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5360de716c78616438f6cf94d571fe60, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5360de716c78616438f6cf94d571fe60, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5360de716c78616438f6cf94d571fe60, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5360de716c78616438f6cf94d571fe60, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5360de716c78616438f6cf94d571fe60, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5360de716c78616438f6cf94d571fe60, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5360de716c78616438f6cf94d571fe60, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5360de716c78616438f6cf94d571fe60, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5360de716c78616438f6cf94d571fe60, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a50c124ba81c2344b7d851ab6128a5c, type: 2}
+    - target: {fileID: 919132149155446097, guid: 5360de716c78616438f6cf94d571fe60, type: 3}
+      propertyPath: m_Name
+      value: Culte_ReadyToTexture
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5360de716c78616438f6cf94d571fe60, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5360de716c78616438f6cf94d571fe60, type: 3}
+--- !u!4 &2589693147010754669 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5360de716c78616438f6cf94d571fe60, type: 3}
+  m_PrefabInstance: {fileID: 2628634674576723846}
+  m_PrefabAsset: {fileID: 0}
