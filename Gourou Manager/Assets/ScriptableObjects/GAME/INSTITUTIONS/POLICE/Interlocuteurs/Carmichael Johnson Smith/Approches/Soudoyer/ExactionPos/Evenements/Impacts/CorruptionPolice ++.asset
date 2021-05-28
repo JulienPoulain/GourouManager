@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65d02e6c45e7ab84a9e56bc495f4f42d, type: 3}
   m_Name: CorruptionPolice ++
   m_EditorClassIdentifier: 
-  m_ressource: {fileID: 11400000, guid: d41a2973659a9d7458ed1ca4f7be6311, type: 2}
+  m_syncInt: {fileID: 11400000, guid: 06f727ef0cf9e2e4190dd9d5a569094c, type: 2}
   m_magnitude: {fileID: 11400000, guid: 1b2e5b2356b2c5f44a0303e9f520a37d, type: 2}
