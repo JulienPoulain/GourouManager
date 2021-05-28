@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a07221645fd8ad42978314f51634aaa, type: 3}
   m_Name: Police_C 26+
   m_EditorClassIdentifier: 
-  m_ressource: {fileID: 11400000, guid: d41a2973659a9d7458ed1ca4f7be6311, type: 2}
+  m_syncInt: {fileID: 11400000, guid: 06f727ef0cf9e2e4190dd9d5a569094c, type: 2}
   m_conditionType: 6
   m_value: 26

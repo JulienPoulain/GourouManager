@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65d02e6c45e7ab84a9e56bc495f4f42d, type: 3}
   m_Name: Police_EXP -15
   m_EditorClassIdentifier: 
-  m_ressource: {fileID: 11400000, guid: a2393f926bf6221458ee7743eb9715de, type: 2}
+  m_syncInt: {fileID: 11400000, guid: a2393f926bf6221458ee7743eb9715de, type: 2}
   m_magnitude: {fileID: 11400000, guid: 739300710ab7c7d48816b4f0db040109, type: 2}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65d02e6c45e7ab84a9e56bc495f4f42d, type: 3}
   m_Name: Media_IMP -5
   m_EditorClassIdentifier: 
-  m_ressource: {fileID: 11400000, guid: 316680447baa28d49a9f7ae2051feed7, type: 2}
+  m_syncInt: {fileID: 11400000, guid: e663ca445edf1ad46a5cf8aabff7ad64, type: 2}
   m_magnitude: {fileID: 11400000, guid: 6c059ddb761dddb41982c7e2fc59bc4a, type: 2}

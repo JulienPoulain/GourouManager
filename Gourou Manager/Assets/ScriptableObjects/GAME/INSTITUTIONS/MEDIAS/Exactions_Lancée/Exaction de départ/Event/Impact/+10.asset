@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42973922d5e361d4b87d9d48e6e44c31, type: 3}
   m_Name: +10
   m_EditorClassIdentifier: 
-  m_overview: 'OpInt : 0'
-  m_operand: 0
+  m_overview: '+10 : 10'
+  m_operand: 10
