@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: Falsifier un article
   m_EditorClassIdentifier: 
-  m_name: Falsifier un article
-  m_description: "Reduire l'impact sur la pop des m\xE9dias en falsifiant un article"
+  m_name: Saboter un article
+  m_description: "Reduire l'impact sur la pop des m\xE9dias"
   m_eventList:
   - {fileID: 11400000, guid: eca9235dfa4158e448768bf6826fa2db, type: 2}
   - {fileID: 11400000, guid: ce212d11a040f7c4a9e013a4f9b21eef, type: 2}

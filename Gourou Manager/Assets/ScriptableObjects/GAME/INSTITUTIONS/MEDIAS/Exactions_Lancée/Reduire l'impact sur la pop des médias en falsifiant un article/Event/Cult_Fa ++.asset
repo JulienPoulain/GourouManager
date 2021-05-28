@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: 
   m_description: 
-  m_initDuration: 0
+  m_initDuration: 1
   m_duration: 1
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 37297a8d201f1eb4cbf4e48093d9257c, type: 2}
   m_infoGained: []

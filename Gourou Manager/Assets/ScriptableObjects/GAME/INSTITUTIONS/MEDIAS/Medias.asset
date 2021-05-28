@@ -17,10 +17,10 @@ MonoBehaviour:
   m_funds: {fileID: 11400000, guid: ef56b524d9546714dbd69b287da8a1ae, type: 2}
   m_members: {fileID: 0}
   m_fanatics: {fileID: 0}
-  m_impactOnPop: {fileID: 11400000, guid: 316680447baa28d49a9f7ae2051feed7, type: 2}
   m_publicExposure: {fileID: 11400000, guid: f5e58cc468f223140a4ac9b0c0130582, type: 2}
   m_corruption: {fileID: 11400000, guid: 0598033080ff97845b2f79930a2ef7d6, type: 2}
   m_brutality: {fileID: 0}
+  m_decay: {fileID: 11400000, guid: e663ca445edf1ad46a5cf8aabff7ad64, type: 2}
   m_interlocutorList:
   - {fileID: 11400000, guid: b773ae5d0dd03164083888c79005ce71, type: 2}
   - {fileID: 11400000, guid: c746c8494d1de4d4ba7f96357f9fb205, type: 2}
