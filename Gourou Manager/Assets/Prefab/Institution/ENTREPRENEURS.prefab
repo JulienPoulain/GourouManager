@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Institution: {fileID: 11400000, guid: 996f3695ed97f644f8fa43220fef988a, type: 2}
   m_cameraObject: {fileID: 0}
-  m_institutionColor: {r: 0.13656996, g: 0.76759267, b: 0.8773585, a: 1}
+  m_institutionColor: {r: 0.5921569, g: 0.54509807, b: 0.2, a: 1}
 --- !u!1001 &5526144217618091889
 PrefabInstance:
   m_ObjectHideFlags: 0

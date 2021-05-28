@@ -28,18 +28,6 @@ public class InstitutionSO : ScriptableObject, IInitializable
     [SerializeField] [Tooltip("Évènements se déclenchants selon certaines conditions sans intervention directe du joueur")] public List<TriggeredEventSO> m_triggeredEvents;
     [SerializeField] public OpinionOnTheCult m_option;
 
-    /*public enum OpinionOnTheCult
-    {
-        Hostile,
-        Suspicious,
-        Indifferent,
-        Complacent,
-        Devoted
-<<<<<<< HEAD:Gourou Manager/Assets/Scripts/Insitution/InstitutionSO.cs
-    }
-=======
-    }*/
-
     public RessourceSO Funds => m_funds;
     public RessourceSO Members => m_members;
     public RessourceSO Fanatics => m_fanatics;
@@ -78,15 +66,6 @@ public class InstitutionSO : ScriptableObject, IInitializable
         {
             m_fanatics.Initialize();
         }
-        
-        /*if (m_impactOnPop == null)
-        {
-            Debug.Log("<color=red>ERROR :</color> Impact population manquant.");
-        }
-        else
-        {
-            m_impactOnPop.Initialize();
-        }*/
         
         if (m_publicExposure == null)
         {
@@ -128,7 +107,7 @@ public class InstitutionSO : ScriptableObject, IInitializable
         {
             interlocutor.Initialize();
         }
-        
+
         foreach (ExactionSO exaction in m_exactionList)
         {
             exaction.Initialize();

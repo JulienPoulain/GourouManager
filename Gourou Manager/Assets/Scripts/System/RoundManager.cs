@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
+using UnityEngine;
 
 public class RoundManager : Singleton<RoundManager>
 {
@@ -119,6 +121,10 @@ public class RoundManager : Singleton<RoundManager>
                     foreach (ImpactSO impact in evenement.Impacts)
                     {
                         int magnitude = impact.Magnitude.Compute();
+
+                        Debug.Log("CECI EST L IMPACTE");
+                        Debug.Log(impact);
+                        
                         if (pendingChanges.ContainsKey(impact.SyncInt))
                         {
                             pendingChanges[impact.SyncInt] += magnitude;

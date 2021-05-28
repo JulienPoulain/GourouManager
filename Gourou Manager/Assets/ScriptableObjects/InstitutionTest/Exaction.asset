@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: Exaction
   m_EditorClassIdentifier: 
-  m_eventList: []
   m_name: tuer des koalo
   m_description: "les koala n'ont plus de for\xEAts, et commencent \xE0 manger les
     b\xE2timents"
-  duree: 1
-  impactList: []
+  m_eventList:
+  - {fileID: 11400000, guid: b39653c3ad0d92e4195bcfe31997cbda, type: 2}
+  m_conditions:
+  - {fileID: 11400000, guid: 8599ecf8426c11541a018de9f326d20a, type: 2}

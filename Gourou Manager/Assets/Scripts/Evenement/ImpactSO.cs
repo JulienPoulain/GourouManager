@@ -13,13 +13,20 @@ public class ImpactSO : ScriptableObject, IInitializable
     {
         if (m_syncInt == null)
         {
-            Debug.Log($"<color=red>ERROR :</color> {name} SyncInt manquant.");
+            Debug.Log($"<color=red>ERROR :</color> {name} Operation manquante manquant.");
         }
         else
         {
             m_syncInt.Initialize();
         }
-        
-        m_magnitude.Initialize();
+
+        if (m_magnitude == null)
+        {
+            Debug.Log($"<color=red>ERROR :</color> {name} SyncInt manquant.");
+        }
+        else
+        {
+            m_magnitude.Initialize();
+        }
     }
 }

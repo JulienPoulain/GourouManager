@@ -40,9 +40,6 @@ public class InterfaceManager : MonoBehaviour
 
     // public TextInterlocutor TextInterlocutor => m_InterlocutorScript;
 
-    [Tooltip("Crises Texte")]
-    [SerializeField] GameObject m_CrisisObject;   // texte local
-
     [Tooltip("définit la distance de  l'interface Institution par rapport au GO pointé")]
     [SerializeField] float m_decallingLightInstitution = 5f;
     
@@ -113,7 +110,6 @@ public class InterfaceManager : MonoBehaviour
 
         m_institutionLightScript = m_InstitutionLightObject.GetComponent<TextInstitutionLight>();
         m_institutionHeavyScript = m_InstitutionHeavyObject.GetComponent<TextInstitutionHeavy>();
-        m_crisisScript = m_CrisisObject.GetComponent<TextCrisis>();
         m_interlocutorScript = m_InterlocutorObject.GetComponent<TextInterlocutor>();
         m_approcheScript = m_Approche.GetComponent<TextApprocheMain>();
         m_endTurnScript = m_EndTurn.GetComponent<TextEndTurn>();
@@ -137,6 +133,14 @@ public class InterfaceManager : MonoBehaviour
             m_institutionSelected.m_cameraObject.SetActive(false);
         }
         
+    }
+
+    public void ChangeColorInstitution(List<Image> p_imageList)
+    {
+        foreach (Image image in p_imageList)
+        {
+            image.color = m_institutionSelected.InstitutionColor;
+        }
     }
 
     public void ChangeColorInstitution(List<Image> p_imageList, List<TMP_Text> p_text)
@@ -181,17 +185,11 @@ public class InterfaceManager : MonoBehaviour
         // envoie les informations pour les afficher
         m_institutionLightScript.Display(p_InstitutionScriptable);        
     }
-    
-    // Fonction affiche / desaffiche
-    public void DisplayCrisis(StructEventCrisesSO p_Crisis)
-    {
-        m_crisisIsDisplay = true;
-        m_CrisisObject.SetActive(true);
-        m_crisisScript.Display(p_Crisis);
-    }
 
-    public void DisplayInterlocutor(InstitutionSO p_data)
+    public void DisplayInterlocutor()
     {
+        InstitutionSO data = m_institutionSelected.m_Institution;
+
         m_InterlocutorIsDisplay = true;
         m_InterlocutorObject.SetActive(true);
 
@@ -199,9 +197,9 @@ public class InterfaceManager : MonoBehaviour
         float buttonWidth = buttonDim.rect.width;
         float buttonHeight = buttonDim.rect.height;
 
-        Vector3 firstPos = firstButtonPos(p_data, buttonWidth, buttonHeight);
+        Vector3 firstPos = firstButtonPos(data, buttonWidth, buttonHeight);
 
-        for (int i = 0; i < p_data.m_interlocutorList.Count; i++)
+        for (int i = 0; i < data.m_interlocutorList.Count; i++)
         {
             // on créer + placer le boutton
             GameObject Button = Instantiate(m_ButtonInterlocutorPrefab, firstPos, Quaternion.identity);
@@ -212,7 +210,7 @@ public class InterfaceManager : MonoBehaviour
             firstPos.x += buttonWidth * 0.25f; // on multiplie selon le scale du boutton (tout boutton à un scale de 0.25 pour le visuel)
 
             // on configure le boutton pour qu'il ai les informations de l'interlocuteur
-            Button.gameObject.GetComponent<InterlocutorButton>().Configuration(p_data.m_interlocutorList[i]);
+            Button.gameObject.GetComponent<InterlocutorButton>().Configuration(data.m_interlocutorList[i]);
             m_ButtonInterlocutorList.Add(Button);
         }
     }
@@ -237,7 +235,7 @@ public class InterfaceManager : MonoBehaviour
         m_endTurnIsDisplay = true;
     }
 
-    public void DisplayVoctory()
+    public void DisplayVictory()
     {
         m_Victory.SetActive(true);
     }
@@ -272,12 +270,6 @@ public class InterfaceManager : MonoBehaviour
     {
         m_InstitutionHeavyObject.SetActive(false);
         m_InstitutionHeavyIsDisplay = false;
-    }
-
-    public void DisallowCrisis() // call in Cursor.cs
-    {
-        m_CrisisObject.SetActive(false);
-        m_crisisIsDisplay = false;
     }
 
     public void DisallowInterlocutor()

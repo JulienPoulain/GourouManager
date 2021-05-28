@@ -41,6 +41,6 @@ public class TextApprocheMain : MonoBehaviour
 
         m_interlocutorImage.sprite = p_interlocutor.m_sprite;
 
-        // GameManager.Instance.m_interfaceManager.ChangeColorInstitution(m_imageList);
+        GameManager.Instance.m_interfaceManager.ChangeColorInstitution(m_imageList);
     }
 }

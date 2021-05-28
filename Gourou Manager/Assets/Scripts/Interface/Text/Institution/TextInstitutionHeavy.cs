@@ -27,7 +27,7 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
     [SerializeField] List<Image> m_imageList = new List<Image>();
     [SerializeField] List<TMP_Text> m_textList = new List<TMP_Text>();
 
-    private void Start()
+    private void Awake()
     {
         foreach (GameObject ExactionObject in m_ExactionsObject)
         {
@@ -67,7 +67,7 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
 
     public void DisplayInterlocutor()
     {
-        GameManager.Instance.m_interfaceManager.DisplayInterlocutor(m_InstitutionData);
+        GameManager.Instance.m_interfaceManager.DisplayInterlocutor();
     }
 
     public void DisplayExaction()
@@ -95,9 +95,6 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
     {
         GameManager.Instance.m_interfaceManager.m_cursorFocusHeavyInstitution = true;
     }
-
-
-    Vector2 m_dragOffset;
 
     public void OnPointerDown(PointerEventData eventData)
     {

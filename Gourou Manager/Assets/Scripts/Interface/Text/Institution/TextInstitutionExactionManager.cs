@@ -13,7 +13,7 @@ public class TextInstitutionExactionManager : MonoBehaviour
 
     ExactionSO m_exaction;
 
-    private void Start()
+    private void Awake()
     {
         m_thisImage = GetComponentInChildren<Image>();
     }

@@ -12,8 +12,7 @@ public class Cursor : MonoBehaviour
     {
         m_interfaceManager = GameManager.Instance.m_interfaceManager;   // raccourcis l'access à Interface Manager
         m_interfaceManager.DisallowLightInstitution();  // désafficher les Institutions
-        m_interfaceManager.DisallowHeavyInstitution();  // désafficher les Institutions
-        m_interfaceManager.DisallowCrisis();  // désafficher les Crises        
+        m_interfaceManager.DisallowHeavyInstitution();  // désafficher les Institutions  
         m_interfaceManager.DisallowInterlocutor();
         m_interfaceManager.DisallowApproche();
         m_interfaceManager.DisallowVictoryDefeat();
@@ -59,7 +58,6 @@ public class Cursor : MonoBehaviour
                 // desafficher l'interface de crise
                 if (Input.GetMouseButtonDown(0))
                 {
-                    if (m_interfaceManager.m_crisisIsDisplay) m_interfaceManager.DisallowCrisis();
                     if (m_interfaceManager.m_InstitutionHeavyIsDisplay && !m_interfaceManager.m_cursorFocusHeavyInstitution) m_interfaceManager.DisallowHeavyInstitution();
                     // chercher comment détecter si le cursor pointe un boutton
                 }

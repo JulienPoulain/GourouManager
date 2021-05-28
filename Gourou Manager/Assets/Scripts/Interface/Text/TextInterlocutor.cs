@@ -27,7 +27,7 @@ public class TextInterlocutor : MonoBehaviour
     // si les interlocutor ne sont pas accessible : on affiche m_description + m_accessibility
     // si les interlocuteurs sont accessible : on affiche en plus m_condition + m_menace
 
-    void Start()
+    void Awake()
     {
         // On récupère les texts des GO
         m_description = m_descriptionOb.GetComponent<TMP_Text>();
@@ -47,7 +47,8 @@ public class TextInterlocutor : MonoBehaviour
         m_buttonSpeakToInterlocutor.SetActive(false);
     }
     
-    public void Display(InterlocutorSO p_data) // appeler depuis InterlocutorButton
+    public void Display(InterlocutorSO p_data) // appeler depuis 
+
     {
         m_InterlocutorSelected = true;
         m_Interlocutor = p_data;
@@ -111,11 +112,21 @@ public class TextInterlocutor : MonoBehaviour
     void DisplayNotAccessibleInterlocutorText()
     {
         m_descriptionOb.SetActive(true);
-        
-        int count = m_Interlocutor.AccessCondition.Count;
-        for (int i = 0; i < m_accessibilityOb.Count; i++)
+
+        Debug.Log(m_Interlocutor);
+
+        if (m_Interlocutor != null)
         {
-            m_accessibilityOb[i].SetActive(true);
+            int count = m_Interlocutor.AccessCondition.Count;
+
+            for (int i = 0; i < m_accessibilityOb.Count; i++)
+            {
+                m_accessibilityOb[i].SetActive(true);
+            }
+        }
+        else
+        {
+            Debug.Log("L'interlocutor " + m_Interlocutor + " n'est pas de conditions d'acces!");
         }
     }
 

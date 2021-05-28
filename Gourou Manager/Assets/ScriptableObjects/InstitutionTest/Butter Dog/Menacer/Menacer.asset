@@ -15,7 +15,8 @@ MonoBehaviour:
   m_name: NAME
   m_exactionPos: {fileID: 0}
   m_exactionNeg: {fileID: 0}
-  m_cdtSuccess: []
+  m_cdtSuccess:
+  - {fileID: 11400000, guid: c793061d672d2d84d96924bb0d43650e, type: 2}
   m_cooldown: 0
   m_remainingTime: 0
   m_descriptionApproach: DESCRIPTION APPROACH
