@@ -122,9 +122,6 @@ public class RoundManager : Singleton<RoundManager>
                     {
                         int magnitude = impact.Magnitude.Compute();
 
-                        Debug.Log("CECI EST L IMPACTE");
-                        Debug.Log(impact);
-                        
                         if (pendingChanges.ContainsKey(impact.SyncInt))
                         {
                             pendingChanges[impact.SyncInt] += magnitude;
