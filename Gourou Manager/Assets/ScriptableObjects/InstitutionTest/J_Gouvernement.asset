@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f60d9fd165f1bf4a8d858defcd6937f, type: 3}
-  m_Name: Gouvernement
+  m_Name: J_Gouvernement
   m_EditorClassIdentifier: 
   m_name: Gouvernement
   m_description: WIR MUSSEN DIE JUDEN HILFEN
-  m_funds: {fileID: 11400000, guid: 785b035de52ea8c47b50255727fd2d5e, type: 2}
-  m_members: {fileID: 11400000, guid: 785b035de52ea8c47b50255727fd2d5e, type: 2}
-  m_fanatics: {fileID: 11400000, guid: 785b035de52ea8c47b50255727fd2d5e, type: 2}
-  m_publicExposure: {fileID: 11400000, guid: 785b035de52ea8c47b50255727fd2d5e, type: 2}
-  m_corruption: {fileID: 11400000, guid: 785b035de52ea8c47b50255727fd2d5e, type: 2}
-  m_brutality: {fileID: 11400000, guid: 785b035de52ea8c47b50255727fd2d5e, type: 2}
-  m_decay: {fileID: 11400000, guid: 9a128bd31d6ca7c468331c9f211bdbbb, type: 2}
+  m_funds: {fileID: 0}
+  m_members: {fileID: 0}
+  m_fanatics: {fileID: 0}
+  m_publicExposure: {fileID: 0}
+  m_corruption: {fileID: 0}
+  m_brutality: {fileID: 0}
+  m_decay: {fileID: 0}
   m_interlocutorList:
   - {fileID: 11400000, guid: ce437b61f47e5ef439bdf76108f0ddb4, type: 2}
   - {fileID: 11400000, guid: 0400873e113651d46936c19c4dc9d7ac, type: 2}
