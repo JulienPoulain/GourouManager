@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65d02e6c45e7ab84a9e56bc495f4f42d, type: 3}
   m_Name: IMP C
   m_EditorClassIdentifier: 
-  m_ressource: {fileID: 11400000, guid: 21ad47f5055687847a07529f2f3a5940, type: 2}
+  m_syncInt: {fileID: 11400000, guid: 1e64836ea4d4982458fff9e77b618fad, type: 2}
   m_magnitude: {fileID: 11400000, guid: 12f2f58f26a4cb443a82969d7b7b099d, type: 2}

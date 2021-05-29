@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465801, g: 0.49641448, b: 0.57481784, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657886, g: 0.49641377, b: 0.57481873, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -410,7 +410,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 905f4e8d9beb53643b9b9ba1257d7c61, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7d56a83bace27304d9589faf13222c6e, type: 2}
+      objectReference: {fileID: 2100000, guid: 97b5a429eca08874a91d8b5d532987cf, type: 2}
     - target: {fileID: 919132149155446097, guid: 905f4e8d9beb53643b9b9ba1257d7c61, type: 3}
       propertyPath: m_Name
       value: Decor2_ReadyToTexture
@@ -488,7 +488,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: d3d0115354b38944ea82daddfbfa2ba0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7d56a83bace27304d9589faf13222c6e, type: 2}
+      objectReference: {fileID: 2100000, guid: bcd19f830f338344a8492599d3ec7292, type: 2}
     - target: {fileID: 919132149155446097, guid: d3d0115354b38944ea82daddfbfa2ba0, type: 3}
       propertyPath: m_Name
       value: Decor1_ReadyToTexture (3)
@@ -586,13 +586,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.36130136, y: 0.4701683, z: -0.21924305, w: 0.77481335}
+  m_LocalRotation: {x: 0.33528563, y: 0.5517252, z: -0.25727367, w: 0.7190224}
   m_LocalPosition: {x: 0, y: 40, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1104774558}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: 62.5, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: 75, z: 0}
 --- !u!1001 &815289395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1191,7 +1191,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: d3d0115354b38944ea82daddfbfa2ba0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7d56a83bace27304d9589faf13222c6e, type: 2}
+      objectReference: {fileID: 2100000, guid: bcd19f830f338344a8492599d3ec7292, type: 2}
     - target: {fileID: 919132149155446097, guid: d3d0115354b38944ea82daddfbfa2ba0, type: 3}
       propertyPath: m_Name
       value: Decor1_ReadyToTexture (1)
@@ -1475,7 +1475,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 905f4e8d9beb53643b9b9ba1257d7c61, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7d56a83bace27304d9589faf13222c6e, type: 2}
+      objectReference: {fileID: 2100000, guid: 97b5a429eca08874a91d8b5d532987cf, type: 2}
     - target: {fileID: 919132149155446097, guid: 905f4e8d9beb53643b9b9ba1257d7c61, type: 3}
       propertyPath: m_Name
       value: Decor2_ReadyToTexture (1)
@@ -1553,7 +1553,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: d3d0115354b38944ea82daddfbfa2ba0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7d56a83bace27304d9589faf13222c6e, type: 2}
+      objectReference: {fileID: 2100000, guid: bcd19f830f338344a8492599d3ec7292, type: 2}
     - target: {fileID: 919132149155446097, guid: d3d0115354b38944ea82daddfbfa2ba0, type: 3}
       propertyPath: m_Name
       value: Decor1_ReadyToTexture
@@ -1631,7 +1631,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: d3d0115354b38944ea82daddfbfa2ba0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7d56a83bace27304d9589faf13222c6e, type: 2}
+      objectReference: {fileID: 2100000, guid: bcd19f830f338344a8492599d3ec7292, type: 2}
     - target: {fileID: 919132149155446097, guid: d3d0115354b38944ea82daddfbfa2ba0, type: 3}
       propertyPath: m_Name
       value: Decor1_ReadyToTexture (4)
@@ -2068,7 +2068,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2060777667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2947,6 +2947,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6589148072303268853, guid: 2f794157b603a204bbb862bc313db0d7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d31680b5dbf9f6d4092f599b4691a74a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f794157b603a204bbb862bc313db0d7, type: 3}
 --- !u!1001 &5874638507918582014

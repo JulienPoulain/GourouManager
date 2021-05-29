@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a07221645fd8ad42978314f51634aaa, type: 3}
   m_Name: CDT EXP
   m_EditorClassIdentifier: 
-  m_ressource: {fileID: 11400000, guid: e1f663acfbf0dfb4bbf20dd4e71f0fde, type: 2}
+  m_syncInt: {fileID: 11400000, guid: e1f663acfbf0dfb4bbf20dd4e71f0fde, type: 2}
   m_conditionType: 6
   m_value: 50
