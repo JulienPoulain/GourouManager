@@ -17,12 +17,10 @@ MonoBehaviour:
   m_funds: {fileID: 11400000, guid: 71d6f38c38e2e3342ba6810c4efd60d5, type: 2}
   m_members: {fileID: 11400000, guid: 246b7a895aefcf84091b7cbb415df657, type: 2}
   m_fanatics: {fileID: 11400000, guid: 31199599f32ab7b46a511ba75443dcd8, type: 2}
-  m_impactOnPop: {fileID: 11400000, guid: 218f0bb2359b21941864b1e1e936517a, type: 2}
   m_publicExposure: {fileID: 11400000, guid: b373f889676d6bd4d8ecf8a3bad79bb6, type: 2}
   m_corruption: {fileID: 11400000, guid: d6e7e01f09e88844a91ef2e545fca37b, type: 2}
   m_brutality: {fileID: 11400000, guid: 788c887bcd8ad4c4daed9987356145ed, type: 2}
+  m_decay: {fileID: 11400000, guid: c6a77e9e92ebc7e48be90ade407e926f, type: 2}
   m_interlocutorList: []
   m_exactionList: []
-  m_triggeredExactions: []
-  m_option: 0
-  m_remainingTriggeredExactions: []
+  m_triggeredEvents: []

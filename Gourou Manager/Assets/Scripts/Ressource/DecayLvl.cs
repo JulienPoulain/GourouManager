@@ -22,7 +22,7 @@ namespace DecayLvlMethods
             _ => "None"
         };
 
-        public static int lvlMin(this DecayLvl p_decayLvl) => p_decayLvl switch
+        public static int LvlMin(this DecayLvl p_decayLvl) => p_decayLvl switch
         {
             DecayLvl.Devoue => 85,
             DecayLvl.Complaisant => 56,
@@ -32,7 +32,7 @@ namespace DecayLvlMethods
             _ => -1
         };
 
-        public static int lvlMax(this DecayLvl p_decayLvl) => p_decayLvl switch
+        public static int LvlMax(this DecayLvl p_decayLvl) => p_decayLvl switch
         {
             DecayLvl.Devoue => 100,
             DecayLvl.Complaisant => 84,

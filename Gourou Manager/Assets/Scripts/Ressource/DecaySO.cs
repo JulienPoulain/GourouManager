@@ -14,7 +14,7 @@ public class DecaySO : SyncIntSO
     public DecayLvl GetDecayLvl()
     {
         foreach (DecayLvl iDecayLvl in Enum.GetValues(typeof(DecayLvl)))
-            if (iDecayLvl.lvlMin() <= Value && Value <= iDecayLvl.lvlMax())
+            if (iDecayLvl.LvlMin() <= Value && Value <= iDecayLvl.LvlMax())
                 return iDecayLvl;
         return DecayLvl.None;
     }

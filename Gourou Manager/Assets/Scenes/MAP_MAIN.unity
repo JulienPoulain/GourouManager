@@ -2578,6 +2578,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1072772259}
     m_Modifications:
+    - target: {fileID: 2628634674178316804, guid: f68fb3e78b01c45498fc4dce708d7848, type: 3}
+      propertyPath: m_institutionColor.b
+      value: 0.1882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628634674178316804, guid: f68fb3e78b01c45498fc4dce708d7848, type: 3}
+      propertyPath: m_institutionColor.g
+      value: 0.5294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628634674178316804, guid: f68fb3e78b01c45498fc4dce708d7848, type: 3}
+      propertyPath: m_institutionColor.r
+      value: 0.79607844
+      objectReference: {fileID: 0}
     - target: {fileID: 2628634674178316805, guid: f68fb3e78b01c45498fc4dce708d7848, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2872,11 +2884,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7846191970672023853, guid: 72714935181560742b22c12d4448c878, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -839
+      value: 833
       objectReference: {fileID: 0}
     - target: {fileID: 7846191970672023853, guid: 72714935181560742b22c12d4448c878, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -432
+      value: 438
       objectReference: {fileID: 0}
     - target: {fileID: 7891688460178978501, guid: 72714935181560742b22c12d4448c878, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3036,15 +3048,15 @@ PrefabInstance:
       objectReference: {fileID: 2041475057}
     - target: {fileID: 5874638508989648376, guid: e6efa9e60e16ef949ba3d9c7e8be7794, type: 3}
       propertyPath: m_institutionColor.b
-      value: 0.1514774
+      value: 0.41568628
       objectReference: {fileID: 0}
     - target: {fileID: 5874638508989648376, guid: e6efa9e60e16ef949ba3d9c7e8be7794, type: 3}
       propertyPath: m_institutionColor.g
-      value: 0.1514774
+      value: 0.16862746
       objectReference: {fileID: 0}
     - target: {fileID: 5874638508989648376, guid: e6efa9e60e16ef949ba3d9c7e8be7794, type: 3}
       propertyPath: m_institutionColor.r
-      value: 0.8679245
+      value: 0.16862746
       objectReference: {fileID: 0}
     - target: {fileID: 5874638508989648378, guid: e6efa9e60e16ef949ba3d9c7e8be7794, type: 3}
       propertyPath: m_Name

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using DecayLvlMethods;
 
 public class TextEndTurn : MonoBehaviour
 {
@@ -43,7 +44,7 @@ public class TextEndTurn : MonoBehaviour
         for (int i = 0; i < GameManager.Instance.Institutions.Count; i++)
         {
             m_objectEtatList[i].SetActive(true);
-            m_textEtatList[i].text = "" + GameManager.Instance.Institutions[i].m_name + " : " + GameManager.Instance.Institutions[i].m_option.ToString();
+            m_textEtatList[i].text = "" + GameManager.Instance.Institutions[i].m_name + " : " + GameManager.Instance.Institutions[i].Decay.GetDecayLvl().GetString();
         }
         
         // Affichage du Culthe
