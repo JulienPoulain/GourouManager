@@ -2236,7 +2236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InstitutionLightObject: {fileID: 815289397}
   m_InstitutionHeavyObject: {fileID: 488147757}
-  m_InterlocutorObject: {fileID: 2098629989}
+  m_interlocutorObject: {fileID: 2098629989}
   m_Approche: {fileID: 2118087359}
   m_NextTurnButton: {fileID: 197782834}
   m_Victory: {fileID: 242952804338130747}
@@ -2245,7 +2245,6 @@ MonoBehaviour:
   m_interlocutorScript: {fileID: 0}
   m_feedBackScript: {fileID: 2060777672}
   m_decallingLightInstitution: 100
-  m_ButtonInterlocutorPrefab: {fileID: 3033758971898248650, guid: b864858dc97db6d44a0a6fc8147413e5, type: 3}
   m_canvasSize: {fileID: 0}
   m_InstitutionLightIsDisplay: 0
   m_crisisIsDisplay: 0
@@ -2368,6 +2367,14 @@ PrefabInstance:
     - target: {fileID: 1128431596502848454, guid: 9663cc69bc376b94ca2d48c7d6f7d7e2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587730388535373194, guid: 9663cc69bc376b94ca2d48c7d6f7d7e2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000030517578
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587730388535373194, guid: 9663cc69bc376b94ca2d48c7d6f7d7e2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000022888184
       objectReference: {fileID: 0}
     - target: {fileID: 7613334340224226808, guid: 9663cc69bc376b94ca2d48c7d6f7d7e2, type: 3}
       propertyPath: m_Name

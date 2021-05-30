@@ -10,6 +10,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
 
     [SerializeField] InstitutionSO m_mainInstitution;
     [SerializeField] List<InstitutionSO> m_institutions = new List<InstitutionSO>();
+    private InstitutionScript m_mainInstitutionScript;
 
     //[SerializeField] public ScriptableObject[] m_Institutions;
     //[SerializeField] public ScriptableObject[] m_Crise;
@@ -31,6 +32,8 @@ public class GameManager : Singleton<GameManager>, IInitializable
     public List<ExactionSO> PendingExactions => m_pendingExactions;
     public List<EventSO> ActiveEvents => m_activeEvents;
     public int Turn => m_turn;
+
+    public InstitutionScript MainInstitutionScript => m_mainInstitutionScript;
 
     public InstitutionSO MainInstitution => m_mainInstitution;
     public List<InstitutionSO> Institutions => m_institutions;    
@@ -77,7 +80,8 @@ public class GameManager : Singleton<GameManager>, IInitializable
             m_institutions.Add(Institution.GetComponent<InstitutionScript>().m_Institution);
         }
 
-        m_mainInstitution = m_mainInstitutionObject.GetComponent<InstitutionScript>().m_Institution; 
+        m_mainInstitutionScript = m_mainInstitutionObject.GetComponent<InstitutionScript>();
+        m_mainInstitution = m_mainInstitutionScript.m_Institution; 
 
         //m_cameraScript = m_camera.GetComponent<CameraManager>();
 

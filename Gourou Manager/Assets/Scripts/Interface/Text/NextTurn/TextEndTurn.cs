@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using DecayLvlMethods;
 
@@ -19,6 +20,8 @@ public class TextEndTurn : MonoBehaviour
 
     [SerializeField] TextExactionPanel m_exactionScript;
 
+    [SerializeField] List<Image> m_BackGroundColor = new List<Image>();
+
 
     // Start is called before the first frame update
     void Awake()
@@ -34,6 +37,13 @@ public class TextEndTurn : MonoBehaviour
         }
 
         m_TextmainInstitutionName = m_objectMainInstitutionName.GetComponent<TMP_Text>();
+
+        // On met la couleur du Culthe (qu'on cherche depuis le GameManager)
+        foreach (Image backgroundImage in m_BackGroundColor)
+        {
+            backgroundImage.color = GameManager.Instance.MainInstitutionScript.InstitutionColor;
+        }
+        // m_TextmainInstitutionName.color = GameManager.Instance.MainInstitutionScript.InstitutionColor;
     }
 
     public void Display()
