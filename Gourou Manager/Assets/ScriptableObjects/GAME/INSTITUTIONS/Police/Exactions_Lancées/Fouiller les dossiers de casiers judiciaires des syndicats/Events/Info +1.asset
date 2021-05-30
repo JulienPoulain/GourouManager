@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
-  m_Name: Cult_Fa --
+  m_Name: Info +1
   m_EditorClassIdentifier: 
-  m_name: "Faire ecrire un article n\xE9gatif sur la police"
-  m_description: "Vous avez d\xE9pens\xE9 1 fanatique"
+  m_name: Fouiller les casiers judiciaires des syndicats
+  m_description: "Vous obtenez une information sur un memebre haut plac\xE9 des syndicats"
   m_initDuration: 1
-  m_duration: 1
+  m_duration: 0
   m_initDelay: 0
   m_delay: 0
-  m_impacts:
-  - {fileID: 11400000, guid: 46dba2cfae9f5d34cbad9ce3753f7472, type: 2}
-  m_infoGained: []
+  m_impacts: []
+  m_infoGained:
+  - {fileID: 11400000, guid: efcb79a553411ec4482aa2dc731f70ce, type: 2}
   m_IsDisplayed: 1

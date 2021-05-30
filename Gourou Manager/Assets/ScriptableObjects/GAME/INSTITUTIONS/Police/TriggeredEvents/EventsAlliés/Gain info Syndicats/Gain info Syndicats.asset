@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b647af1624fef43bcaf750a89ff899, type: 3}
+  m_Name: Gain info Syndicats
+  m_EditorClassIdentifier: 
+  m_name: Gain d'info sur un membre du syndicat
+  m_description: "Un de vos collaborateurs de la police a fouill\xE9 les casiers
+    judiciaires des syndicats et trouv\xE9 une information"
+  m_initDuration: 1
+  m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
+  m_impacts: []
+  m_infoGained:
+  - {fileID: 11400000, guid: efcb79a553411ec4482aa2dc731f70ce, type: 2}
+  m_IsDisplayed: 1
+  m_initNbUse: -1
+  m_nbUse: 0
+  m_cdtActivation:
+  - {fileID: 11400000, guid: 589158f948469ce4bb85d8d14e767d88, type: 2}
+  - {fileID: 11400000, guid: 8e3d04f9e3bb48d49beceb8afb41c029, type: 2}

@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: Cult_F ++
   m_EditorClassIdentifier: 
-  m_name: 
-  m_description: 
-  m_initDuration: 0
+  m_name: 'Vol de fonds '
+  m_description: Vous gagnez des fonds
+  m_initDuration: 1
   m_duration: 1
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 73cac584a289c7b40a9d7dbe0fd7af84, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1
