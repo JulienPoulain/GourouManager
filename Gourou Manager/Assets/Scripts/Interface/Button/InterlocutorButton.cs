@@ -8,8 +8,8 @@ using TMPro;
 
 public class InterlocutorButton : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField] private TMP_Text m_TextContainer;
-    private InterlocutorSO m_Interlocutor;
+    [SerializeField] private TMP_Text m_textContainer;
+    public InterlocutorSO m_interlocutor;
 
     // On recupere l'image lier a ce script pour changer sa couleur
     Image m_thisImage;
@@ -21,8 +21,8 @@ public class InterlocutorButton : MonoBehaviour, IPointerClickHandler
 
     public void Configuration(InterlocutorSO p_Interlocutor)
     {
-        m_Interlocutor = p_Interlocutor;
-        m_TextContainer.text = "" + p_Interlocutor.m_name;
+        m_interlocutor = p_Interlocutor;
+        m_textContainer.text = "" + p_Interlocutor.m_name;
 
         m_thisImage.color = GameManager.Instance.m_interfaceManager.m_institutionSelected.InstitutionColor;
     }
@@ -31,13 +31,8 @@ public class InterlocutorButton : MonoBehaviour, IPointerClickHandler
     {
         if (pointerEventData.button == PointerEventData.InputButton.Left)
         {
-            GameManager.Instance.m_interfaceManager.m_interlocutorScript.Display(m_Interlocutor);
+            // On appelle Display du script TextInterlocutor depuis le GameManager
+            GameManager.Instance.m_interfaceManager.m_interlocutorScript.Display(m_interlocutor);
         }
-    }
-
-    // lorsque l'object est desafficher, on le supprime et on reset les statistiques de l'interface interlocutor
-    void OnDisable()
-    {
-        Destroy (this.gameObject);
     }
 }

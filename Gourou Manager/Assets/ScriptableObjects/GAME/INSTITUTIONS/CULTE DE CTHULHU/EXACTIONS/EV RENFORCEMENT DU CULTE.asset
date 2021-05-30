@@ -14,7 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Renforcement du Culte
   m_description: Le Culte se renforce
-  m_duration: 1
+  m_initDuration: 1
+  m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 55014e15dcb70114b97e22ef62d304c6, type: 2}
   - {fileID: 11400000, guid: 6dc0d9d04f3503340a45ba13b9884a53, type: 2}
+  m_infoGained: []
+  m_IsDisplayed: 1

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class TextInterlocutor : MonoBehaviour
@@ -22,7 +23,10 @@ public class TextInterlocutor : MonoBehaviour
 
     private InterlocutorSO m_Interlocutor;
 
-    public string m_approachSceneToLoad;
+    [SerializeField] List<GameObject> m_buttonInterlocutorList = new List<GameObject>();
+    List<InterlocutorButton> m_buttonScriptList = new List<InterlocutorButton>();
+
+    [SerializeField] public Image m_backGroundColor;
     
     // si les interlocutor ne sont pas accessible : on affiche m_description + m_accessibility
     // si les interlocuteurs sont accessible : on affiche en plus m_condition + m_menace
@@ -41,14 +45,18 @@ public class TextInterlocutor : MonoBehaviour
         {
             m_condition.Add(m_conditionOb[i].GetComponent<TMP_Text>());
         }
-        
+
+        for (int i = 0; i < m_buttonInterlocutorList.Count; i++)
+        {
+            m_buttonScriptList.Add(m_buttonInterlocutorList[i].GetComponent<InterlocutorButton>());
+        }
+
         m_menace = m_menaceOb.GetComponent<TMP_Text>();
 
         m_buttonSpeakToInterlocutor.SetActive(false);
     }
     
     public void Display(InterlocutorSO p_data) // appeler depuis 
-
     {
         m_InterlocutorSelected = true;
         m_Interlocutor = p_data;
@@ -156,21 +164,21 @@ public class TextInterlocutor : MonoBehaviour
 
     public void SpeekToInterlocutor()
     {
-        if (m_Interlocutor.IsAccessible() && m_InterlocutorSelected  && !GameManager.Instance.PlayerHasExecuteApproach)
+        if (m_Interlocutor.IsAccessible() && m_InterlocutorSelected  && !GameManager.Instance.PlayerHasExecuteAction)
         {
             GameManager.Instance.m_interfaceManager.CameraChange();     // On place la camera liee a l'institution
             GameManager.Instance.m_interfaceManager.DisplayApproche(m_Interlocutor);
             GameManager.Instance.m_interfaceManager.DisallowInterlocutor();
 
-            GameManager.Instance.PlayerHasExecuteApproach = true;
-            Debug.Log("Institution : " + GameManager.Instance.PlayerHasExecuteApproach);
+            GameManager.Instance.PlayerHasExecuteAction = true;
+            Debug.Log("Institution : " + GameManager.Instance.PlayerHasExecuteAction);
         }
         else if (!m_Interlocutor.IsAccessible())
         {
             GameManager.Instance.m_interfaceManager.m_feedBackScript.FeedBackApproachNotValid();
             Debug.Log("Cet Interlocuteur n'est pas disponible, ou tu n'as pas sélectionner d'interlocuteurs");
         }
-        else if (GameManager.Instance.PlayerHasExecuteApproach)
+        else if (GameManager.Instance.PlayerHasExecuteAction)
         {
             GameManager.Instance.m_interfaceManager.m_feedBackScript.FeedBackApproachDouble();
         }
@@ -194,6 +202,7 @@ public class TextInterlocutor : MonoBehaviour
         m_descriptionOb.SetActive(true);
     }
 
+    /*
     // appeler depuis un boutton, option de dev, à supprimer pour le public
     public void ForcerApproche()
     {
@@ -202,12 +211,30 @@ public class TextInterlocutor : MonoBehaviour
             GameManager.Instance.m_interfaceManager.DisplayApproche(m_Interlocutor);
             GameManager.Instance.m_interfaceManager.DisallowInterlocutor();
             // Il y avait le changement de scene ici
-            GameManager.Instance.PlayerHasExecuteApproach = true;
-            Debug.Log("Institution : " + GameManager.Instance.PlayerHasExecuteApproach);
+            GameManager.Instance.PlayerHasExecuteAction = true;
+            Debug.Log("Institution : " + GameManager.Instance.PlayerHasExecuteAction);
         }
         else
         {
             Debug.Log("Tu n as pas selectionner d'interlocuteurs");
+        }
+    }
+    */
+    // Configuration des bouttons / appeler via InterfaceManager
+    public void ConfigureButton(InstitutionSO p_institution)
+    {
+        // On les désactive tous pour les remettres
+        foreach(GameObject interlocutorObject in m_buttonInterlocutorList)
+        {
+            interlocutorObject.SetActive(false);
+        }
+        // On initialise les Bouttons
+        for (int i = 0; i < p_institution.m_interlocutorList.Count; i++)
+        {
+            Debug.Log("1");
+            m_buttonInterlocutorList[i].SetActive(true);
+            Debug.Log("2");
+            m_buttonScriptList[i].Configuration(p_institution.m_interlocutorList[i]);
         }
     }
 }

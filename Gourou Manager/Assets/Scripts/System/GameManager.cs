@@ -10,6 +10,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
 
     [SerializeField] InstitutionSO m_mainInstitution;
     [SerializeField] List<InstitutionSO> m_institutions = new List<InstitutionSO>();
+    private InstitutionScript m_mainInstitutionScript;
 
     //[SerializeField] public ScriptableObject[] m_Institutions;
     //[SerializeField] public ScriptableObject[] m_Crise;
@@ -32,23 +33,19 @@ public class GameManager : Singleton<GameManager>, IInitializable
     public List<EventSO> ActiveEvents => m_activeEvents;
     public int Turn => m_turn;
 
+    public InstitutionScript MainInstitutionScript => m_mainInstitutionScript;
+
     public InstitutionSO MainInstitution => m_mainInstitution;
     public List<InstitutionSO> Institutions => m_institutions;    
 
     // Player Variable //
     
-    private static bool m_playerHasExecuteExaction = false; // définit si le joueur à déjà fait une exaction ce tour ci, static pour que l'information ne change pas entre les changments de scènes
-    private static bool m_playerHasExecuteApproche = false;    // Définit si le joueur à déjà fait un dialogue ce tour ci
+    private bool m_playerHasExecuteAction = false; 
     
-    public bool PlayerHasExecuteApproach
+    public bool PlayerHasExecuteAction
     {
-        get { return m_playerHasExecuteApproche; }
-        set { m_playerHasExecuteApproche = value;}
-    }
-    public bool PlayerHasExectuteExaction
-    {
-        get { return m_playerHasExecuteExaction; }
-        set { m_playerHasExecuteExaction = value; }
+        get { return m_playerHasExecuteAction; }
+        set { m_playerHasExecuteAction = value;}
     }
 
     public void Initialize()
@@ -83,7 +80,8 @@ public class GameManager : Singleton<GameManager>, IInitializable
             m_institutions.Add(Institution.GetComponent<InstitutionScript>().m_Institution);
         }
 
-        m_mainInstitution = m_mainInstitutionObject.GetComponent<InstitutionScript>().m_Institution; 
+        m_mainInstitutionScript = m_mainInstitutionObject.GetComponent<InstitutionScript>();
+        m_mainInstitution = m_mainInstitutionScript.m_Institution; 
 
         //m_cameraScript = m_camera.GetComponent<CameraManager>();
 
@@ -94,8 +92,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
     {
         Debug.Log("FIN DU TOUR");
 
-        m_playerHasExecuteExaction = false;
-        m_playerHasExecuteApproche = false;
+        m_playerHasExecuteAction = false;
 
         RoundManager.Instance.NextTurn();
 
