@@ -21,5 +21,4 @@ MonoBehaviour:
   m_remainingTime: 0
   m_descriptionApproach: Soudoyer Marcus
   m_dialogueApproach: 
-  m_resultatApproach: Il pourra augmenter votre impact sur la population pendant
-    plusieur tours
+  m_resultatApproach: 'Il vous donnera une info sur un entrepreneur '
