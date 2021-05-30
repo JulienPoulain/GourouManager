@@ -26,7 +26,6 @@ public class InstitutionSO : ScriptableObject, IInitializable
     [SerializeField] [Tooltip("Personnages appartenant à l'institution")] public List<InterlocutorSO> m_interlocutorList;
     [SerializeField] [Tooltip("Exactions disponibles sans dialogue")] public List<ExactionSO> m_exactionList;
     [SerializeField] [Tooltip("Évènements se déclenchants selon certaines conditions sans intervention directe du joueur")] public List<TriggeredEventSO> m_triggeredEvents;
-    [SerializeField] public OpinionOnTheCult m_option;
 
     public RessourceSO Funds => m_funds;
     public RessourceSO Members => m_members;
