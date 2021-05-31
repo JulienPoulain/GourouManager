@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525d2b2df425485449ec8a12401c7c35, type: 3}
+  m_Name: INTIMIDER POUR FONDS
+  m_EditorClassIdentifier: 
+  m_name: INTIMIDER
+  m_exactionPos: {fileID: 11400000, guid: bac603ee89c250b4783153e49ce7ed71, type: 2}
+  m_exactionNeg: {fileID: 11400000, guid: 506b2c7ae62916d41b5986e797dd4fa7, type: 2}
+  m_cdtSuccess:
+  - {fileID: 11400000, guid: 49f69e2ea315e1e4aa66928146f4959c, type: 2}
+  - {fileID: 11400000, guid: 5a4c3e9028924f044b91e51bfad82a53, type: 2}
+  m_cooldown: 8
+  m_remainingTime: 0
+  m_descriptionApproach: "Vous menacez Alejandra d'avoir la visite de vos fanatiques
+    pendant la nuit si elle ne d\xE9tourne pas une partie de l'argent des Syndicats
+    pour alimenter le Culte. Cela vous couteras un point de Fanatiques."
+  m_dialogueApproach: 
+  m_resultatApproach: "Si vous r\xE9ussissez \xE0 Intimider Alejandra, vous obtiendrez
+    des petits revenus r\xE9guliers. Sinon, elle se m\xE9fieras de vous"

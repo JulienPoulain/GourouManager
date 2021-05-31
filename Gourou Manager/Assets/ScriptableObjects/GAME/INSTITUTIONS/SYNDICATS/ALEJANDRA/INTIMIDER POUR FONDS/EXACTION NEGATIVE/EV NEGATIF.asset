@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
+  m_Name: EV NEGATIF
+  m_EditorClassIdentifier: 
+  m_name: Echec de l'intimidation
+  m_description: "Alejandra se m\xE9fieras de vous et a d\xE9pos\xE9 une plainte
+    aupr\xE8s de la Police contre vous."
+  m_initDuration: 1
+  m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
+  m_impacts:
+  - {fileID: 11400000, guid: 0cf6a6df1fdf79c46bc5ae738a63ef77, type: 2}
+  - {fileID: 11400000, guid: cbde78e5a2f4e024c887ea341952f42b, type: 2}
+  - {fileID: 11400000, guid: d10858895958a974d96b053ddb1aa89d, type: 2}
+  - {fileID: 11400000, guid: fc4707821f018164882baeb726ad5168, type: 2}
+  m_infoGained: []
+  m_IsDisplayed: 1

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b647af1624fef43bcaf750a89ff899, type: 3}
+  m_Name: EV ATTAQUES
+  m_EditorClassIdentifier: 
+  m_name: Attaques des casseurs contre le Culte
+  m_description: "Les membres les plus extr\xEAmes et violents des syndicats d\xE9cident
+    d'entreprendre des actions violentes contre le Culte, saccageant des lieux de
+    pri\xE8re \xE0 Cthulhu et attaquant les regroupements d'Adeptes."
+  m_initDuration: 1
+  m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
+  m_impacts:
+  - {fileID: 11400000, guid: 2ed3fd22e06c21c408b942facfb049b0, type: 2}
+  - {fileID: 11400000, guid: 5f1a247658ac2854db3f7e8bf88e1ce9, type: 2}
+  - {fileID: 11400000, guid: 9be594445b2a40446bfbec535f10da6d, type: 2}
+  - {fileID: 11400000, guid: c90977c8d638f6f4bbf0ded23ff53d36, type: 2}
+  m_infoGained: []
+  m_IsDisplayed: 1
+  m_initNbUse: -1
+  m_nbUse: 0
+  m_cdtActivation:
+  - {fileID: 11400000, guid: 1e29fecc56c1c1b46ad5a99ba7fb99f9, type: 2}
+  - {fileID: 11400000, guid: 6aca2bbc5f337ca46b61f44e2767709e, type: 2}
+  - {fileID: 11400000, guid: 03d44befce762c244b21f6bef516c8c8, type: 2}

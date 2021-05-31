@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b647af1624fef43bcaf750a89ff899, type: 3}
+  m_Name: EV CONF DE PRESSE
+  m_EditorClassIdentifier: 
+  m_name: 'Conference de presse '
+  m_description: "Les Syndicats font une conf\xE9rence de presse pour d\xE9clarer
+    leur m\xE9fiance vis a vis du \"mouvement sectaire\" qui monte dans le pays"
+  m_initDuration: 1
+  m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
+  m_impacts:
+  - {fileID: 11400000, guid: b54f6940146ab064498a40d0b1dfd37e, type: 2}
+  - {fileID: 11400000, guid: 9d0172396e9a469449104bf31fdbc8b5, type: 2}
+  m_infoGained: []
+  m_IsDisplayed: 1
+  m_initNbUse: -1
+  m_nbUse: 0
+  m_cdtActivation:
+  - {fileID: 11400000, guid: 0ec28efaa9428aa4985daa6989f0e8db, type: 2}
+  - {fileID: 11400000, guid: bf66844421c243c4c92bd8fee6623bfe, type: 2}
+  - {fileID: 11400000, guid: 89a3f1e7922dd1a42badd2031f003145, type: 2}

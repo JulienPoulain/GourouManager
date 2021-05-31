@@ -15,7 +15,7 @@ MonoBehaviour:
   m_name: Kate
   m_description: "Riche actionnaire, investisseur t\xE9m\xE9raire, mordue d'adr\xE9naline."
   m_descriptionFailure: 
-  m_sanity: {fileID: 0}
+  m_sanity: {fileID: 11400000, guid: 77992e186e78e694a9947e42602dbc9f, type: 2}
   m_approach:
   - {fileID: 11400000, guid: 92eaa1bc9ed542f47899855ca5c9a4fa, type: 2}
   - {fileID: 11400000, guid: 5aab8c60f36aa4d448cd192869bd5e01, type: 2}
