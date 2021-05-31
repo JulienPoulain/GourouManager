@@ -19,8 +19,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a81744682f6d2b14ba435ea5f14fb891, type: 2}
   m_cooldown: 5
   m_remainingTime: 0
-  m_descriptionApproach: "Vous proposez des FANATIQUES comme gros bras en \xE9change
-    d'un soutien financier."
-  m_dialogueApproach: 
-  m_resultatApproach: "Si vous r\xE9ussissez, vous obtiendrez 5 000 pendant 3 tours
-    cons\xE9cutifs."
+  m_descriptionApproach: "Vous proposez \xE0 Kate un investissement risqu\xE9 mais
+    lucratif dans l'une des propri\xE9t\xE9s du Culte."
+  m_dialogueApproach: "\"J'ai une entreprise \xE0 vous proposer. Elle est risqu\xE9e,
+    mais vous serez b\xE9n\xE9ficiaire, \xE0 condition d'investir. Ayez confiance
+    en mon Ami.\""
+  m_resultatApproach: "Si vous r\xE9ussissez, vous obtiendrez une petite somme pendant
+    3 tours cons\xE9cutifs."

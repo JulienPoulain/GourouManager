@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f60d9fd165f1bf4a8d858defcd6937f, type: 3}
-  m_Name: Police
+  m_Name: POLICE
   m_EditorClassIdentifier: 
   m_name: Police
-  m_description: "Le monopole de la violence l\xE9gitime de l'\xC9tat"
+  m_description: "Bras arm\xE9 de la justice de l'\xEEle."
   m_funds: {fileID: 11400000, guid: 5d7d34600bd47db4baac925a506195ce, type: 2}
   m_members: {fileID: 0}
   m_fanatics: {fileID: 0}

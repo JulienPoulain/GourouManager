@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Marcus Grandbergson
   m_EditorClassIdentifier: 
   m_name: Marcus Grandbergson
-  m_description: Chef du journal local
-  m_descriptionFailure: "Si vous \xE9chouez dans les n\xE9gociations il fera son
-    possible pour vous exposer n\xE9gativement"
+  m_description: "R\xE9dacteur en chef de la Una, malin, sympathique et int\xE8gre."
+  m_descriptionFailure: 
   m_sanity: {fileID: 0}
   m_approach:
   - {fileID: 11400000, guid: 7107f77b534063a459fa76a2edce1c29, type: 2}

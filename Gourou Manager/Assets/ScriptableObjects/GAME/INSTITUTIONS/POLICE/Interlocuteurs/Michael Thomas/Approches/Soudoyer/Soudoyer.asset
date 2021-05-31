@@ -18,6 +18,8 @@ MonoBehaviour:
   m_cdtSuccess:
   - {fileID: 11400000, guid: 550e05300ca43d14f8d29f48c1fb044a, type: 2}
   m_cooldown: 4
-  m_descriptionApproach: Soudoyer Micheal Thomas
-  m_DialogueApproach: 
+  m_remainingTime: 0
+  m_descriptionApproach: Soudoyer Michael Thomas
+  m_dialogueApproach: "\"L'\xEEle a besoin de gardiens de l'ordre comme toi, laisse
+    mon Ami te montrer sa reconnaissance.\""
   m_resultatApproach: La corruption de la police augmentera un peu

@@ -15,7 +15,7 @@ MonoBehaviour:
   m_name: LUIS
   m_description: "Luis est le pr\xE9sident de la Conf\xE9d\xE9ration du Travail. "
   m_descriptionFailure: 
-  m_sanity: {fileID: 11400000, guid: 3fa3bfe10c7a9bc4cbb0ec678361566c, type: 2}
+  m_sanity: {fileID: 11400000, guid: 8adaac2ff82f8364591857f7169e7b4e, type: 2}
   m_approach:
   - {fileID: 11400000, guid: 1fa6de69c7a6b034ba0e9189ea481444, type: 2}
   - {fileID: 11400000, guid: 6f58411d899c27b4aa8a2766578aec4d, type: 2}

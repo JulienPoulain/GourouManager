@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b647af1624fef43bcaf750a89ff899, type: 3}
+  m_Name: Obtention d'info
+  m_EditorClassIdentifier: 
+  m_name: Obtention d'informations
+  m_description: "Une personne haut plac\xE9e dans les m\xE9dias vous fait part d'une
+    information importante sur un entrepreneur, vous ouvrant d'autres possibilit\xE9s."
+  m_initDuration: 1
+  m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
+  m_impacts: []
+  m_infoGained:
+  - {fileID: 11400000, guid: be1b4c9eca8c95648a2966de8c92e021, type: 2}
+  m_IsDisplayed: 1
+  m_initNbUse: -1
+  m_nbUse: 0
+  m_cdtActivation:
+  - {fileID: 11400000, guid: 9350bbc3ebaf4d043b584fcfc9ea10ab, type: 2}
+  - {fileID: 11400000, guid: 1834ad7133184cb478ad956a8c64e7bb, type: 2}

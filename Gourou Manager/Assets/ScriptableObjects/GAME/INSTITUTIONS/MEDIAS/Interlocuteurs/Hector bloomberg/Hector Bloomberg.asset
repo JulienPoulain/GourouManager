@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Hector Bloomberg
   m_EditorClassIdentifier: 
   m_name: Hector Bloomberg
-  m_description: "Pigiste ind\xE9pendant"
+ Intégration-Narrato
+  m_description: "Pigiste dans la Una, d\xE9butant, curieux et optimiste"
   m_descriptionFailure: "Echouer les n\xE9gociations avec Hector le poussera a parler
     n\xE9gativement du culte dans ses articles"
+ main
   m_sanity: {fileID: 0}
   m_approach:
   - {fileID: 11400000, guid: ce60528cce40d254a8cd252603d955df, type: 2}

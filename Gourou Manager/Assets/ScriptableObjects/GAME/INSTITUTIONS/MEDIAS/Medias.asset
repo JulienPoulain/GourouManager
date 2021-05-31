@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f60d9fd165f1bf4a8d858defcd6937f, type: 3}
-  m_Name: Medias
+  m_Name: MEDIAS
   m_EditorClassIdentifier: 
   m_name: Medias
-  m_description: Les groupes de presse mainstream
+  m_description: "Le groupe \xE9ditorial \"Una\", qui d\xE9tient toute la presse
+    \xE9crite et radiovisuelle de l'\xEEle."
   m_funds: {fileID: 11400000, guid: ef56b524d9546714dbd69b287da8a1ae, type: 2}
   m_members: {fileID: 0}
   m_fanatics: {fileID: 0}
@@ -38,5 +39,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9005539cec7256944850b140733c7bb2, type: 2}
   - {fileID: 11400000, guid: 0f9667961a15f7e428eadecd22a1f12d, type: 2}
   - {fileID: 11400000, guid: 79d7bf68eb7ebd24dbee1687b4e432e9, type: 2}
-  - {fileID: 11400000, guid: 3d3aefd0a1da9084d9eb62935ecc1fa3, type: 2}
-  - {fileID: 11400000, guid: 632cf552d11c06e479c257e5e81f2eea, type: 2}
+  - {fileID: 11400000, guid: c627f2048b348304f9b02c6fe152f443, type: 2}
+  - {fileID: 11400000, guid: b351e2122e4043347a7564a39f8d769f, type: 2}
+  - {fileID: 11400000, guid: 80b779f908ed13a40be915132464f5fa, type: 2}
+  - {fileID: 11400000, guid: 4a49bf22db3bd004f9ecaa4a40488ecf, type: 2}

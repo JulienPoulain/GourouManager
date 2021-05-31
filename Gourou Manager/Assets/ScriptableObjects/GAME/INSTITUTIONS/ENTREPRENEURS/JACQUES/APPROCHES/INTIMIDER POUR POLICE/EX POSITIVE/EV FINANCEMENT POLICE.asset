@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: EV FINANCEMENT POLICE
   m_EditorClassIdentifier: 
   m_name: FINANCEMENT DE LA POLICE
-  m_description: "La Police re\xE7oit des sommes massives"
+  m_description: "La police re\xE7oit une tr\xE8s grande quantit\xE9 d'argent."
   m_initDuration: 3
-  m_duration: 0
+  m_duration: 3
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: e04fb6ca3bb208b49926b6833a4b9067, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b647af1624fef43bcaf750a89ff899, type: 3}
+  m_Name: Confiscation d'armes du culte
+  m_EditorClassIdentifier: 
+  m_name: Confiscation des armes du culte
+  m_description: "La police ordonne la r\xE9quisition des armes des citoyens suspect\xE9s
+    de vous suivre"
+  m_initDuration: 1
+  m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
+  m_impacts:
+  - {fileID: 11400000, guid: 5951f8aa86de8e349be59136d3933c0f, type: 2}
+  m_infoGained: []
+  m_IsDisplayed: 1
+  m_initNbUse: 1
+  m_nbUse: 0
+  m_cdtActivation:
+  - {fileID: 11400000, guid: 85bcc2c2fcf85264fb39a3e799ad0290, type: 2}
+  - {fileID: 11400000, guid: 41e3dc851862fd04d9f15ebdd83142e9, type: 2}

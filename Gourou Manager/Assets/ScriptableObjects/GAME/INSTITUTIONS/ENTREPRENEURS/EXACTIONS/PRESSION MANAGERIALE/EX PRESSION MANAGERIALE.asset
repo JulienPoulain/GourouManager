@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: EX PRESSION MANAGERIALE
   m_EditorClassIdentifier: 
-  m_name: EX PRESSION MANAGERIALE
+  m_name: "Pression manag\xE9riale"
   m_description: "Poussez les chef d'Entreprises \xE0 durcir leur m\xE9thodes manag\xE9riales,
-    \xE0 multiplier les licenciements... Les d\xE9g\xE2ts psychologiques vous rapporterons
-    des Adeptes, bris\xE9s par la maltraitance au travail et la violence du march\xE9
+    \xE0 multiplier les licenciements... Les d\xE9g\xE2ts psychologiques vous rapporteront
+    des membres, bris\xE9s par la maltraitance au travail et la violence du march\xE9
     du travail d\xE9grad\xE9."
   m_eventList:
   - {fileID: 11400000, guid: 7c06c98d745a6be40b224e1c1623c7b8, type: 2}

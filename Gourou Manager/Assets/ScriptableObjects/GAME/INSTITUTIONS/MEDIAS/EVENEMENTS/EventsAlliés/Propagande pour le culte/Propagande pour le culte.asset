@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b647af1624fef43bcaf750a89ff899, type: 3}
+  m_Name: Propagande pour le culte
+  m_EditorClassIdentifier: 
+  m_name: Propagande pour le culte
+  m_description: "Les m\xE9dias affichent des messages favorables au culte, enjoignant
+    leurs lecteurs \xE0 vous rejoindre."
+  m_initDuration: 3
+  m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
+  m_impacts:
+  - {fileID: 11400000, guid: 9099d5f22e7246649bebd8bd870e0cb8, type: 2}
+  m_infoGained: []
+  m_IsDisplayed: 1
+  m_initNbUse: 1
+  m_nbUse: 0
+  m_cdtActivation:
+  - {fileID: 11400000, guid: 8131a316cee66e24ea654c731b23a3b6, type: 2}
+  - {fileID: 11400000, guid: fd990db99f03878489d2118bb03a38f1, type: 2}

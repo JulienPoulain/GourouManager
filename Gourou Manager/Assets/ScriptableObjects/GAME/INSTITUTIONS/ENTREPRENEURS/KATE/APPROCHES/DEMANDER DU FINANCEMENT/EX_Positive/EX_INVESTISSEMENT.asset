@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EX_INVESTISSEMENT
   m_EditorClassIdentifier: 
   m_name: INVESTISSEMENT OBTENU
-  m_description: "Vous obtiendrez 5 000 pendant 3 tours cons\xE9cutifs"
+  m_description: Vous obtiendrez 5 000 pour les 3 prochains tours
   m_eventList:
   - {fileID: 11400000, guid: c608dda607cfb904293f0c231df91ca0, type: 2}
   m_conditions: []

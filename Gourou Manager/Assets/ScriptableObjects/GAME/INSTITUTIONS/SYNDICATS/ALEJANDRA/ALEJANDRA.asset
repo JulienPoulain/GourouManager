@@ -16,9 +16,10 @@ MonoBehaviour:
   m_description: Syndicaliste proche des militants pronant la violence et les actions
     radicales.
   m_descriptionFailure: 
-  m_sanity: {fileID: 11400000, guid: 7d9ae2e7dadca5644b04ca898d377ed3, type: 2}
+  m_sanity: {fileID: 11400000, guid: 13af307a3af5d174f815c1da35667365, type: 2}
   m_approach:
   - {fileID: 11400000, guid: 2ecd90e7853e0c54db63783866babd21, type: 2}
+  - {fileID: 11400000, guid: d8aca5115f8917a448b240e9d4acc338, type: 2}
   m_accesConditions:
   - {fileID: 11400000, guid: 8af3c4b127dc8dd44992e9af1e6c5041, type: 2}
   m_sprite: {fileID: 21300000, guid: 200a44462a43c574c8b1b3a9207f31d9, type: 3}
