@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: EX_INVEST_REFUSE
   m_EditorClassIdentifier: 
   m_name: EX pos de Machin
-  m_description: Vous avez corrompu truc
+  m_description: "Suite \xE0 votre \xE9chec avec Kate, les Entrepreneurs vous sont
+    moins favorables."
   m_eventList:
   - {fileID: 11400000, guid: dbe79d49fcb0a854e9c4c55a79b9d48e, type: 2}
   m_conditions: []

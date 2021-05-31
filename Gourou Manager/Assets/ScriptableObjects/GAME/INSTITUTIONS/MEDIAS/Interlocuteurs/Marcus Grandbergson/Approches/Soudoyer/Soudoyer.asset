@@ -19,6 +19,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0497af65b16c37841976650cbda9b738, type: 2}
   m_cooldown: 3
   m_remainingTime: 0
-  m_descriptionApproach: Soudoyer Marcus
-  m_dialogueApproach: 
-  m_resultatApproach: 'Il vous donnera une info sur un entrepreneur '
+  m_descriptionApproach: "Aidez Marcus \xE0 promouvoir la culture pour obtenir des
+    informations."
+  m_dialogueApproach: "\"Les spectacles que votre cha\xEEne organise manquent d'un
+    m\xE9c\xE8ne ; et mon Ami manque d'un collaborateur comme vous.\""
+  m_resultatApproach: "Si vous parvenez \xE0 le soudoyer, Marcus vous donnera une
+    information essentielle sur un des entrepreneurs."

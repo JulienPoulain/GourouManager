@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: Cult_F --
   m_EditorClassIdentifier: 
-  m_name: Tout soudoiement a un prix...
-  m_description: "Vous avez d\xE9pens\xE9 40000 afin de soudoyer Marcus"
+  m_name: Promouvoir la culture a un prix.
+  m_description: "Vous avez d\xE9pens\xE9 40.000 afin de soudoyer Marcus"
   m_initDuration: 1
   m_duration: 1
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: ee7594bf148ef6e47964b7a5bbc80087, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1

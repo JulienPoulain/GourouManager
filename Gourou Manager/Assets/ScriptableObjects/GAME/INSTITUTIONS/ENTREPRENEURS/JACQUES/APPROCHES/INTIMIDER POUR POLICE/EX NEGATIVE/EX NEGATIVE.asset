@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: EX NEGATIVE
   m_EditorClassIdentifier: 
   m_name: Refus du financement
-  m_description: "Le financement est refus\xE9, et l'Entrepreneur compte bien vous
-    faire payer cette tentative d'intimidation gr\xE2ce \xE0 son r\xE9seau influent."
+  m_description: "Le financement est refus\xE9, et Jacques compte bien vous faire
+    payer cette tentative d'intimidation gr\xE2ce \xE0 son r\xE9seau."
   m_eventList:
   - {fileID: 11400000, guid: 38f95681167a18d4686722604ad6dd7b, type: 2}
   m_conditions: []

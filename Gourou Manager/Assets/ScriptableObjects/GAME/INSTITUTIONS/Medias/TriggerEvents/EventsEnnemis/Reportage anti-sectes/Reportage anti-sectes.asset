@@ -13,12 +13,16 @@ MonoBehaviour:
   m_Name: Reportage anti-sectes
   m_EditorClassIdentifier: 
   m_name: Propagande anti-sectes
-  m_description: "Les m\xE9dias lancent un reportage anti-secte sur leur chaine principale"
+  m_description: "Les m\xE9dias lancent un reportage anti-secte sur leur cha\xEEne
+    principale."
   m_initDuration: 1
   m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 7873d8aee99c7c343a8578ae5977baa6, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1
   m_initNbUse: 1
   m_nbUse: 0
   m_cdtActivation:

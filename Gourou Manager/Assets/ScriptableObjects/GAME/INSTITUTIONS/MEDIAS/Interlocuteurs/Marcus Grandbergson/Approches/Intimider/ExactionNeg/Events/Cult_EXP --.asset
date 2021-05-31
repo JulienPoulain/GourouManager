@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: Cult_EXP --
   m_EditorClassIdentifier: 
-  m_name: 'Intimider Marcus : Echec'
-  m_description: L'exposition publique du culte diminue
+  m_name: "Intimidation de Marcus : \xE9chec"
+  m_description: "Vous n'\xEAtes pas parvenu \xE0 intimider Marcus et il r\xE9duit
+    la pr\xE9sence du culte dans les m\xE9dias. Vous perdez de l'exposition publique."
   m_initDuration: 1
   m_duration: 1
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: f87da0e9aa0418a478a8f2cf8c3b983f, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1

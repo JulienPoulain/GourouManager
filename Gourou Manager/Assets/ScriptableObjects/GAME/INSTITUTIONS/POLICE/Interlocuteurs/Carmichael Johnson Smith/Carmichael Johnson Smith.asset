@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Carmichael Johnson Smith
   m_EditorClassIdentifier: 
   m_name: Carmichael Johnson Smith
-  m_description: Chef de la police
+  m_description: "Directeur g\xE9n\xE9ral de la police, exp\xE9riment\xE9 et d\xE9sabus\xE9"
   m_descriptionFailure: 
   m_sanity: {fileID: 0}
   m_approach:
@@ -22,4 +22,3 @@ MonoBehaviour:
   m_accesConditions:
   - {fileID: 11400000, guid: 2b049c422b9acdd46815860f2cdac66e, type: 2}
   m_sprite: {fileID: 21300000, guid: 3c98d4dcdd2203645964c8f29e30eeac, type: 3}
-  m_cameraPlacement: {fileID: 11400000, guid: 8ce3f7eb1408b74499381359da5d2906, type: 2}
