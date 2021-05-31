@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: GVT_DECAY
   m_EditorClassIdentifier: 
   m_name: Corruption
-  m_initValue: 100
-  m_value: 100
+  m_initValue: 0
+  m_value: 50
