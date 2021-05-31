@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 885772bd64b7b1348a7f3133ea46b0b4, type: 3}
   m_Name: POLICE_EXP
   m_EditorClassIdentifier: 
-  m_name: PublicEX
+  m_name: Exposition public
   m_initValue: 50
   m_value: 50

@@ -13,12 +13,16 @@ MonoBehaviour:
   m_Name: "Reportage vantant les m\xE9rites de certaines sectes"
   m_EditorClassIdentifier: 
   m_name: "Reportage vantant les m\xE9rites de certaines sectes"
-  m_description: 'Lancement d''un reportage '
+  m_description: "Lancement d'un reportage parlant des sectes comme un moyen de sortir
+    de ses probl\xE8mes"
   m_initDuration: 3
   m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 3da470589143278449ccf43fa1defc7e, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1
   m_initNbUse: 1
   m_nbUse: 0
   m_cdtActivation:

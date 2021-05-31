@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: Cult_EXP ++
   m_EditorClassIdentifier: 
-  m_name: "Les m\xE9dias ont ecrit un article positif sur le culte"
+  m_name: "Les m\xE9dias ont \xE9crits un article positif sur le culte"
   m_description: "L'exposition publique du culte a augment\xE9"
   m_initDuration: 1
   m_duration: 1
@@ -21,3 +21,4 @@ MonoBehaviour:
   m_impacts:
   - {fileID: 11400000, guid: b5aba30b8487fce41a4c23283049077e, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1

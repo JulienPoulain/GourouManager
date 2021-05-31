@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Vol de fonds
   m_EditorClassIdentifier: 
   m_name: Vol de fonds a la police
-  m_description: Voler une partie deds fonds de la police peut nous enrrichir ainsi
+  m_description: Voler une partie des fonds de la police peut nous enrrichir ainsi
     que les affaiblir
   m_eventList:
   - {fileID: 11400000, guid: c54fd80a4dbcda44898ffcc4162aebf8, type: 2}

@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: Carmichael Johnson Smith
   m_EditorClassIdentifier: 
   m_name: Carmichael Johnson Smith
+ Intégration-Narrato
   m_description: "Directeur g\xE9n\xE9ral de la police, exp\xE9riment\xE9 et d\xE9sabus\xE9"
-  m_descriptionFailure: 
+  m_descriptionFailure: "Echouer dans les n\xE9gociations avec Carmichael rendra
+    la police de plus en plus hostile a votre \xE9gard"
+ main
   m_sanity: {fileID: 0}
   m_approach:
   - {fileID: 11400000, guid: cb6a58d2c1b9cae4299e1e7e1e814eaf, type: 2}
