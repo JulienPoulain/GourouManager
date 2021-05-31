@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Vol de fonds
   m_EditorClassIdentifier: 
   m_name: Vol de fonds a la police
-  m_description: Voler une partie des fonds de la police peut nous enrrichir ainsi
-    que les affaiblir
+  m_description: "En mettant la main sur une partie du financement de la police,
+    vous l'emp\xEAchez de renouveler son mat\xE9riel."
   m_eventList:
   - {fileID: 11400000, guid: c54fd80a4dbcda44898ffcc4162aebf8, type: 2}
   - {fileID: 11400000, guid: 2621c7f3d82a0854791ecf01966975d0, type: 2}

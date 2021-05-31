@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: "Equipe de pr\xE9vention contre les sectes"
   m_EditorClassIdentifier: 
   m_name: "Equipe de pr\xE9vention contre les sectes"
-  m_description: "La Police lance une \xE9quipe de pr\xE9vention contre les secte
-    visant a informer les gens de ses dangers"
+  m_description: "La Police cr\xE9\xE9 une \xE9quipe de pr\xE9vention contre les
+    sectes pour intervenir contre vous dans les coll\xE8ges et lyc\xE9es."
   m_initDuration: 3
   m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 264fa90912bda964fba6017876224598, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1
   m_initNbUse: 1
   m_nbUse: 0
   m_cdtActivation:

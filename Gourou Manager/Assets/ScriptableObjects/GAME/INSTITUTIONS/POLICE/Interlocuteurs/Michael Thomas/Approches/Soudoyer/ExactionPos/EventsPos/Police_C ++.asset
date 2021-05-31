@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: Police_C ++
   m_EditorClassIdentifier: 
-  m_name: 'Soudoiement Michael : Reussite'
-  m_description: 'La corruption de la police augment '
+  m_name: "Soudoiement Michael : R\xE9ussite"
+  m_description: La corruption de la police augmente
   m_initDuration: 1
   m_duration: 1
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 062e0b988b9715b4986dc36c0ca9ae05, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1

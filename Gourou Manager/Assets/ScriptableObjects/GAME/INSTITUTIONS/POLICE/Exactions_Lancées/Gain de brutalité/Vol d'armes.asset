@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Vol d'armes
   m_EditorClassIdentifier: 
   m_name: Vol d'armes de la police
-  m_description: "Voler des armes \xE0 la police"
+  m_description: Vous prenez une patrouille en embuscade pour lui voler ses armes.
   m_eventList:
   - {fileID: 11400000, guid: aa2f5cfa6a4d55a45875a95d14d2f765, type: 2}
   - {fileID: 11400000, guid: 36fb45b65b7042843ae2ca8e89b8ca8b, type: 2}

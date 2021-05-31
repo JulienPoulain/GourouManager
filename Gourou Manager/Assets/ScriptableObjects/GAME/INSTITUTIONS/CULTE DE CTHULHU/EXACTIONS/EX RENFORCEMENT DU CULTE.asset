@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: EX RENFORCEMENT DU CULTE
   m_EditorClassIdentifier: 
   m_name: Renforcement du Culte
-  m_description: Argent contre Adeptes
+  m_description: "Financez des orateurs pour \xE9cumer les rues de la capitale et
+    accro\xEEtre vos rangs."
   m_eventList:
   - {fileID: 11400000, guid: ac7e5ae7d260d7049b3aea4a3d96a4c9, type: 2}
+  m_conditions: []

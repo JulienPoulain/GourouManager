@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Falsifier un article
   m_EditorClassIdentifier: 
   m_name: Saboter un article
-  m_description: "R\xE9duire l'impact sur la pop des m\xE9dias en sabotant plusieurs
-    de leurs articles"
+  m_description: "R\xE9duire la confiance de la population dans les m\xE9dias en
+    falsifiant quelques articles."
   m_eventList:
   - {fileID: 11400000, guid: eca9235dfa4158e448768bf6826fa2db, type: 2}
   - {fileID: 11400000, guid: ce212d11a040f7c4a9e013a4f9b21eef, type: 2}

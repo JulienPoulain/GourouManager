@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: Info +1
   m_EditorClassIdentifier: 
-  m_name: Gain d'info
-  m_description: 'Vous obtenez une info sur un membre du gouvernement '
+  m_name: Gain d'information
+  m_description: 'Vous obtenez une information sur un membre du gouvernement, ce
+    qui vous permettra de l''atteindre '
   m_initDuration: 1
   m_duration: 1
+  m_initDelay: 0
+  m_delay: 0
   m_impacts: []
   m_infoGained:
   - {fileID: 11400000, guid: 10289abc5bae02442bb1004d3f37b75f, type: 2}
+  m_IsDisplayed: 1

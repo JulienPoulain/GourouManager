@@ -12,14 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b647af1624fef43bcaf750a89ff899, type: 3}
   m_Name: Propagande anti-police
   m_EditorClassIdentifier: 
-  m_name: Propagande anti-police
-  m_description: "Les m\xE9dias lancent des article d\xE9noncant les erreurs et violences
-    de la police "
+  m_name: Article anti-police
+  m_description: "Les m\xE9dias \xE9ditent une \xE9dition sp\xE9ciale consacr\xE9e
+    aux violences polici\xE8res"
   m_initDuration: 3
   m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 39e82ca1a8b412a43aabe8b96b671c82, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1
   m_initNbUse: 1
   m_nbUse: 0
   m_cdtActivation:

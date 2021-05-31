@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Propagande anti-sectes
   m_description: "Les m\xE9dias lancent un reportage anti-secte sur leur cha\xEEne
-    principale."
+    principale pour diminuer votre influence.."
   m_initDuration: 1
   m_duration: 0
   m_initDelay: 0

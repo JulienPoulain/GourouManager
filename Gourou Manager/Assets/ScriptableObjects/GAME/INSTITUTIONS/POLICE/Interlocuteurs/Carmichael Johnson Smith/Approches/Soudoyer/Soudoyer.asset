@@ -18,7 +18,9 @@ MonoBehaviour:
   m_cdtSuccess:
   - {fileID: 11400000, guid: 987a416e336e77043bcf2beb8bbbf902, type: 2}
   m_cooldown: 5
+  m_remainingTime: 0
   m_descriptionApproach: Soudoyer Carmichael
-  m_DialogueApproach: 
-  m_resultatApproach: Si vous parvenez a soudoyer Carmichael vous obtiendrez vous
-    pourrez faire monter la corruption de l'institution
+  m_dialogueApproach: "\"Cette \xEEle est une gigantesque fosse \xE0 purin, Carmichael.
+    Mon Ami et moi pouvons vous sortir de l\xE0.\""
+  m_resultatApproach: Si vous parvenez a soudoyer Carmichael vous pourrez faire monter
+    la corruption de la Police

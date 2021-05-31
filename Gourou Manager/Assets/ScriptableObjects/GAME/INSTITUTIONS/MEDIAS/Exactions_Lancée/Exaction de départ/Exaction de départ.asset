@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "Exaction de d\xE9part"
   m_EditorClassIdentifier: 
   m_name: "Corrompre les m\xE9dias "
-  m_description: "Choisir les m\xE9dias comme institution corrompue"
+  m_description: "Vous commencez \xE0 corrompre les m\xE9dias."
   m_eventList:
   - {fileID: 11400000, guid: b1ef8232fa9613b4abb2868d48b138f6, type: 2}
   m_conditions:

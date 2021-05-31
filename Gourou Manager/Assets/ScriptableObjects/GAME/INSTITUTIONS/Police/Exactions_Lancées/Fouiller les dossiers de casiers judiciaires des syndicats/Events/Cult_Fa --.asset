@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cult_Fa --
   m_EditorClassIdentifier: 
   m_name: Fouiller les casiers judiciaires des syndicats
-  m_description: "Vous avez utilis\xE9 deux point de fanatisme "
+  m_description: Vous avez investi deux points de fanatiques
   m_initDuration: 1
   m_duration: 0
   m_initDelay: 0

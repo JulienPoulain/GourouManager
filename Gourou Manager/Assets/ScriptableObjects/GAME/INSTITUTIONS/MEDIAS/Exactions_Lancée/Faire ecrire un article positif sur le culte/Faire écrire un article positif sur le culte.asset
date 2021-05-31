@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: "Faire \xE9crire un article positif sur le culte"
   m_EditorClassIdentifier: 
   m_name: "Faire \xE9crire un article positif sur le culte"
-  m_description: Gagner de l'exposition publique en propageant un article vantant
-    le culte
+  m_description: Gagner de l'exposition publique en propageant un article favorable
+    au culte
   m_eventList:
   - {fileID: 11400000, guid: dab474088cd3c8848ae44442e8137650, type: 2}
   m_conditions:

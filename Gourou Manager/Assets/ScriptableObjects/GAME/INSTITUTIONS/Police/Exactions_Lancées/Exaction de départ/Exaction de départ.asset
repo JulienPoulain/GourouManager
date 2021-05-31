@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "Exaction de d\xE9part"
   m_EditorClassIdentifier: 
   m_name: "Exaction de d\xE9part"
-  m_description: "Prendre la police comme institution corrompue de d\xE9part"
+  m_description: "Vous commencez \xE0 corrompre la Police."
   m_eventList:
   - {fileID: 11400000, guid: ed075f217fa1dcd4ab6a46f5221fb117, type: 2}
   m_conditions:

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Creation du poste d'Happiness Cthulhu Manager
   m_description: "Les entreprises cr\xE9ent un nouveau poste : Cthulhu Happiness
-    Manager"
+    Manager, ce qui am\xE9liore votre exposition publique."
   m_eventList:
   - {fileID: 11400000, guid: 7d025f36a7051f041acf7c5b345c7a58, type: 2}
   m_conditions:

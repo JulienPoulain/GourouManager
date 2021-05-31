@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Fouiller les casiers judiciaires des syndicats
   m_EditorClassIdentifier: 
   m_name: Fouiller les casiers judiciaires des syndicats
-  m_description: "Vous pourrez peut \xEAtre y trouver une information importante"
+  m_description: "En infiltrant la police, vous pourriez avoir acc\xE8s \xE0 des
+    informations confidentielles et compromettantes."
   m_eventList:
   - {fileID: 11400000, guid: 975934d4a77f7a94dada8cc50cb2524a, type: 2}
   - {fileID: 11400000, guid: 2351d331794bd9e4db3791efde25214e, type: 2}

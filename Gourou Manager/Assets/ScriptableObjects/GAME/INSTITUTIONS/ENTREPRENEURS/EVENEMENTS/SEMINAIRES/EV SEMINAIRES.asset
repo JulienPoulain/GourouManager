@@ -12,17 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b647af1624fef43bcaf750a89ff899, type: 3}
   m_Name: EV SEMINAIRES
   m_EditorClassIdentifier: 
-  m_name: SEMINAIRE ANTI CULTE
-  m_description: "Les patrons organisent des week end et conf\xE9rences \xE0 th\xE8mes
-    pour combattre Cthulhu dans les entreprises"
+  m_name: "S\xE9minaire anti-culte de Cthulhu"
+  m_description: "Les patrons organisent des week end de conf\xE9rences pour lutter
+    contre la propagation du Culte dans leurs entreprises."
   m_initDuration: 3
-  m_duration: 0
+  m_duration: 3
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 61dadfdc2732e4c4290046001280b99d, type: 2}
   - {fileID: 11400000, guid: 623948cd6cc02f346b1debd6c8c9027a, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1
   m_initNbUse: -1
-  m_nbUse: 0
+  m_nbUse: -1
   m_cdtActivation:
   - {fileID: 11400000, guid: f049916448607e849a981f3b939e04ae, type: 2}
   - {fileID: 11400000, guid: c05585db4e334334e9df16d5774522ff, type: 2}
