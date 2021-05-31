@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Carmichael Johnson Smith
   m_description: Chef de la police
-  m_descriptionFailure: 
+  m_descriptionFailure: "Echouer dans les n\xE9gociations avec Carmichael rendra
+    la police de plus en plus hostile a votre \xE9gard"
   m_sanity: {fileID: 0}
   m_approach:
   - {fileID: 11400000, guid: cb6a58d2c1b9cae4299e1e7e1e814eaf, type: 2}
@@ -22,4 +23,3 @@ MonoBehaviour:
   m_accesConditions:
   - {fileID: 11400000, guid: 2b049c422b9acdd46815860f2cdac66e, type: 2}
   m_sprite: {fileID: 21300000, guid: 3c98d4dcdd2203645964c8f29e30eeac, type: 3}
-  m_cameraPlacement: {fileID: 11400000, guid: 8ce3f7eb1408b74499381359da5d2906, type: 2}

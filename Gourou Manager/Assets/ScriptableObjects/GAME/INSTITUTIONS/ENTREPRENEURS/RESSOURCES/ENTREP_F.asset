@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 885772bd64b7b1348a7f3133ea46b0b4, type: 3}
   m_Name: ENTREP_F
   m_EditorClassIdentifier: 
-  m_name: 
+  m_name: Fonds
   m_initValue: 600000
-  m_value: 0
+  m_value: 600000

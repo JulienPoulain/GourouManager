@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Corruption de la police
   m_EditorClassIdentifier: 
   m_name: Corruption de la police
-  m_description: "Corromp l\xE9gerement la police sur 3 tours"
+  m_description: "Corrompt l\xE9gerement la police sur 3 tours"
   m_eventList:
   - {fileID: 11400000, guid: e30eaa3dc3b2e544c9368d72fbc260ce, type: 2}
   m_conditions: []
