@@ -19,7 +19,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 931346b5e4f06b242a75dad44baef0a4, type: 2}
   - {fileID: 11400000, guid: b83c4ff6da2c9c74a95ae438c3b291b6, type: 2}
   m_cooldown: 8
+  m_remainingTime: 0
   m_descriptionApproach: Vous demandez un financement massif du Culte
-  m_DialogueApproach: 
-  m_resultatApproach: "Si vous r\xE9ussisez, vous obtiendrais des sommes consid\xE9rables
+  m_dialogueApproach: "\"Les temps sont durs et les cieux se couvrent de mauvais
+    pr\xE9sages. J'ai peur que mes projets ne passent pas l'hiver...\""
+  m_resultatApproach: "Si vous r\xE9ussisez, vous obtiendrez une somme consid\xE9rable
     pendant 4 tours."

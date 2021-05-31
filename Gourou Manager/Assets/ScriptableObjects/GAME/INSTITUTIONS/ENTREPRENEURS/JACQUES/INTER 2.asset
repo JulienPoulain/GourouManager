@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: INTER 2
   m_EditorClassIdentifier: 
   m_name: Jacques
-  m_description: "Pr\xE9sident de l'association des Dirigeants d'Entreprises"
+  m_description: "Patron des grandes surfaces \"Bel Oiseau\", traditionnaliste attach\xE9
+    \xE0 sa famille."
   m_descriptionFailure: 
   m_sanity: {fileID: 0}
   m_approach:

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EX FINANCEMENT POLICE
   m_EditorClassIdentifier: 
   m_name: FINANCEMENT DE LA POLICE
-  m_description: "La Police re\xE7oit des sommes massives"
+  m_description: "La police re\xE7oit une tr\xE8s grande quantit\xE9 d'argent."
   m_eventList:
   - {fileID: 11400000, guid: 391083bd3b3ab564e9c9e1832f2695c0, type: 2}
   m_conditions: []

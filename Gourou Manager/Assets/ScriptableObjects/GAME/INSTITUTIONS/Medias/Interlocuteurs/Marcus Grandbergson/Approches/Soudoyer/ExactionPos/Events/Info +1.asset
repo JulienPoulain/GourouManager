@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: Info +1
   m_EditorClassIdentifier: 
-  m_name: 'Soudoiement Marcus : Reussite'
-  m_description: Vous obtenez une info sur un entrepreneur
+  m_name: "Soudoiement Marcus : r\xE9ussite"
+  m_description: "Vous avez maintenant acc\xE8s \xE0 un entrepreneur."
   m_initDuration: 1
   m_duration: 1
   m_initDelay: 0

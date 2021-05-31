@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: "Message de pr\xE9vention dans le m\xE9tro"
   m_description: "Les m\xE9dias installent des affiches de pr\xE9vention anti-sectes
-    dans le m\xE9tro "
+    dans le m\xE9tro."
   m_initDuration: 1
   m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 8ea0d8d9c33b7004d89e00fe4f6fb931, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1
   m_initNbUse: 1
   m_nbUse: 0
   m_cdtActivation:

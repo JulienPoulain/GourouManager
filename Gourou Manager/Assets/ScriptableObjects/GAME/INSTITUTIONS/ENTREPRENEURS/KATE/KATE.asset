@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: KATE
   m_EditorClassIdentifier: 
   m_name: Kate
-  m_description: Premier interlocuteur accessible chez les Entrepreneurs
+  m_description: "Riche actionnaire, investisseur t\xE9m\xE9raire, mordue d'adr\xE9naline."
   m_descriptionFailure: 
   m_sanity: {fileID: 0}
   m_approach:

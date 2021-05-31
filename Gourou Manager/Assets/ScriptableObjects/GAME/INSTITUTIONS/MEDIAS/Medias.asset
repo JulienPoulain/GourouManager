@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Medias
   m_EditorClassIdentifier: 
   m_name: Medias
-  m_description: Les groupes de presse mainstream
+  m_description: "Le groupe \xE9ditorial \"Una\", qui d\xE9tient toute la presse
+    \xE9crite et radiovisuelle de l'\xEEle."
   m_funds: {fileID: 11400000, guid: ef56b524d9546714dbd69b287da8a1ae, type: 2}
   m_members: {fileID: 0}
   m_fanatics: {fileID: 0}

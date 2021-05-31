@@ -21,6 +21,7 @@ MonoBehaviour:
   m_cooldown: 5
   m_remainingTime: 0
   m_descriptionApproach: Intimider Marcus
-  m_dialogueApproach: 
-  m_resultatApproach: "Reussir a intimider Marcus peut vous faire ganer \xE9norm\xE9ment
-    en popularit\xE9 aupr\xE9s du peuple "
+  m_dialogueApproach: "\"Ob\xE9issez \xE0 Mon Ami et \xE0 moi, ou votre chroniqueur
+    aura \xE0 d\xE9plorer votre disparition.\""
+  m_resultatApproach: "Reussir a intimider Marcus le contraindra \xE0 donner une
+    meilleure image de vous aupr\xE8s de la population."

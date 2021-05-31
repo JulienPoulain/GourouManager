@@ -18,7 +18,9 @@ MonoBehaviour:
   m_cdtSuccess:
   - {fileID: 11400000, guid: c4c32c3f5c2a8684dba7298d2dbfecd7, type: 2}
   m_cooldown: 10
-  m_descriptionApproach: "Vous Intimidez l'Entrepreneur pour obtenir de l'argent
-    pour l'Institution souhait\xE9e"
-  m_DialogueApproach: 
-  m_resultatApproach: "Vous obteneez un financement massif pour l'Institution souhait\xE9e."
+  m_remainingTime: 0
+  m_descriptionApproach: Vous intimidez Jacques Noilli pour obtenir de l'argent pour
+    la police.
+  m_dialogueApproach: "\"Le Grand Ancien serait ravi de se d\xE9barrasser de vous
+    ; vous feriez mieux de vous rendre utile pour lui.\""
+  m_resultatApproach: Vous obtenez un financement massif pour la police.
