@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class GameManager : Singleton<GameManager>, IInitializable
 {
@@ -12,10 +10,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
     [SerializeField] List<InstitutionSO> m_institutions = new List<InstitutionSO>();
     private InstitutionScript m_mainInstitutionScript;
 
-    //[SerializeField] public ScriptableObject[] m_Institutions;
-    //[SerializeField] public ScriptableObject[] m_Crise;
-
-    [SerializeField] public RoundManager m_roundManager;
+    //[SerializeField] public RoundManager m_roundManager;
     [SerializeField] public InterfaceManager m_interfaceManager;
     
     [SerializeField] public GameObject m_camera;
@@ -48,9 +43,26 @@ public class GameManager : Singleton<GameManager>, IInitializable
         set { m_playerHasExecuteAction = value;}
     }
 
+    private void Start()
+    {
+        //m_mainInstitution = m_mainInstitutionObject.GetComponent<InterfaceInstitution>().m_Institution;
+
+        foreach (GameObject Institution in m_institutionsObjectList)
+        {
+            m_institutions.Add(Institution.GetComponent<InstitutionScript>().m_Institution);
+        }
+
+        m_mainInstitutionScript = m_mainInstitutionObject.GetComponent<InstitutionScript>();
+        m_mainInstitution = m_mainInstitutionScript.m_Institution; 
+
+        //m_cameraScript = m_camera.GetComponent<CameraManager>();
+
+        Initialize();
+    }
+    
     public void Initialize()
     {
-        m_turn = 0;
+        m_turn = 1;
         
         foreach (InstitutionSO institution in m_institutions)
             institution.Initialize();
@@ -68,24 +80,6 @@ public class GameManager : Singleton<GameManager>, IInitializable
         else
             foreach (ConditionSO condition in m_cdtDefeat)
                 condition.Initialize();
-            
-    }
-    
-    private void Start()
-    {
-        //m_mainInstitution = m_mainInstitutionObject.GetComponent<InterfaceInstitution>().m_Institution;
-
-        foreach (GameObject Institution in m_institutionsObjectList)
-        {
-            m_institutions.Add(Institution.GetComponent<InstitutionScript>().m_Institution);
-        }
-
-        m_mainInstitutionScript = m_mainInstitutionObject.GetComponent<InstitutionScript>();
-        m_mainInstitution = m_mainInstitutionScript.m_Institution; 
-
-        //m_cameraScript = m_camera.GetComponent<CameraManager>();
-
-        Initialize();
     }
 
     public void EndTurn()
