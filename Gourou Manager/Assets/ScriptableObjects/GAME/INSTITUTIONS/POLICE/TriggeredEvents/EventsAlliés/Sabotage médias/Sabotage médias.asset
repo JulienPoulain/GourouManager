@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: "Sabotage m\xE9dias"
   m_description: "La Police envoie des unit\xE9s saboter discretement la propagande
-    m\xE9diatique"
+    m\xE9diatique du gouvernement"
   m_initDuration: 3
   m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 7be7f52242a02a04ca34690c77db48f1, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1
   m_initNbUse: 1
   m_nbUse: 0
   m_cdtActivation:

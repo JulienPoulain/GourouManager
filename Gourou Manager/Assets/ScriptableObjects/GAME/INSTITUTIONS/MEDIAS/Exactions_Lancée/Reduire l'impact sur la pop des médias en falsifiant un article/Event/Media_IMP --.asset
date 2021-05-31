@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Media_IMP --
   m_EditorClassIdentifier: 
   m_name: "Vos fanatiques ont sabot\xE9s un article des m\xE9dias"
-  m_description: "L'ompact sur la population des m\xE9dias diminue sur 3 tours"
+  m_description: "L'impact sur la population des m\xE9dias diminue sur 3 tours"
   m_initDuration: 3
   m_duration: 3
   m_initDelay: 0
@@ -21,3 +21,4 @@ MonoBehaviour:
   m_impacts:
   - {fileID: 11400000, guid: 823bfbb36e835494f9309caf48d5d5b5, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1

@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Police_C ++
   m_EditorClassIdentifier: 
   m_name: Corruption de la police
-  m_description: Vous avez choisi de corrompre la police elle vous aidera pour vos
-    projets
+  m_description: "La corruption de la police a l\xE9g\xE8rement augment\xE9"
   m_initDuration: 3
   m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: e2421ce642d88cc43ad8b467eb0fa289, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 0

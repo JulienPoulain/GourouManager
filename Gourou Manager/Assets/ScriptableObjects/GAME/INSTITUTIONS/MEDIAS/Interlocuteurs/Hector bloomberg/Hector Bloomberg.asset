@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Hector Bloomberg
   m_description: "Pigiste ind\xE9pendant"
-  m_descriptionFailure: description random failure
+  m_descriptionFailure: "Echouer les n\xE9gociations avec Hector le poussera a parler
+    n\xE9gativement du culte dans ses articles"
   m_sanity: {fileID: 0}
   m_approach:
   - {fileID: 11400000, guid: ce60528cce40d254a8cd252603d955df, type: 2}

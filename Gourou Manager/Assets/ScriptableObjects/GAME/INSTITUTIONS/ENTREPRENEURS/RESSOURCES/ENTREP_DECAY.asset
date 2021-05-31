@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a0977cda155f549a226bea8b00e089, type: 3}
   m_Name: ENTREP_DECAY
   m_EditorClassIdentifier: 
-  m_name: 
+  m_name: Corruption
   m_initValue: 50
-  m_value: 0
+  m_value: 50

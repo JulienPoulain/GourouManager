@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Gain d'info sur un membre du syndicat
   m_description: "Un de vos collaborateurs de la police a fouill\xE9 les casiers
-    judiciaires des syndicats et trouv\xE9 une information"
+    judiciaires des syndicats et trouv\xE9 une information qui peut vous \xEAtre
+    utile sur l'un d'entre eux"
   m_initDuration: 1
   m_duration: 0
   m_initDelay: 0
