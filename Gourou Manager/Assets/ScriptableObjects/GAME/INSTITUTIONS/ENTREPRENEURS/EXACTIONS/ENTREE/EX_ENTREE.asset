@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: EX_ENTREE
   m_EditorClassIdentifier: 
   m_name: 'Convertir quelques investisseurs '
-  m_description: Premiere exaction dispo chez les entrepreneurs
+  m_description: "Vous acqu\xE9rez le soutien de quelques entrepreneurs et am\xE9liorez
+    votre exposition publique en convainquant quelques gros bonnets de la finance
+    de vous rejoindre"
   m_eventList:
   - {fileID: 11400000, guid: 4527f4239b49e974da4cf72a37523b2b, type: 2}
   m_conditions: []

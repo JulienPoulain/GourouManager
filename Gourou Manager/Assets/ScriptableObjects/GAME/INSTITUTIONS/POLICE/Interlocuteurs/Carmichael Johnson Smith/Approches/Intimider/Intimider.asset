@@ -19,7 +19,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2058a50d44087e14ba5cdfc97ec05b29, type: 2}
   - {fileID: 11400000, guid: 24a76af6003d47c408517a1237d2f497, type: 2}
   m_cooldown: -1
-  m_descriptionApproach: Intimider Carmichael Jhonson
-  m_DialogueApproach: 
+  m_remainingTime: 0
+  m_descriptionApproach: "Intimider Carmichael Johonson gr\xE2ce \xE0 vos informations"
+  m_dialogueApproach: "\"L'exp\xE9rience devrait vous avoir appris \xE0 reconna\xEEtre
+    ceux qu'il faut craindre ; sinon, je m'en chargerai.\""
   m_resultatApproach: "Si vous parvenez a intimider Carmichael vous pourrez peut
-    \xEAtre obtenir une information importante"
+    \xEAtre obtenir une information importante sur un autre interlocuteur"

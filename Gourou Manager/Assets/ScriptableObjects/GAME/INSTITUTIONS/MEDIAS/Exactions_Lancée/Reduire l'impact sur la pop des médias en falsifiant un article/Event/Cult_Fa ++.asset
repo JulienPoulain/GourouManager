@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: Cult_Fa ++
   m_EditorClassIdentifier: 
-  m_name: "Vos fanatiques ont sabot\xE9s un article des m\xE9dias"
-  m_description: "Cela vous a co\xFBt\xE9 2 points de fanatismes"
+  m_name: "Vos fanatiques ont sabot\xE9 un article des m\xE9dias"
+  m_description: Vous avez investi deux points de fanatiques
   m_initDuration: 1
   m_duration: 1
   m_initDelay: 0

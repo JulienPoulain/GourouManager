@@ -12,14 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b647af1624fef43bcaf750a89ff899, type: 3}
   m_Name: Renforcement des rues
   m_EditorClassIdentifier: 
-  m_name: Renforcement des rues
+  m_name: Renforcement des patrouilles
   m_description: "La police mobilise des patrouilles afin de surveiller les rues
-    et emp\xEAcher la propagation du culte"
+    et emp\xEAcher vos orateurs de propager le culte."
   m_initDuration: 3
   m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 7f55b5a3eef53e04baed0a6e7f38f856, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1
   m_initNbUse: 1
   m_nbUse: 0
   m_cdtActivation:

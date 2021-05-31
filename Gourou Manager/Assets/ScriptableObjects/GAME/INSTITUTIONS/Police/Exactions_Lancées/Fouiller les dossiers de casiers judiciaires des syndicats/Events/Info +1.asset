@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Info +1
   m_EditorClassIdentifier: 
   m_name: Fouiller les casiers judiciaires des syndicats
-  m_description: "Vous obtenez une information sur un membre haut plac\xE9 des syndicats"
+  m_description: "Vous obtenez une information sur un membre haut plac\xE9 des syndicats,
+    vous pourrez sans doute l'atteindre ainsi."
   m_initDuration: 1
   m_duration: 0
   m_initDelay: 0

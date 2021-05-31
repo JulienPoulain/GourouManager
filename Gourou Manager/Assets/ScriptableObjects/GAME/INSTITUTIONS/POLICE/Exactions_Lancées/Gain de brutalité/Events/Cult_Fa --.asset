@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cult_Fa --
   m_EditorClassIdentifier: 
   m_name: 'Vol d''armes '
-  m_description: "vous avez d\xE9pens\xE9 1 fanatique"
+  m_description: Vous avez investi un point de fanatiques
   m_initDuration: 1
   m_duration: 1
   m_initDelay: 0

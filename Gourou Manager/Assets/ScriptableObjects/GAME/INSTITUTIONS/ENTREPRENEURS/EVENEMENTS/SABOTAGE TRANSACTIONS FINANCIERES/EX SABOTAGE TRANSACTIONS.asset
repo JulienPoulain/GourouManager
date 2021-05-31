@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: EX SABOTAGE TRANSACTIONS
   m_EditorClassIdentifier: 
-  m_name: SABOTAGE DES TRANSACTIONS FINANCIERES
-  m_description: "Les Entrepreneurs contactent leur relais dans les banques et sabotent
-    les transactions financi\xE8res appartenant au Culte."
+  m_name: "Sabotage des transactions financi\xE8res"
+  m_description: Les riches entrepreneurs font pression sur les banques pour saboter
+    les comptes et les transactions du Culte.
   m_eventList:
-  - {fileID: 11400000, guid: 9edfed45db792a2418bf845c912f9a36, type: 2}
+  - {fileID: 0}
   m_conditions:
   - {fileID: 11400000, guid: 1491bda2d026d384daf3d5bef9b3bf75, type: 2}
   - {fileID: 11400000, guid: 4883bcdc173c127498220d37d2770f37, type: 2}

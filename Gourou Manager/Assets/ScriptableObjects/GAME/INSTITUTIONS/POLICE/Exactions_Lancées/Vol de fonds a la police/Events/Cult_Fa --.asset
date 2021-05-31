@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cult_Fa --
   m_EditorClassIdentifier: 
   m_name: 'Vol de fonds '
-  m_description: "Vous avez d\xE9pens\xE9 2 fanatiques"
+  m_description: Vous avez investi deux points de fanatiques
   m_initDuration: 1
   m_duration: 1
   m_initDelay: 0

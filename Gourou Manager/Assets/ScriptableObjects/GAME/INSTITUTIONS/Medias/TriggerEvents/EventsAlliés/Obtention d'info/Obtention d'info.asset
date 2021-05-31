@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b647af1624fef43bcaf750a89ff899, type: 3}
   m_Name: Obtention d'info
   m_EditorClassIdentifier: 
-  m_name: Obtention d'info
-  m_description: "Une personne haut plac\xE9 dans les m\xE9dias vus fait part d'une
-    information importante sur un entrepreneur"
+  m_name: Obtention d'informations
+  m_description: "Une personne haut plac\xE9e dans les m\xE9dias vous fait part d'une
+    information importante sur un entrepreneur, vous ouvrant d'autres possibilit\xE9s."
   m_initDuration: 1
   m_duration: 0
   m_initDelay: 0

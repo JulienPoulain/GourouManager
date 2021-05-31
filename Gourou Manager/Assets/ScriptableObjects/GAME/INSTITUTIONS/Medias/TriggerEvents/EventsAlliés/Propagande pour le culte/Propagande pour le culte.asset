@@ -13,12 +13,16 @@ MonoBehaviour:
   m_Name: Propagande pour le culte
   m_EditorClassIdentifier: 
   m_name: Propagande pour le culte
-  m_description: "Les m\xE9dias affichent des message de propagande pour le culte"
+  m_description: "Les m\xE9dias affichent des messages favorables au culte, enjoignant
+    leurs lecteurs \xE0 vous rejoindre."
   m_initDuration: 3
   m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 9099d5f22e7246649bebd8bd870e0cb8, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1
   m_initNbUse: 1
   m_nbUse: 0
   m_cdtActivation:

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: Police_EXP --
   m_EditorClassIdentifier: 
-  m_name: "Les m\xE9dias ont \xE9crit un article n\xE9gatif sur la police"
-  m_description: "L'exposition public de la police a diminu\xE9"
+  m_name: "Les m\xE9dias ont \xE9crit un article n\xE9gatif sur la police."
+  m_description: "L'exposition publique de la police a diminu\xE9."
   m_initDuration: 1
   m_duration: 1
   m_initDelay: 0
@@ -21,3 +21,4 @@ MonoBehaviour:
   m_impacts:
   - {fileID: 11400000, guid: d4f269c1e16ef3441a6f9c0294b29375, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1

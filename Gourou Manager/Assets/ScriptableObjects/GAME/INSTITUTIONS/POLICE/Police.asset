@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Police
   m_EditorClassIdentifier: 
   m_name: Police
-  m_description: "Le monopole de la violence l\xE9gitime de l'\xC9tat"
+  m_description: "Bras arm\xE9 de la justice de l'\xEEle."
   m_funds: {fileID: 11400000, guid: 5d7d34600bd47db4baac925a506195ce, type: 2}
   m_members: {fileID: 0}
   m_fanatics: {fileID: 0}
@@ -43,6 +43,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 14d565a2c286b394cbd0b36e13e0c6e3, type: 2}
   - {fileID: 11400000, guid: 53e02dd87a6934d4781ce001e935a6e7, type: 2}
   - {fileID: 11400000, guid: 8e2125ade8cf69040aea59ec23831726, type: 2}
- Review_Media_Police
-  m_option: 2
- main

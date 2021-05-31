@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: EV_ENTREE
   m_EditorClassIdentifier: 
   m_name: Convertir quelques investisseurs
-  m_description: Monte la corruption des entrepreneurs et un peu l'exposition publique
-    du Culte
+  m_description: "Vous acqu\xE9rez le soutien de quelques entrepreneurs et am\xE9liorez
+    votre exposition publique en convainquant quelques gros bonnets de la finance
+    de vous rejoindre"
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: c8fbb49c32769524296d2fe684e12fec, type: 2}
   - {fileID: 11400000, guid: e6b136b5e12e7ab4e806885738c3e386, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1
