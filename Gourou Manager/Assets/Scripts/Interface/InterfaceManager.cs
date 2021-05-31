@@ -30,6 +30,8 @@ public class InterfaceManager : MonoBehaviour
     [SerializeField] GameObject m_Defeat;
     [SerializeField] GameObject m_EndTurn;
 
+    public Image m_nextTurnButtonImage; // utiliser dans GameManager pour changer la couleur du boutton lorsque le joueur fait une action
+
     TextInstitutionLight m_institutionLightScript;
     TextInstitutionHeavy m_institutionHeavyScript;
     TextCrisis m_crisisScript;
@@ -110,6 +112,8 @@ public class InterfaceManager : MonoBehaviour
         m_interlocutorScript = m_interlocutorObject.GetComponent<TextInterlocutor>();
         m_approcheScript = m_Approche.GetComponent<TextApprocheMain>();
         m_endTurnScript = m_EndTurn.GetComponent<TextEndTurn>();
+
+        m_nextTurnButtonImage = m_NextTurnButton.GetComponent<Image>();
     }
     
     // Change la camera actuelle avec celle de l'institution cibée
@@ -195,6 +199,7 @@ public class InterfaceManager : MonoBehaviour
 
     public void DisplayApproche(InterlocutorSO p_interlocutor) // appeler depuis textInterlocutor
     {
+        m_NextTurnButton.SetActive(false);
         m_Approche.SetActive(true);
         // m_ApprocheIsDisplay = true;
         m_approcheScript.Display(p_interlocutor);
@@ -258,6 +263,7 @@ public class InterfaceManager : MonoBehaviour
     
     public void DisallowApproche()
     {
+        m_NextTurnButton.SetActive(true);
         m_Approche.SetActive(false);
         m_ApprocheIsDisplay = false;
     }
@@ -305,12 +311,44 @@ public class InterfaceManager : MonoBehaviour
         }
         return position;
     }
-
-    Vector3 firstButtonPos(InstitutionSO p_data, float p_buttonWidth, float p_buttonHeight)
+    
+    // lorsque le joueur fait une action, le boutton de fon de tour s'agrandis et se rétrécis pour montrer qu'on peut passer au tour suivant
+    public IEnumerator ChangeNextTurnButtonSizeAnimation()
     {
-        float startX = (m_canvasSize.rect.width /2)  - ((p_data.m_interlocutorList.Count * p_buttonWidth)/2 * 0.25f);
-        float startY = m_canvasSize.rect.height - (p_buttonHeight * 0.25f); 
+        float time = 1f;
+        float duration = 1.5f;
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+            m_NextTurnButton.transform.localScale += Vector3.one * Mathf.Log(time) * Time.deltaTime;
+            yield return null;
+        }
+        time = 1f;
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+            m_NextTurnButton.transform.localScale -= Vector3.one * Mathf.Log(time) * Time.deltaTime;
+            yield return null;
+        }
 
-        return new Vector3(startX, startY, 0);
+        while (GameManager.Instance.PlayerHasExecuteAction)
+        {
+            time = 1f;
+            while (time < duration)
+            {
+                time += Time.deltaTime;
+                m_NextTurnButton.transform.localScale += Vector3.one / 3 * Mathf.Log(time) * Time.deltaTime;
+                yield return null;
+            }
+            time = 1f;
+            while (time < duration)
+            {
+                time += Time.deltaTime;
+                m_NextTurnButton.transform.localScale -= Vector3.one / 3 * Mathf.Log(time) * Time.deltaTime;
+                yield return null;
+            }
+        }
+        
     }
+    
 }

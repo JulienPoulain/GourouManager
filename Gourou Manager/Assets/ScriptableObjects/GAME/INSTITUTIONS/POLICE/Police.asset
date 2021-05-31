@@ -25,7 +25,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7b2f6f1395b041e42b68a82f2ae23fd9, type: 2}
   - {fileID: 11400000, guid: ba95949992ba0d94fba71bc8210b4032, type: 2}
   m_exactionList:
-  - {fileID: 11400000, guid: 784bf7f6601fb48459b020a5e9326c4d, type: 2}
   - {fileID: 11400000, guid: d769de198bced944ab5cca51062d6c07, type: 2}
   - {fileID: 11400000, guid: c0a7c05a660b35d4fad7491218dee6c0, type: 2}
   - {fileID: 11400000, guid: f0915f85d8b4936429dd4b07851f286e, type: 2}
@@ -43,6 +42,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 14d565a2c286b394cbd0b36e13e0c6e3, type: 2}
   - {fileID: 11400000, guid: 53e02dd87a6934d4781ce001e935a6e7, type: 2}
   - {fileID: 11400000, guid: 8e2125ade8cf69040aea59ec23831726, type: 2}
- Review_Media_Police
-  m_option: 2
- main

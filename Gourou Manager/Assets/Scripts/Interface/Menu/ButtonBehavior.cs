@@ -42,7 +42,6 @@ public class ButtonBehavior : MonoBehaviour, IPointerDownHandler, IPointerExitHa
         {
             transform.localScale += Vector3.one * Mathf.Log(time) * Time.deltaTime * 3;
             time += Time.deltaTime;
-            Debug.Log("JE RENTRE DEDANS" + time);
             yield return null;
         }
     }
@@ -55,7 +54,6 @@ public class ButtonBehavior : MonoBehaviour, IPointerDownHandler, IPointerExitHa
             time += Time.deltaTime;
             transform.localScale -= Vector3.one * Mathf.Log(time) * Time.deltaTime * 3;
             yield return null;
-            Debug.Log("JE SORS DE LA" + time);
         }
     }
 }

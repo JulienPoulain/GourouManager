@@ -45,7 +45,21 @@ public class GameManager : Singleton<GameManager>, IInitializable
     public bool PlayerHasExecuteAction
     {
         get { return m_playerHasExecuteAction; }
-        set { m_playerHasExecuteAction = value;}
+        set
+        {
+            m_playerHasExecuteAction = value;
+            
+            // feed back sur le boutton de fin de tour (changement de couleur, et animation)
+            if (value == true)
+            {
+                m_interfaceManager.m_nextTurnButtonImage.color = Color.red;
+                StartCoroutine(m_interfaceManager.ChangeNextTurnButtonSizeAnimation());
+            }
+            else
+            {
+                m_interfaceManager.m_nextTurnButtonImage.color = Color.white;
+            }
+        }
     }
 
     public void Initialize()
@@ -92,7 +106,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
     {
         Debug.Log("FIN DU TOUR");
 
-        m_playerHasExecuteAction = false;
+        PlayerHasExecuteAction = false;
 
         RoundManager.Instance.NextTurn();
 

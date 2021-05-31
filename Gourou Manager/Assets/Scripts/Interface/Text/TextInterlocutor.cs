@@ -7,7 +7,7 @@ using TMPro;
 public class TextInterlocutor : MonoBehaviour
 {
     [SerializeField] private GameObject m_descriptionOb;
-    [SerializeField] private List<GameObject> m_accessibilityOb;
+    [SerializeField] private List<GameObject> m_accessibilityOb = new List<GameObject>();
     [SerializeField] private List<GameObject> m_conditionOb = new List<GameObject>();
     [SerializeField] private GameObject m_menaceOb;
     [SerializeField] private GameObject m_buttonSpeakToInterlocutor; // permettra de l'afficher lorsqu'un interlocuteur est selectionner
@@ -64,13 +64,11 @@ public class TextInterlocutor : MonoBehaviour
         DisallowAll();
 
         // par default, l'interlocuteur est innaccessible, on affiche les 2 premières informations
-        DisplayNotAccessibleInterlocutorText();
         InterlocutorIsNotAccessible();
 
         // Si l'interlocuteur est accessible, on affiche le reste
         if (p_data.IsAccessible())
         {
-            DisplayAcessibleInterlocutorText();
             InterlocutorIsAccessible();
         }
 
@@ -86,9 +84,12 @@ public class TextInterlocutor : MonoBehaviour
         // condition
         for (int i = 0; i < m_Interlocutor.m_approach.Count; i++)
         {
+            m_conditionOb[i].SetActive(true);
             m_condition[i].text = "" +  m_Interlocutor.m_approach[i].m_dialogueApproach;
         }
+        
         // menace
+        m_menaceOb.SetActive(true);
         m_menace.text = "" + m_Interlocutor.m_descriptionFailure; // m_risque
 
         m_buttonSpeakToInterlocutor.SetActive(true); // on affiche le boutton : Parler à l'interlocuteur
@@ -96,46 +97,24 @@ public class TextInterlocutor : MonoBehaviour
 
     void InterlocutorIsNotAccessible()
     {
+        m_descriptionOb.SetActive(true);
         m_description.text = "" + m_Interlocutor.m_description;
 
-        for (int i = 0; i < m_Interlocutor.AccessCondition.Count; i++)
-        {            
-            // On affiche : nom de la ressource / le tyle (> || < || =) / valeur de la ressource
-            m_accessibility[i].text = "" + m_Interlocutor.AccessCondition[i].ToString();
-        }
-    }
-    
-    void DisplayAcessibleInterlocutorText()
-    {
-        int count = m_Interlocutor.m_approach.Count;
-        
-        for (int i = 0; i < count; i++)
+        if (m_Interlocutor.AccessCondition.Count != 0)
         {
-            m_conditionOb[i].SetActive(true);
-        }
-        
-        m_menaceOb.SetActive(true);
-    }
-
-    void DisplayNotAccessibleInterlocutorText()
-    {
-        m_descriptionOb.SetActive(true);
-
-        Debug.Log(m_Interlocutor);
-
-        if (m_Interlocutor != null)
-        {
-            int count = m_Interlocutor.AccessCondition.Count;
-
-            for (int i = 0; i < m_accessibilityOb.Count; i++)
-            {
+            for (int i = 0; i < m_Interlocutor.AccessCondition.Count; i++)
+            {            
+                // On affiche : nom de la ressource / le tyle (> || < || =) / valeur de la ressource
                 m_accessibilityOb[i].SetActive(true);
+                m_accessibility[i].text = "" + m_Interlocutor.AccessCondition[i].ToString();
             }
         }
         else
         {
-            Debug.Log("L'interlocutor " + m_Interlocutor + " n'est pas de conditions d'acces!");
+            m_accessibilityOb[0].SetActive(true);
+            m_accessibility[0].text = "Aucune condition d'accès";
         }
+        
     }
 
     void DisallowAll()
@@ -231,9 +210,7 @@ public class TextInterlocutor : MonoBehaviour
         // On initialise les Bouttons
         for (int i = 0; i < p_institution.m_interlocutorList.Count; i++)
         {
-            Debug.Log("1");
             m_buttonInterlocutorList[i].SetActive(true);
-            Debug.Log("2");
             m_buttonScriptList[i].Configuration(p_institution.m_interlocutorList[i]);
         }
     }
