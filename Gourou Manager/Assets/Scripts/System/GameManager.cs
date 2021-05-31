@@ -38,30 +38,6 @@ public class GameManager : Singleton<GameManager>, IInitializable
     public InstitutionSO MainInstitution => m_mainInstitution;
     public List<InstitutionSO> Institutions => m_institutions;    
 
-    // Player Variable //
-    
-    private bool m_playerHasExecuteAction = false; 
-    
-    public bool PlayerHasExecuteAction
-    {
-        get { return m_playerHasExecuteAction; }
-        set
-        {
-            m_playerHasExecuteAction = value;
-            
-            // feed back sur le boutton de fin de tour (changement de couleur, et animation)
-            if (value == true)
-            {
-                m_interfaceManager.m_nextTurnButtonImage.color = Color.red;
-                StartCoroutine(m_interfaceManager.ChangeNextTurnButtonSizeAnimation());
-            }
-            else
-            {
-                m_interfaceManager.m_nextTurnButtonImage.color = Color.white;
-            }
-        }
-    }
-
     public void Initialize()
     {
         m_turn = 0;
@@ -85,7 +61,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
             
     }
     
-    private void Start()
+    private void Awake()
     {
         //m_mainInstitution = m_mainInstitutionObject.GetComponent<InterfaceInstitution>().m_Institution;
 
@@ -95,7 +71,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
         }
 
         m_mainInstitutionScript = m_mainInstitutionObject.GetComponent<InstitutionScript>();
-        m_mainInstitution = m_mainInstitutionScript.m_Institution; 
+        m_mainInstitution = m_mainInstitutionScript.m_Institution;
 
         //m_cameraScript = m_camera.GetComponent<CameraManager>();
 
@@ -105,8 +81,6 @@ public class GameManager : Singleton<GameManager>, IInitializable
     public void EndTurn()
     {
         Debug.Log("FIN DU TOUR");
-
-        PlayerHasExecuteAction = false;
 
         RoundManager.Instance.NextTurn();
 

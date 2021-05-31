@@ -143,23 +143,16 @@ public class TextInterlocutor : MonoBehaviour
 
     public void SpeekToInterlocutor()
     {
-        if (m_Interlocutor.IsAccessible() && m_InterlocutorSelected  && !GameManager.Instance.PlayerHasExecuteAction)
+        if (m_Interlocutor.IsAccessible() && m_InterlocutorSelected )
         {
             GameManager.Instance.m_interfaceManager.CameraChange();     // On place la camera liee a l'institution
             GameManager.Instance.m_interfaceManager.DisplayApproche(m_Interlocutor);
             GameManager.Instance.m_interfaceManager.DisallowInterlocutor();
-
-            GameManager.Instance.PlayerHasExecuteAction = true;
-            Debug.Log("Institution : " + GameManager.Instance.PlayerHasExecuteAction);
         }
         else if (!m_Interlocutor.IsAccessible())
         {
             GameManager.Instance.m_interfaceManager.m_feedBackScript.FeedBackApproachNotValid();
             Debug.Log("Cet Interlocuteur n'est pas disponible, ou tu n'as pas sélectionner d'interlocuteurs");
-        }
-        else if (GameManager.Instance.PlayerHasExecuteAction)
-        {
-            GameManager.Instance.m_interfaceManager.m_feedBackScript.FeedBackApproachDouble();
         }
     }
 
@@ -181,24 +174,6 @@ public class TextInterlocutor : MonoBehaviour
         m_descriptionOb.SetActive(true);
     }
 
-    /*
-    // appeler depuis un boutton, option de dev, à supprimer pour le public
-    public void ForcerApproche()
-    {
-        if (m_InterlocutorSelected)
-        {
-            GameManager.Instance.m_interfaceManager.DisplayApproche(m_Interlocutor);
-            GameManager.Instance.m_interfaceManager.DisallowInterlocutor();
-            // Il y avait le changement de scene ici
-            GameManager.Instance.PlayerHasExecuteAction = true;
-            Debug.Log("Institution : " + GameManager.Instance.PlayerHasExecuteAction);
-        }
-        else
-        {
-            Debug.Log("Tu n as pas selectionner d'interlocuteurs");
-        }
-    }
-    */
     // Configuration des bouttons / appeler via InterfaceManager
     public void ConfigureButton(InstitutionSO p_institution)
     {

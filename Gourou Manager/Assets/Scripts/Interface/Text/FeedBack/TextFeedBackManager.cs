@@ -26,31 +26,9 @@ public class TextFeedBackManager : MonoBehaviour
         m_textPosition = new Vector3(posX, posY, 0);
     }
     
-    // Feed Back Exactions
-    public void FeedBackExaction()
-    {
-        DisplayText("Exaction faite");
-    }
-
-    public void FeedBackExactionDouble()
-    {
-        DisplayText("Action déjà faite!");
-    }
-    
     public void FeedBackExactionNotValid()
     {
         DisplayText("Exaction non valide!");
-    }
-    
-    // Feed Back Approach
-    public void FeedBackApproach()
-    {
-        DisplayText("Approche faite");
-    }
-    
-    public void FeedBackApproachDouble()
-    {
-        DisplayText("Action déjà faite!");
     }
     
     public void FeedBackApproachNotValid()

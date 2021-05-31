@@ -53,7 +53,7 @@ public class Cursor : MonoBehaviour
             else // si le curseur ne pointe null part, toutes les interfaces sont désactivés
             {
                 // desafficher les interfaces Institution
-                if (m_interfaceManager.m_InstitutionLightIsDisplay) m_interfaceManager.DisallowLightInstitution();
+                if (m_interfaceManager.m_institutionLightIsDisplay) m_interfaceManager.DisallowLightInstitution();
 
                 // desafficher l'interface de crise
                 if (Input.GetMouseButtonDown(0))

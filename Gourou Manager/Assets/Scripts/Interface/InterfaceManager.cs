@@ -19,18 +19,17 @@ public class InterfaceManager : MonoBehaviour
 {
     // text
     [Tooltip("Institution Texte en Standard mode")]
-    [SerializeField] GameObject m_InstitutionLightObject;
-    
-    [Tooltip("Institution Texte en FocusOnInstitution mode")]
-    [SerializeField] GameObject m_InstitutionHeavyObject;
-    [SerializeField] GameObject m_interlocutorObject;
-    [SerializeField] GameObject m_Approche;
-    [SerializeField] GameObject m_NextTurnButton;
-    [SerializeField] GameObject m_Victory;
-    [SerializeField] GameObject m_Defeat;
-    [SerializeField] GameObject m_EndTurn;
+    [SerializeField] GameObject m_institutionLightObject;
 
-    public Image m_nextTurnButtonImage; // utiliser dans GameManager pour changer la couleur du boutton lorsque le joueur fait une action
+    [Tooltip("Institution Texte en FocusOnInstitution mode")]
+    [SerializeField] GameObject m_institutionHeavyObject;
+    [SerializeField] GameObject m_interlocutorObject;
+    [SerializeField] GameObject m_approche;
+    [SerializeField] GameObject m_victory;
+    [SerializeField] GameObject m_defeat;
+    [SerializeField] GameObject m_endTurn;
+    [SerializeField] GameObject m_cultStat;
+    [SerializeField] GameObject m_gameDescription;
 
     TextInstitutionLight m_institutionLightScript;
     TextInstitutionHeavy m_institutionHeavyScript;
@@ -39,6 +38,7 @@ public class InterfaceManager : MonoBehaviour
     TextApprocheMain m_approcheScript;
     TextEndTurn m_endTurnScript;
     public TextFeedBackManager m_feedBackScript; // sera appeler lorsque le joueur fait une action
+    TextCultStat m_cultStatScript;
 
     // public TextInterlocutor TextInterlocutor => m_InterlocutorScript;
 
@@ -47,10 +47,10 @@ public class InterfaceManager : MonoBehaviour
 
     private Camera m_Camera;
 
-    public RectTransform m_canvasSize; 
-   
+    public RectTransform m_canvasSize;
+
     [Tooltip("définit si l'interface affiche actuellement une information, permet d'éviter de rappeler la fonction d'affichage")]
-    public bool m_InstitutionLightIsDisplay = false;
+    public bool m_institutionLightIsDisplay = false;
 
     // getter pour HeavyInstitution, servant à ne pas afficher la LightInstitution en même temps
     bool institutionHeavyIsDisplay = false;
@@ -86,17 +86,17 @@ public class InterfaceManager : MonoBehaviour
         set
         {
             if (value == m_ApprocheIsDisplay) return;
-            
-            if (value == true) 
+
+            if (value == true)
                 DisallowInterlocutor();
             else
                 DisallowApproche();
         }
     }
-    
+
     public bool m_cursorFocusHeavyInstitution; // utiliser dans Cursor.cs, pour définir si la fenêtre peut être enlever
     public bool m_endTurnIsDisplay = false;
-    
+
     // Institution actuellement sélectionnée
     public InstitutionScript m_institutionSelected;     // Definit dans Cursor.cs 
 
@@ -107,15 +107,16 @@ public class InterfaceManager : MonoBehaviour
         m_Camera = GameManager.Instance.m_camera.GetComponent<Camera>();
         m_canvasSize = GetComponent<RectTransform>();
 
-        m_institutionLightScript = m_InstitutionLightObject.GetComponent<TextInstitutionLight>();
-        m_institutionHeavyScript = m_InstitutionHeavyObject.GetComponent<TextInstitutionHeavy>();
+        m_institutionLightScript = m_institutionLightObject.GetComponent<TextInstitutionLight>();
+        m_institutionHeavyScript = m_institutionHeavyObject.GetComponent<TextInstitutionHeavy>();
         m_interlocutorScript = m_interlocutorObject.GetComponent<TextInterlocutor>();
-        m_approcheScript = m_Approche.GetComponent<TextApprocheMain>();
-        m_endTurnScript = m_EndTurn.GetComponent<TextEndTurn>();
+        m_approcheScript = m_approche.GetComponent<TextApprocheMain>();
+        m_endTurnScript = m_endTurn.GetComponent<TextEndTurn>();
+        m_cultStatScript = m_cultStat.GetComponent<TextCultStat>();
 
-        m_nextTurnButtonImage = m_NextTurnButton.GetComponent<Image>();
+        m_cultStatScript.Display();
     }
-    
+
     // Change la camera actuelle avec celle de l'institution cibée
     public void CameraChange()
     {
@@ -133,7 +134,7 @@ public class InterfaceManager : MonoBehaviour
             GameManager.Instance.m_camera.SetActive(true);
             m_institutionSelected.m_cameraObject.SetActive(false);
         }
-        
+
     }
 
     public void ChangeColorInstitution(List<Image> p_imageList)
@@ -165,7 +166,7 @@ public class InterfaceManager : MonoBehaviour
     {
         // ALL INFORMATION
         m_InstitutionHeavyIsDisplay = true;
-        m_InstitutionHeavyObject.SetActive(true);
+        m_institutionHeavyObject.SetActive(true);
 
         // envoie les informations pour les afficher
         m_institutionHeavyScript.Display(p_Institution);
@@ -173,18 +174,18 @@ public class InterfaceManager : MonoBehaviour
 
     public void DisplayLightInstitution(GameObject p_Institution, InstitutionSO p_InstitutionScriptable)
     {
-        m_InstitutionLightIsDisplay = true;
+        m_institutionLightIsDisplay = true;
 
         // Placement du texte
-        m_InstitutionLightObject.SetActive(true);
+        m_institutionLightObject.SetActive(true);
 
         // Définit la position de l'affichage par rapport au G.O.
         Vector3 position = CalculateWindowDimention(m_Camera.WorldToScreenPoint(p_Institution.transform.position));
 
-        m_InstitutionLightObject.transform.position = position;
+        m_institutionLightObject.transform.position = position;
 
         // envoie les informations pour les afficher
-        m_institutionLightScript.Display(p_InstitutionScriptable);        
+        m_institutionLightScript.Display(p_InstitutionScriptable);
     }
 
     public void DisplayInterlocutor()
@@ -199,33 +200,32 @@ public class InterfaceManager : MonoBehaviour
 
     public void DisplayApproche(InterlocutorSO p_interlocutor) // appeler depuis textInterlocutor
     {
-        m_NextTurnButton.SetActive(false);
-        m_Approche.SetActive(true);
+        m_approche.SetActive(true);
         // m_ApprocheIsDisplay = true;
         m_approcheScript.Display(p_interlocutor);
         DisallowHeavyInstitution();
     }
 
-    public void DisplayNextTurnButton()
-    {
-        m_NextTurnButton.SetActive(true);
-    }
-
     public void DisplayEndTurn()
     {
-        m_EndTurn.SetActive(true);
+        m_endTurn.SetActive(true);
         m_endTurnScript.Display();
         m_endTurnIsDisplay = true;
     }
 
     public void DisplayVictory()
     {
-        m_Victory.SetActive(true);
+        m_victory.SetActive(true);
     }
 
     public void DisplayDefeat()
     {
-        m_Defeat.SetActive(false);
+        m_defeat.SetActive(false);
+    }
+
+    public void DisplayCultStat()
+    {
+        m_cultStat.SetActive(true);
     }
 
     // Sert à savoir si une quelquonque interface est actuellement affichée (les LightInstitutions ne sont pas comprises
@@ -239,45 +239,59 @@ public class InterfaceManager : MonoBehaviour
         return false;
     }
 
+    public void DisplayGameInstitution()
+    {
+        m_gameDescription.SetActive(true);
+    }
+
     // -----------------------------------------------------------------------------------------
     // Dissalow interfaces
     // -----------------------------------------------------------------------------------------
 
     public void DisallowLightInstitution() // call in Cursor.cs
     {
-        m_InstitutionLightObject.SetActive(false);
-        m_InstitutionLightIsDisplay = false;
+        m_institutionLightObject.SetActive(false);
+        m_institutionLightIsDisplay = false;
     }
 
     public void DisallowHeavyInstitution()
     {
-        m_InstitutionHeavyObject.SetActive(false);
+        m_institutionHeavyObject.SetActive(false);
         m_InstitutionHeavyIsDisplay = false;
     }
 
     public void DisallowInterlocutor()
-    {        
+    {
         m_interlocutorObject.SetActive(false);
         m_interlocutorIsDisplay = false;
     }
-    
+
     public void DisallowApproche()
     {
-        m_NextTurnButton.SetActive(true);
-        m_Approche.SetActive(false);
+        m_approche.SetActive(false);
         m_ApprocheIsDisplay = false;
     }
 
     public void DisallowVictoryDefeat()
     {
-        m_Victory.SetActive(false);
-        m_Defeat.SetActive(false);
+        m_victory.SetActive(false);
+        m_defeat.SetActive(false);
     }
 
     public void DisallowEndTurn()
     {
-        m_EndTurn.SetActive(false);
+        m_endTurn.SetActive(false);
         m_endTurnIsDisplay = false;
+    }
+
+    public void DisallowCultStat()
+    {
+        m_cultStat.SetActive(false);
+    }
+
+    public void DisallowGameDescription()
+    {
+        m_gameDescription.SetActive(false);
     }
 
     // -----------------------------------------------------------------------------------------
@@ -311,44 +325,4 @@ public class InterfaceManager : MonoBehaviour
         }
         return position;
     }
-    
-    // lorsque le joueur fait une action, le boutton de fon de tour s'agrandis et se rétrécis pour montrer qu'on peut passer au tour suivant
-    public IEnumerator ChangeNextTurnButtonSizeAnimation()
-    {
-        float time = 1f;
-        float duration = 1.5f;
-        while (time < duration)
-        {
-            time += Time.deltaTime;
-            m_NextTurnButton.transform.localScale += Vector3.one * Mathf.Log(time) * Time.deltaTime;
-            yield return null;
-        }
-        time = 1f;
-        while (time < duration)
-        {
-            time += Time.deltaTime;
-            m_NextTurnButton.transform.localScale -= Vector3.one * Mathf.Log(time) * Time.deltaTime;
-            yield return null;
-        }
-
-        while (GameManager.Instance.PlayerHasExecuteAction)
-        {
-            time = 1f;
-            while (time < duration)
-            {
-                time += Time.deltaTime;
-                m_NextTurnButton.transform.localScale += Vector3.one / 3 * Mathf.Log(time) * Time.deltaTime;
-                yield return null;
-            }
-            time = 1f;
-            while (time < duration)
-            {
-                time += Time.deltaTime;
-                m_NextTurnButton.transform.localScale -= Vector3.one / 3 * Mathf.Log(time) * Time.deltaTime;
-                yield return null;
-            }
-        }
-        
-    }
-    
 }

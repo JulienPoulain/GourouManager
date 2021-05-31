@@ -8,6 +8,8 @@ public class TextInstitutionExactionManager : MonoBehaviour
 {
     [SerializeField] TMP_Text m_textNom;
     [SerializeField] TMP_Text m_textDescription;
+    [SerializeField] TMP_Text m_textCout;
+    
 
     Image m_thisImage;
 
@@ -24,6 +26,7 @@ public class TextInstitutionExactionManager : MonoBehaviour
 
         m_textNom.text = "" + p_exaction.Name;
         m_textDescription.text = "" + p_exaction.Description;
+        m_textCout.text = "Couts : ";
 
         // Changement de la couleur selon si l'exaction est valide ou non
         if (p_exaction.IsValid())
@@ -38,22 +41,11 @@ public class TextInstitutionExactionManager : MonoBehaviour
 
     public void ExecuteExaction()
     {
-        if (!GameManager.Instance.PlayerHasExecuteAction && m_exaction.IsValid())
+        if (m_exaction.IsValid())
         {
             GameManager.Instance.PendingExactions.Add(m_exaction);
             GameManager.Instance.m_interfaceManager.DisallowHeavyInstitution();
-            GameManager.Instance.m_interfaceManager.m_feedBackScript.FeedBackExaction();
-
-            GameManager.Instance.PlayerHasExecuteAction = true;
-        } 
-        else if (!m_exaction.IsValid())
-        {
-            GameManager.Instance.m_interfaceManager.m_feedBackScript.FeedBackExactionNotValid();
-        }
-        else if (GameManager.Instance.PlayerHasExecuteAction)
-        {
-            GameManager.Instance.m_interfaceManager.m_feedBackScript.FeedBackExactionDouble();
-        }
-        
+            GameManager.Instance.EndTurn();
+        }         
     }
 }
