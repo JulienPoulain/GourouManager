@@ -1398,6 +1398,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4967333318008298406, guid: 1e72b06db2487b14a80dbd13a561a30a, type: 3}
+      propertyPath: m_text
+      value: Cliquez sur l'un des interlocuteur pour qu'il s'affiche
+      objectReference: {fileID: 0}
     - target: {fileID: 7424981301570921747, guid: 1e72b06db2487b14a80dbd13a561a30a, type: 3}
       propertyPath: m_Name
       value: Interlocutor
