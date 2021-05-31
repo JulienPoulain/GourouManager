@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: Don des bien saisis
   m_EditorClassIdentifier: 
   m_name: 'Don des biens saisis '
-  m_description: "La police vous donne une partie des biens qu'elle a saisi lors
-    d'arr\xE9station "
+  m_description: 'La police vous donne une partie des biens qu''elle a saisi lors
+    d''arrestations '
   m_initDuration: 1
   m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 3a665574badf62543be82575316d1263, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1
   m_initNbUse: 1
   m_nbUse: 0
   m_cdtActivation:

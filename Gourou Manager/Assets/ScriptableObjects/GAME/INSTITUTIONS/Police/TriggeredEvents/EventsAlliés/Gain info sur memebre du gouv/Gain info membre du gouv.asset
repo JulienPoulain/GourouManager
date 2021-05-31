@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b647af1624fef43bcaf750a89ff899, type: 3}
   m_Name: Gain info membre du gouv
   m_EditorClassIdentifier: 
-  m_name: Gain d'info sur un memebre du gouvernement
+  m_name: Gain d'info sur un membre du gouvernement
   m_description: Vous recevez une info sur un membre du gouvernement
   m_initDuration: 1
   m_duration: 0
