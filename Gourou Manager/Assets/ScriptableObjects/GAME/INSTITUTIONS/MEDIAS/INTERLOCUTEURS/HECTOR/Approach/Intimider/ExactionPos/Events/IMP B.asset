@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65d02e6c45e7ab84a9e56bc495f4f42d, type: 3}
-  m_Name: Media_IMP -1
+  m_Name: IMP B
   m_EditorClassIdentifier: 
-  m_syncInt: {fileID: 11400000, guid: 316680447baa28d49a9f7ae2051feed7, type: 2}
-  m_magnitude: {fileID: 11400000, guid: 09794ecf54473f34cb44edcd462f2333, type: 2}
+  m_syncInt: {fileID: 11400000, guid: aeb5c07663399d447b10360c56750814, type: 2}
+  m_magnitude: {fileID: 11400000, guid: 66daed618901a1d4da2c92c23df3da64, type: 2}

@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
-  m_Name: INTIMIDATION REUSSIE
+  m_Script: {fileID: 11500000, guid: 65d02e6c45e7ab84a9e56bc495f4f42d, type: 3}
+  m_Name: IMP FA
   m_EditorClassIdentifier: 
-  m_name: "Intimidation r\xE9ussie"
-  m_description: 
-  m_eventList:
-  - {fileID: 11400000, guid: 1250bc728fc40594ea65b33906cebe91, type: 2}
-  m_conditions: []
+  m_syncInt: {fileID: 11400000, guid: c319fb0ef87343f40bc47b6d66d6c2e6, type: 2}
+  m_magnitude: {fileID: 11400000, guid: 853e33226db4fa840b66a86ef3095184, type: 2}
