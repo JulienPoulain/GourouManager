@@ -14,12 +14,9 @@ public class InstitutionSO : ScriptableObject, IInitializable
     [SerializeField] [Tooltip("Montant d’argent dont dispose l’Institution")] private RessourceSO m_funds;
     [SerializeField] [Tooltip("Citoyens composant l’Institution")] private RessourceSO m_members;
     [SerializeField] [Tooltip("Membres dévoués à l’Institution. 0 sauf pour religion, culte, BB.")] private RessourceSO m_fanatics;
-    //[SerializeField] [Tooltip("Citoyens corrompus par l’Institution au prochain tour (+/-)")] private SyncIntSO m_impactOnPop;
-    //[SerializeField] [Tooltip("Entier qui va venir alimenter la Crise à la fin de chaque tour")] public SyncIntSO m_impactOnCrise;
     [SerializeField] [Tooltip("Notoriété de l’Institution")] private RessourceSO m_publicExposure;
-    [SerializeField] [Tooltip("Entier représentant le niveau de corruption de l’Institution")] private SyncIntSO m_corruption;
     [SerializeField] [Tooltip("Entier entre 0 et 100. 10 à l'initialisation")] private RessourceSO m_brutality;
-    [SerializeField] private DecaySO m_decay;
+    [SerializeField] [Tooltip("Entier représentant le niveau de corruption de l’Institution")] private DecaySO m_decay;
     
     [Header("Objets liés à l'institution")]
     
@@ -74,16 +71,7 @@ public class InstitutionSO : ScriptableObject, IInitializable
         {
             m_publicExposure.Initialize();
         }
-        
-        if (m_corruption == null)
-        {
-            Debug.Log($"<color=red>ERROR :</color> {name} Corruption manquante.");
-        }
-        else
-        {
-            m_corruption.Initialize();
-        }
-        
+
         if (m_brutality == null)
         {
             Debug.Log($"<color=red>ERROR :</color> {name} Brutalité manquante.");
