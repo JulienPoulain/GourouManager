@@ -9,7 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 305aa538d4407b149bac159b7c5e8197, type: 3}
-  m_Name: CDT INFO
+  m_Script: {fileID: 11500000, guid: 7f4b2361bf53edb458383d8faec3177c, type: 3}
+  m_Name: INFO TEMP CARE
   m_EditorClassIdentifier: 
-  m_syncBool: {fileID: 11400000, guid: be1b4c9eca8c95648a2966de8c92e021, type: 2}
+  m_name: 
+  m_initValue: 0
+  m_value: 0
+  m_title: 
+  m_description: 
