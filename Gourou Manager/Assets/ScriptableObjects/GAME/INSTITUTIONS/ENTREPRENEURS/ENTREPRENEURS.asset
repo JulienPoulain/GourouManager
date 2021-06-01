@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f60d9fd165f1bf4a8d858defcd6937f, type: 3}
   m_Name: ENTREPRENEURS
   m_EditorClassIdentifier: 
-  m_name: ENTREPRENEURS
+  m_name: Entrepreneurs
   m_description: Les investisseurs et capitaines d'industries
   m_funds: {fileID: 11400000, guid: a26544a9e213a0449ad68d4863f68928, type: 2}
   m_members: {fileID: 11400000, guid: 95dbcd9603641c8429ec884c45a1c9b4, type: 2}

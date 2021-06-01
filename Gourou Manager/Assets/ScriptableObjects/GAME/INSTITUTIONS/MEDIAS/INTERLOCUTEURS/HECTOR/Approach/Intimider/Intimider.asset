@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525d2b2df425485449ec8a12401c7c35, type: 3}
+  m_Name: Intimider
+  m_EditorClassIdentifier: 
+  m_name: Intimider Hector
+  m_exactionPos: {fileID: 11400000, guid: c552f5aca8f4f894cab293a045271c7a, type: 2}
+  m_exactionNeg: {fileID: 11400000, guid: 4a1c8609a4f6a554c8a35f7b763e72eb, type: 2}
+  m_cdtSuccess:
+  - {fileID: 11400000, guid: 166843ed9b05dc443ab0fb6afcd731a4, type: 2}
+  m_cooldown: 5
+  m_remainingTime: 0
+  m_descriptionApproach: "Vous envoyez un Fanatique passer un message \xE0 Hector
+    : les journalistes qui seront hostiles au Culte risquent d'avoir des probl\xE8mes."
+  m_dialogueApproach: 
+  m_resultatApproach: 

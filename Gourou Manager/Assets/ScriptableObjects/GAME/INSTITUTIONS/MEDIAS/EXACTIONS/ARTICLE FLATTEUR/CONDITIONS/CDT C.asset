@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 885772bd64b7b1348a7f3133ea46b0b4, type: 3}
-  m_Name: MEDIAS_F
+  m_Script: {fileID: 11500000, guid: 4a07221645fd8ad42978314f51634aaa, type: 3}
+  m_Name: CDT C
   m_EditorClassIdentifier: 
-  m_name: Fonds
-  m_initValue: 100000
-  m_value: 0
+  m_syncInt: {fileID: 11400000, guid: e663ca445edf1ad46a5cf8aabff7ad64, type: 2}
+  m_conditionType: 6
+  m_value: 35
