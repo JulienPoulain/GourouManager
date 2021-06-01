@@ -10,24 +10,22 @@ public class ButtonFeedBack : MonoBehaviour, IPointerExitHandler, IPointerEnterH
     Image m_thisImage;
     [SerializeField] TMP_Text m_buttonText;
 
-    Color m_actualColor;
-
     void Awake()
     {
         m_thisImage = GetComponent<Image>();
     }
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        GameManager.Instance.m_interfaceManager.m_imageBehavior.ReplaceBackGroundImage(m_thisImage);
-        m_buttonText.color = m_actualColor;
-    }
-
     public void OnPointerEnter(PointerEventData eventData)
     {
         GameManager.Instance.m_interfaceManager.m_imageBehavior.ReverseBackGroundImage(m_thisImage);
-
-        m_actualColor = m_buttonText.color;
         m_buttonText.color = Color.black;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        GameManager.Instance.m_interfaceManager.m_imageBehavior.ReplaceBackGroundImage(m_thisImage);
+        
+        // Ici on met blanc, parce que tous les textes des bouttons sont en blanc, cela évite certains bug de couleur
+        m_buttonText.color = Color.white;
     }
 }

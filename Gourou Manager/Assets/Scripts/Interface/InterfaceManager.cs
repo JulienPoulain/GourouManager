@@ -241,7 +241,7 @@ public class InterfaceManager : MonoBehaviour
         return false;
     }
 
-    public void DisplayGameInstitution()
+    public void DisplayGameDescription()
     {
         m_gameDescription.SetActive(true);
     }

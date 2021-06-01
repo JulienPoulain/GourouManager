@@ -9,6 +9,7 @@ public class TextInstitutionLight : MonoBehaviour
     [SerializeField] TMP_Text m_textFont;
     [SerializeField] TMP_Text m_textDescription;
     [SerializeField] Image m_image;
+    [SerializeField] Image m_pictogram;
 
 
 
@@ -24,5 +25,7 @@ public class TextInstitutionLight : MonoBehaviour
         // On change la couleur du fond et les lettes
         m_textNom.color = GameManager.Instance.m_interfaceManager.m_institutionSelected.InstitutionColor;
         m_image.color = GameManager.Instance.m_interfaceManager.m_institutionSelected.InstitutionColor;
+
+        m_pictogram.sprite = p_data.Pictogram;
     }
 }

@@ -33,7 +33,7 @@ public class TextInstitutionExactionManager : MonoBehaviour
         }
         else
         {
-            m_thisImage.color = Color.white;
+            m_thisImage.color = Color.grey;
         }
     }
 

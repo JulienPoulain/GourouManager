@@ -10,6 +10,7 @@ public class TextCultStat : MonoBehaviour
     [SerializeField] TMP_Text m_membres;
     [SerializeField] TMP_Text m_fanatiques;
     [SerializeField] TMP_Text m_expositionPublic;
+    [SerializeField] TMP_Text m_turnNumber;
 
     [SerializeField] Image m_backGroundColor;
 
@@ -27,7 +28,9 @@ public class TextCultStat : MonoBehaviour
         m_membres.text = "" + culte.Members.Value;
         m_fanatiques.text = "" + culte.Fanatics.Value;
         m_expositionPublic.text = "" + culte.PublicExposure.Value;
+        m_turnNumber.text = "" + GameManager.Instance.Turn;
 
-        
+
+
     }
 }
