@@ -13,6 +13,7 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
     [SerializeField] TMP_Text m_textFonds;
     [SerializeField] TMP_Text m_textEtat;
     [SerializeField] TMP_Text m_textExpositionPublique;
+    [SerializeField] TMP_Text m_textCout;
 
     [SerializeField] GameObject m_InterlocutorButton;
 
@@ -55,7 +56,6 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
         m_textFonds.text = "Fonds : " + p_data.Funds.Value;
         m_textEtat.text = "Etat : " + p_data.Decay.GetDecayLvl().GetString();
         m_textExpositionPublique.text = "Exposition publique : " + p_data.PublicExposure.Value;
-
         /*
         m_textGouvernement.text = "Pour Gouvernements :";
         m_textCulte.text = "Pour Culte :";
