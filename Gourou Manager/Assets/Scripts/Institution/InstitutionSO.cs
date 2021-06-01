@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "NewInstitution", menuName = "GourouManager/Institution/Institution")]
 
@@ -27,6 +28,8 @@ public class InstitutionSO : ScriptableObject, IInitializable
     [SerializeField] [Tooltip("Exactions disponibles sans dialogue")] public List<ExactionSO> m_exactionList;
     [SerializeField] [Tooltip("Évènements se déclenchants selon certaines conditions sans intervention directe du joueur")] public List<TriggeredEventSO> m_triggeredEvents;
 
+    [SerializeField] private Sprite m_pictogram;
+
     public RessourceSO Funds => m_funds;
     public RessourceSO Members => m_members;
     public RessourceSO Fanatics => m_fanatics;
@@ -36,6 +39,8 @@ public class InstitutionSO : ScriptableObject, IInitializable
     public DecaySO Decay => m_decay;
 
     public List<TriggeredEventSO> TriggeredEvents => m_triggeredEvents;
+
+    public Sprite Pictogram => m_pictogram;
 
     public void Initialize()
     {

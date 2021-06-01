@@ -25,3 +25,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 94e23ccacdca9264baa3f9442f72b8de, type: 2}
   m_exactionList: []
   m_triggeredEvents: []
+  m_pictogram: {fileID: 21300000, guid: 4a3fa9abe22c1734c954e0598db27a0a, type: 3}

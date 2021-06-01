@@ -36,3 +36,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0e3e17135c1710d46860d4d00cc174e8, type: 2}
   - {fileID: 11400000, guid: 124d283932cfe7c4894e35549b63e03c, type: 2}
   - {fileID: 11400000, guid: a587af758b4b322419d456a62ea31617, type: 2}
+  m_pictogram: {fileID: 21300000, guid: 42e752e69bacd714e86e8e56800d46fc, type: 3}

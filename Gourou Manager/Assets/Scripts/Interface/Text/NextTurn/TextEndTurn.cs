@@ -9,14 +9,15 @@ public class TextEndTurn : MonoBehaviour
 {
 
     // [SerializeField] private GameObject m_textPrefab;
-    [SerializeField] private List<GameObject> m_objectEtatList;
+    [SerializeField] private List<GameObject> m_objectEtatInstitutionList;
     private List<TMP_Text> m_textEtatList = new List<TMP_Text>();
     
     [SerializeField] GameObject m_objectMainInstitutionName;
     private TMP_Text m_TextmainInstitutionName;
     
-    [SerializeField] private List<GameObject> m_objectStatList;
-    private List<TMP_Text> m_textStatList = new List<TMP_Text>();
+    [SerializeField] private List<GameObject> m_objectCultStatList;
+    private List<TMP_Text> m_textCultStatList = new List<TMP_Text>();
+    private List<Image> m_imageStatList = new List<Image>();
 
     [SerializeField] TextExactionPanel m_exactionScript;
 
@@ -26,14 +27,16 @@ public class TextEndTurn : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        foreach (GameObject thisObject in m_objectEtatList)
+        // 1 object est constituer d'un ob text et un ob image qu'on va utiliser plus tard
+        foreach (GameObject thisObject in m_objectEtatInstitutionList)
         {
-            m_textEtatList.Add(thisObject.GetComponent<TMP_Text>());
+            m_textEtatList.Add(thisObject.GetComponentInChildren<TMP_Text>());
+            m_imageStatList.Add(thisObject.GetComponentInChildren<Image>());
         }
         
-        foreach (GameObject thisObject in m_objectStatList)
+        foreach (GameObject thisObject in m_objectCultStatList)
         {
-            m_textStatList.Add(thisObject.GetComponent<TMP_Text>());
+            m_textCultStatList.Add(thisObject.GetComponent<TMP_Text>());
         }
 
         m_TextmainInstitutionName = m_objectMainInstitutionName.GetComponent<TMP_Text>();
@@ -53,18 +56,18 @@ public class TextEndTurn : MonoBehaviour
         // On affiche les Text dont on a besoin
         for (int i = 0; i < GameManager.Instance.Institutions.Count; i++)
         {
-            m_objectEtatList[i].SetActive(true);
-            m_textEtatList[i].text = "" + GameManager.Instance.Institutions[i].m_name + " : " + GameManager.Instance.Institutions[i].Decay.GetDecayLvl().GetString();
+            m_objectEtatInstitutionList[i].SetActive(true);
+            m_textEtatList[i].text = "" + GameManager.Instance.Institutions[i].Decay.GetDecayLvl().GetString();
+            m_imageStatList[i].sprite = GameManager.Instance.Institutions[i].Pictogram;
         }
         
         // Affichage du Culthe
         m_TextmainInstitutionName.text = "" + GameManager.Instance.MainInstitution.m_name;
 
-        m_textStatList[0].text = "Fonds : " + GameManager.Instance.MainInstitution.Funds.Value.ToString();
-        m_textStatList[1].text = "Membres : " + GameManager.Instance.MainInstitution.Members.Value.ToString();
-        m_textStatList[2].text = "Fanatiques : " + GameManager.Instance.MainInstitution.Fanatics.Value.ToString();
-        m_textStatList[3].text = "Exposition Publique : " + GameManager.Instance.MainInstitution.PublicExposure.Value.ToString();
-        m_textStatList[4].text = "Brutalité : " + GameManager.Instance.MainInstitution.Brutality.Value;
+        m_textCultStatList[0].text = "" + GameManager.Instance.MainInstitution.Funds.Value.ToString();
+        m_textCultStatList[1].text = "" + GameManager.Instance.MainInstitution.Members.Value.ToString();
+        m_textCultStatList[2].text = "" + GameManager.Instance.MainInstitution.Fanatics.Value.ToString();
+        m_textCultStatList[3].text = "" + GameManager.Instance.MainInstitution.PublicExposure.Value.ToString();
 
         // on récupère la liste d'event du tour qui vient de finir
         List<EventSO> m_eventList = EventRegister.Instance.GetEvents(GameManager.Instance.Turn);
@@ -80,7 +83,7 @@ public class TextEndTurn : MonoBehaviour
 
     void DisallowAll()
     {
-        foreach (GameObject thisObject in m_objectEtatList)
+        foreach (GameObject thisObject in m_objectEtatInstitutionList)
         {
             thisObject.SetActive(false);
         }

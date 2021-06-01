@@ -49,6 +49,8 @@ public class InterfaceManager : MonoBehaviour
 
     public RectTransform m_canvasSize;
 
+    [SerializeField] public ImageBehavior m_imageBehavior;
+
     [Tooltip("définit si l'interface affiche actuellement une information, permet d'éviter de rappeler la fonction d'affichage")]
     public bool m_institutionLightIsDisplay = false;
 

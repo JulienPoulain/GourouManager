@@ -17,7 +17,7 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
 
     [SerializeField] GameObject m_InterlocutorButton;
 
-    private InstitutionSO m_InstitutionData;
+    private InstitutionSO m_institutionData;
 
     // EXACTIONS
     // stoque les GO exaction (contenant 1 bouton + un texte)
@@ -28,6 +28,8 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
 
     [SerializeField] List<Image> m_imageList = new List<Image>();
     [SerializeField] List<TMP_Text> m_textList = new List<TMP_Text>();
+
+    [SerializeField] [Tooltip("Liste des images qui prendrons les pictogrammes des institutions")] List<Image> m_PictoList = new List<Image>();
 
     private void Awake()
     {
@@ -50,20 +52,21 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
             m_InterlocutorButton.SetActive(true);
         }
 
-        m_InstitutionData = p_data;
+        m_institutionData = p_data;
 
         m_textNom.text = "" + p_data.m_name;
         m_textFonds.text = "" + p_data.Funds.Value;
         m_textEtat.text = "Etat : " + p_data.Decay.GetDecayLvl().GetString();
         m_textExpositionPublique.text = "" + p_data.PublicExposure.Value;
-        /*
-        m_textGouvernement.text = "Pour Gouvernements :";
-        m_textCulte.text = "Pour Culte :";
-        */
 
         GameManager.Instance.m_interfaceManager.ChangeColorInstitution(m_imageList, m_textList);
 
         DisplayExaction();
+
+        foreach(Image pictogram in m_PictoList)
+        {
+            pictogram.sprite = p_data.Pictogram;
+        }
     }
 
     public void DisplayInterlocutor()
@@ -77,10 +80,10 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
         DisallowExaction();
 
         // On affiche les exactions selon notre besoin & on les paramètre        
-        for (int i = 0; i < m_InstitutionData.m_exactionList.Count; i++)
+        for (int i = 0; i < m_institutionData.m_exactionList.Count; i++)
         {
             m_ExactionsObject[i].SetActive(true);
-            m_exactionInterfaceScript[i].Display(m_InstitutionData.m_exactionList[i]);
+            m_exactionInterfaceScript[i].Display(m_institutionData.m_exactionList[i]);
         }
     }
 
@@ -91,7 +94,14 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
             exaction.SetActive(false);
         }
     }
-    
+
+    // On vide InstiutionData pour éviter les bugs d'interface
+    void OnDisable()
+    {
+        m_institutionData = null;
+    }
+
+    // Interraction
     public void OnPointerEnter(PointerEventData eventData)
     {
         GameManager.Instance.m_interfaceManager.m_cursorFocusHeavyInstitution = true;
@@ -108,6 +118,7 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
         GameManager.Instance.m_interfaceManager.m_cursorFocusHeavyInstitution = false;
     }
 
+    // Mouvement de la fenêtre
     Vector3 m_oldMousePos;
 
     void MoveWindow()

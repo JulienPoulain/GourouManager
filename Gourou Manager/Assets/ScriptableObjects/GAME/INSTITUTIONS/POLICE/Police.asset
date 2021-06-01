@@ -42,3 +42,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 41efcabcbbc6b7043a9541712884b213, type: 2}
   - {fileID: 11400000, guid: 8599dbbd885573d48a0036e8e053ed67, type: 2}
   - {fileID: 11400000, guid: 6e5c526bd5b397c4b8f4f2a45405534b, type: 2}
+  m_pictogram: {fileID: 21300000, guid: 52b18c357bdc76d4c9814d604331aafa, type: 3}

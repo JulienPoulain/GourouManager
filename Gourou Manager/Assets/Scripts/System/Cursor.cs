@@ -58,7 +58,12 @@ public class Cursor : MonoBehaviour
                 // desafficher l'interface de crise
                 if (Input.GetMouseButtonDown(0))
                 {
-                    if (m_interfaceManager.m_InstitutionHeavyIsDisplay && !m_interfaceManager.m_cursorFocusHeavyInstitution) m_interfaceManager.DisallowHeavyInstitution();
+                    if (m_interfaceManager.m_InstitutionHeavyIsDisplay && !m_interfaceManager.m_cursorFocusHeavyInstitution)
+                    {
+                        m_interfaceManager.DisallowHeavyInstitution();
+                        m_interfaceManager.m_institutionSelected = null;
+                    }
+                        
                     // chercher comment détecter si le cursor pointe un boutton
                 }
             }
