@@ -15,7 +15,7 @@ MonoBehaviour:
   m_name: Michael Thomas
   m_description: "Policier, bleusaille na\xEFve et inexp\xE9riment\xE9e, mais patriote"
   m_descriptionFailure: 
-  m_sanity: {fileID: 0}
+  m_sanity: {fileID: 11400000, guid: 533d467f0e63ba447ae53ca4c690cd49, type: 2}
   m_approach:
   - {fileID: 11400000, guid: 22d5bb00e2abb6f46947a70c8410230a, type: 2}
   - {fileID: 11400000, guid: de54daabc67d6494e84aedd514780be2, type: 2}
