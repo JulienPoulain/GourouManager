@@ -2137,7 +2137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1537922849}
   m_Layer: 0
-  m_Name: View
+  m_Name: ViewDestination
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2455,12 +2455,12 @@ MonoBehaviour:
   m_mainCamera: {fileID: 0}
   m_currentCamera: {fileID: 0}
   m_currentView: {fileID: 0}
-  m_view: {fileID: 1537922849}
+  m_viewDestination: {fileID: 1537922849}
   m_viewMainScreen: {fileID: 2113928655}
   m_viewPolice: {fileID: 666133782}
   m_springView: {fileID: 0}
   m_springSoftness: 1
-  m_transitionSpeed: 5
+  m_transitionSpeed: 0.75
   m_cursorPos: {x: 0, y: 0}
   m_screenWidth: 0
   m_screenHeigth: 0
