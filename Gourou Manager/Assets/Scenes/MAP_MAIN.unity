@@ -2552,15 +2552,17 @@ MonoBehaviour:
   - {fileID: 1081732356}
   - {fileID: 1913247310}
   - {fileID: 446163453}
-  m_mainInstitution: {fileID: 0}
+  m_mainInstitution: {fileID: 11400000, guid: 02a825d5b5d4172469e4848fc7f78b55, type: 2}
   m_institutions: []
   m_roundManager: {fileID: 0}
   m_interfaceManager: {fileID: 2060777671}
   m_camera: {fileID: 963194225}
   m_pendingExactions: []
   m_activeEvents: []
-  m_cdtVictory: []
-  m_cdtDefeat: []
+  m_cdtVictory:
+  - {fileID: 11400000, guid: 2e3e084a2f05f954f8d31722dd8b9ef5, type: 2}
+  m_cdtDefeat:
+  - {fileID: 11400000, guid: d5d2a3270559771488443193ca14fd3f, type: 2}
   m_focusOnInstitution: 0
   m_turn: 0
 --- !u!4 &2009924893
@@ -3115,7 +3117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 349007621759263340, guid: 649cd0bd6fee2e44a80aad35b135f00c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -6.100006
+      value: -6.0999756
       objectReference: {fileID: 0}
     - target: {fileID: 349007621759263342, guid: 649cd0bd6fee2e44a80aad35b135f00c, type: 3}
       propertyPath: m_Sprite
@@ -3259,7 +3261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 349007622814274278, guid: 649cd0bd6fee2e44a80aad35b135f00c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.04599762
+      value: -0.04598999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 649cd0bd6fee2e44a80aad35b135f00c, type: 3}

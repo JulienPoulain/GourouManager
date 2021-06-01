@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
+  m_Name: ARTICLE FLATTEUR
+  m_EditorClassIdentifier: 
+  m_name: "Faire \xE9crire un article flatteur pour le Culte"
+  m_description: Vous payez 4 000 un journaliste pour qu'il mette en valeur les bienfaits
+    du Culte de Cthulhu
+  m_eventList:
+  - {fileID: 11400000, guid: dab474088cd3c8848ae44442e8137650, type: 2}
+  m_conditions:
+  - {fileID: 11400000, guid: 309aee27a1b15ec4bbe3f537840b42e0, type: 2}
+  - {fileID: 11400000, guid: 1250d4ac5e82d7a4e90fd344090db7e6, type: 2}

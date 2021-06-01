@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f60d9fd165f1bf4a8d858defcd6937f, type: 3}
   m_Name: SYNDICATS
   m_EditorClassIdentifier: 
-  m_name: SYNDICATS
+  m_name: Syndicats
   m_description: "Si\xE8ge de la Conf\xE9d\xE9ration du Travail"
   m_funds: {fileID: 11400000, guid: 482290692feb8404293fe1542d558b45, type: 2}
   m_members: {fileID: 11400000, guid: f66752d4851a05845bd824f4e0020a58, type: 2}

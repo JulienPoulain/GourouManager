@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
-  m_Name: Info +1
+  m_Name: ECHEC INTIMIDATION
   m_EditorClassIdentifier: 
-  m_name: Fouiller les casiers judiciaires des syndicats
-  m_description: "Vous obtenez une information sur un membre haut plac\xE9 des syndicats,
-    vous pourrez sans doute l'atteindre ainsi."
+  m_name: Echec de l'Intimidation d'Hector
+  m_description: "Hector n'as pas pris au s\xE9rieux vos menaces et parleras en mal
+    de vous dans les M\xE9dias"
   m_initDuration: 1
   m_duration: 0
   m_initDelay: 0
   m_delay: 0
   m_impacts:
-  - {fileID: 11400000, guid: 0fb900fb1b23004498fab9ed04ed26b6, type: 2}
-  m_infoGained:
-  - {fileID: 11400000, guid: efcb79a553411ec4482aa2dc731f70ce, type: 2}
+  - {fileID: 11400000, guid: 39e7aea7263a21b479a7ea22c4dd1a81, type: 2}
+  - {fileID: 11400000, guid: f8f53fd9a891ff9409edf319af44fc86, type: 2}
+  m_infoGained: []
   m_IsDisplayed: 1

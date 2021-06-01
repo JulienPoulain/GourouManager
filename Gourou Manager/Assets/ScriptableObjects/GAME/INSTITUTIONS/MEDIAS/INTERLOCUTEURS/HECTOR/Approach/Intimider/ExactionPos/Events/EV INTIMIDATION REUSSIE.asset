@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
-  m_Name: Info +1
+  m_Name: EV INTIMIDATION REUSSIE
   m_EditorClassIdentifier: 
-  m_name: Fouiller les casiers judiciaires des syndicats
-  m_description: "Vous obtenez une information sur un membre haut plac\xE9 des syndicats,
-    vous pourrez sans doute l'atteindre ainsi."
+  m_name: "Intimidation d'Hector r\xE9ussie"
+  m_description: "Le Culte gagne en Brutalit\xE9"
   m_initDuration: 1
   m_duration: 0
   m_initDelay: 0
   m_delay: 0
   m_impacts:
-  - {fileID: 11400000, guid: 0fb900fb1b23004498fab9ed04ed26b6, type: 2}
-  m_infoGained:
-  - {fileID: 11400000, guid: efcb79a553411ec4482aa2dc731f70ce, type: 2}
+  - {fileID: 11400000, guid: e89aaf0ede2771d4e9a33bf482c493f7, type: 2}
+  - {fileID: 11400000, guid: 3f4f92e4d62d21b419df5395d99e84bd, type: 2}
+  m_infoGained: []
   m_IsDisplayed: 1
