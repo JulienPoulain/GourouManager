@@ -53,9 +53,9 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
         m_InstitutionData = p_data;
 
         m_textNom.text = "" + p_data.m_name;
-        m_textFonds.text = "Fonds : " + p_data.Funds.Value;
+        m_textFonds.text = "" + p_data.Funds.Value;
         m_textEtat.text = "Etat : " + p_data.Decay.GetDecayLvl().GetString();
-        m_textExpositionPublique.text = "Exposition publique : " + p_data.PublicExposure.Value;
+        m_textExpositionPublique.text = "" + p_data.PublicExposure.Value;
         /*
         m_textGouvernement.text = "Pour Gouvernements :";
         m_textCulte.text = "Pour Culte :";

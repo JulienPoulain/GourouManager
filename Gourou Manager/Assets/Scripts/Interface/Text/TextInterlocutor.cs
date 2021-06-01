@@ -8,7 +8,6 @@ public class TextInterlocutor : MonoBehaviour
 {
     [SerializeField] private GameObject m_descriptionOb;
     [SerializeField] private List<GameObject> m_accessibilityOb = new List<GameObject>();
-    [SerializeField] private List<GameObject> m_conditionOb = new List<GameObject>();
     [SerializeField] private GameObject m_menaceOb;
     [SerializeField] private GameObject m_buttonSpeakToInterlocutor; // permettra de l'afficher lorsqu'un interlocuteur est selectionner
 
@@ -16,7 +15,6 @@ public class TextInterlocutor : MonoBehaviour
 
     private TMP_Text m_description;
     private List<TMP_Text> m_accessibility = new List<TMP_Text>();
-    private List<TMP_Text> m_condition = new List<TMP_Text>();  
     private TMP_Text m_menace;
 
     [Tooltip("Definit si l'interface Interlocuteur cible un personnage ou non, utile pour éviter les bugs")] public bool m_InterlocutorSelected = false;
@@ -39,11 +37,6 @@ public class TextInterlocutor : MonoBehaviour
         for (int i = 0; i < m_accessibilityOb.Count; i++)
         {
             m_accessibility.Add(m_accessibilityOb[i].GetComponent<TMP_Text>());
-        }
-        
-        for (int i = 0; i < m_conditionOb.Count; i++)
-        {
-            m_condition.Add(m_conditionOb[i].GetComponent<TMP_Text>());
         }
 
         for (int i = 0; i < m_buttonInterlocutorList.Count; i++)
@@ -81,13 +74,6 @@ public class TextInterlocutor : MonoBehaviour
 
     void InterlocutorIsAccessible()
     {
-        // condition
-        for (int i = 0; i < m_Interlocutor.m_approach.Count; i++)
-        {
-            m_conditionOb[i].SetActive(true);
-            m_condition[i].text = "" +  m_Interlocutor.m_approach[i].m_dialogueApproach;
-        }
-        
         // menace
         m_menaceOb.SetActive(true);
         m_menace.text = "" + m_Interlocutor.m_descriptionFailure; // m_risque
@@ -129,11 +115,6 @@ public class TextInterlocutor : MonoBehaviour
         for (int i = 0; i < m_accessibilityOb.Count; i++)
         {
             m_accessibilityOb[i].SetActive(false);
-        }
-        
-        for (int i = 0; i < m_conditionOb.Count; i++)
-        {
-            m_conditionOb[i].SetActive(false);
         }
         
         m_menaceOb.SetActive(false);

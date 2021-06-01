@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewConditionInt", menuName = "GourouManager/Condition/ConditionInt")]
@@ -7,6 +8,7 @@ public class ConditionIntSO : ConditionSO
     [SerializeField] private SyncIntSO m_syncInt;    // utiliser dans TextInterlocutor
     [SerializeField] private ConditionType m_conditionType; // utiliser dans TextInterlocutor (interface)
     [SerializeField] private int m_value;
+    public int Value => m_value;
     public override void Initialize()
     {
         if (m_syncInt == null)

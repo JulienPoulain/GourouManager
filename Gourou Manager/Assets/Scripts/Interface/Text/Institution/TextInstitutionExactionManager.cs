@@ -8,7 +8,6 @@ public class TextInstitutionExactionManager : MonoBehaviour
 {
     [SerializeField] TMP_Text m_textNom;
     [SerializeField] TMP_Text m_textDescription;
-    [SerializeField] TMP_Text m_textCout;
     
 
     Image m_thisImage;
@@ -26,16 +25,6 @@ public class TextInstitutionExactionManager : MonoBehaviour
 
         m_textNom.text = "" + p_exaction.Name;
         m_textDescription.text = "" + p_exaction.Description;
-
-        if (p_exaction.Conditions.Count == 0)
-        {
-            m_textCout.text = "Couts : Aucun";
-        }
-        else
-        {
-            m_textCout.text = "Couts : " + p_exaction.Conditions[0].Value;
-        }
-        
 
         // Changement de la couleur selon si l'exaction est valide ou non
         if (p_exaction.IsValid())

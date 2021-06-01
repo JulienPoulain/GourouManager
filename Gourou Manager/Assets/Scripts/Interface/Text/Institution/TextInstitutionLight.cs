@@ -17,7 +17,7 @@ public class TextInstitutionLight : MonoBehaviour
         m_textNom.text = "" + p_data.m_name;
         
         m_textEtat.text = "" + p_data.Decay.GetDecayLvl().GetString();
-        m_textFont.text = "Fonds : " + p_data.Funds.Value;
+        m_textFont.text = "" + p_data.Funds.Value;
         // m_textDescription.text = "Si ce text est présent, c'est qu'on doit rajouter une description aux Institutions";
         m_textDescription.text = "" + p_data.m_description;
 
