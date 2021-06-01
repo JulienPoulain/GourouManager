@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 509392107836665858}
   m_Layer: 5
-  m_Name: Ressource Membres
+  m_Name: Ressource FinDeTour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 39858db631b0af045b04858d671f4f6d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f1b4859a3ca156548a923f953a3e6a41, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
