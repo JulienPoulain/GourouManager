@@ -9,7 +9,6 @@ public class TextInstitutionExactionManager : MonoBehaviour
     [SerializeField] TMP_Text m_textNom;
     [SerializeField] TMP_Text m_textDescription;
     
-
     Image m_thisImage;
 
     ExactionSO m_exaction;
