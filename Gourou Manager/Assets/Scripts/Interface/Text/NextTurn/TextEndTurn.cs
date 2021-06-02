@@ -64,7 +64,7 @@ public class TextEndTurn : MonoBehaviour
         // Affichage du Culthe
         m_TextmainInstitutionName.text = "" + GameManager.Instance.MainInstitution.m_name;
 
-        m_textCultStatList[0].text = "" + GameManager.Instance.MainInstitution.Funds.Value.ToString();
+        m_textCultStatList[0].text = "" + GameManager.Instance.MainInstitution.Funds.Value.ToString("N1");
         m_textCultStatList[1].text = "" + GameManager.Instance.MainInstitution.Members.Value.ToString();
         m_textCultStatList[2].text = "" + GameManager.Instance.MainInstitution.Fanatics.Value.ToString();
         m_textCultStatList[3].text = "" + GameManager.Instance.MainInstitution.PublicExposure.Value.ToString();

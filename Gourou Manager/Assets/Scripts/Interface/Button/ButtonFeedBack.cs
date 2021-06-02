@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 
-public class ButtonFeedBack : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
+public class ButtonFeedBack : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler, IPointerDownHandler
 {
     Image m_thisImage;
     [SerializeField] TMP_Text m_buttonText;
@@ -19,6 +19,13 @@ public class ButtonFeedBack : MonoBehaviour, IPointerExitHandler, IPointerEnterH
     {
         GameManager.Instance.m_interfaceManager.m_imageBehavior.ReverseBackGroundImage(m_thisImage);
         m_buttonText.color = Color.black;
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        // Permet de remettre l'ancienne image une fois cliquer dessus
+        GameManager.Instance.m_interfaceManager.m_imageBehavior.ReplaceBackGroundImage(m_thisImage);
+        m_buttonText.color = Color.white;
     }
 
     public void OnPointerExit(PointerEventData eventData)

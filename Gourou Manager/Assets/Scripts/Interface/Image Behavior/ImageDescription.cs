@@ -7,7 +7,7 @@ using TMPro;
 
 public class ImageDescription : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler, IPointerDownHandler
 {
-    [SerializeField] RessourceType m_ressourceName;
+    [SerializeField] string m_ressourceName;
     [SerializeField] TMP_Text m_textPrefab;
 
     // Stocke le GO instancier pour le d�truire
@@ -15,8 +15,24 @@ public class ImageDescription : MonoBehaviour, IPointerExitHandler, IPointerEnte
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        string message = "";
-        switch (m_ressourceName)
+        string message = m_ressourceName;
+        Vector3 position = new Vector3(Input.mousePosition.x + 120f, Input.mousePosition.y - 25f, 0);
+        m_actualPrefab = Instantiate(m_textPrefab, position, Quaternion.identity, GameManager.Instance.m_interfaceManager.transform);
+        m_actualPrefab.text = message;
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        m_actualPrefab.transform.position = Input.mousePosition;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        Destroy(m_actualPrefab);
+    }
+
+    /*
+     switch (m_ressourceName)
         {
             case RessourceType.Founds:
                 message = "Fonds : Les fonds permettent de réaliser certaines éxactions telles que soudoyer. " +
@@ -38,19 +54,5 @@ public class ImageDescription : MonoBehaviour, IPointerExitHandler, IPointerEnte
                 message = "Corruption : La corruption d'une institution représente sa dévotion au culte et impact directement le statut de l'institution à son égard, plus elle est élevée plus l'institution sera amicale  ";
                 break;
         }
-
-        Vector3 position = new Vector3(Input.mousePosition.x + 120f, Input.mousePosition.y - 25f, 0);
-        m_actualPrefab = Instantiate(m_textPrefab, position, Quaternion.identity, GameManager.Instance.m_interfaceManager.transform);
-        m_actualPrefab.text = message;
-    }
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        m_actualPrefab.transform.position = Input.mousePosition;
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        Destroy(m_actualPrefab);
-    }
+    */
 }
