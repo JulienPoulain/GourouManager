@@ -51,6 +51,8 @@ public class InterfaceManager : MonoBehaviour
 
     [SerializeField] public ImageBehavior m_imageBehavior;
 
+    [SerializeField] public PictoEtatBehavior m_pictoEtatBehavior;
+
     [Tooltip("définit si l'interface affiche actuellement une information, permet d'éviter de rappeler la fonction d'affichage")]
     public bool m_institutionLightIsDisplay = false;
 
