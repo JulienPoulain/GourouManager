@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class GameManager : Singleton<GameManager>, IInitializable
 {
@@ -12,10 +10,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
     [SerializeField] List<InstitutionSO> m_institutions = new List<InstitutionSO>();
     private InstitutionScript m_mainInstitutionScript;
 
-    //[SerializeField] public ScriptableObject[] m_Institutions;
-    //[SerializeField] public ScriptableObject[] m_Crise;
-
-    [SerializeField] public RoundManager m_roundManager;
+    //[SerializeField] public RoundManager m_roundManager;
     [SerializeField] public InterfaceManager m_interfaceManager;
     
     [SerializeField] public GameObject m_camera;
@@ -40,7 +35,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
 
     public void Initialize()
     {
-        m_turn = 0;
+        m_turn = 1;
         
         foreach (InstitutionSO institution in m_institutions)
             institution.Initialize();
@@ -58,7 +53,6 @@ public class GameManager : Singleton<GameManager>, IInitializable
         else
             foreach (ConditionSO condition in m_cdtDefeat)
                 condition.Initialize();
-            
     }
     
     private void Awake()

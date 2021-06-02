@@ -121,24 +121,16 @@ public class InterfaceManager : MonoBehaviour
         m_cultStatScript.Display();
     }
 
-    // Change la camera actuelle avec celle de l'institution cibée
+    // Change la camera actuelle avec celle de l'institution ciblée
     public void CameraChange()
     {
-        if (m_institutionSelected.m_cameraObject != null)
-        {
-            m_institutionSelected.m_cameraObject.SetActive(true);
-            GameManager.Instance.m_camera.SetActive(false);
-        }
+        if (m_institutionSelected.View != null)
+            CameraManager.Instance.SwitchToInstitution(m_institutionSelected.View);
     }
 
     public void CameraReset()
     {
-        if (m_institutionSelected.m_cameraObject != null)
-        {
-            GameManager.Instance.m_camera.SetActive(true);
-            m_institutionSelected.m_cameraObject.SetActive(false);
-        }
-
+        CameraManager.Instance.SwitchToIsland();
     }
 
     public void ChangeColorInstitution(List<Image> p_imageList)
