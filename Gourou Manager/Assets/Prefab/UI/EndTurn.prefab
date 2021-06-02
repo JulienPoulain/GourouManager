@@ -3790,8 +3790,9 @@ MonoBehaviour:
   m_objectCultStatList:
   - {fileID: 5536610797856184729}
   - {fileID: 5491550868936237219}
-  - {fileID: 82321021147465924}
-  - {fileID: 7520262794325604816}
+  - {fileID: 230001580416206194}
+  - {fileID: 6379526812265582765}
+  m_textCultStatList: []
   m_exactionScript: {fileID: 8834438534176611361}
   m_BackGroundColor:
   - {fileID: 2972566500129326521}
