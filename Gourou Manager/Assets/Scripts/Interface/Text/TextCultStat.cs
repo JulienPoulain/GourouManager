@@ -29,8 +29,5 @@ public class TextCultStat : MonoBehaviour
         m_fanatiques.text = "" + culte.Fanatics.Value;
         m_expositionPublic.text = "" + culte.PublicExposure.Value;
         m_turnNumber.text = "" + GameManager.Instance.Turn;
-
-
-
     }
 }

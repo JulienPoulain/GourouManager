@@ -25,7 +25,12 @@ public class TextInstitutionLight : MonoBehaviour
         // On change la couleur du fond et les lettes
         m_textNom.color = GameManager.Instance.m_interfaceManager.m_institutionSelected.InstitutionColor;
         m_image.color = GameManager.Instance.m_interfaceManager.m_institutionSelected.InstitutionColor;
-
+        
+        // on definit la couleur du pictogram pour changer l'opacite
+        Color pictogramColor = new Color(m_pictogram.color.r, m_pictogram.color.g, m_pictogram.color.b, GameManager.Instance.m_interfaceManager.m_institutionSelected.InstitutionAlpha);
+        
+        m_pictogram.color = pictogramColor;
         m_pictogram.sprite = p_data.Pictogram;
+        
     }
 }
