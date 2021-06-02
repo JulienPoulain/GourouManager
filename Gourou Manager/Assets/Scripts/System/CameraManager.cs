@@ -44,29 +44,17 @@ public class CameraManager : Singleton<CameraManager>
         if ((m_state & CameraState.Spring) == CameraState.Spring)
             SpringView(m_view);
 
-        if (Input.GetKeyDown(KeyCode.N))
+        // TEST
+        /*if (Input.GetKeyDown(KeyCode.N))
         {
             if (m_instCoroutine != null)
                 StopCoroutine(m_instCoroutine);
 
             if ((m_state & CameraState.IslandView) == CameraState.IslandView)
-            {
-                /*m_currentView = m_viewPolice;
-                SwitchToState(CameraState.InstitutionView, CameraState.Views);*/
                 SwitchToInstitution(m_viewPolice);
-            }
             else
-            {
-                /*m_currentView = m_viewIsland;
-                SwitchToState(CameraState.IslandView, CameraState.Views);*/
                 SwitchToIsland();
-            }
-
-            m_view.position = m_currentView.position;
-            m_view.rotation = m_currentView.rotation;
-            
-            m_instCoroutine = StartCoroutine(TransitionToView(m_view));
-        }
+        }*/
     }
 
     private void LateUpdate()
@@ -140,7 +128,17 @@ public class CameraManager : Singleton<CameraManager>
         transformMainCamera.rotation = p_view.rotation;
         
         // Retrait du comportement de transition.
-        m_state ^= CameraState.Transition;
+        Remove(CameraState.Transition);
+    }
+
+    /// <summary>
+    /// Supprime l'état spécifié.
+    /// </summary>
+    /// <param name="p_cameraState">L'état à supprimer.</param>
+    private void Remove(CameraState p_cameraState)
+    {
+        CameraState maskErase = CameraState.All ^ p_cameraState;
+        m_state &= maskErase;
     }
 
     /// <summary>
@@ -150,12 +148,11 @@ public class CameraManager : Singleton<CameraManager>
     /// <param name="p_group">Groupe optionel sur lequel s'exerce le changement.</param>
     private void SwitchToState(CameraState p_newState, CameraState p_group = CameraState.All)
     {
-        CameraState maskErase = CameraState.All ^ p_group;
-        m_state &= maskErase;
+        Remove(p_group);
         m_state |= p_newState;
     }
 
-    private void SwitchToInstitution(Transform p_viewInstitution)
+    public void SwitchToInstitution(Transform p_viewInstitution)
     {
         m_currentView = p_viewInstitution;
         SwitchToState(CameraState.InstitutionView);
@@ -163,7 +160,7 @@ public class CameraManager : Singleton<CameraManager>
         m_instCoroutine = StartCoroutine(TransitionToView(m_view));
     }
 
-    private void SwitchToIsland()
+    public void SwitchToIsland()
     {
         m_currentView = m_viewIsland;
         SwitchToState(CameraState.IslandView | CameraState.Spring);
