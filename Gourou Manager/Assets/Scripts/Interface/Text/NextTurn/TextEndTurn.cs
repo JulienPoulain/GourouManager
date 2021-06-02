@@ -16,7 +16,7 @@ public class TextEndTurn : MonoBehaviour
     private TMP_Text m_TextmainInstitutionName;
     
     [SerializeField] private List<GameObject> m_objectCultStatList;
-    private List<TMP_Text> m_textCultStatList = new List<TMP_Text>();
+    [SerializeField] private List<TMP_Text> m_textCultStatList = new List<TMP_Text>();
     private List<Image> m_imageStatList = new List<Image>();
 
     [SerializeField] TextExactionPanel m_exactionScript;
