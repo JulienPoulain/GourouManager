@@ -2137,7 +2137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1537922849}
   m_Layer: 0
-  m_Name: ViewDestination
+  m_Name: View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2452,20 +2452,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abd8fca32b9cb2f44a4099cb1c9f4697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_mainCamera: {fileID: 0}
-  m_currentCamera: {fileID: 0}
   m_currentView: {fileID: 0}
-  m_viewDestination: {fileID: 1537922849}
-  m_viewMainScreen: {fileID: 2113928655}
+  m_view: {fileID: 0}
+  m_viewIsland: {fileID: 0}
   m_viewPolice: {fileID: 666133782}
-  m_springView: {fileID: 0}
+  m_state: 0
   m_springSoftness: 1
-  m_transitionSpeed: 0.75
-  m_cursorPos: {x: 0, y: 0}
-  m_screenWidth: 0
-  m_screenHeigth: 0
-  m_centerScreen: {x: 0, y: 0}
-  m_normalizedToCenter: {x: 0, y: 0}
+  m_transitionSpeed: 1
 --- !u!1 &1745589892
 GameObject:
   m_ObjectHideFlags: 0
@@ -3304,7 +3297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2113928655}
   m_Layer: 0
-  m_Name: ViewMainScreen
+  m_Name: ViewIsland
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

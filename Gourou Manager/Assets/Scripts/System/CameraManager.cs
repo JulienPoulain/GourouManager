@@ -1,82 +1,78 @@
 using System.Collections;
-using TreeEditor;
 using UnityEngine;
 
 public class CameraManager : Singleton<CameraManager>
 {
-    // Main caméra
-    [SerializeField] private Camera m_mainCamera;
-    // Caméra utilisée actuellement
-    [SerializeField] private Camera m_currentCamera;
-    // Vue de référence
+    private Camera m_mainCamera;
+    private Camera m_currentCamera;
+    
     [SerializeField] private Transform m_currentView;
-    // Vue destination
-    [SerializeField] private Transform m_viewDestination;
-
-    [Header("Views")]
-    [SerializeField] private Transform m_viewMainScreen;
+    [SerializeField] private Transform m_view;
+    
+    [SerializeField] private Transform m_viewIsland;
     [SerializeField] private Transform m_viewPolice;
 
-    [Header("MainScreen")]
-    [SerializeField] private Transform m_springView;
-    [Range(0.0f, 20.0f)]
+    [Header("Comportements")]
+    [SerializeField] private CameraState m_state;
+    [Range(0.0f, 2.0f)]
     [SerializeField] private float m_springSoftness;
-
-    [Header("Transition")]
-    [Range(0.0f, 1.0f)]
+    [Range(0.0f, 2.0f)]
     [SerializeField] private float m_transitionSpeed;
-    [SerializeField] private Coroutine m_instTransitionToView = null;
+    private Coroutine m_instCoroutine;
 
-    [SerializeField] private Vector2 m_cursorPos;
-    [SerializeField] private float m_screenWidth;
-    [SerializeField] private float m_screenHeigth;
-    [SerializeField] private Vector2 m_centerScreen;
-    [SerializeField] private Vector2 m_normalizedToCenter;
 
     private void Start()
     {
+        // Inititalisation des caméras
         m_mainCamera = Camera.main;
         m_currentCamera = m_mainCamera;
-        m_currentView = m_viewMainScreen;
-        /*m_viewDestination.position = m_currentView.position;
-        m_viewDestination.rotation = m_currentView.rotation;*/
+        
+        // Initialisation des vues
+        m_view = GameObject.Find("View").GetComponentInChildren<Transform>();
+        m_viewIsland = GameObject.Find("ViewIsland").GetComponentInChildren<Transform>();
+        m_currentView = m_viewIsland;
+        m_view.SetPositionAndRotation(m_currentView.position, m_currentView.rotation);
 
-        // POUR LE DEBUG
-        m_centerScreen = new Vector2();
+        // Initialisation de l'état de la caméra
+        m_state = CameraState.IslandView | CameraState.Spring;
     }
 
     private void Update()
     {
-        // POUR LE DEBUG
-        m_cursorPos.x = Input.mousePosition.x;
-        m_cursorPos.y = Input.mousePosition.y;
-        m_screenWidth = Screen.width;
-        m_screenHeigth = Screen.height;
-        m_centerScreen.x = (float) Screen.width / 2;
-        m_centerScreen.y = (float) Screen.height / 2;
+        m_view.SetPositionAndRotation(m_currentView.position, m_currentView.rotation);
 
-        m_normalizedToCenter = GetPosNormToCenter();
+        if ((m_state & CameraState.Spring) == CameraState.Spring)
+            SpringView(m_view);
 
         if (Input.GetKeyDown(KeyCode.N))
         {
-            Debug.Log($"DEBUT - m_instTransitionToView : {m_instTransitionToView}");
-            if (m_instTransitionToView != null)
-                StopCoroutine(m_instTransitionToView);
-            
-            if (m_currentView == m_viewMainScreen)
-                m_currentView = m_viewPolice;
+            if (m_instCoroutine != null)
+                StopCoroutine(m_instCoroutine);
+
+            if ((m_state & CameraState.IslandView) == CameraState.IslandView)
+            {
+                /*m_currentView = m_viewPolice;
+                SwitchToState(CameraState.InstitutionView, CameraState.Views);*/
+                SwitchToInstitution(m_viewPolice);
+            }
             else
-                m_currentView = m_viewMainScreen;
+            {
+                /*m_currentView = m_viewIsland;
+                SwitchToState(CameraState.IslandView, CameraState.Views);*/
+                SwitchToIsland();
+            }
+
+            m_view.position = m_currentView.position;
+            m_view.rotation = m_currentView.rotation;
             
-            m_viewDestination.position = m_currentView.position;
-            m_viewDestination.rotation = m_currentView.rotation;
-            
-            m_instTransitionToView = StartCoroutine(TransitionToView(m_viewDestination));
-            Debug.Log($"FIN   - m_instTransitionToView : {m_instTransitionToView}");
+            m_instCoroutine = StartCoroutine(TransitionToView(m_view));
         }
-        
-        if (m_currentView == m_viewMainScreen)
-            SpringView(m_viewDestination);
+    }
+
+    private void LateUpdate()
+    {
+        if ((m_state & CameraState.Transition) != CameraState.Transition)
+            m_mainCamera.transform.SetPositionAndRotation(m_view.position, m_view.rotation);
     }
 
     /// <summary>
@@ -88,8 +84,8 @@ public class CameraManager : Singleton<CameraManager>
     private Vector2 GetPosNormToCenter()
     {
         return new Vector2(
-            m_cursorPos.x * (2 / m_screenWidth) - 2,
-            m_cursorPos.y * (2 / m_screenHeigth) - 2);
+            Input.mousePosition.x * ((float) 2 / Screen.width) - 1,
+            Input.mousePosition.y * ((float) 2 / Screen.height) - 1);
     }
 
     /// <summary>
@@ -98,9 +94,10 @@ public class CameraManager : Singleton<CameraManager>
     /// <param name="p_transform">Transform sur lequel appliquer la translation.</param>
     private void SpringView(Transform p_transform)
     {
+        Vector2 posNormalizedToCenter = GetPosNormToCenter();
         p_transform.Translate(
-            m_normalizedToCenter.x * m_springSoftness,
-            m_normalizedToCenter.y * m_springSoftness,
+            posNormalizedToCenter.x * m_springSoftness,
+            posNormalizedToCenter.y * m_springSoftness,
             0);
     }
 
@@ -111,6 +108,9 @@ public class CameraManager : Singleton<CameraManager>
     /// <returns>La coroutine TransitionToView instanciée.</returns>
     private IEnumerator TransitionToView(Transform p_view)
     {
+        // Ajout du comportement de transition.
+        m_state |= CameraState.Transition;
+        
         Transform transformMainCamera = m_mainCamera.transform;
         
         Vector3 initPos = transformMainCamera.position;
@@ -120,7 +120,7 @@ public class CameraManager : Singleton<CameraManager>
         while (elapsedTime <= m_transitionSpeed)
         {
             elapsedTime += Time.deltaTime;
-            
+
             m_currentCamera.transform.position =
                 Vector3.Lerp(
                     initPos,
@@ -135,5 +135,39 @@ public class CameraManager : Singleton<CameraManager>
             
             yield return null;
         }
+
+        transformMainCamera.position = p_view.position;
+        transformMainCamera.rotation = p_view.rotation;
+        
+        // Retrait du comportement de transition.
+        m_state ^= CameraState.Transition;
+    }
+
+    /// <summary>
+    /// Passe de l'état actuel au nouvel état [sur le groupe concerné si précisé].
+    /// </summary>
+    /// <param name="p_newState">Nouvel état.</param>
+    /// <param name="p_group">Groupe optionel sur lequel s'exerce le changement.</param>
+    private void SwitchToState(CameraState p_newState, CameraState p_group = CameraState.All)
+    {
+        CameraState maskErase = CameraState.All ^ p_group;
+        m_state &= maskErase;
+        m_state |= p_newState;
+    }
+
+    private void SwitchToInstitution(Transform p_viewInstitution)
+    {
+        m_currentView = p_viewInstitution;
+        SwitchToState(CameraState.InstitutionView);
+        m_view.SetPositionAndRotation(m_currentView.position, m_currentView.rotation);
+        m_instCoroutine = StartCoroutine(TransitionToView(m_view));
+    }
+
+    private void SwitchToIsland()
+    {
+        m_currentView = m_viewIsland;
+        SwitchToState(CameraState.IslandView | CameraState.Spring);
+        m_view.SetPositionAndRotation(m_currentView.position, m_currentView.rotation);
+        m_instCoroutine = StartCoroutine(TransitionToView(m_view));
     }
 }
