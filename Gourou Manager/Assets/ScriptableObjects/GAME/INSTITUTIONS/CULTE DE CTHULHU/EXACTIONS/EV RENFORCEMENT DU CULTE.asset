@@ -15,7 +15,7 @@ MonoBehaviour:
   m_name: Renforcement du Culte
   m_description: Le Culte se renforce
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts:

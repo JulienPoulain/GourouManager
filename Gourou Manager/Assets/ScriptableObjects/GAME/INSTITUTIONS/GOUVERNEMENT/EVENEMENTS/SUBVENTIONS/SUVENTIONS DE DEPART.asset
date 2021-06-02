@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6b647af1624fef43bcaf750a89ff899, type: 3}
-  m_Name: EV DECAY +2
+  m_Name: SUVENTIONS DE DEPART
   m_EditorClassIdentifier: 
-  m_name: Decay de Corruption +2
-  m_description: 
+  m_name: Subventions
+  m_description: "Fonds donn\xE9s \xE0 la Police et aux M\xE9dias par le Gouvernement"
   m_initDuration: 1
   m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts:
-  - {fileID: 11400000, guid: 097538cdfa230eb4ca809130550cbb58, type: 2}
+  - {fileID: 11400000, guid: 1ea519c2b2edab2418b3263200411b87, type: 2}
+  - {fileID: 11400000, guid: a5978485c5411ef4aaa6fd1cc1b24cc7, type: 2}
   m_infoGained: []
-  m_IsDisplayed: 0
+  m_IsDisplayed: 1
   m_initNbUse: -1
   m_nbUse: -1
   m_cdtActivation:
-  - {fileID: 11400000, guid: 2462619507cd1984eb1304528e802e16, type: 2}
-  - {fileID: 11400000, guid: ce842163e01ce4a4e8d64469e8bdd7d3, type: 2}
+  - {fileID: 11400000, guid: ebc644e3ecbf83a4cb45f7c14e45de4d, type: 2}

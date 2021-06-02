@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42973922d5e361d4b87d9d48e6e44c31, type: 3}
-  m_Name: OP M
+  m_Script: {fileID: 11500000, guid: 65d02e6c45e7ab84a9e56bc495f4f42d, type: 3}
+  m_Name: IMP F ENTREP
   m_EditorClassIdentifier: 
-  m_overview: 'OP M : 2'
-  m_operand: 2
+  m_syncInt: {fileID: 11400000, guid: a26544a9e213a0449ad68d4863f68928, type: 2}
+  m_magnitude: {fileID: 11400000, guid: 46f65380b116e0049ad7380c7e1e3b0d, type: 2}
