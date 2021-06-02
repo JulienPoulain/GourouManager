@@ -18,11 +18,12 @@ MonoBehaviour:
   m_members: {fileID: 11400000, guid: 246b7a895aefcf84091b7cbb415df657, type: 2}
   m_fanatics: {fileID: 11400000, guid: 31199599f32ab7b46a511ba75443dcd8, type: 2}
   m_publicExposure: {fileID: 11400000, guid: b373f889676d6bd4d8ecf8a3bad79bb6, type: 2}
-  m_corruption: {fileID: 11400000, guid: d6e7e01f09e88844a91ef2e545fca37b, type: 2}
   m_brutality: {fileID: 11400000, guid: 788c887bcd8ad4c4daed9987356145ed, type: 2}
   m_decay: {fileID: 11400000, guid: c6a77e9e92ebc7e48be90ade407e926f, type: 2}
   m_interlocutorList:
   - {fileID: 11400000, guid: 94e23ccacdca9264baa3f9442f72b8de, type: 2}
   m_exactionList: []
-  m_triggeredEvents: []
+  m_triggeredEvents:
+  - {fileID: 11400000, guid: c094c8bd72f8c1d4284b56a4548d5af8, type: 2}
+  - {fileID: 11400000, guid: 99333d77762a0664cabffd6ed6a6743e, type: 2}
   m_pictogram: {fileID: 21300000, guid: 4a3fa9abe22c1734c954e0598db27a0a, type: 3}

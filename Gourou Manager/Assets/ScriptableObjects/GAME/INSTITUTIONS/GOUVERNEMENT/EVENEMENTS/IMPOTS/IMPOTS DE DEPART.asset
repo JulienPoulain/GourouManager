@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6b647af1624fef43bcaf750a89ff899, type: 3}
-  m_Name: EV DECAY +2
+  m_Name: IMPOTS DE DEPART
   m_EditorClassIdentifier: 
-  m_name: Decay de Corruption +2
-  m_description: 
+  m_name: "Imp\xF4ts"
+  m_description: "Somme pr\xE9lev\xE9e aux Entrepreneurs par le Gouvernement."
   m_initDuration: 1
-  m_duration: 1
+  m_duration: 0
   m_initDelay: 0
   m_delay: 0
   m_impacts:
-  - {fileID: 11400000, guid: 097538cdfa230eb4ca809130550cbb58, type: 2}
+  - {fileID: 11400000, guid: ed5a5fbb7f431754cbd22f904b871bb0, type: 2}
   m_infoGained: []
-  m_IsDisplayed: 0
+  m_IsDisplayed: 1
   m_initNbUse: -1
-  m_nbUse: -1
+  m_nbUse: 0
   m_cdtActivation:
-  - {fileID: 11400000, guid: 2462619507cd1984eb1304528e802e16, type: 2}
-  - {fileID: 11400000, guid: ce842163e01ce4a4e8d64469e8bdd7d3, type: 2}
+  - {fileID: 11400000, guid: acdd9d186499d784f811ee3c9945c660, type: 2}
