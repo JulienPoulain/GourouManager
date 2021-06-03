@@ -120,7 +120,7 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _corruptionLevel: -2
+    - _corruptionLevel: -0.378
     m_Colors:
     - Color_0521913ecb5c437cbc5978bcb1599d95: {r: 0, g: 0, b: 0, a: 0}
     - Color_356bf65781914ba7acb5358f00f5f00d: {r: 1, g: 1, b: 1, a: 0}
