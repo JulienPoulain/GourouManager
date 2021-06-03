@@ -26,4 +26,5 @@ MonoBehaviour:
   m_triggeredEvents:
   - {fileID: 11400000, guid: c094c8bd72f8c1d4284b56a4548d5af8, type: 2}
   - {fileID: 11400000, guid: 99333d77762a0664cabffd6ed6a6743e, type: 2}
+  - {fileID: 11400000, guid: 93e9c316bcbb21346a3da94e5487c98d, type: 2}
   m_pictogram: {fileID: 21300000, guid: 4a3fa9abe22c1734c954e0598db27a0a, type: 3}
