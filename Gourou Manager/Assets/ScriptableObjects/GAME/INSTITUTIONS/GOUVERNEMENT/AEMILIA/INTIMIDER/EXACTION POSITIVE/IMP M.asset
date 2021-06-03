@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65d02e6c45e7ab84a9e56bc495f4f42d, type: 3}
+  m_Name: IMP M
+  m_EditorClassIdentifier: 
+  m_syncInt: {fileID: 11400000, guid: 9a39fbeee89981a4393543e0b21d335b, type: 2}
+  m_magnitude: {fileID: 11400000, guid: 0317c61f145c80346b21df5c4c4be187, type: 2}

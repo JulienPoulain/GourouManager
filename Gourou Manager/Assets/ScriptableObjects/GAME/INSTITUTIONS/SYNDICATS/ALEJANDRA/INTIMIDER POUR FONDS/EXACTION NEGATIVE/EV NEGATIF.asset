@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: EV NEGATIF
   m_EditorClassIdentifier: 
   m_name: Echec de l'intimidation
-  m_description: "Alejandra se m\xE9fieras de vous et a d\xE9pos\xE9 une plainte
-    aupr\xE8s de la Police contre vous."
+  m_description: "La Conf\xE9d\xE9ration du Travail se m\xE9fie de vous et a d\xE9pos\xE9
+    une plainte contre vous aupr\xE8s de la Police."
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts:

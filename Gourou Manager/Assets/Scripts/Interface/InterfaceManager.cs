@@ -38,7 +38,7 @@ public class InterfaceManager : MonoBehaviour
     TextApprocheMain m_approcheScript;
     TextEndTurn m_endTurnScript;
     public TextFeedBackManager m_feedBackScript; // sera appeler lorsque le joueur fait une action
-    TextCultStat m_cultStatScript;
+    public TextCultStat m_cultStatScript;
 
     // public TextInterlocutor TextInterlocutor => m_InterlocutorScript;
 
@@ -118,7 +118,6 @@ public class InterfaceManager : MonoBehaviour
         m_endTurnScript = m_endTurn.GetComponent<TextEndTurn>();
         m_cultStatScript = m_cultStat.GetComponent<TextCultStat>();
 
-        m_cultStatScript.Display();
     }
 
     // Change la camera actuelle avec celle de l'institution ciblée

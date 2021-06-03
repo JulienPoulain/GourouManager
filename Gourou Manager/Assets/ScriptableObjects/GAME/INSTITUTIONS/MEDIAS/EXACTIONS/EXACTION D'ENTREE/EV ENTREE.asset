@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
+  m_Name: EV ENTREE
+  m_EditorClassIdentifier: 
+  m_name: Corruption journaliste
+  m_description: "Vous avez corrompu un pigiste qui \xE9criras des articles conciliants
+    avec le Culte"
+  m_initDuration: 1
+  m_duration: 1
+  m_initDelay: 0
+  m_delay: 0
+  m_impacts:
+  - {fileID: 11400000, guid: b470ed310e1e27d4dae64754bef70751, type: 2}
+  - {fileID: 11400000, guid: d9f2342de9df93b499cf1ff101a7a45c, type: 2}
+  - {fileID: 11400000, guid: 0666b9ac3a37d9646844e6cd0d313560, type: 2}
+  - {fileID: 11400000, guid: f17347306c7c49649af1c9aa22ec5762, type: 2}
+  m_infoGained: []
+  m_IsDisplayed: 1

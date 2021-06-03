@@ -17,6 +17,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
     
     [SerializeField] private List<ExactionSO> m_pendingExactions = new List<ExactionSO>();
     [SerializeField] private List<EventSO> m_activeEvents = new List<EventSO>();
+    [SerializeField] private List<ApproachSO> m_approachesAttempted = new List<ApproachSO>();
 
     [SerializeField] private List<ConditionSO> m_cdtVictory;
     [SerializeField] private List<ConditionSO> m_cdtDefeat;
@@ -26,6 +27,8 @@ public class GameManager : Singleton<GameManager>, IInitializable
 
     public List<ExactionSO> PendingExactions => m_pendingExactions;
     public List<EventSO> ActiveEvents => m_activeEvents;
+    public List<ApproachSO> ApproachesAttempted => m_approachesAttempted;
+
     public int Turn => m_turn;
 
     public InstitutionScript MainInstitutionScript => m_mainInstitutionScript;
@@ -85,6 +88,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
         TryEndGame();
 
         m_turn++;
+        m_interfaceManager.m_cultStatScript.Display();
     }
 
     

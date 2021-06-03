@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: EV POSITIF
   m_EditorClassIdentifier: 
   m_name: "Intimidation r\xE9ussie"
-  m_description: "Alejandra accepte de d\xE9tourner une partie des fonds des syndicats
-    pour financer le Culte. Vous obtiendrez 3000 par tour pendant 5 tours."
+  m_description: "Alejandra accepte de d\xE9tourner une partie des fonds des syndicats.
+    Vous obtiendrez 3000 par tour pendant 5 tours."
   m_initDuration: 5
-  m_duration: 0
+  m_duration: 5
   m_initDelay: 0
   m_delay: 0
   m_impacts:

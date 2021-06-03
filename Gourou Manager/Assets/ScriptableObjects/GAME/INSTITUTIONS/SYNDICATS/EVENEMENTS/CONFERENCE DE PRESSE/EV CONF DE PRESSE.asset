@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b647af1624fef43bcaf750a89ff899, type: 3}
   m_Name: EV CONF DE PRESSE
   m_EditorClassIdentifier: 
-  m_name: 'Conference de presse '
-  m_description: "Les Syndicats font une conf\xE9rence de presse pour d\xE9clarer
-    leur m\xE9fiance vis a vis du \"mouvement sectaire\" qui monte dans le pays"
+  m_name: "Congr\xE8s syndical m\xE9fiant"
+  m_description: "Au cours d'un congr\xE8s, les Syndicats d\xE9clarent leur m\xE9fiance
+    vis a vis du \"mouvement sectaire\" qui monte dans le pays"
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts:
@@ -25,7 +25,7 @@ MonoBehaviour:
   m_infoGained: []
   m_IsDisplayed: 1
   m_initNbUse: -1
-  m_nbUse: 0
+  m_nbUse: -1
   m_cdtActivation:
   - {fileID: 11400000, guid: 0ec28efaa9428aa4985daa6989f0e8db, type: 2}
   - {fileID: 11400000, guid: bf66844421c243c4c92bd8fee6623bfe, type: 2}

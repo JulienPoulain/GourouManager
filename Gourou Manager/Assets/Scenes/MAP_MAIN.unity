@@ -4987,6 +4987,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5772172639389415677, guid: b53b2417c57656648b71fc736368a3db, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 450.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 5772172639389415677, guid: b53b2417c57656648b71fc736368a3db, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 369
+      objectReference: {fileID: 0}
     - target: {fileID: 6771110931803590880, guid: b53b2417c57656648b71fc736368a3db, type: 3}
       propertyPath: m_Pivot.x
       value: 0.49999997
@@ -6558,6 +6566,7 @@ MonoBehaviour:
   m_gameDescription: {fileID: 367185061}
   m_interlocutorScript: {fileID: 0}
   m_feedBackScript: {fileID: 2060777672}
+  m_cultStatScript: {fileID: 0}
   m_decallingLightInstitution: 150
   m_canvasSize: {fileID: 0}
   m_imageBehavior: {fileID: 2060777673}

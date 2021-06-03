@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: EV ENTREE SYNDICATS
   m_EditorClassIdentifier: 
-  m_name: Soudoyement d'un syndicat ouvrier
-  m_description: "Vous offrez une coquette somme \xE0 un petit syndicat ouvrier connu
-    pour ces id\xE9es radicales."
+  m_name: Soudoiement d'un syndicat ouvrier
+  m_description: "Vous offrez une coquette somme \xE0 un syndicat ouvrier connu pour
+    ses id\xE9es radicales."
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts:

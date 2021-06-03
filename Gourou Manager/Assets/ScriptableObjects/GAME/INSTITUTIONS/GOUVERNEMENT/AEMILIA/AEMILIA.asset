@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: AEMILIA
   m_EditorClassIdentifier: 
   m_name: Aemilia Jackson
-  m_description: "Ministre de l'\xE9conomie"
-  m_descriptionFailure: 
-  m_sanity: {fileID: 11400000, guid: e1ccabe16b65cfc42bfe6e251cc37dce, type: 2}
-  m_approach: []
+  m_description: "Pr\xE9sidente de la R\xE9publique"
+  m_descriptionFailure: 'Description failure '
+  m_sanity: {fileID: 11400000, guid: 2fd83f33ef622c041b958aef8dd5f067, type: 2}
+  m_approach:
+  - {fileID: 11400000, guid: 2d7c72fbb69b4a5459f9488e0d0fdb0a, type: 2}
+  - {fileID: 11400000, guid: 466dece827fafdf48ae8c3ffce610c72, type: 2}
   m_accesConditions:
-  - {fileID: 11400000, guid: dd368292ef0c5ef4bb555a23daaef732, type: 2}
+  - {fileID: 11400000, guid: ba9d8a1fa1403d8428fbe7524c54324e, type: 2}
+  - {fileID: 11400000, guid: de3248fc8ce06d749b698cdf00c43f80, type: 2}
+  - {fileID: 11400000, guid: 2f24450bdecf15246bde684ee2b46692, type: 2}
   m_sprite: {fileID: 21300000, guid: 1765b203f09fa804cba45ff919a36aaa, type: 3}

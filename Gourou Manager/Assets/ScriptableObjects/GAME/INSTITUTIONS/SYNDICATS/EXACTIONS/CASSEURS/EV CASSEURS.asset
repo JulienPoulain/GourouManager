@@ -12,13 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: EV CASSEURS
   m_EditorClassIdentifier: 
-  m_name: LACHER LES CASSEURS
-  m_description: "Vous payez les Syndicalistes pour qu'ils laissent les casseurs
-    se d\xE9fouler dans leur prochaine manifestation"
+  m_name: "D\xE9cha\xEEner les casseurs"
+  m_description: Vous payez les Syndicalistes pour qu'ils laissent les casseurs infiltrer
+    leur prochaine manifestation
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: a9f1634713ad3b74ea57774ccd72af41, type: 2}
   - {fileID: 11400000, guid: 2b27a2a6f57595d4b824cdd4b308ea9e, type: 2}
   - {fileID: 11400000, guid: a92702584205ff94883073689ab2adc4, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1
