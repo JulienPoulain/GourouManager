@@ -18,7 +18,6 @@ public class TextApprocheMain : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log("LE MAIN START");
         foreach (GameObject thisObject in m_approche)
         {
             m_approcheScript.Add(thisObject.GetComponent<TextApprocheIndividual>());

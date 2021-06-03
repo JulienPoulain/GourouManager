@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Numerics;
 
 public class TextCultStat : MonoBehaviour
 {
@@ -24,13 +25,10 @@ public class TextCultStat : MonoBehaviour
     {
         InstitutionSO culte = GameManager.Instance.MainInstitution;
         
-        m_fonds.text = "" + culte.Funds.Value;
+        m_fonds.text = "" + culte.Funds.Value.ToString("N1");
         m_membres.text = "" + culte.Members.Value;
         m_fanatiques.text = "" + culte.Fanatics.Value;
         m_expositionPublic.text = "" + culte.PublicExposure.Value;
         m_turnNumber.text = "" + GameManager.Instance.Turn;
-
-
-
     }
 }

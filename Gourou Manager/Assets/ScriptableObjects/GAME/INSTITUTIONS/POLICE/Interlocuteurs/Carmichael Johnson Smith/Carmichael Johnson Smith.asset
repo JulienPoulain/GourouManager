@@ -16,6 +16,9 @@ MonoBehaviour:
   m_description: 
   m_descriptionFailure: 
   m_sanity: {fileID: 11400000, guid: e1ccabe16b65cfc42bfe6e251cc37dce, type: 2}
-  m_approach: []
-  m_accesConditions: []
-  m_sprite: {fileID: 0}
+  m_approach:
+  - {fileID: 11400000, guid: 43fd2a536ccb5a443824ba874e4ab3c1, type: 2}
+  - {fileID: 11400000, guid: cb6a58d2c1b9cae4299e1e7e1e814eaf, type: 2}
+  m_accesConditions:
+  - {fileID: 11400000, guid: 987a416e336e77043bcf2beb8bbbf902, type: 2}
+  m_sprite: {fileID: 21300000, guid: 3c98d4dcdd2203645964c8f29e30eeac, type: 3}

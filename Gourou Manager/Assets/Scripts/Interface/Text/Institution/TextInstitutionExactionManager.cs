@@ -8,6 +8,8 @@ public class TextInstitutionExactionManager : MonoBehaviour
 {
     [SerializeField] TMP_Text m_textNom;
     [SerializeField] TMP_Text m_textDescription;
+
+    [SerializeField] [Tooltip("Script permetant au bouton de s'éclérer lorsqu'on passe la souris dessus, il sera désactiver si l'exaction n'est pas possible")] ButtonFeedBack m_buttonFeedBackScript;
     
     Image m_thisImage;
 
@@ -25,6 +27,8 @@ public class TextInstitutionExactionManager : MonoBehaviour
         m_textNom.text = "" + p_exaction.Name;
         m_textDescription.text = "" + p_exaction.Description;
 
+        m_buttonFeedBackScript.enabled = true;
+
         // Changement de la couleur selon si l'exaction est valide ou non
         if (p_exaction.IsValid())
         {
@@ -33,6 +37,7 @@ public class TextInstitutionExactionManager : MonoBehaviour
         else
         {
             m_thisImage.color = Color.grey;
+            m_buttonFeedBackScript.enabled = false;
         }
     }
 

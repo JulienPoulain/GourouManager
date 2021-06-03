@@ -51,6 +51,8 @@ public class InterfaceManager : MonoBehaviour
 
     [SerializeField] public ImageBehavior m_imageBehavior;
 
+    [SerializeField] public PictoEtatBehavior m_pictoEtatBehavior;
+
     [Tooltip("définit si l'interface affiche actuellement une information, permet d'éviter de rappeler la fonction d'affichage")]
     public bool m_institutionLightIsDisplay = false;
 
@@ -195,7 +197,7 @@ public class InterfaceManager : MonoBehaviour
     public void DisplayApproche(InterlocutorSO p_interlocutor) // appeler depuis textInterlocutor
     {
         m_approche.SetActive(true);
-        // m_ApprocheIsDisplay = true;
+        m_ApprocheIsDisplay = true;
         m_approcheScript.Display(p_interlocutor);
         DisallowHeavyInstitution();
     }
@@ -286,6 +288,22 @@ public class InterfaceManager : MonoBehaviour
     public void DisallowGameDescription()
     {
         m_gameDescription.SetActive(false);
+    }
+
+    /// <summary>
+    /// Renvoit false si les interfaces Interlocutor / Approach / EndTurn sont affichés (ne concernes pas Institutions light + heavy
+    /// </summary>
+    /// <returns></returns>
+    public bool InterfaceIsActive()
+    {
+        if (interlocutorIsDisplay || ApprocheIsDisplay || m_endTurnIsDisplay)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 
     // -----------------------------------------------------------------------------------------

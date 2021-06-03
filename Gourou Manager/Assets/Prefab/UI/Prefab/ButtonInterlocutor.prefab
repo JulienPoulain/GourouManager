@@ -144,9 +144,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3054248311612129200}
   - component: {fileID: 9054663763781884222}
+  - component: {fileID: 4577365465283756708}
   - component: {fileID: 934802664639315842}
   m_Layer: 5
-  m_Name: uttonInterlocutor
+  m_Name: ButtonInterlocutor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,6 +181,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127016078486409650}
   m_CullTransparentMesh: 1
+--- !u!114 &4577365465283756708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127016078486409650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0c77192b8dc189439b411996dae2231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_buttonText: {fileID: 7226982818471535883}
 --- !u!114 &934802664639315842
 MonoBehaviour:
   m_ObjectHideFlags: 0
