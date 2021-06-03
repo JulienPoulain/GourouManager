@@ -20,6 +20,8 @@ public class TextCultStat : MonoBehaviour
     {
         // on définit ici les couleurs pour ne pas avoir a le faire à chaques appels
         m_backGroundColor.color = GameManager.Instance.MainInstitutionScript.InstitutionColor;
+        
+        Display();
     }
 
     public void Display()

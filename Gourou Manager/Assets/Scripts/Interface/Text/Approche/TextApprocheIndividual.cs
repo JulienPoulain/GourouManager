@@ -12,6 +12,8 @@ public class TextApprocheIndividual : MonoBehaviour
 
     [SerializeField] TextApprocheMain m_mainApproach;   // servira � stocker l'approach choisis
 
+    [SerializeField] ButtonFeedBack m_buttonFeedBack;
+
     ApproachSO m_approche;
 
     void Start()
@@ -24,6 +26,15 @@ public class TextApprocheIndividual : MonoBehaviour
         this.gameObject.SetActive(true);
 
         m_approche = p_approach;
+        
+        if (m_approche.RemainingTime == 0)
+        {
+            m_buttonFeedBack.enabled = true;
+        }
+        else
+        {
+            m_buttonFeedBack.enabled = false;
+        }
 
         m_name.text = "" + m_approche.Name;
         m_dialogueCharacter.text = "" + m_approche.m_dialogueApproach;
@@ -32,12 +43,14 @@ public class TextApprocheIndividual : MonoBehaviour
 
     public void ExecuteApproche()
     {
-        GameManager.Instance.PendingExactions.Add(m_approche.TryApproach());
-        GameManager.Instance.ApproachesAttempted.Add(m_approche);
-        GameManager.Instance.m_interfaceManager.DisallowApproche();
-        GameManager.Instance.m_interfaceManager.CameraReset();
-        m_approche = null;
+        if (m_approche.RemainingTime == 0)
+        {
+            GameManager.Instance.PendingExactions.Add(m_approche.TryApproach());
+            GameManager.Instance.m_interfaceManager.DisallowApproche();
+            GameManager.Instance.m_interfaceManager.CameraReset();
+            m_approche = null;
 
-        GameManager.Instance.EndTurn();
+            GameManager.Instance.EndTurn();
+        }
     }
 }

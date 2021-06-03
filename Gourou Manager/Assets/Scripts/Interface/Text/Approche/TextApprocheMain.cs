@@ -42,4 +42,11 @@ public class TextApprocheMain : MonoBehaviour
 
         GameManager.Instance.m_interfaceManager.ChangeColorInstitution(m_imageList);
     }
+
+    public void ExitApproach()
+    {
+        GameManager.Instance.m_interfaceManager.DisallowApproche();
+        GameManager.Instance.m_interfaceManager.CameraReset();
+        m_approche = null;
+    }
 }
