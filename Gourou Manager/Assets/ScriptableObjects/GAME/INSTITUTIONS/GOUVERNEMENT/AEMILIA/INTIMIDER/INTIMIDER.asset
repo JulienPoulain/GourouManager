@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: INTIMIDER
   m_exactionPos: {fileID: 11400000, guid: 2cdfbbc67b8977a4aa08a0bbea8c7a28, type: 2}
-  m_exactionNeg: {fileID: 0}
+  m_exactionNeg: {fileID: 11400000, guid: f31833fbb17c78d4e8c3b50ae387373f, type: 2}
   m_cdtSuccess:
   - {fileID: 11400000, guid: 3a93b3f635edac745a005846a4a38b39, type: 2}
   m_cooldown: 900

@@ -12,12 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 525d2b2df425485449ec8a12401c7c35, type: 3}
   m_Name: SOUDOYER
   m_EditorClassIdentifier: 
-  m_name: 
-  m_exactionPos: {fileID: 0}
-  m_exactionNeg: {fileID: 0}
-  m_cdtSuccess: []
-  m_cooldown: 0
+  m_name: Soudoyer
+  m_exactionPos: {fileID: 11400000, guid: c6539fe4f115d234dbcdbff434eeb916, type: 2}
+  m_exactionNeg: {fileID: 11400000, guid: a636466118efa4a489141b144825da70, type: 2}
+  m_cdtSuccess:
+  - {fileID: 11400000, guid: a451528dc6e282548a78209b73c5575e, type: 2}
+  m_cooldown: 900
   m_remainingTime: 0
-  m_descriptionApproach: 
+  m_descriptionApproach: "Vous proposez \xE0 Aemilia de r\xE9duire drastiquement
+    la Brutalit\xE9 du Culte en \xE9change d'un entretient avec elle \xE0 l'Elys\xE9e,
+    qui augmentera fortement votre Exposition Publique."
   m_dialogueApproach: 
-  m_resultatApproach: 
+  m_resultatApproach: "Si le Soudoyement fonctionne, vous gagnerez 35 d'Exposition
+    Publique contre une perte de 30 de Brutalit\xE9."

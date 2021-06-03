@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
+  m_Name: EV NEGATIF
+  m_EditorClassIdentifier: 
+  m_name: Echec de l'Intimidation d'Aemilia
+  m_description: "Aemilia ne c'est pas laiss\xE9e intimid\xE9e, et fait une d\xE9claration
+    publique disant que le Culte est dangereux."
+  m_initDuration: 1
+  m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
+  m_impacts:
+  - {fileID: 11400000, guid: 7d005616d25ec664b911215929ae3fa0, type: 2}
+  - {fileID: 11400000, guid: cd41ddd512ca7f24f8858ebf2109384f, type: 2}
+  m_infoGained: []
+  m_IsDisplayed: 1
