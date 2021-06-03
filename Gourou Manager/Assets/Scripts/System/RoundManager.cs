@@ -127,7 +127,7 @@ public class RoundManager : Singleton<RoundManager>
     {
         foreach (ApproachSO approach in p_approaches.ToList())
         {
-            if (approach.Cooldown <= 0)
+            if (!approach.IsInCd())
             {
                 p_approaches.Remove(approach);
                 approach.Reset();
