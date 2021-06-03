@@ -3086,6 +3086,7 @@ MonoBehaviour:
   m_camera: {fileID: 963194225}
   m_pendingExactions: []
   m_activeEvents: []
+  m_approachesAttempted: []
   m_cdtVictory:
   - {fileID: 11400000, guid: 2e3e084a2f05f954f8d31722dd8b9ef5, type: 2}
   m_cdtDefeat:
@@ -4107,7 +4108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2859054846545574668, guid: 5945e9e782d93b14cbe32bc58a7c68cf, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -81.141
+      value: -81.14111
       objectReference: {fileID: 0}
     - target: {fileID: 2859054846545574668, guid: 5945e9e782d93b14cbe32bc58a7c68cf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
