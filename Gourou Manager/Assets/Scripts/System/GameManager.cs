@@ -80,6 +80,8 @@ public class GameManager : Singleton<GameManager>, IInitializable
 
         m_interfaceManager.DisplayEndTurn();
 
+        /*POUR LE DEBUG*/Debug.Log(EventRegister.Instance.Summary(m_turn));
+        
         TryEndGame();
 
         m_turn++;
