@@ -16,7 +16,9 @@ MonoBehaviour:
   m_description: "Ministre de l'\xE9conomie"
   m_descriptionFailure: 
   m_sanity: {fileID: 11400000, guid: e1ccabe16b65cfc42bfe6e251cc37dce, type: 2}
-  m_approach: []
+  m_approach:
+  - {fileID: 11400000, guid: ae95078ac23343041afdad61237b98c6, type: 2}
+  - {fileID: 11400000, guid: 294e0524b64920b469879e4206aaba05, type: 2}
   m_accesConditions:
   - {fileID: 11400000, guid: dd368292ef0c5ef4bb555a23daaef732, type: 2}
   m_sprite: {fileID: 21300000, guid: 9089e47c7cf3a3b4ca2e593a0a15c79e, type: 3}
