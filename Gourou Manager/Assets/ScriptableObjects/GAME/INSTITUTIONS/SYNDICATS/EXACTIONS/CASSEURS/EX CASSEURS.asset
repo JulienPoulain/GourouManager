@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: EX CASSEURS
   m_EditorClassIdentifier: 
-  m_name: LACHER LES CASSEURS
-  m_description: "Vous payez les Syndicalistes pour qu'ils laissent les casseurs
-    se d\xE9fouler dans leur prochaine manifestation"
+  m_name: "D\xE9cha\xEEner les casseurs"
+  m_description: Vous payez les Syndicalistes pour qu'ils laissent les casseurs infiltrer
+    leur prochaine manifestation
   m_eventList:
   - {fileID: 11400000, guid: 10e84920bd9fd3147bfd0ddf6c585612, type: 2}
   m_conditions: []

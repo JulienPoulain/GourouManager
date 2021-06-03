@@ -21,8 +21,9 @@ MonoBehaviour:
   m_cooldown: 8
   m_remainingTime: 0
   m_descriptionApproach: "Vous menacez Alejandra d'avoir la visite de vos fanatiques
-    pendant la nuit si elle ne d\xE9tourne pas une partie de l'argent des Syndicats
-    pour alimenter le Culte. Cela vous couteras un point de Fanatiques."
-  m_dialogueApproach: 
+    pendant la nuit si elle ne d\xE9tourne pas une partie des fonds du Syndicat.
+    Cela vous co\xFBtera un point de Fanatiques."
+  m_dialogueApproach: "\"Les comptes de la Conf\xE9d\xE9ration seront bient\xF4t
+    clos, tout comme le v\xF4tre.\""
   m_resultatApproach: "Si vous r\xE9ussissez \xE0 Intimider Alejandra, vous obtiendrez
-    des petits revenus r\xE9guliers. Sinon, elle se m\xE9fieras de vous"
+    des petits revenus r\xE9guliers. Sinon, les Syndicats se m\xE9fieront de vous"

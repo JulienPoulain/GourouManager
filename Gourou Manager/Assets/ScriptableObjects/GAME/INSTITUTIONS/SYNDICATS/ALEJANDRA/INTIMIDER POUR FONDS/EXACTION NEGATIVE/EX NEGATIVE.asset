@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: EX NEGATIVE
   m_EditorClassIdentifier: 
   m_name: Echec de l'intimidation
-  m_description: "Alejandra se m\xE9fieras de vous et a d\xE9pos\xE9 une plainte
-    aupr\xE8s de la Police contre vous."
+  m_description: "La Conf\xE9d\xE9ration du Travail se m\xE9fie de vous et a d\xE9pos\xE9
+    une plainte contre vous aupr\xE8s de la Police."
   m_eventList:
   - {fileID: 11400000, guid: 071ada8e6e83379438055ff5cf279437, type: 2}
   m_conditions: []
