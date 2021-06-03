@@ -60,7 +60,7 @@ public class ApproachSO : ScriptableObject, IInitializable
 
     public void Reset()
     {
-        m_remainingTime = m_cooldown;
+        m_remainingTime = 0;
     }
 
     /// <summary>
