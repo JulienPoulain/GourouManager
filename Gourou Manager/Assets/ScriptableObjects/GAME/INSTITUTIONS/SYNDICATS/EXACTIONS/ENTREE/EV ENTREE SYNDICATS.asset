@@ -17,8 +17,14 @@ MonoBehaviour:
     pour ces id\xE9es radicales."
   m_initDuration: 1
   m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 9ec267a1260a7c741a60d41244557c33, type: 2}
   - {fileID: 11400000, guid: 9f0a8a8e3e8c75f48bb5de58e6bca2eb, type: 2}
   - {fileID: 11400000, guid: 721523c662a632b4d96aa405cb85f093, type: 2}
+  - {fileID: 11400000, guid: d202c08ece665e2489d2cfff90ae1e6a, type: 2}
+  - {fileID: 11400000, guid: 8f7039a998801094782b196558c590d1, type: 2}
+  - {fileID: 11400000, guid: acf92019e821b2442b4ac550c14b156d, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1

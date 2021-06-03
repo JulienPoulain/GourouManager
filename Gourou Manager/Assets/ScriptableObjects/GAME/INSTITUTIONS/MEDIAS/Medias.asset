@@ -19,7 +19,6 @@ MonoBehaviour:
   m_members: {fileID: 11400000, guid: f5e58cc468f223140a4ac9b0c0130582, type: 2}
   m_fanatics: {fileID: 11400000, guid: f5e58cc468f223140a4ac9b0c0130582, type: 2}
   m_publicExposure: {fileID: 11400000, guid: f5e58cc468f223140a4ac9b0c0130582, type: 2}
-  m_corruption: {fileID: 11400000, guid: 0598033080ff97845b2f79930a2ef7d6, type: 2}
   m_brutality: {fileID: 11400000, guid: f5e58cc468f223140a4ac9b0c0130582, type: 2}
   m_decay: {fileID: 11400000, guid: e663ca445edf1ad46a5cf8aabff7ad64, type: 2}
   m_interlocutorList:
@@ -27,14 +26,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c746c8494d1de4d4ba7f96357f9fb205, type: 2}
   m_exactionList:
   - {fileID: 11400000, guid: e4e4f22970e79db418c39ba255901adc, type: 2}
+  - {fileID: 11400000, guid: dad667aa72151a94ea9badfac6ff04ea, type: 2}
   m_triggeredEvents:
   - {fileID: 11400000, guid: b84b73b69c04023438ffd99b9debd925, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 11400000, guid: 60f18a14da6ad344f97d3c2ae2ca47d5, type: 2}
   - {fileID: 11400000, guid: 4a3fd617ff093e74782cded2a7617cdc, type: 2}
-  - {fileID: 0}
   - {fileID: 11400000, guid: c627f2048b348304f9b02c6fe152f443, type: 2}
   - {fileID: 11400000, guid: b351e2122e4043347a7564a39f8d769f, type: 2}
   - {fileID: 11400000, guid: 80b779f908ed13a40be915132464f5fa, type: 2}

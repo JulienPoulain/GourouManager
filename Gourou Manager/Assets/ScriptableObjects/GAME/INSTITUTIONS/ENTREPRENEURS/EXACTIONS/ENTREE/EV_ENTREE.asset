@@ -23,5 +23,8 @@ MonoBehaviour:
   m_impacts:
   - {fileID: 11400000, guid: c8fbb49c32769524296d2fe684e12fec, type: 2}
   - {fileID: 11400000, guid: e6b136b5e12e7ab4e806885738c3e386, type: 2}
+  - {fileID: 11400000, guid: 4d8f7a028b6761c4181fde4bfa603d9d, type: 2}
+  - {fileID: 11400000, guid: e0036891c1915a54da3a80b82d9420ed, type: 2}
+  - {fileID: 11400000, guid: bbfa775b7dc4c4741963fce2778982c2, type: 2}
   m_infoGained: []
   m_IsDisplayed: 1

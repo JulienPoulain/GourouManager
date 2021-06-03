@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Membres
   m_initValue: 10
-  m_value: 10
+  m_value: 20
