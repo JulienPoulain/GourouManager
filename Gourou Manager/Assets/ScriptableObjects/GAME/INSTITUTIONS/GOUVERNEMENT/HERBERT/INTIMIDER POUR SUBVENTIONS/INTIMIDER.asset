@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: INTIMIDER
   m_EditorClassIdentifier: 
   m_name: Intimider
-  m_exactionPos: {fileID: 0}
+  m_exactionPos: {fileID: 11400000, guid: f388f655d47b7674396b0550042b0e8e, type: 2}
   m_exactionNeg: {fileID: 0}
   m_cdtSuccess:
   - {fileID: 11400000, guid: bad301a8cde99264cb62bc063bc475aa, type: 2}
-  m_cooldown: 0
+  m_cooldown: 900
   m_remainingTime: 0
-  m_descriptionApproach: Vous menacez Herbert en
+  m_descriptionApproach: "Vous menacez Herbert d'attaques de Fanatiques \xE0 son
+    domicile si il n'augmente pas drastiquement le financement de la Police et des
+    M\xE9dias par les subventions"
   m_dialogueApproach: 
   m_resultatApproach: 
