@@ -18,11 +18,13 @@ public class RoundManager : Singleton<RoundManager>
         // 1. Ajout des nouveaux évènements d'exactions puis exécution des évènements actifs.
         AddEvent(newActiveEvents, GameManager.Instance.PendingExactions);
         
-        foreach (EventSO evenement in newActiveEvents)
+        //foreach (EventSO evenement in newActiveEvents)
+        for(int i = 0; i < newActiveEvents.Count; i++)
         {
-            if (GameManager.Instance.ActiveEvents.Contains(evenement))
+            if (GameManager.Instance.ActiveEvents.Contains(newActiveEvents[i]))
             {
-                newActiveEvents.Remove(evenement);
+                newActiveEvents.Remove(newActiveEvents[i]);
+                i--;
             }
         }
         
@@ -117,6 +119,7 @@ public class RoundManager : Singleton<RoundManager>
                     // Stockage des futures modifications
                     foreach (ImpactSO impact in evenement.Impacts)
                     {
+                        //if (impact == null) continue;
                         int magnitude = impact.Magnitude.Compute();
 
                         if (pendingChanges.ContainsKey(impact.SyncInt))
