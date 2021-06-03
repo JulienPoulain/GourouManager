@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a07221645fd8ad42978314f51634aaa, type: 3}
-  m_Name: CDT C 46
+  m_Name: CDT C 56
   m_EditorClassIdentifier: 
-  m_syncInt: {fileID: 11400000, guid: bd3fdc65a15d9934cad34a7d62c5a6a8, type: 2}
+  m_syncInt: {fileID: 11400000, guid: 1e64836ea4d4982458fff9e77b618fad, type: 2}
   m_conditionType: 6
-  m_value: 46
+  m_value: 56
