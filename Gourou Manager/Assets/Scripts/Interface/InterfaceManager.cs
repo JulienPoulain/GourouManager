@@ -118,7 +118,6 @@ public class InterfaceManager : MonoBehaviour
         m_endTurnScript = m_endTurn.GetComponent<TextEndTurn>();
         m_cultStatScript = m_cultStat.GetComponent<TextCultStat>();
 
-        m_cultStatScript.Display();
     }
 
     // Change la camera actuelle avec celle de l'institution ciblée

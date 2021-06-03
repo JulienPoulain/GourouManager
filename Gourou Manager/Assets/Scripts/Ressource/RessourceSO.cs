@@ -12,6 +12,8 @@ public class RessourceSO : SyncIntSO
                 m_value = 0;
             else
                 m_value = value;
+            
+            WarnValueChanged();
         }
     }
 }
