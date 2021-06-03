@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -31,11 +32,56 @@ public class EventRegister : Singleton<EventRegister>
 
         public HashSet<ExactionSO> Exactions => m_exactions;
         public HashSet<EventSO> Events => m_events;
+
+        public string Summary()
+        {
+            string str = "";
+            
+            if (m_exactions.Count == 0)
+            {
+                str += "Aucune exactions.";
+            }
+            else
+            {
+                str += "EXACTIONS : [ ";
+                foreach (ExactionSO exaction in m_exactions)
+                {
+                    str += exaction.name + ", ";
+                }
+                //str += String.Join(", ", m_exactions);
+                str += "]\r";
+            }
+            
+            if (m_exactions.Count == 0)
+            {
+                str += "Aucune évènements.";
+            }
+            else
+            {
+                str += "EVENEMENTS : [ ";
+                foreach (EventSO iEvent in m_events)
+                {
+                    str += iEvent.name + ", ";
+                }
+                str += "]\r";
+            }
+            
+            return str;
+        }
     }
 
     private void Awake()
     {
         name = "EventRegister";
+    }
+
+    public string Summary(int p_turn)
+    {
+        if (m_registers.ContainsKey(p_turn))
+        {
+            return m_registers[p_turn].Summary();
+        }
+        return "Aucune entrée au tour " + p_turn;
     }
 
     public void AddDay(int p_turn)
