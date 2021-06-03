@@ -128,6 +128,9 @@ public class TextInterlocutor : MonoBehaviour
         {
             GameManager.Instance.m_interfaceManager.CameraChange();     // On place la camera liee a l'institution
             GameManager.Instance.m_interfaceManager.DisplayApproche(m_Interlocutor);
+
+            ResetInterlocutorInterface();
+            
             GameManager.Instance.m_interfaceManager.DisallowInterlocutor();
         }
         else if (!m_Interlocutor.IsAccessible())
