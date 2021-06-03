@@ -3511,7 +3511,6 @@ GameObject:
   - component: {fileID: 2445871495336328075}
   - component: {fileID: 253462381450455338}
   - component: {fileID: 4631221470996027075}
-  - component: {fileID: 5218779466394863887}
   m_Layer: 5
   m_Name: BackGround MainInstitutionName
   m_TagString: Untagged
@@ -3577,19 +3576,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5218779466394863887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9200339872762571090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0c77192b8dc189439b411996dae2231, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_buttonText: {fileID: 771151050019175760}
 --- !u!1001 &2668753665417455395
 PrefabInstance:
   m_ObjectHideFlags: 0

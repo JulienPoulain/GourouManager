@@ -85,6 +85,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
         TryEndGame();
 
         m_turn++;
+        m_interfaceManager.m_cultStatScript.Display();
     }
 
     
