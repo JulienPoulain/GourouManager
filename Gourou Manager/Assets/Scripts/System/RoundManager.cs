@@ -19,14 +19,21 @@ public class RoundManager : Singleton<RoundManager>
         AddEvent(newActiveEvents, GameManager.Instance.PendingExactions);
         
         //foreach (EventSO evenement in newActiveEvents)
-        for(int i = 0; i < newActiveEvents.Count; i++)
+        foreach (EventSO newActiveEvent in newActiveEvents.ToList())
+        {
+            if (GameManager.Instance.ActiveEvents.Contains(newActiveEvent))
+            {
+                newActiveEvents.Remove(newActiveEvent);
+            }
+        }
+        /*for(int i = 0; i < newActiveEvents.Count; i++)
         {
             if (GameManager.Instance.ActiveEvents.Contains(newActiveEvents[i]))
             {
                 newActiveEvents.Remove(newActiveEvents[i]);
                 i--;
             }
-        }
+        }*/
         
         GameManager.Instance.ActiveEvents.AddRange(newActiveEvents);
         
@@ -58,7 +65,15 @@ public class RoundManager : Singleton<RoundManager>
         
         EventRegister.Instance.Add(GameManager.Instance.Turn, GameManager.Instance.ActiveEvents);
         
+        // 3. Gestion des temps de récupération des approches.
+        foreach (ApproachSO approach in GameManager.Instance.ApproachesAttempted)
+        {
+            approach.AdvanceTime(1);
+        }
+        
+        // 4. Nettoyage des listes.
         ClearFinishedEvent(GameManager.Instance.ActiveEvents);
+        ClearRecoveredApproaches(GameManager.Instance.ApproachesAttempted);
     }
     
     /// <summary>
@@ -91,8 +106,8 @@ public class RoundManager : Singleton<RoundManager>
     /// <summary>
     /// Réinitialise les évènements finis puis les supprime de la liste p_events.
     /// </summary>
-    /// <param name="p_events">Liste d'évènements à clear</param>
-    public void ClearFinishedEvent(List<EventSO> p_events)
+    /// <param name="p_events">Liste d'évènements à clear.</param>
+    private void ClearFinishedEvent(List<EventSO> p_events)
     {
         foreach (EventSO evenement in p_events.ToList())
         {
@@ -100,6 +115,22 @@ public class RoundManager : Singleton<RoundManager>
             {
                 p_events.Remove(evenement);
                 evenement.Reset();
+            }
+        }
+    }
+
+    /// <summary>
+    /// Réinitialise les approches qui on récupérées puis les supprime de la liste p_approches.
+    /// </summary>
+    /// <param name="p_approaches">Liste des approches en récupération.</param>
+    private void ClearRecoveredApproaches(List<ApproachSO> p_approaches)
+    {
+        foreach (ApproachSO approach in p_approaches.ToList())
+        {
+            if (approach.Cooldown <= 0)
+            {
+                p_approaches.Remove(approach);
+                approach.Reset();
             }
         }
     }

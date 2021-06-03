@@ -58,6 +58,11 @@ public class ApproachSO : ScriptableObject, IInitializable
         m_remainingTime = 0;
     }
 
+    public void Reset()
+    {
+        m_remainingTime = m_cooldown;
+    }
+
     /// <summary>
     /// Renvoie le résultat d'une tentative de cette approche.
     /// </summary>
@@ -82,6 +87,13 @@ public class ApproachSO : ScriptableObject, IInitializable
         if (ConditionsReached(m_cdtSuccess))
             return m_exactionPos;
         return m_exactionNeg;
+    }
+
+    public void AdvanceTime(int p_duration)
+    {
+        m_remainingTime -= p_duration;
+        if (m_remainingTime <= 0)
+            m_remainingTime = 0;
     }
 
     public bool IsSuccessful()
