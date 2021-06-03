@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: EX CORTEGE
   m_EditorClassIdentifier: 
-  m_name: LE CULTE DE CTHULHU DANS UN CORTEGE
-  m_description: "Vous graissez la pate des Syndicats pour avoir votre place dans
+  m_name: "Int\xE9grer le Culte dans un cort\xE8ge"
+  m_description: "Vous graissez la patte des Syndicats pour avoir votre place dans
     le cort\xE8ge d'une manifestation contre le Gouvernement."
   m_eventList:
   - {fileID: 11400000, guid: 7f4fa38e27dbb414e9aa8cf7386b7744, type: 2}

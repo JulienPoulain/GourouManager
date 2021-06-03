@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HERBERT
   m_EditorClassIdentifier: 
   m_name: Herbet Godman
-  m_description: "Pr\xE9sident de la R\xE9publique"
+  m_description: "Ministre de l'\xE9conomie"
   m_descriptionFailure: 
   m_sanity: {fileID: 11400000, guid: 2fd83f33ef622c041b958aef8dd5f067, type: 2}
   m_approach: []

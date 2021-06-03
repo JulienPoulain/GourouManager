@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: EX ENTREE SYNDIC
   m_EditorClassIdentifier: 
-  m_name: Soudoyement d'un syndicat ouvrier
-  m_description: "Vous offrez une coquette somme \xE0 un petit syndicat ouvrier connu
-    pour ces id\xE9es radicales."
+  m_name: Soudoiement d'un syndicat ouvrier
+  m_description: "Vous offrez une coquette somme \xE0 un syndicat ouvrier connu pour
+    ses id\xE9es radicales."
   m_eventList:
   - {fileID: 11400000, guid: 676bc983c86104147b9bc960605984b9, type: 2}
   m_conditions:

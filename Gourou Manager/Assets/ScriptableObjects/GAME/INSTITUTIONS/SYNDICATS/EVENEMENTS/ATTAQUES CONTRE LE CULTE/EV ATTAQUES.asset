@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b647af1624fef43bcaf750a89ff899, type: 3}
   m_Name: EV ATTAQUES
   m_EditorClassIdentifier: 
-  m_name: Attaques des casseurs contre le Culte
-  m_description: "Les membres les plus extr\xEAmes et violents des syndicats d\xE9cident
-    d'entreprendre des actions violentes contre le Culte, saccageant des lieux de
-    pri\xE8re \xE0 Cthulhu et attaquant les regroupements d'Adeptes."
+  m_name: Attaques de casseurs contre le Culte
+  m_description: "Les membres les plus violents des syndicats saccagent les lieux
+    de pri\xE8re \xE0 Cthulhu et attaquent les regroupements d'Adeptes."
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts:
@@ -28,7 +27,7 @@ MonoBehaviour:
   m_infoGained: []
   m_IsDisplayed: 1
   m_initNbUse: -1
-  m_nbUse: 0
+  m_nbUse: -1
   m_cdtActivation:
   - {fileID: 11400000, guid: 1e29fecc56c1c1b46ad5a99ba7fb99f9, type: 2}
   - {fileID: 11400000, guid: 6aca2bbc5f337ca46b61f44e2767709e, type: 2}

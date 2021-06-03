@@ -12,13 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: EV CORTEGE
   m_EditorClassIdentifier: 
-  m_name: LE CULTE DE CTHULHU DANS UN CORTEGE
-  m_description: "Vous graissez la pate des Syndicats pour avoir votre place dans
+  m_name: "Int\xE9grer le Culte dans un cort\xE8ge"
+  m_description: "Vous graissez la patte des Syndicats pour avoir votre place dans
     le cort\xE8ge d'une manifestation contre le Gouvernement."
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: e7ed929037b080f4ba91b316b14e14fb, type: 2}
   - {fileID: 11400000, guid: f9ba77559c0dbd745b931f8dfab193ca, type: 2}
   - {fileID: 11400000, guid: 459b277c27b75344eaed31fd0f313eff, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1

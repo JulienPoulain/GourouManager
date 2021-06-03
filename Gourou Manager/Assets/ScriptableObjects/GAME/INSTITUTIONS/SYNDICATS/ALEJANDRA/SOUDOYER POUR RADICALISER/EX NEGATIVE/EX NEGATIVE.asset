@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EX NEGATIVE
   m_EditorClassIdentifier: 
   m_name: Echec du soudoyement
-  m_description: "Vous avez \xE9chou\xE9 a soudoyer Alejandra, qui se m\xE9fieras
-    d\xE9sormais d'avantage de vous"
+  m_description: "Vous avez \xE9chou\xE9 a soudoyer Alejandra, les Syndicats se m\xE9fient
+    de vous."
   m_eventList: []
   m_conditions: []

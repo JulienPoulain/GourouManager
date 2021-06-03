@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 471942724c89ca84486354cfe1a7022d, type: 3}
   m_Name: ALEJANDRA
   m_EditorClassIdentifier: 
-  m_name: ALEJANDRA
-  m_description: Syndicaliste proche des militants pronant la violence et les actions
-    radicales.
+  m_name: Alejandra Munez
+  m_description: "Tr\xE9sori\xE8re du syndicat, proche des militants pronant la violence
+    et les actions radicales."
   m_descriptionFailure: 
   m_sanity: {fileID: 11400000, guid: 13af307a3af5d174f815c1da35667365, type: 2}
   m_approach:
