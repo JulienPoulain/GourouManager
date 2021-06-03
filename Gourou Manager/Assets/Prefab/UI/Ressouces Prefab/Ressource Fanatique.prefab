@@ -90,3 +90,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ressourceName: Points de fanatisme
   m_textPrefab: {fileID: 2101137435692569717, guid: 158e883b1a7581d498d2b0a8244d1301, type: 3}
+  m_displayTime: 5
+  m_canBeAutoDestroy: 1
