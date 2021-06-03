@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Corruption
   m_initValue: 50
-  m_value: 0
+  m_value: 50

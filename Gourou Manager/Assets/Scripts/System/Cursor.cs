@@ -19,10 +19,24 @@ public class Cursor : MonoBehaviour
         m_interfaceManager.DisallowEndTurn();
 
         m_camera = GameManager.Instance.GetComponent<Camera>();
+        
+        DesableOutline();
+    }
+    
+    //Désactive l'outline qui apparait quand on passa la souris sur le batiment d'une institution
+    public void DesableOutline()
+    {
+        foreach (Outline hover in m_hovers)
+        {
+            hover.OutlineColor = Color.clear;
+        }
     }
 
     // raycast
     [SerializeField] LayerMask m_layerMask;
+    
+    //Outline hover
+    [SerializeField] private List<Outline> m_hovers;
     void Update()
     {
         // On commence par vérifier si la camera est active ou non (si non, il y aura des problemes de raycast qui nous interessera pas)
@@ -39,6 +53,11 @@ public class Cursor : MonoBehaviour
                 {
                     if (!m_interfaceManager.InterfaceIsDisplay())
                     {
+                        //Affiche l'outline quand on passe la souris sur le batiment d'une institution
+                        if (hit.transform.gameObject.TryGetComponent(out Outline outline))
+                        {
+                            outline.OutlineColor = script.InstitutionColor;
+                        }
                         m_interfaceManager.m_institutionSelected = script;    // On definit cette Institution comme celle actuellement selectionnee
                         m_interfaceManager.DisplayLightInstitution(script.gameObject, script.m_Institution);
                     }
@@ -52,6 +71,8 @@ public class Cursor : MonoBehaviour
             }
             else // si le curseur ne pointe null part, toutes les interfaces sont désactivés
             {
+                DesableOutline();
+                
                 // desafficher les interfaces Institution
                 if (m_interfaceManager.m_institutionLightIsDisplay) m_interfaceManager.DisallowLightInstitution();
 
