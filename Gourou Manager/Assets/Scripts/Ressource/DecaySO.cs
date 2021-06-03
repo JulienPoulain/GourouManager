@@ -8,7 +8,11 @@ public class DecaySO : SyncIntSO
     public override int Value
     {
         get => m_value;
-        set => m_value = Mathf.Clamp(value, 0, 100);
+        set
+        {
+            m_value = Mathf.Clamp(value, 0, 100);
+            WarnValueChanged();
+        } 
     }
 
     public DecayLvl GetDecayLvl()
