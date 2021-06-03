@@ -12,13 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 471942724c89ca84486354cfe1a7022d, type: 3}
   m_Name: HERBERT
   m_EditorClassIdentifier: 
-  m_name: Herbet Godman
-  m_description: "Pr\xE9sident de la R\xE9publique"
+  m_name: Herbert
+  m_description: "Ministre de l'\xE9conomie"
   m_descriptionFailure: 
-  m_sanity: {fileID: 11400000, guid: 2fd83f33ef622c041b958aef8dd5f067, type: 2}
+  m_sanity: {fileID: 11400000, guid: e1ccabe16b65cfc42bfe6e251cc37dce, type: 2}
   m_approach: []
   m_accesConditions:
-  - {fileID: 11400000, guid: ba9d8a1fa1403d8428fbe7524c54324e, type: 2}
-  - {fileID: 11400000, guid: de3248fc8ce06d749b698cdf00c43f80, type: 2}
-  - {fileID: 11400000, guid: 2f24450bdecf15246bde684ee2b46692, type: 2}
-  m_sprite: {fileID: 21300000, guid: 9089e47c7cf3a3b4ca2e593a0a15c79e, type: 3}
+  - {fileID: 11400000, guid: dd368292ef0c5ef4bb555a23daaef732, type: 2}
+  m_sprite: {fileID: 21300000, guid: 1765b203f09fa804cba45ff919a36aaa, type: 3}
