@@ -43,9 +43,10 @@ public class TextApprocheIndividual : MonoBehaviour
 
     public void ExecuteApproche()
     {
-        if (m_approche.RemainingTime == 0)
+        if (m_approche.IsInCd())
         {
             GameManager.Instance.PendingExactions.Add(m_approche.TryApproach());
+            GameManager.Instance.ApproachesAttempted.Add(m_approche);
             GameManager.Instance.m_interfaceManager.DisallowApproche();
             GameManager.Instance.m_interfaceManager.CameraReset();
             m_approche = null;
