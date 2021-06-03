@@ -96,6 +96,11 @@ public class ApproachSO : ScriptableObject, IInitializable
             m_remainingTime = 0;
     }
 
+    public bool IsInCd()
+    {
+        return m_remainingTime > 0;
+    }
+
     public bool IsSuccessful()
     {
         return ConditionsReached(m_cdtSuccess);
