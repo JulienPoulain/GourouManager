@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
-  m_Name: EX_ENTREE
+  m_Name: EX ENTREE MEDIAS
   m_EditorClassIdentifier: 
-  m_name: 'Convertir quelques investisseurs '
-  m_description: "Vous acqu\xE9rez le soutien de quelques entrepreneurs et am\xE9liorez
-    votre exposition publique en convainquant quelques gros bonnets de la finance
-    de vous rejoindre"
+  m_name: "Corruption d'un journaliste de bas \xE9tage"
+  m_description: "Vous donnez 8 000 Fonds \xE0 un journaliste pour qu'il soit bienveillant
+    avec le Culte."
   m_eventList:
-  - {fileID: 11400000, guid: 4527f4239b49e974da4cf72a37523b2b, type: 2}
+  - {fileID: 11400000, guid: 635852149c83f4d40b3ef3bfb9dbea17, type: 2}
   m_conditions:
-  - {fileID: 11400000, guid: b3d2e483a9899914fa6831b33733eed5, type: 2}
+  - {fileID: 11400000, guid: 748ceac3496f5a24a9e37839a94d2fd3, type: 2}
