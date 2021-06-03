@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70a0977cda155f549a226bea8b00e089, type: 3}
-  m_Name: HerbertSanity
+  m_Script: {fileID: 11500000, guid: 65d02e6c45e7ab84a9e56bc495f4f42d, type: 3}
+  m_Name: IMP EXPO
   m_EditorClassIdentifier: 
-  m_name: 
-  m_initValue: 0
-  m_value: 0
+  m_syncInt: {fileID: 11400000, guid: e1f663acfbf0dfb4bbf20dd4e71f0fde, type: 2}
+  m_magnitude: {fileID: 11400000, guid: e2aeddb2a78aca945b8c9db16ced1e02, type: 2}
