@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
+  m_Name: EV OBSESSION
+  m_EditorClassIdentifier: 
+  m_name: "Obession s\xE9curitaire"
+  m_description: "Les m\xE9dias diffusent des faits divers a longueur de journ\xE9e,
+    provoquant la panique dans la population"
+  m_initDuration: 1
+  m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
+  m_impacts:
+  - {fileID: 11400000, guid: 8c25106fb2ec9c046ad1308f8234b142, type: 2}
+  - {fileID: 11400000, guid: a2b78a7bb04a72140abd71f4859a7a64, type: 2}
+  - {fileID: 11400000, guid: 0f9a8f23b82262f40a4e0c84ff999be7, type: 2}
+  m_infoGained: []
+  m_IsDisplayed: 1

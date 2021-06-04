@@ -15,15 +15,16 @@ MonoBehaviour:
   m_name: Decay de Corruption +2
   m_description: 
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: d20ddc52f385e8d4a9f8365d60d04b2d, type: 2}
+  - {fileID: 11400000, guid: b8278d6cfb1b9464ebdf8a4d66c933a8, type: 2}
   m_infoGained: []
   m_IsDisplayed: 0
   m_initNbUse: -1
-  m_nbUse: 0
+  m_nbUse: -1
   m_cdtActivation:
   - {fileID: 11400000, guid: a5412dc25c043ce4992a55ef35472888, type: 2}
   - {fileID: 11400000, guid: cdd10c2bdb620314fa4bb6af0877fe56, type: 2}

@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: EX POSITIVE
   m_EditorClassIdentifier: 
-  m_name: 
-  m_description: 
-  m_eventList: []
+  m_name: "Soudoyement Alejandra r\xE9ussi"
+  m_description: "La brutalit\xE9 du Culte augmente pendant 3 tours, ainsi que la
+    Corruption des Syndicats"
+  m_eventList:
+  - {fileID: 11400000, guid: 60fb03410638c5a4dbc396dec4029c49, type: 2}
   m_conditions: []
