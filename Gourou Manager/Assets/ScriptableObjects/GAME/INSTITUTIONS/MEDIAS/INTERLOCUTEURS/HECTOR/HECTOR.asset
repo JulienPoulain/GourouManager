@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HECTOR
   m_EditorClassIdentifier: 
   m_name: Hector Bloomberg
-  m_description: 
+  m_description: "Pigiste dans la Una, d\xE9butant, curieux et optimiste"
   m_descriptionFailure: 
   m_sanity: {fileID: 11400000, guid: 533d467f0e63ba447ae53ca4c690cd49, type: 2}
   m_approach:

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: EV NEGATIF
   m_EditorClassIdentifier: 
-  m_name: Echec de l'Intimidation d'Aemilia
-  m_description: "Aemilia ne c'est pas laiss\xE9e intimid\xE9e, et fait une d\xE9claration
-    publique disant que le Culte est dangereux."
+  m_name: "Intimidation d'Aemilia - \xE9chec"
+  m_description: "Aemilia ne s'est pas laiss\xE9e intimid\xE9e, et fait une d\xE9claration
+    publique contre le Culte."
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts:

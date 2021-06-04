@@ -12,13 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: EV NEGATIF
   m_EditorClassIdentifier: 
-  m_name: ECHEC INTIMIDATION
+  m_name: Intimidation - Echec
   m_description: "Luis n'as pas du tout appr\xE9ci\xE9 vos menaces et la tentative
     de d\xE9tournement de fonds, il a pr\xE9venu la Police de vos exactions."
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 0b59c7cd10dacf74f9b57b1a368cf054, type: 2}
   - {fileID: 11400000, guid: c944738b8160fcb4c9691321fb4e21ea, type: 2}
   - {fileID: 11400000, guid: f94d225e63d1a234a83d7f007b9218f4, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1

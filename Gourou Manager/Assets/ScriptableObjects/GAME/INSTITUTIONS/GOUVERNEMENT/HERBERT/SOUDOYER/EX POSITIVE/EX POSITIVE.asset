@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: EX POSITIVE
   m_EditorClassIdentifier: 
-  m_name: "Soudoyement r\xE9ussi"
+  m_name: "Soudoiement de Herbert - R\xE9ussite"
   m_description: Herbert accepte vos 25 000 et supprime l'Impot sur la Fortune. Les
-    Entrepreneurs s'enrichierons beaucoup lors des prochains tours.
+    Entrepreneurs vont s'enrichir significativement lors des prochains tours.
   m_eventList:
   - {fileID: 11400000, guid: 3967ffe9466d1674ca21abc69b0d2478, type: 2}
   m_conditions: []

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 471942724c89ca84486354cfe1a7022d, type: 3}
   m_Name: LUIS
   m_EditorClassIdentifier: 
-  m_name: LUIS
-  m_description: "Luis est le pr\xE9sident de la Conf\xE9d\xE9ration du Travail. "
+  m_name: Luis Aquellas
+  m_description: "Pr\xE9sident de la Conf\xE9d\xE9ration du Travail"
   m_descriptionFailure: 
   m_sanity: {fileID: 11400000, guid: 8adaac2ff82f8364591857f7169e7b4e, type: 2}
   m_approach:

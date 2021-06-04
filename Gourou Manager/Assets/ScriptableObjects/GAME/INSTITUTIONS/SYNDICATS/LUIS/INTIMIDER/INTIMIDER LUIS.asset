@@ -19,8 +19,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6dc0738c61426f74683bde11f20946f5, type: 2}
   - {fileID: 11400000, guid: 4cb162c8a7e40ec49bf7b5fc9ad4568b, type: 2}
   m_cooldown: 1000
+  m_remainingTime: 0
   m_descriptionApproach: "Vous essayez d'Intimider Luis, en lui imposant de d\xE9tourner
     les fonds de la Conf\xE9d\xE9ration du Travail."
-  m_DialogueApproach: 
+  m_dialogueApproach: "\"Le pouvoir de mon Ami ne conna\xEEt aucune limite, contrairement
+    \xE0 votre existence.\""
   m_resultatApproach: "Si vous disposez de quoi intimider Luis, vous obtiendrez des
     Fonds plusieurs tours cons\xE9cutifs provenant de d\xE9tournements de Fonds."

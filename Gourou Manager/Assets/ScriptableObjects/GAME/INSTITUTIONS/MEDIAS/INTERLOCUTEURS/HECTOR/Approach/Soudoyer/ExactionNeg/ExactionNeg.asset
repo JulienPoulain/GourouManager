@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: ExactionNeg
   m_EditorClassIdentifier: 
-  m_name: 
-  m_description: 
+  m_name: Soudoiement de Hector - Echec
+  m_description: "Hector n'a pas accept\xE9 votre argent et il ne couvre plus l'actualit\xE9
+    du Culte."
   m_eventList:
   - {fileID: 11400000, guid: c4384a87facb14240b2ea5aac5e995b9, type: 2}
   m_conditions: []

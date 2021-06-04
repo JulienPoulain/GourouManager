@@ -20,7 +20,8 @@ MonoBehaviour:
   m_cooldown: 900
   m_remainingTime: 0
   m_descriptionApproach: "Vous menacez Herbert d'attaques de Fanatiques \xE0 son
-    domicile si il n'augmente pas drastiquement le financement de la Police et des
+    domicile s'il n'augmente pas drastiquement le financement de la Police et des
     M\xE9dias par les subventions"
-  m_dialogueApproach: 
+  m_dialogueApproach: "\"Vous \xEAtes peut-\xEAtre intouchable, mais ce n'est pas
+    le cas de votre mari. La vie peut \xEAtre longue lorsqu'on est seul.\""
   m_resultatApproach: 

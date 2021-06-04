@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: EV NEGATIF
   m_EditorClassIdentifier: 
-  m_name: Echec de l'intimidation d'Herbert
-  m_description: "Herbert n'as clairement pas trouv\xE9 le Culte assez menacant pour
-    se laisser intimider. Il a cependant pr\xE9venu les autorit\xE9s de vos tentatives
-    de pression"
+  m_name: Intimidation de Herbert - Echec
+  m_description: "Herbert n'a pas trouv\xE9 le Culte assez menacant pour se laisser
+    intimider. Il a  pr\xE9venu les autorit\xE9s de vos tentatives de pression"
   m_initDuration: 1
   m_duration: 0
   m_initDelay: 0

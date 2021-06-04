@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: EX NEGATIVE
   m_EditorClassIdentifier: 
-  m_name: ECHEC INTIMIDATION
+  m_name: Intimidation - Echec
   m_description: "Luis n'as pas du tout appr\xE9ci\xE9 vos menaces et la tentative
     de d\xE9tournement de fonds, il a pr\xE9venu la Police de vos exactions."
   m_eventList:

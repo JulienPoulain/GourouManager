@@ -19,9 +19,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3a93b3f635edac745a005846a4a38b39, type: 2}
   m_cooldown: 900
   m_remainingTime: 0
-  m_descriptionApproach: Vous menacez Herbert de divulger des informations compromettantes
-    sur lui.
-  m_dialogueApproach: 
-  m_resultatApproach: "Si vous disposez d'informations compromettantes sur Herbet,
-    vous pourrez le pousser \xE0 faire une allocution pr\xE9sidentielle pour l\xE9gitimer
+  m_descriptionApproach: Vous menacez Aemilia de divulger des informations compromettantes
+    sur elle.
+  m_dialogueApproach: "\"Prenez garde ou votre mendat prendra fin pr\xE9matur\xE9ment.\""
+  m_resultatApproach: "Si vous disposez d'informations compromettantes sur Aemilia,
+    vous pourrez la pousser \xE0 faire une allocution pr\xE9sidentielle pour l\xE9gitimer
     le Culte."

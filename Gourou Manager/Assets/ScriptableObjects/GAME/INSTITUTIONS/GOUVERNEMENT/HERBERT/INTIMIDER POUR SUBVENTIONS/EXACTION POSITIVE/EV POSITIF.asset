@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: EV POSITIF
   m_EditorClassIdentifier: 
-  m_name: Augmentation des subventions publiques
-  m_description: "Les M\xE9dias et la Police gagnent 12000 Fonds"
+  m_name: "Intimidation de Herbert - R\xE9ussite"
+  m_description: "Le Ministre de l'\xC9conomie octroie des subventions massives aux
+    m\xE9dias et \xE0 la Police"
   m_initDuration: 8
-  m_duration: 0
+  m_duration: 8
   m_initDelay: 0
   m_delay: 0
   m_impacts:
