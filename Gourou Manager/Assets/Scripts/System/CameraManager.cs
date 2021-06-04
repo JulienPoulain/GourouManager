@@ -43,18 +43,6 @@ public class CameraManager : Singleton<CameraManager>
 
         if ((m_state & CameraState.Spring) == CameraState.Spring)
             SpringView(m_view);
-
-        // TEST
-        /*if (Input.GetKeyDown(KeyCode.N))
-        {
-            if (m_instCoroutine != null)
-                StopCoroutine(m_instCoroutine);
-
-            if ((m_state & CameraState.IslandView) == CameraState.IslandView)
-                SwitchToInstitution(m_viewPolice);
-            else
-                SwitchToIsland();
-        }*/
     }
 
     private void LateUpdate()

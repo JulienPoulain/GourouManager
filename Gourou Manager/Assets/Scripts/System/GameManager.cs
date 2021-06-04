@@ -90,7 +90,6 @@ public class GameManager : Singleton<GameManager>, IInitializable
         m_turn++;
         m_interfaceManager.m_cultStatScript.Display();
     }
-
     
     // GESTION DES CONDITIONS DE VICTOIRE ET DÉFAITE
     

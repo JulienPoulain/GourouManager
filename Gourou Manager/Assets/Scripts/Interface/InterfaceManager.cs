@@ -211,11 +211,19 @@ public class InterfaceManager : MonoBehaviour
     public void DisplayVictory()
     {
         m_victory.SetActive(true);
+        
+        // desafficher
+        DisallowEndTurn();
+        DisallowCultStat();
     }
 
     public void DisplayDefeat()
     {
-        m_defeat.SetActive(false);
+        m_defeat.SetActive(true);
+
+        // desafficher
+        DisallowEndTurn();
+        DisallowCultStat();
     }
 
     public void DisplayCultStat()

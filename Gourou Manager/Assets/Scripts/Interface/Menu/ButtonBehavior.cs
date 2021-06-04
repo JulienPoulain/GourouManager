@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
-public class ButtonBehavior : MonoBehaviour, IPointerDownHandler, IPointerExitHandler, IPointerEnterHandler
+public class ButtonBehavior : MonoBehaviour, IPointerDownHandler
 {
     // en static parce qu'il s'agit une valeur qui sera commun à tout le monde
     [SerializeField] private float m_scaleDuration;
@@ -18,42 +19,7 @@ public class ButtonBehavior : MonoBehaviour, IPointerDownHandler, IPointerExitHa
     
     public void OnPointerDown(PointerEventData eventData)
     {
-        m_image.sprite = MenuManager.Instance.RedSprite;
-        MenuManager.Instance.LoadScene(m_SceneName);
+        SceneManager.LoadScene(m_SceneName, LoadSceneMode.Single);
         Debug.Log("je clicke dessus");
-    }
-    
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        m_image.sprite = MenuManager.Instance.WhiteSprite;
-        StartCoroutine(ReverseScaleChange());
-    }
-
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        StartCoroutine(ScaleChange());
-        Debug.Log("je suis dessus");
-    }
-
-    IEnumerator ScaleChange()
-    {
-        float time = 1f;
-        while (time < m_scaleDuration)
-        {
-            transform.localScale += Vector3.one * Mathf.Log(time) * Time.deltaTime * 3;
-            time += Time.deltaTime;
-            yield return null;
-        }
-    }
-    
-    IEnumerator ReverseScaleChange()
-    {
-        float time = 1f;
-        while (time < m_scaleDuration)
-        {
-            time += Time.deltaTime;
-            transform.localScale -= Vector3.one * Mathf.Log(time) * Time.deltaTime * 3;
-            yield return null;
-        }
     }
 }
