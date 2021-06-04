@@ -9,15 +9,17 @@ public class TextEndTurn : MonoBehaviour
 {
 
     // [SerializeField] private GameObject m_textPrefab;
-    [SerializeField] private List<GameObject> m_objectEtatInstitutionList;
-    private List<TMP_Text> m_textEtatList = new List<TMP_Text>();
-    
+    // Partie Institutions
+
+    [SerializeField] [Tooltip("List des images Institution (a mettre par ordre)")] private List<Image> m_imageInstitutionList = new List<Image>();     // Liste des picto d'institutions
+    [SerializeField] [Tooltip("List des images Stat (a mettre par ordre)")] private List<Image> m_imageStatList = new List<Image>();            // liste des picto d'etats d'institutions
+
     [SerializeField] GameObject m_objectMainInstitutionName;
     private TMP_Text m_TextmainInstitutionName;
     
+    // Partie Culte
     [SerializeField] private List<GameObject> m_objectCultStatList;
     [SerializeField] private List<TMP_Text> m_textCultStatList = new List<TMP_Text>();
-    private List<Image> m_imageStatList = new List<Image>();
 
     [SerializeField] TextExactionPanel m_exactionScript;
 
@@ -26,14 +28,7 @@ public class TextEndTurn : MonoBehaviour
 
     // Start is called before the first frame update
     void Awake()
-    {
-        // 1 object est constituer d'un ob text et un ob image qu'on va utiliser plus tard
-        foreach (GameObject thisObject in m_objectEtatInstitutionList)
-        {
-            m_textEtatList.Add(thisObject.GetComponentInChildren<TMP_Text>());
-            m_imageStatList.Add(thisObject.GetComponentInChildren<Image>());
-        }
-        
+    {        
         foreach (GameObject thisObject in m_objectCultStatList)
         {
             m_textCultStatList.Add(thisObject.GetComponent<TMP_Text>());
@@ -51,14 +46,12 @@ public class TextEndTurn : MonoBehaviour
 
     public void Display()
     {
-        DisallowAll();
-
         // On affiche les Text dont on a besoin
+        // Etatant long à être créer, le nombre d'institutions est prédéfini
         for (int i = 0; i < GameManager.Instance.Institutions.Count; i++)
         {
-            m_objectEtatInstitutionList[i].SetActive(true);
-            m_textEtatList[i].text = "" + GameManager.Instance.Institutions[i].Decay.GetDecayLvl().GetString();
-            m_imageStatList[i].sprite = GameManager.Instance.Institutions[i].Pictogram;
+            m_imageInstitutionList[i].sprite = GameManager.Instance.Institutions[i].Pictogram;
+            m_imageStatList[i].sprite = GameManager.Instance.m_interfaceManager.m_pictoEtatBehavior.DisplayStat(GameManager.Instance.Institutions[i].Decay.GetDecayLvl());
         }
         
         // Affichage du Culthe
@@ -79,13 +72,5 @@ public class TextEndTurn : MonoBehaviour
     {
         GameManager.Instance.m_interfaceManager.DisallowEndTurn();
         m_exactionScript.DestroyAll();
-    }
-
-    void DisallowAll()
-    {
-        foreach (GameObject thisObject in m_objectEtatInstitutionList)
-        {
-            thisObject.SetActive(false);
-        }
     }
 }

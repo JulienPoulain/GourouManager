@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.36507657, g: 0.43263993, b: 0.4176437, a: 1}
+  m_IndirectSpecularColor: {r: 0.36507657, g: 0.43263987, b: 0.4176437, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -292,7 +292,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_renderer: {fileID: 287381414}
-  m_institution: {fileID: 11400000, guid: 55accf475c27cf145b17df0c6132568c, type: 2}
 --- !u!1 &319329696 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5526144217712019164, guid: 2f794157b603a204bbb862bc313db0d7, type: 3}
@@ -3550,7 +3549,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_renderer: {fileID: 609144531}
-  m_institution: {fileID: 11400000, guid: 996f3695ed97f644f8fa43220fef988a, type: 2}
 --- !u!1 &620170580
 GameObject:
   m_ObjectHideFlags: 0
@@ -4837,7 +4835,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_renderer: {fileID: 1236890096}
-  m_institution: {fileID: 11400000, guid: bd13c5127f7bc25408d988438a4dc994, type: 2}
 --- !u!1001 &1337996836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5090,6 +5087,30 @@ PrefabInstance:
     - target: {fileID: 6771110931803590880, guid: b53b2417c57656648b71fc736368a3db, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847992689258067113, guid: b53b2417c57656648b71fc736368a3db, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847992689258067113, guid: b53b2417c57656648b71fc736368a3db, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847992689258067113, guid: b53b2417c57656648b71fc736368a3db, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847992689258067113, guid: b53b2417c57656648b71fc736368a3db, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847992689258067113, guid: b53b2417c57656648b71fc736368a3db, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 996.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847992689258067113, guid: b53b2417c57656648b71fc736368a3db, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 189.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b53b2417c57656648b71fc736368a3db, type: 3}
@@ -5348,7 +5369,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_renderer: {fileID: 1566437398}
-  m_institution: {fileID: 11400000, guid: 02a825d5b5d4172469e4848fc7f78b55, type: 2}
 --- !u!1001 &1602250914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6155,7 +6175,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_renderer: {fileID: 1917615032}
-  m_institution: {fileID: 11400000, guid: 5b61acc8373cf1147921f178a53e2af6, type: 2}
 --- !u!1 &2009924890
 GameObject:
   m_ObjectHideFlags: 0
@@ -6222,6 +6241,7 @@ MonoBehaviour:
   m_camera: {fileID: 963194225}
   m_pendingExactions: []
   m_activeEvents: []
+  m_approachesAttempted: []
   m_cdtVictory:
   - {fileID: 11400000, guid: 2e3e084a2f05f954f8d31722dd8b9ef5, type: 2}
   m_cdtDefeat:
@@ -6883,7 +6903,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_renderer: {fileID: 2119397421}
-  m_institution: {fileID: 11400000, guid: c9a38b99aaacdf543ade2e6c43a57466, type: 2}
 --- !u!1001 &242952804338130745
 PrefabInstance:
   m_ObjectHideFlags: 0

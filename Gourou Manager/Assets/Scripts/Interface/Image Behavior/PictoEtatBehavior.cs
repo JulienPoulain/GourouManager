@@ -10,7 +10,7 @@ public class PictoEtatBehavior : MonoBehaviour
     [SerializeField] private Sprite m_complaisant;
     [SerializeField] private Sprite m_devoue;
 
-    public Sprite DisplayEtat(DecayLvl p_decay)
+    public Sprite DisplayStat(DecayLvl p_decay)
     {
         switch (p_decay)
         {
