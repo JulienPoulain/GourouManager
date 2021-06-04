@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: ExactionPos
   m_EditorClassIdentifier: 
-  m_name: 
-  m_description: 
+  m_name: "Soudoiement de Hector - R\xE9ussite"
+  m_description: "Vous avez r\xE9ussi \xE0 soudoyer Hector, l'exposition publique
+    du Culte augmente."
   m_eventList:
   - {fileID: 11400000, guid: e4326e429281479438e877063172f8b0, type: 2}
   - {fileID: 11400000, guid: b39653c3ad0d92e4195bcfe31997cbda, type: 2}

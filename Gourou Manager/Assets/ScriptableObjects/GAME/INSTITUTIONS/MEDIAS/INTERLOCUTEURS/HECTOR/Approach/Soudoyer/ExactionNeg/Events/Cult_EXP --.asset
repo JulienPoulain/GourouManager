@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: Cult_EXP --
   m_EditorClassIdentifier: 
-  m_name: 'Soudoiement Hector : Echec'
+  m_name: Soudoiement de Hector - Echec
   m_description: 'L''exposition publique du culte diminue '
   m_initDuration: 1
   m_duration: 1
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 29b08b7df6980664ca46b7c9932225ec, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1

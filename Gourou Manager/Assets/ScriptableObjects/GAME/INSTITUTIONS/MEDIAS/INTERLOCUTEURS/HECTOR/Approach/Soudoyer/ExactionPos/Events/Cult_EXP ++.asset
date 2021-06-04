@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: Cult_EXP ++
   m_EditorClassIdentifier: 
-  m_name: 'Soudoyer Hector : Reussite'
+  m_name: Soudoyer Hector - Reussite
   m_description: 'L''exposition publique du culte augmente '
   m_initDuration: 1
   m_duration: 1
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 9a1c93c7f7743f34d8990e85b60e15c2, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: EV POSITIF
   m_EditorClassIdentifier: 
-  m_name: "Soudoyement d'Aemilia r\xE9ussi"
+  m_name: "Soudoiement d'Aemilia - r\xE9ussite"
   m_description: "Vous perdez 30 de Brutalit\xE9 pour gagner 35 d'Exposition Publique
-    gr\xE2ce a un entretient avec la Pr\xE9sidente au sein du Gouvernement."
+    gr\xE2ce a un entretien avec la Pr\xE9sidente au sein du Gouvernement."
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts:

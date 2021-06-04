@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CECILIA
   m_EditorClassIdentifier: 
   m_name: 'Cecilia Termidor '
-  m_description: "Ministre de l'int\xE9rieur"
+  m_description: "Ministre de l'int\xE9rieur ambitieuse, machiav\xE9lique et patriote."
   m_descriptionFailure: 
   m_sanity: {fileID: 11400000, guid: 7bdac214ddc9cc748b0aaa0fdb34134f, type: 2}
   m_approach: []

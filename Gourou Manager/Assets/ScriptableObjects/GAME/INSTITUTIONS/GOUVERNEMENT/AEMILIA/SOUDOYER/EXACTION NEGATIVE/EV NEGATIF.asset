@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: EV NEGATIF
   m_EditorClassIdentifier: 
-  m_name: Echec du soudoyement
-  m_description: "Aemilia n'as pas accept\xE9 votre offre. Elle n'accepteras plus
+  m_name: "Soudoiement d'Aemilia - \xE9chec"
+  m_description: "Aemilia n'as pas accept\xE9 votre offre. Elle n'acceptera plus
     de vous recevoir"
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts:

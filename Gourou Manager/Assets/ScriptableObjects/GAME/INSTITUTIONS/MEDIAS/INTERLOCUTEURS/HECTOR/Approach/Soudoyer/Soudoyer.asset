@@ -18,7 +18,9 @@ MonoBehaviour:
   m_cdtSuccess:
   - {fileID: 11400000, guid: c123159b091882e40a13e3ee1cfb24ad, type: 2}
   m_cooldown: 3
-  m_remainingTime: 0
+  m_remainingTime: 1
   m_descriptionApproach: Soudoyer Hector
-  m_dialogueApproach: 
-  m_resultatApproach: Soudoyer Hector fera
+  m_dialogueApproach: "\"J'ai envie d'investir en votre carri\xE8re. Mon Ami pourrait
+    vous \xEAtre fort utile...\""
+  m_resultatApproach: "Soudoyer Hector fera augmenter l'exposition publique du culte,
+    mais cous co\xFBtera des fonds."

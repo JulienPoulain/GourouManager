@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: EV POSITIF
   m_EditorClassIdentifier: 
-  m_name: "Intimidation d'Aemilia r\xE9ussie"
+  m_name: "Intimidation d'Aemilia - r\xE9ussite"
   m_description: "La pr\xE9sidente donne une conf\xE9rence de presse pour mettre
     en valeur l'aspect profond\xE9ment R\xE9publicain du Culte."
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts:

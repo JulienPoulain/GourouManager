@@ -21,5 +21,6 @@ MonoBehaviour:
   m_remainingTime: 0
   m_descriptionApproach: "Vous proposez \xE0 Herbert 25 000 Fonds en \xE9change de
     la suppression de l'Impot sur la Fortune des Entrepreneurs"
-  m_dialogueApproach: 
+  m_dialogueApproach: "\"Aujourd'hui Ministre, demain Pr\xE9sident... Si vous saisissez
+    notre main.\""
   m_resultatApproach: 
