@@ -20,8 +20,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a33a14ba09fc46c4abd1036963443537, type: 2}
   - {fileID: 11400000, guid: 918f61c75f3ffce47b3f6c78948831be, type: 2}
   m_cooldown: 6
-  m_descriptionApproach: "Vous soudoyez Luis pour qu'il dirige l'action syndicale
-    vers des actions violentes, et qu'il encourage les casseurs \xE0 rejoindre le
-    Culte. Cela vous rapportera 3 Points de Fanatiques si vous r\xE9ussissez."
-  m_DialogueApproach: 
-  m_resultatApproach: 
+  m_remainingTime: 0
+  m_descriptionApproach: "Vous soudoyez Luis avec une tr\xE8s grande quantit\xE9
+    d'argent pour qu'il dirige l'action syndicale vers des m\xE9thodes violentes."
+  m_dialogueApproach: '"Il est temps que l''ordre social change ; et mon Ami dispose
+    des ressources pour vous aider."'
+  m_resultatApproach: "Luis encouragera les casseurs \xE0 rejoindre le Culte. Cela
+    vous rapportera 3 Points de Fanatiques contre 20.000 fonds."

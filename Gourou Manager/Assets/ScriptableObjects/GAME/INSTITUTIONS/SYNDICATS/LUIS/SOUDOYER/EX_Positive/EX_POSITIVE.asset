@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EX_POSITIVE
   m_EditorClassIdentifier: 
   m_name: EX POSITIVE
-  m_description: Vous obtenez 3 Points de Fanatiques
+  m_description: "Vous obtenez 3 Points de Fanatiques en \xE9change de 20 000 Fonds."
   m_eventList:
   - {fileID: 11400000, guid: 0f693bc6e27ca584ab34a5855effd38e, type: 2}
   m_conditions: []

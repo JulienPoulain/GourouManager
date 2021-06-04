@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: EV POSITIF
   m_EditorClassIdentifier: 
-  m_name: DETOURNEMENT DE FONDS
-  m_description: "Luis d\xE9tourne les fonds de la CT pour vous financer"
+  m_name: "Intimidation - R\xE9ussite"
+  m_description: "Suite \xE0 vos menaces, Luis d\xE9tourne les fonds de la CT pour
+    vous financer."
   m_initDuration: 3
-  m_duration: 0
+  m_duration: 3
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 97420ed92c6bab5448e7ca0d1f13c276, type: 2}
   - {fileID: 11400000, guid: 5ce6a711a0bc97c4b87eb8769bf0f0e2, type: 2}
   - {fileID: 11400000, guid: 06bfb48790d392d42bc43a83a19b55fc, type: 2}
   - {fileID: 11400000, guid: c8d5660a2bc93694296fa3d4159a1cd3, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1

@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: EX POSITIVE
   m_EditorClassIdentifier: 
-  m_name: DETOURNEMENT DE FONDS
-  m_description: "Luis d\xE9tourne les fonds de la CT pour vous financer"
+  m_name: "Intimidation - R\xE9ussite"
+  m_description: "Suite \xE0 vos menaces, Luis d\xE9tourne les fonds de la CT pour
+    vous financer."
   m_eventList:
   - {fileID: 11400000, guid: 675dc1a3495692a41b968ef575118c6e, type: 2}
   m_conditions: []
