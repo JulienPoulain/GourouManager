@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: Vol d'armes
   m_EditorClassIdentifier: 
-  m_name: Vol d'armes de la police
-  m_description: Vous prenez une patrouille en embuscade pour lui voler ses armes.
+  m_name: Vol d'armes a un CRS
+  m_description: Lors d'une manifestation, vos Fanatiques isolent un policier et
+    lui volent son arme et son bouclier
   m_eventList:
   - {fileID: 11400000, guid: aa2f5cfa6a4d55a45875a95d14d2f765, type: 2}
   - {fileID: 11400000, guid: 36fb45b65b7042843ae2ca8e89b8ca8b, type: 2}
