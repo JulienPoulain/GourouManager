@@ -22,6 +22,7 @@ MonoBehaviour:
   m_decay: {fileID: 11400000, guid: c6a77e9e92ebc7e48be90ade407e926f, type: 2}
   m_interlocutorList:
   - {fileID: 11400000, guid: 94e23ccacdca9264baa3f9442f72b8de, type: 2}
+  - {fileID: 11400000, guid: 129ba86edbfbbc142b58e475714e08af, type: 2}
   m_exactionList: []
   m_triggeredEvents:
   - {fileID: 11400000, guid: c094c8bd72f8c1d4284b56a4548d5af8, type: 2}

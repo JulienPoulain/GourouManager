@@ -19,10 +19,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 05b7c9f24478b9e45bddba8c8a4c2d8b, type: 2}
   - {fileID: 11400000, guid: 74e59adc172b71041b25c1f4034c6b5c, type: 2}
   m_cooldown: 6
-  m_remainingTime: 0
+  m_remainingTime: 5
   m_descriptionApproach: Vous proposez a Alejandra 1200 Fonds par tour contre la
     propagation d'un discours radical dans les organisations syndicales.
   m_dialogueApproach: "\"Je lis en vous la souffrance d'un pass\xE9 difficile ; mon
     Ami et moi pouvons vous aider. Laissez nous vous aider.\""
-  m_resultatApproach: "Vous corrompez d'avantage les syndicats et gagnez 3 de Brutalit\xE9
+  m_resultatApproach: "Vous corrompez d'avantage les syndicats et gagnez 4 de Brutalit\xE9
     pour 3 tours cons\xE9cutifs."

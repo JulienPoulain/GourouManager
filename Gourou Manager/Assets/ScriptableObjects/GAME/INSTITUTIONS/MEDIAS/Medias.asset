@@ -27,6 +27,7 @@ MonoBehaviour:
   m_exactionList:
   - {fileID: 11400000, guid: e4e4f22970e79db418c39ba255901adc, type: 2}
   - {fileID: 11400000, guid: 53b152bc1388c6347b6889f29128bb34, type: 2}
+  - {fileID: 11400000, guid: 95d1c0ed1549f184f9002a935b85bebf, type: 2}
   m_triggeredEvents:
   - {fileID: 11400000, guid: b84b73b69c04023438ffd99b9debd925, type: 2}
   - {fileID: 11400000, guid: 60f18a14da6ad344f97d3c2ae2ca47d5, type: 2}
