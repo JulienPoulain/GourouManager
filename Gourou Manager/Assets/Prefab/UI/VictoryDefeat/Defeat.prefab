@@ -85,8 +85,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: DEFAITE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 49ef5a20997430e4da3d3cfc40277fe3, type: 2}
+  m_sharedMaterial: {fileID: 3146101629646661465, guid: 49ef5a20997430e4da3d3cfc40277fe3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -502,6 +502,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Re-corrompre
       objectReference: {fileID: 0}
+    - target: {fileID: 4663299314603431672, guid: 61aa8556c8f2f8c4bb71715367ba24cb, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 49ef5a20997430e4da3d3cfc40277fe3, type: 2}
+    - target: {fileID: 4663299314603431672, guid: 61aa8556c8f2f8c4bb71715367ba24cb, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3146101629646661465, guid: 49ef5a20997430e4da3d3cfc40277fe3, type: 2}
     - target: {fileID: 7041068223814498912, guid: 61aa8556c8f2f8c4bb71715367ba24cb, type: 3}
       propertyPath: m_Name
       value: Button Color
