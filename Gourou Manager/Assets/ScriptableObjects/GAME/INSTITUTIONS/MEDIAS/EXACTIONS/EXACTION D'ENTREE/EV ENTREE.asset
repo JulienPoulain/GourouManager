@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EV ENTREE
   m_EditorClassIdentifier: 
   m_name: Corruption journaliste
-  m_description: "Vous avez corrompu un pigiste qui \xE9criras des articles conciliants
+  m_description: "Vous avez corrompu un pigiste qui \xE9crira des articles conciliants
     avec le Culte"
   m_initDuration: 1
   m_duration: 1

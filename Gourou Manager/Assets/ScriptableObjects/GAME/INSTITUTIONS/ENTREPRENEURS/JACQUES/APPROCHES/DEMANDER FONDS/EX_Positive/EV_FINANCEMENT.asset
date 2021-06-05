@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: EV_FINANCEMENT
   m_EditorClassIdentifier: 
-  m_name: FINANCEMENT OBTENU
+  m_name: "Demande de fonds \xE0 Jacques - R\xE9ussite"
   m_description: Vous obtenez un financement massif
   m_initDuration: 3
-  m_duration: 0
+  m_duration: 3
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: daad4e138f0a09e4b8c67f8df1ba5e5e, type: 2}
   - {fileID: 11400000, guid: 37ab65aa7f6381b4f916387d31057061, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1

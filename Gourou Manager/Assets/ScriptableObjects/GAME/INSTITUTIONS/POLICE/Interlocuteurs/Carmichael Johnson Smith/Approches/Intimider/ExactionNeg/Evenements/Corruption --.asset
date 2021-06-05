@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: Corruption --
   m_EditorClassIdentifier: 
-  m_name: 'Intimidation de Carmichael : Echec'
+  m_name: Intimidation de Carmichael - Echec
   m_description: La corruption de la police diminue
   m_initDuration: 1
   m_duration: 1
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 20721281f0eba6b448277e1f1f0bd508, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1

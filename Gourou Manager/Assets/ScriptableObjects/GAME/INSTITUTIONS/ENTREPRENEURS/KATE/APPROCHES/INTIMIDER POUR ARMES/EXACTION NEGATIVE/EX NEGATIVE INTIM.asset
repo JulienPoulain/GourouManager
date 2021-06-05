@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: EX NEGATIVE INTIM
   m_EditorClassIdentifier: 
-  m_name: EX Negative Intim
+  m_name: Intimidation de Kate - Echec
   m_description: "L'intimidation \xE0 \xE9chou\xE9, les Entrepreneurs et les m\xE9dias
     se m\xE9fient de vous"
   m_eventList:

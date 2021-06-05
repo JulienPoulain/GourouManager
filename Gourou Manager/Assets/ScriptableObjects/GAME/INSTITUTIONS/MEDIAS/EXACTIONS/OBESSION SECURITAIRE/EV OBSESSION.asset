@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: EV OBSESSION
   m_EditorClassIdentifier: 
   m_name: "Obession s\xE9curitaire"
-  m_description: "Les m\xE9dias diffusent des faits divers a longueur de journ\xE9e,
+  m_description: "Les m\xE9dias diffusent des faits divers \xE0 longueur de journ\xE9e,
     provoquant la panique dans la population"
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts:

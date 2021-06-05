@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: EV POSITIF INTIMIDER
   m_EditorClassIdentifier: 
-  m_name: "EV Positive apr\xE8s Intimidation pour Armes"
+  m_name: "Intimidation de Kate - R\xE9ussite"
   m_description: "Vous obtenez des armes pour vos Fanatiques, augmentant drastiquement
     la brutalit\xE9 du Culte."
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: b660711b16cf37c4798517cc6f97c89c, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1

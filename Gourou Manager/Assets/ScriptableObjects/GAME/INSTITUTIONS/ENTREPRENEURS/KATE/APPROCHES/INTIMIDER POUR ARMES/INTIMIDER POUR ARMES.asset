@@ -20,9 +20,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9c04bf60e804bf04e9868094feb02670, type: 2}
   m_cooldown: 900
   m_remainingTime: 0
-  m_descriptionApproach: "Intimidez Interlocuteur pour obtenir un contact qui vous
-    fourniras des armes, augmentant fortement la Brutalit\xE9 du Culte. Vous devez
-    \xEAtre suffisamment Brutal et Connu pour qu'il c\xE8de."
-  m_dialogueApproach: 
-  m_resultatApproach: "Si vous \xE9chouez, cet Entrepreneur pr\xE9viendras la Police,
-    qui deviendras tr\xE8s vigilante vis-\xE0-vis du Culte."
+  m_descriptionApproach: "Intimidez Kate pour obtenir un contact qui vous fourniras
+    des armes, augmentant fortement la Brutalit\xE9 du Culte. Vous devez \xEAtre
+    suffisamment Brutal et Connu pour qu'il c\xE8de."
+  m_dialogueApproach: '"Vous allez faire tout ce que je vous dis, ou vos capitaux
+    vont s''effondrer."'
+  m_resultatApproach: "Si vous \xE9chouez, cet Entrepreneur pr\xE9viendra la Police,
+    qui deviendra tr\xE8s vigilante vis-\xE0-vis du Culte."

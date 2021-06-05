@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: EX_NEGATIVE
   m_EditorClassIdentifier: 
-  m_name: EX NEGATIVE
+  m_name: Soudoiement de Luis - Echec
   m_description: 'Vous perdez une partie de la confiance des Syndicats '
   m_eventList:
   - {fileID: 11400000, guid: 2833e32cc18920e4c8bf122c61b3385a, type: 2}

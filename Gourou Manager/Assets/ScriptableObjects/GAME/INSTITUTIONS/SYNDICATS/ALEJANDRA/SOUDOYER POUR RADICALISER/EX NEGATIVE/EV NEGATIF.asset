@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: EV NEGATIF
   m_EditorClassIdentifier: 
-  m_name: Echec du soudoyement
+  m_name: Soudoiement d'Alejandra - Echec
   m_description: "Vous avez \xE9chou\xE9 a soudoyer Alejandra, les Syndicats se m\xE9fient
     de vous."
   m_initDuration: 1
