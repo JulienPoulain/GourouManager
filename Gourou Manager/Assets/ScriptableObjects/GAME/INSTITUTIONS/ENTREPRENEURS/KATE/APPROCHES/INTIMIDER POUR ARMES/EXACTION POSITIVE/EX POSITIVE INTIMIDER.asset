@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: EX POSITIVE INTIMIDER
   m_EditorClassIdentifier: 
-  m_name: "EX Positive apr\xE8s Intimidation pour Armes"
+  m_name: "Intimidation de Kate - R\xE9ussite"
   m_description: "Vous obtenez des armes pour vos Fanatiques, augmentant drastiquement
     la brutalit\xE9 du Culte."
   m_eventList:

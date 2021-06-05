@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: EX_INVESTISSEMENT
   m_EditorClassIdentifier: 
-  m_name: INVESTISSEMENT OBTENU
-  m_description: Vous obtiendrez 5 000 pour les 3 prochains tours
+  m_name: "Demande de financement \xE0 Kate - R\xE9ussite"
+  m_description: Vous obtiendrez 5 000 fonds pour les 3 prochains tours
   m_eventList:
   - {fileID: 11400000, guid: c608dda607cfb904293f0c231df91ca0, type: 2}
   m_conditions: []

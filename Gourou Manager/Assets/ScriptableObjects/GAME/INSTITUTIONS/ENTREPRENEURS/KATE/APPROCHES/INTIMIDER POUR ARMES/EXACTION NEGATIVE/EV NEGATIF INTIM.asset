@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: EV NEGATIF INTIM
   m_EditorClassIdentifier: 
-  m_name: EV NEGATIF INTIMIDATION POUR ARMES
-  m_description: "Vous avez \xE9chou\xE9 \xE0 intimider Entrepreneur, il se m\xE9fieras
-    de vous et \xE0 averti la Police."
+  m_name: Intimidation de Kate - Echec
+  m_description: "L'intimidation \xE0 \xE9chou\xE9, les Entrepreneurs et les m\xE9dias
+    se m\xE9fient de vous"
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: ac54b19c7d553b84abaf0aaa400183bb, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1

@@ -12,11 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: EV_REFUS
   m_EditorClassIdentifier: 
-  m_name: REFUS DU FINANCEMENT
-  m_description: "Vous avez pris un sacr\xE9 vent"
+  m_name: "Demande de fonds \xE0 Jacques - Echec"
+  m_description: "Jacques refuse de vous allouer des fonds. La corruption des Entrepreneurs
+    diminue et votre exposition publique d\xE9cro\xEEt."
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 2262afb7b6fbfb04ea461176592e944b, type: 2}
   - {fileID: 11400000, guid: 268c33ca69ed50c468d630b0b1cb9880, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1

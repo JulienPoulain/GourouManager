@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: EV NEGATIF
   m_EditorClassIdentifier: 
-  m_name: Refus du financement
+  m_name: Intimidation de Jacques - Echec
   m_description: "Le financement est refus\xE9, et Jacques compte bien vous faire
     payer cette tentative d'intimidation gr\xE2ce \xE0 son r\xE9seau."
   m_initDuration: 1

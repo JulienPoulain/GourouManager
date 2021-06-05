@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: EX FINANCEMENT POLICE
   m_EditorClassIdentifier: 
-  m_name: FINANCEMENT DE LA POLICE
+  m_name: "Intimidation de Jacques - R\xE9ussite"
   m_description: "La police re\xE7oit une tr\xE8s grande quantit\xE9 d'argent."
   m_eventList:
   - {fileID: 11400000, guid: 391083bd3b3ab564e9c9e1832f2695c0, type: 2}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: EX_FINANCEMENT
   m_EditorClassIdentifier: 
-  m_name: FINANCEMENT OBTENU
+  m_name: "Demande de fonds \xE0 Jacques - R\xE9ussite"
   m_description: Vous obtenez un financement massif
   m_eventList:
   - {fileID: 11400000, guid: 37c71654b30619a44bb209dd450e0eb0, type: 2}

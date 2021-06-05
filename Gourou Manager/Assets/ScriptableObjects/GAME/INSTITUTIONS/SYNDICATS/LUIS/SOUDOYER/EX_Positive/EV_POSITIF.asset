@@ -12,13 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: EV_POSITIF
   m_EditorClassIdentifier: 
-  m_name: 'Event positif '
+  m_name: "Soudoiement de Luis - R\xE9ussite"
   m_description: "Vous obtenez 3 Points de Fanatiques en \xE9change de 20 000 Fonds."
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 10ca86f2340650742a262cd734807a8b, type: 2}
   - {fileID: 11400000, guid: 574b653437f2b6645b582a7f9c884cfa, type: 2}
   - {fileID: 11400000, guid: 37be92e256d89c64cab1a6244bda0d51, type: 2}
   - {fileID: 11400000, guid: b0cdfbd9bb8115c4497153ef5b1d19d4, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1

@@ -20,5 +20,7 @@ MonoBehaviour:
   m_cooldown: -1
   m_remainingTime: 0
   m_descriptionApproach: Intimider Michael Thomas
-  m_dialogueApproach: 
-  m_resultatApproach: "Vous optiendrez peut \xEAtre une info importante..."
+  m_dialogueApproach: "\"Tu aimes \xEAtre policier, n'est-ce pas ? Il serait dommage
+    que ta carri\xE8re s'arr\xEAte pr\xE9matur\xE9ment.\""
+  m_resultatApproach: "Si vous \xEAtes per\xE7u comme suffisament brutal, intimider
+    Michael vous permettra d'acc\xE9der \xE0 un autre interlocuteur."
