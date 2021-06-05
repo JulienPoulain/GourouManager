@@ -51,7 +51,6 @@ public class GradiateDiplay : MonoBehaviour
 
     public void Display()
     {
-        Debug.Log("DEBUT DE LA COROUTINE");
         StartCoroutine(DradiateDisplay());
     }
 
@@ -60,7 +59,6 @@ public class GradiateDiplay : MonoBehaviour
         float time = 0;
         while (time <= m_displayDuration)
         {
-            Debug.Log("LE TEMPS : " + time);
             yield return null;
 
             for (int i = 0; i < m_imageList.Count; i++)
