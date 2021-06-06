@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SoundManager : Singleton<SoundManager>
@@ -14,7 +12,7 @@ public class SoundManager : Singleton<SoundManager>
     {
         if (m_audio == null)
         {
-            m_audio = GetComponent<AudioSource>();
+            m_audio = GameObject.Find("Music background").GetComponent<AudioSource>();
         }
     }
 }
