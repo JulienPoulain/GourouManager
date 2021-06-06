@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EX PRESSION MANAGERIALE
   m_EditorClassIdentifier: 
   m_name: "Pression manag\xE9riale"
-  m_description: "Payez 10 000 pour pousser les chef d'Entreprises \xE0 durcir leur
+  m_description: "Payez 25 000 pour pousser les chef d'Entreprises \xE0 durcir leur
     m\xE9thodes manag\xE9riales. Les d\xE9g\xE2ts psychologiques fragiliseront la
     population et vous rapportera des membres"
   m_eventList:

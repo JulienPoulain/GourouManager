@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CDT EXPO
   m_EditorClassIdentifier: 
   m_syncInt: {fileID: 11400000, guid: e1f663acfbf0dfb4bbf20dd4e71f0fde, type: 2}
-  m_conditionType: 1
-  m_value: 40
+  m_conditionType: 3
+  m_value: 45

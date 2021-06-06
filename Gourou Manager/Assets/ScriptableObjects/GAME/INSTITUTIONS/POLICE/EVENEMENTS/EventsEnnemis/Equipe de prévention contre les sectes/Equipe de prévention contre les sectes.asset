@@ -16,15 +16,15 @@ MonoBehaviour:
   m_description: "La Police cr\xE9\xE9 une \xE9quipe de pr\xE9vention contre les
     sectes pour intervenir contre vous dans les coll\xE8ges et lyc\xE9es."
   m_initDuration: 3
-  m_duration: 0
+  m_duration: 3
   m_initDelay: 0
   m_delay: 0
   m_impacts:
-  - {fileID: 11400000, guid: 264fa90912bda964fba6017876224598, type: 2}
+  - {fileID: 11400000, guid: 5bd44fe60c2b44a4189710918da233c6, type: 2}
   m_infoGained: []
   m_IsDisplayed: 1
   m_initNbUse: 1
-  m_nbUse: 0
+  m_nbUse: 1
   m_cdtActivation:
   - {fileID: 11400000, guid: 2df6639cda3d55f49b599b8fcb7425a6, type: 2}
   - {fileID: 11400000, guid: 3aa0f214d5d1de247aab7725a1fb9c38, type: 2}
