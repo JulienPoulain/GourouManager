@@ -17,7 +17,7 @@ MonoBehaviour:
   m_exactionNeg: {fileID: 11400000, guid: f7dc32be220683b478887f02b9013a05, type: 2}
   m_cdtSuccess:
   - {fileID: 11400000, guid: 0497af65b16c37841976650cbda9b738, type: 2}
-  m_cooldown: 3
+  m_cooldown: 5
   m_remainingTime: 0
   m_descriptionApproach: "Aidez Marcus \xE0 promouvoir la culture pour obtenir des
     informations."

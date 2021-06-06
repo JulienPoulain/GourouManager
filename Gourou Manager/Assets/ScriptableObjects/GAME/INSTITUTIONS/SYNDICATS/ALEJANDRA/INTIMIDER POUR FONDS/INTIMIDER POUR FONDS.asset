@@ -17,8 +17,7 @@ MonoBehaviour:
   m_exactionNeg: {fileID: 11400000, guid: 506b2c7ae62916d41b5986e797dd4fa7, type: 2}
   m_cdtSuccess:
   - {fileID: 11400000, guid: 49f69e2ea315e1e4aa66928146f4959c, type: 2}
-  - {fileID: 11400000, guid: 5a4c3e9028924f044b91e51bfad82a53, type: 2}
-  m_cooldown: 8
+  m_cooldown: 12
   m_remainingTime: 0
   m_descriptionApproach: "Vous menacez Alejandra d'avoir la visite de vos fanatiques
     pendant la nuit si elle ne d\xE9tourne pas une partie des fonds du Syndicat.

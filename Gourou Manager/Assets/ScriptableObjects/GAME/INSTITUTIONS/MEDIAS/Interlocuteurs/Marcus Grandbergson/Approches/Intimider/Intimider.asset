@@ -17,7 +17,6 @@ MonoBehaviour:
   m_exactionNeg: {fileID: 11400000, guid: a661190126f02cf4b9e4a91fd1fe8a3c, type: 2}
   m_cdtSuccess:
   - {fileID: 11400000, guid: 54a62150a95861545b9e21d064d45b40, type: 2}
-  - {fileID: 11400000, guid: 729ff9feebb3f3b4bb3e0d8e86532f1f, type: 2}
   m_cooldown: 5
   m_remainingTime: 0
   m_descriptionApproach: Intimider Marcus

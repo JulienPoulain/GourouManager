@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
+  m_Name: EX SUBVENTIONS
+  m_EditorClassIdentifier: 
+  m_name: Demander de l'argent public
+  m_description: "Promouvoir aupr\xE8s d'un secr\xE9taire d'\xE9tat les emplois cr\xE9es
+    par le Culte pour entretenir les locaux et demander un peu de subventions"
+  m_eventList:
+  - {fileID: 11400000, guid: 4e9cebed408c8664da728365acedcdd3, type: 2}
+  m_conditions:
+  - {fileID: 11400000, guid: 3ab55bb8a11956747b9e1a0993f663a3, type: 2}
+  - {fileID: 11400000, guid: e65015815e69dab448cca8843a710a5d, type: 2}

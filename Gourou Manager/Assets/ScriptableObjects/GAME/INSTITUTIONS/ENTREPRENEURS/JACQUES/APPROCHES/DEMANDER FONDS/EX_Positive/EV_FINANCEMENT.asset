@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: "Demande de fonds \xE0 Jacques - R\xE9ussite"
   m_description: Vous obtenez un financement massif
-  m_initDuration: 3
+  m_initDuration: 5
   m_duration: 3
   m_initDelay: 0
   m_delay: 0

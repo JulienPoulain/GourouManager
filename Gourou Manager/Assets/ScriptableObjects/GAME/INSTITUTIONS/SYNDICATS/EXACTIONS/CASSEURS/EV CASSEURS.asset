@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: EV CASSEURS
   m_EditorClassIdentifier: 
-  m_name: "D\xE9cha\xEEner les casseurs"
-  m_description: Vous payez les Syndicalistes pour qu'ils laissent les casseurs infiltrer
-    leur prochaine manifestation
+  m_name: Manifestation Violente
+  m_description: "Vous perdez 5000 Fonds mais gagnez fortement en Brutalit\xE9"
   m_initDuration: 1
   m_duration: 1
   m_initDelay: 0

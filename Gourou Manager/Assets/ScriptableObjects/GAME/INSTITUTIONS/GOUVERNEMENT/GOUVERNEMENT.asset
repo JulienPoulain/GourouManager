@@ -23,7 +23,8 @@ MonoBehaviour:
   m_interlocutorList:
   - {fileID: 11400000, guid: 94e23ccacdca9264baa3f9442f72b8de, type: 2}
   - {fileID: 11400000, guid: 129ba86edbfbbc142b58e475714e08af, type: 2}
-  m_exactionList: []
+  m_exactionList:
+  - {fileID: 11400000, guid: 7d55c4f7d6c234f42a1d41e6ddf41aa2, type: 2}
   m_triggeredEvents:
   - {fileID: 11400000, guid: c094c8bd72f8c1d4284b56a4548d5af8, type: 2}
   - {fileID: 11400000, guid: 99333d77762a0664cabffd6ed6a6743e, type: 2}
@@ -31,4 +32,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 661c37c0b0d44364b8759c8999897275, type: 2}
   - {fileID: 11400000, guid: 23349d5678b492d4fbd10ce6268072c7, type: 2}
   - {fileID: 11400000, guid: 93e9c316bcbb21346a3da94e5487c98d, type: 2}
+  - {fileID: 11400000, guid: 7841b6d6a66a03c44beb1c3fd551d325, type: 2}
+  - {fileID: 11400000, guid: b0cb5a070158e724f82fff172980ec6c, type: 2}
+  - {fileID: 11400000, guid: 87ef66802a033ec4da40fa6c56f2543a, type: 2}
+  - {fileID: 11400000, guid: c1e4058ace0f3194fb077350063dbdf1, type: 2}
   m_pictogram: {fileID: 21300000, guid: 4a3fa9abe22c1734c954e0598db27a0a, type: 3}

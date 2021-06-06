@@ -21,7 +21,7 @@ MonoBehaviour:
   m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 5519f82e7ffcdfc4d9ecc8140c8004c7, type: 2}
-  - {fileID: 11400000, guid: 22da8d1774abf2f4ca8b51bef824be1a, type: 2}
   - {fileID: 11400000, guid: 8a0301d8c92a26d43a48af52a9d94293, type: 2}
+  - {fileID: 11400000, guid: 716a284ed79cac24786290fbcb9f0989, type: 2}
   m_infoGained: []
   m_IsDisplayed: 1

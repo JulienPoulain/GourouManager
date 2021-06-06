@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Cult_Fa --
   m_EditorClassIdentifier: 
   m_name: Fouiller les casiers judiciaires des syndicats
-  m_description: Vous avez investi deux points de fanatiques
+  m_description: "Deux Fanatiques ont \xE9t\xE9 captur\xE9s pendant l'Exaction"
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts:
