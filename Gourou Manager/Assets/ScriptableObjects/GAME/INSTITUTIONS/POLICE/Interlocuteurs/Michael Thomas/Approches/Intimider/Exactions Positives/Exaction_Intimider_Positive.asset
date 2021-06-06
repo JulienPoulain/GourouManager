@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: Exaction_Intimider_Positive
   m_EditorClassIdentifier: 
-  m_name: 
-  m_description: 
+  m_name: Ex Positive
+  m_description: Info sur chef de la Police
   m_eventList:
   - {fileID: 11400000, guid: 833f3d4814ba2dd4eaee52290795a5aa, type: 2}
   m_conditions: []

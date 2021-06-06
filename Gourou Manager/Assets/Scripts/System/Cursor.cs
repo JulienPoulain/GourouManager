@@ -64,7 +64,6 @@ public class Cursor : MonoBehaviour
                 
                     if (Input.GetMouseButtonDown(0) && !m_interfaceManager.InterfaceIsDisplay())
                     {
-                        //m_CameraScript.FocusOnInstitution(hit.transform.position);
                         m_interfaceManager.DisplayHeavyInstitution(script.m_Institution);
                     }
                 }

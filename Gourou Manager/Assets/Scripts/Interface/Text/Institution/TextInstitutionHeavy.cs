@@ -12,7 +12,7 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
     [SerializeField] TMP_Text m_textNom;
     [SerializeField] TMP_Text m_textFonds;
     [SerializeField] TMP_Text m_textExpositionPublique;
-    [SerializeField] private Image m_imagePico;
+    [SerializeField] private TMP_Text m_textEtat;
 
     [SerializeField] GameObject m_InterlocutorButton;
 
@@ -55,7 +55,7 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
 
         m_textNom.text = "" + p_data.m_name;
         m_textFonds.text = "" + p_data.Funds.Value.ToString("N1");
-        m_imagePico.sprite = GameManager.Instance.m_interfaceManager.m_pictoEtatBehavior.DisplayStat(p_data.Decay.GetDecayLvl());
+        m_textEtat.text = p_data.Decay.GetDecayLvl().ToString();
         m_textExpositionPublique.text = "" + p_data.PublicExposure.Value;
 
         GameManager.Instance.m_interfaceManager.ChangeColorInstitution(m_imageList, m_textList);

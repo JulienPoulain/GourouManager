@@ -20,5 +20,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 43fd2a536ccb5a443824ba874e4ab3c1, type: 2}
   - {fileID: 11400000, guid: cb6a58d2c1b9cae4299e1e7e1e814eaf, type: 2}
   m_accesConditions:
-  - {fileID: 11400000, guid: 987a416e336e77043bcf2beb8bbbf902, type: 2}
+  - {fileID: 11400000, guid: 66844e8b039a91a4fb286ac7ba0642d7, type: 2}
+  - {fileID: 11400000, guid: f40b7a98e30bf444e9b6f1789b759f31, type: 2}
   m_sprite: {fileID: 21300000, guid: 3c98d4dcdd2203645964c8f29e30eeac, type: 3}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ARTICLE FLATTEUR
   m_EditorClassIdentifier: 
   m_name: "Faire \xE9crire un article flatteur pour le Culte"
-  m_description: Vous payez 4 000 un journaliste pour qu'il mette en valeur les bienfaits
+  m_description: Vous payez 6 000 un journaliste pour qu'il mette en valeur les bienfaits
     du Culte de Cthulhu
   m_eventList:
   - {fileID: 11400000, guid: dab474088cd3c8848ae44442e8137650, type: 2}

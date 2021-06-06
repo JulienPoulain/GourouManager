@@ -12,7 +12,7 @@ public class TextEndTurn : MonoBehaviour
     // Partie Institutions
 
     [SerializeField] [Tooltip("List des images Institution (a mettre par ordre)")] private List<Image> m_imageInstitutionList = new List<Image>();     // Liste des picto d'institutions
-    [SerializeField] [Tooltip("List des images Stat (a mettre par ordre)")] private List<Image> m_imageStatList = new List<Image>();            // liste des picto d'etats d'institutions
+    [SerializeField] [Tooltip("List des text Stat (a mettre par ordre)")] private List<TMP_Text> m_textStatList = new List<TMP_Text>();            // liste des picto d'etats d'institutions
 
     [SerializeField] GameObject m_objectMainInstitutionName;
     private TMP_Text m_TextmainInstitutionName;
@@ -51,7 +51,7 @@ public class TextEndTurn : MonoBehaviour
         for (int i = 0; i < GameManager.Instance.Institutions.Count; i++)
         {
             m_imageInstitutionList[i].sprite = GameManager.Instance.Institutions[i].Pictogram;
-            m_imageStatList[i].sprite = GameManager.Instance.m_interfaceManager.m_pictoEtatBehavior.DisplayStat(GameManager.Instance.Institutions[i].Decay.GetDecayLvl());
+            m_textStatList[i].text = GameManager.Instance.Institutions[i].Decay.GetDecayLvl().ToString();
         }
         
         // Affichage du Culthe

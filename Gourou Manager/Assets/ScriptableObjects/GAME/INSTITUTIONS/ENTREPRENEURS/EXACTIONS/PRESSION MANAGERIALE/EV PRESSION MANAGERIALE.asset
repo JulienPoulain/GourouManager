@@ -20,5 +20,6 @@ MonoBehaviour:
   m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 6bd715f580cd1b241b51511681da95b4, type: 2}
+  - {fileID: 11400000, guid: a93d631e6f3ce774db6b37e6cee3e577, type: 2}
   m_infoGained: []
   m_IsDisplayed: 1
