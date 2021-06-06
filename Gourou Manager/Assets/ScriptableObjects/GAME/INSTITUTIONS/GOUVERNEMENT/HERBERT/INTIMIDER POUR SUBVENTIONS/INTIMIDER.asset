@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Intimider
   m_exactionPos: {fileID: 11400000, guid: f388f655d47b7674396b0550042b0e8e, type: 2}
-  m_exactionNeg: {fileID: 0}
+  m_exactionNeg: {fileID: 11400000, guid: cbf8e3f5e9d3cca4c926b8541d2d3888, type: 2}
   m_cdtSuccess:
   - {fileID: 11400000, guid: bad301a8cde99264cb62bc063bc475aa, type: 2}
   m_cooldown: 900

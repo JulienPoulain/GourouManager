@@ -180,8 +180,8 @@ MonoBehaviour:
   m_text: "Vous \xEAtes le Gourou, au service du grand Ancien, Cthulhu lui-m\xEAme.
     Votre objectif est de corrompre l\u2019\xEEle pour la livrer \xE0 votre ma\xEEtre."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8835eb43743433e4c9d465c9b619c6d0, type: 2}
+  m_sharedMaterial: {fileID: 5868983803118335828, guid: 8835eb43743433e4c9d465c9b619c6d0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -452,8 +452,8 @@ MonoBehaviour:
     le plus rentable sera sans doute de parler directement aux personnes les plus
     influentes de l\u2019\xEEle.\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8835eb43743433e4c9d465c9b619c6d0, type: 2}
+  m_sharedMaterial: {fileID: 5868983803118335828, guid: 8835eb43743433e4c9d465c9b619c6d0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.2
+  m_fontSize: 14.85
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -586,8 +586,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Commencez votre devoir
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8835eb43743433e4c9d465c9b619c6d0, type: 2}
+  m_sharedMaterial: {fileID: 5868983803118335828, guid: 8835eb43743433e4c9d465c9b619c6d0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -611,8 +611,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -841,8 +841,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Pour ce faire, votre culte doit atteindre 100 membres.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8835eb43743433e4c9d465c9b619c6d0, type: 2}
+  m_sharedMaterial: {fileID: 5868983803118335828, guid: 8835eb43743433e4c9d465c9b619c6d0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -977,8 +977,8 @@ MonoBehaviour:
     et certaines pourraient combattre votre influence. Si votre culte n\u2019a plus
     qu\u2019un seul membre, vous serez vaincu."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8835eb43743433e4c9d465c9b619c6d0, type: 2}
+  m_sharedMaterial: {fileID: 5868983803118335828, guid: 8835eb43743433e4c9d465c9b619c6d0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1160,8 +1160,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000020981, y: 161.1}
-  m_SizeDelta: {x: 299.1988, y: 50}
+  m_AnchoredPosition: {x: -0.15055, y: 164.8}
+  m_SizeDelta: {x: 465.419, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1634317509900529514
 CanvasRenderer:
@@ -1193,8 +1193,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Cthulhu Manager
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8835eb43743433e4c9d465c9b619c6d0, type: 2}
+  m_sharedMaterial: {fileID: 5868983803118335828, guid: 8835eb43743433e4c9d465c9b619c6d0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1329,8 +1329,8 @@ MonoBehaviour:
     l\u2019\xE9tat des institutions vis \xE0 vis du Culte, et sur votre brutalit\xE9
     per\xE7ue.\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8835eb43743433e4c9d465c9b619c6d0, type: 2}
+  m_sharedMaterial: {fileID: 5868983803118335828, guid: 8835eb43743433e4c9d465c9b619c6d0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1354,7 +1354,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
+  m_fontSize: 18.35
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1

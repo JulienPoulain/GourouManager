@@ -16,7 +16,7 @@ MonoBehaviour:
   m_description: "Pr\xE9sidente de la R\xE9publique, terre \xE0 terre, int\xE8gre
     et souveraine. Un leader n\xE9."
   m_descriptionFailure: 
-  m_sanity: {fileID: 11400000, guid: 2fd83f33ef622c041b958aef8dd5f067, type: 2}
+  m_sanity: {fileID: 11400000, guid: 6ca8d82a3ecbe5f4bbba9dc82b00775f, type: 2}
   m_approach:
   - {fileID: 11400000, guid: 2d7c72fbb69b4a5459f9488e0d0fdb0a, type: 2}
   - {fileID: 11400000, guid: 466dece827fafdf48ae8c3ffce610c72, type: 2}
