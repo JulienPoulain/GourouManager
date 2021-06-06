@@ -12,15 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b647af1624fef43bcaf750a89ff899, type: 3}
   m_Name: EV MEFIANT
   m_EditorClassIdentifier: 
-  m_name: GVT MEFIANT
-  m_description: 
-  m_initDuration: 0
-  m_duration: 0
+  m_name: "Gouvernement m\xE9fiant"
+  m_description: "Le Gouvernement sent que le Culte est une menace et commence \xE0
+    le combattre"
+  m_initDuration: 1
+  m_duration: 1
   m_initDelay: 0
   m_delay: 0
-  m_impacts: []
+  m_impacts:
+  - {fileID: 11400000, guid: 6fbf1acefb00fb84db79f23a770027e4, type: 2}
   m_infoGained: []
   m_IsDisplayed: 0
   m_initNbUse: -1
-  m_nbUse: 0
-  m_cdtActivation: []
+  m_nbUse: -1
+  m_cdtActivation:
+  - {fileID: 11400000, guid: 4c516642143623a4ba1236f6c5bc716e, type: 2}
+  - {fileID: 11400000, guid: 79a340f1bb21edf46bad4106d3f1c4da, type: 2}

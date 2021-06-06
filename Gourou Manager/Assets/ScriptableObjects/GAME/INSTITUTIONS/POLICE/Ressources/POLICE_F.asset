@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: POLICE_F
   m_EditorClassIdentifier: 
   m_name: Fonds
-  m_initValue: 50000
-  m_value: 0
+  m_initValue: 100000
+  m_value: 340000

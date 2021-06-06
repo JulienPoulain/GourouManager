@@ -18,9 +18,11 @@ MonoBehaviour:
   m_cdtSuccess:
   - {fileID: 11400000, guid: 2aab25a4b6568544ebfd319b0f76f671, type: 2}
   m_cooldown: 900
-  m_remainingTime: 0
+  m_remainingTime: 899
   m_descriptionApproach: "Vous proposez \xE0 Herbert 25 000 Fonds en \xE9change de
     la suppression de l'Impot sur la Fortune des Entrepreneurs"
-  m_dialogueApproach: "\"Aujourd'hui Ministre, demain Pr\xE9sident... Si vous saisissez
-    notre main.\""
-  m_resultatApproach: 
+  m_dialogueApproach: "\"L'imp\xF4t sur la Fortune emp\xEAche les investissements...
+    Supprimez le et vous vous ferez des amis..\""
+  m_resultatApproach: "Vous proposez \xE0 Herbert 25 000 Fonds en \xE9change de la
+    suppression de l'Impot sur la Fortune des Entrepreneurs, qui appr\xE9cieront
+    le geste "

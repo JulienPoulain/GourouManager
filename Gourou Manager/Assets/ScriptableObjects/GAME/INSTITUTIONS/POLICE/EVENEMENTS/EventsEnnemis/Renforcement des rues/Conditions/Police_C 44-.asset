@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_syncInt: {fileID: 11400000, guid: 06f727ef0cf9e2e4190dd9d5a569094c, type: 2}
   m_conditionType: 1
-  m_value: 44
+  m_value: 36

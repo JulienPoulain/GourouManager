@@ -30,7 +30,6 @@ MonoBehaviour:
   m_triggeredEvents:
   - {fileID: 11400000, guid: ed073883adbc1334db211991c47d5126, type: 2}
   - {fileID: 11400000, guid: 6b472a58c1dbfa242b4dbd6106dd7d96, type: 2}
-  - {fileID: 11400000, guid: 7a74586e6c44a9a4b83f0aaa87911dc3, type: 2}
   - {fileID: 11400000, guid: 57ca02ac882d3754c8d5840744ae0931, type: 2}
   - {fileID: 11400000, guid: 34d8abb715197ba43ab8e0d2dea345ad, type: 2}
   - {fileID: 11400000, guid: affa7181eb3ddd347b43f1337d82aa43, type: 2}

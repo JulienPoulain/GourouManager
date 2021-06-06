@@ -16,15 +16,15 @@ MonoBehaviour:
   m_description: "La police mobilise des patrouilles afin de surveiller les rues
     et emp\xEAcher vos orateurs de propager le culte."
   m_initDuration: 3
-  m_duration: 0
+  m_duration: 3
   m_initDelay: 0
   m_delay: 0
   m_impacts:
-  - {fileID: 11400000, guid: 7f55b5a3eef53e04baed0a6e7f38f856, type: 2}
+  - {fileID: 11400000, guid: 7d0af0bcf474dcc469bb17946a94f721, type: 2}
   m_infoGained: []
   m_IsDisplayed: 1
   m_initNbUse: 1
-  m_nbUse: 0
+  m_nbUse: 1
   m_cdtActivation:
   - {fileID: 11400000, guid: ebd0301846cfb114da33d3b427265ccf, type: 2}
   - {fileID: 11400000, guid: 707ded22d1ff96d448a1cce7a75fa6bc, type: 2}
