@@ -24,6 +24,7 @@ public class ButtonFeedBack : MonoBehaviour, IPointerExitHandler, IPointerEnterH
     public void OnPointerDown(PointerEventData eventData)
     {
         // Permet de remettre l'ancienne image une fois cliquer dessus
+        SoundManager.Instance.ClickEffect();
         GameManager.Instance.m_interfaceManager.m_imageBehavior.ReplaceBackGroundImage(m_thisImage);
         m_buttonText.color = Color.white;
     }

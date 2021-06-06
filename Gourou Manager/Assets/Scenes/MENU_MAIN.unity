@@ -305,6 +305,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7948924374027240198, guid: 3b684eaa9361ac945bf209184d46aaa9, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1bcd718e8b686c548b37844d592574cb, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b684eaa9361ac945bf209184d46aaa9, type: 3}
 --- !u!114 &434696884 stripped
@@ -1292,10 +1296,6 @@ PrefabInstance:
     - target: {fileID: 6238718164439961451, guid: 8be76ece7c1a14e4ab59d4280c0e1636, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7303995657419588729, guid: 8be76ece7c1a14e4ab59d4280c0e1636, type: 3}
-      propertyPath: m_text
-      value: "FACHE Ali\xE9nor : Shaders | Prog"
       objectReference: {fileID: 0}
     - target: {fileID: 7710689291573300253, guid: 8be76ece7c1a14e4ab59d4280c0e1636, type: 3}
       propertyPath: m_graduateDispalyScriptList.Array.size

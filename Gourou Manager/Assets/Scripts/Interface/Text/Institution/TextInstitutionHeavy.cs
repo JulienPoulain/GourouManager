@@ -76,6 +76,7 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
     public void DisplayExaction()
     {
         // On désaffiche les exactions pour les afficher comme on veut
+        SoundManager.Instance.ClickEffect();
         DisallowExaction();
 
         // On affiche les exactions selon notre besoin & on les paramètre        
@@ -108,6 +109,7 @@ public class TextInstitutionHeavy : MonoBehaviour , IPointerEnterHandler, IPoint
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        SoundManager.Instance.ClickEffect();
         StartCoroutine(MousePressed());
     }
 

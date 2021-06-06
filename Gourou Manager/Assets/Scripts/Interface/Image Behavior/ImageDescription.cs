@@ -31,6 +31,8 @@ public class ImageDescription : MonoBehaviour, IPointerExitHandler, IPointerEnte
     {
         if (!m_descriptionIsDisplay)
         {
+            SoundManager.Instance.ClickEffect();
+
             m_descriptionIsDisplay = true;
             RectTransform canvasDim = GameManager.Instance.m_interfaceManager.m_canvasSize;
 
@@ -38,7 +40,6 @@ public class ImageDescription : MonoBehaviour, IPointerExitHandler, IPointerEnte
 
             m_descriptionPrefabContainer = Instantiate(m_descriptionPrefab, position, Quaternion.identity, GameManager.Instance.m_interfaceManager.transform);
             m_descriptionPrefabContainer.GetComponent<RessourceDescription>().Display(m_ressourceDescription);
-
         }
     }
 

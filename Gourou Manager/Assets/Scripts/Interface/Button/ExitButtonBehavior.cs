@@ -34,6 +34,7 @@ public class ExitButtonBehavior : MonoBehaviour, IPointerEnterHandler, IPointerD
     {
         m_spriteButonContainer.sprite = m_exitNormalSprite;
         m_colorButonContainer.color = m_normalColor;
+        SoundManager.Instance.ClickEffect();
     }
 
     // Le curseur quitte

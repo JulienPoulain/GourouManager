@@ -26,12 +26,4 @@ public class SoundManager : Singleton<SoundManager>
     {
         m_click.Play();
     }
-
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            m_click.Play();
-        }
-    }
 }
