@@ -13,6 +13,7 @@ public class TextCultStat : MonoBehaviour
     [SerializeField] TMP_Text m_fanatiques;
     [SerializeField] TMP_Text m_expositionPublic;
     [SerializeField] TMP_Text m_turnNumber;
+    [SerializeField] TMP_Text m_brutality;
 
     [SerializeField] Image m_backGroundColor;
 
@@ -36,6 +37,7 @@ public class TextCultStat : MonoBehaviour
         culte.Members.onValueChanged += HandleMembersChanged;
         culte.Fanatics.onValueChanged += HandleFanaticsChanged;
         culte.PublicExposure.onValueChanged += HandlePublicExposureChanged;
+        culte.Brutality.onValueChanged += HandleBrutalityChanged;
     }
 
     private void OnDisable()
@@ -45,6 +47,7 @@ public class TextCultStat : MonoBehaviour
         culte.Members.onValueChanged -= HandleMembersChanged;
         culte.Fanatics.onValueChanged -= HandleFanaticsChanged;
         culte.PublicExposure.onValueChanged -= HandlePublicExposureChanged;
+        culte.Brutality.onValueChanged += HandleBrutalityChanged;
     }
     
     private void HandleFundsChanged(int p_value) {
@@ -58,5 +61,10 @@ public class TextCultStat : MonoBehaviour
     }
     private void HandlePublicExposureChanged(int p_value) {
         m_expositionPublic.text = "" + p_value;
+    }
+
+    private void HandleBrutalityChanged(int p_value)
+    {
+        m_brutality.text = "" + p_value;
     }
 }
