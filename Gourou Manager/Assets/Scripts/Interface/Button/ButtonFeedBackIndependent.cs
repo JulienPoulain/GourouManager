@@ -23,6 +23,7 @@ public class ButtonFeedBackIndependent : MonoBehaviour, IPointerDownHandler, IPo
     public void OnPointerEnter(PointerEventData eventData)
     {
         m_image.sprite = m_reverseSprite;
+        SoundManager.Instance.ClickEffect();
     }
 
     public void OnPointerExit(PointerEventData eventData)

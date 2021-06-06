@@ -26,6 +26,7 @@ public class ETPALogoScript : MonoBehaviour, IPointerEnterHandler, IPointerDownH
     // On clique dessus
     public void OnPointerDown(PointerEventData eventData)
     {
+        SoundManager.Instance.ClickEffect();
         Application.OpenURL("https://www.etpa.com/game-design");
         m_thisImage.sprite = m_logoSprite;
     }
