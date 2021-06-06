@@ -14,6 +14,8 @@ public abstract class ConditionSO : ScriptableObject, IInitializable
     }
     
     public abstract void Initialize();
+
+    public abstract string Express();
     
     public abstract bool IsValid();
 }

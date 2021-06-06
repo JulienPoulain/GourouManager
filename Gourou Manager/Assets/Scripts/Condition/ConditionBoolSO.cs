@@ -17,7 +17,12 @@ public class ConditionBoolSO : ConditionSO
             m_syncBool.Initialize();
         }
     }
-    
+
+    public override string Express()
+    {
+        return "Vous devez posséder l'info : " + m_syncBool.Name + ".";
+    }
+
     public override bool IsValid()
     {
         return m_syncBool.Value;
