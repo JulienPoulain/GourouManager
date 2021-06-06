@@ -16,7 +16,7 @@ MonoBehaviour:
   m_description: "Ministre de l'\xE9conomie, int\xE8gre, progressiste et fervent
     d\xE9fenseur de l'Etat."
   m_descriptionFailure: 
-  m_sanity: {fileID: 0}
+  m_sanity: {fileID: 11400000, guid: e1ccabe16b65cfc42bfe6e251cc37dce, type: 2}
   m_approach:
   - {fileID: 11400000, guid: ae95078ac23343041afdad61237b98c6, type: 2}
   - {fileID: 11400000, guid: 294e0524b64920b469879e4206aaba05, type: 2}
