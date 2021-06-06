@@ -6026,9 +6026,19 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -15.4
       objectReference: {fileID: 0}
+    - target: {fileID: 2214783594861502738, guid: cc4a71a9a623ad744b63f718e8e79243, type: 3}
+      propertyPath: m_ressourceDescription
+      value: "La brutalit\xE9 repr\xE9sente \xE0 quel point le culte est per\xE7u
+        comme violent par la population, elle est tr\xE8s utile, notamment dans les
+        situations d\u2019intimidations"
+      objectReference: {fileID: 0}
     - target: {fileID: 2442488038076925845, guid: cc4a71a9a623ad744b63f718e8e79243, type: 3}
       propertyPath: m_ressourceName
       value: Jours
+      objectReference: {fileID: 0}
+    - target: {fileID: 2442488038076925845, guid: cc4a71a9a623ad744b63f718e8e79243, type: 3}
+      propertyPath: m_ressourceDescription
+      value: "Nombre de tours \xE9coul\xE9s depuis le d\xE9but de la partie"
       objectReference: {fileID: 0}
     - target: {fileID: 3330995381997203310, guid: cc4a71a9a623ad744b63f718e8e79243, type: 3}
       propertyPath: m_text
