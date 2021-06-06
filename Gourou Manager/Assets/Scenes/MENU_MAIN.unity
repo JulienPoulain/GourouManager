@@ -1063,6 +1063,14 @@ PrefabInstance:
       propertyPath: m_graduateDispalyScriptList.Array.data[4]
       value: 
       objectReference: {fileID: 95409428}
+    - target: {fileID: 3118929937286795839, guid: 4b2566c47bd96784882a3f23b33190f1, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8835eb43743433e4c9d465c9b619c6d0, type: 2}
+    - target: {fileID: 3118929937286795839, guid: 4b2566c47bd96784882a3f23b33190f1, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5868983803118335828, guid: 8835eb43743433e4c9d465c9b619c6d0, type: 2}
     - target: {fileID: 3792419301005837222, guid: 4b2566c47bd96784882a3f23b33190f1, type: 3}
       propertyPath: m_Name
       value: Menu
