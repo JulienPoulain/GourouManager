@@ -88,7 +88,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ef948b4ac235f48a340eab83fc045e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ressourceName: 'Membres : Les membres sont votre condition de victoire, obtenez
+  m_ressourceName: Membres
+  m_ressourceDescription: 'Les membres sont votre condition de victoire, obtenez
     en 100 pour gagner la partie . Votre impact sur la population ainsi que celle
     des institutions font varier leur nombre '
   m_textPrefab: {fileID: 2101137435692569717, guid: 158e883b1a7581d498d2b0a8244d1301, type: 3}
+  m_descriptionPrefab: {fileID: 5380090440679609051, guid: 799996798a3d8af41a660dde998835ef, type: 3}

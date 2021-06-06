@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ressourceName: Jour
+  m_ressourceDescription: "Repr\xE9sente les jours que vous avez passer dans ce bas
+    monde"
   m_textPrefab: {fileID: 2101137435692569717, guid: 158e883b1a7581d498d2b0a8244d1301, type: 3}
-  m_displayTime: 5
-  m_canBeAutoDestroy: 1
+  m_descriptionPrefab: {fileID: 5380090440679609051, guid: 799996798a3d8af41a660dde998835ef, type: 3}

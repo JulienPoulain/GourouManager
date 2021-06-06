@@ -15,6 +15,11 @@ public class SoundManager : Singleton<SoundManager>
         {
             m_audio = GameObject.Find("Music background").GetComponent<AudioSource>();
         }
+
+        if (m_audio == null)
+        {
+            m_click = GameObject.Find("Click FeedBack").GetComponent<AudioSource>();
+        }
     }
 
     public void ClickEffect()
