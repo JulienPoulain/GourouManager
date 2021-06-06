@@ -18,10 +18,10 @@ MonoBehaviour:
   m_cdtSuccess:
   - {fileID: 11400000, guid: 166843ed9b05dc443ab0fb6afcd731a4, type: 2}
   m_cooldown: 5
-  m_remainingTime: 0
+  m_remainingTime: 4
   m_descriptionApproach: "Vous envoyez un Fanatique passer un message \xE0 Hector
     : les journalistes qui seront hostiles au Culte risquent d'avoir des probl\xE8mes."
   m_dialogueApproach: "\"Prenez garde \xE0 ce que votre objectif capture, il existe
     un savoir trop grand pour vous.\""
-  m_resultatApproach: "Intimider Hector ne passera pas inaper\xE7u et permettra au
-    Culte de gagner en brutalit\xE9 per\xE7ue."
+  m_resultatApproach: "Intimider Hector vous fera gagner en Brutalit\xE9 mais vous
+    couteras un Fanatique. Si vous n'en avez aucun, vous \xE9chouerez"

@@ -17,12 +17,14 @@ MonoBehaviour:
   m_exactionNeg: {fileID: 11400000, guid: 95133e1cd9efea0429f6b258085f45f5, type: 2}
   m_cdtSuccess:
   - {fileID: 11400000, guid: a81744682f6d2b14ba435ea5f14fb891, type: 2}
-  m_cooldown: 5
+  - {fileID: 11400000, guid: 7e234aefc7c921642ad944e2c5354f7a, type: 2}
+  - {fileID: 11400000, guid: 47155d61ac0ef724b89910d3be8ae655, type: 2}
+  m_cooldown: 8
   m_remainingTime: 0
   m_descriptionApproach: "Vous proposez \xE0 Kate un investissement risqu\xE9 mais
     lucratif dans l'une des propri\xE9t\xE9s du Culte."
   m_dialogueApproach: "\"J'ai une entreprise \xE0 vous proposer. Elle est risqu\xE9e,
     mais vous serez b\xE9n\xE9ficiaire, \xE0 condition d'investir. Ayez confiance
     en mon Ami.\""
-  m_resultatApproach: "Si vous r\xE9ussissez, vous obtiendrez une petite somme pendant
-    3 tours cons\xE9cutifs."
+  m_resultatApproach: Si vous disposez d'1 Fanatique et que le Entrepreneurs sont
+    suffisamment riches, vous obtiendrez 5k sur trois tours

@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 305aa538d4407b149bac159b7c5e8197, type: 3}
-  m_Name: Info sur Carmichael
+  m_Script: {fileID: 11500000, guid: 4a07221645fd8ad42978314f51634aaa, type: 3}
+  m_Name: CDT F ENTREP
   m_EditorClassIdentifier: 
-  m_syncBool: {fileID: 11400000, guid: 7469adb9dafaec743b11dd29d9bb0e75, type: 2}
+  m_syncInt: {fileID: 11400000, guid: a26544a9e213a0449ad68d4863f68928, type: 2}
+  m_conditionType: 6
+  m_value: 450000
