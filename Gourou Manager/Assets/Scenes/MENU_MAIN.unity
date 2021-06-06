@@ -1232,6 +1232,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7303995657419588729, guid: 8be76ece7c1a14e4ab59d4280c0e1636, type: 3}
+      propertyPath: m_text
+      value: "FACHE Ali\xE9nor : Shaders | Prog"
+      objectReference: {fileID: 0}
     - target: {fileID: 7710689291573300253, guid: 8be76ece7c1a14e4ab59d4280c0e1636, type: 3}
       propertyPath: m_graduateDispalyScriptList.Array.size
       value: 9
