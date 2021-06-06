@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: EV NEGATIF
   m_EditorClassIdentifier: 
-  m_name: 
-  m_description: 
-  m_initDuration: 0
-  m_duration: 0
+  m_name: Echec du soudoyment
+  m_description: Vous n'avez pas 25 000 Fonds, vous ne pouvez pas Soudoyer Herbert
+  m_initDuration: 1
+  m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts: []

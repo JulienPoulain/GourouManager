@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: EV PRESSION MANAGERIALE
   m_EditorClassIdentifier: 
   m_name: "Pression manag\xE9riale"
-  m_description: "Poussez les chef d'Entreprises \xE0 durcir leur m\xE9thodes manag\xE9riales.
-    Les d\xE9g\xE2ts psychologiques vous rapporteront des membres"
+  m_description: "Vous payez 10 000 contre un durcissement des politiques manag\xE8riales"
   m_initDuration: 3
   m_duration: 3
   m_initDelay: 0

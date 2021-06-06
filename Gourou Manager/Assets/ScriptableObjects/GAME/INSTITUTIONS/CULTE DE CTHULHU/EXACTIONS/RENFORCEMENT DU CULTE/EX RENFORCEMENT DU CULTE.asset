@@ -17,4 +17,5 @@ MonoBehaviour:
     accro\xEEtre vos rangs."
   m_eventList:
   - {fileID: 11400000, guid: ac7e5ae7d260d7049b3aea4a3d96a4c9, type: 2}
-  m_conditions: []
+  m_conditions:
+  - {fileID: 11400000, guid: 67be9b7080a2a0941bf6de5225130835, type: 2}

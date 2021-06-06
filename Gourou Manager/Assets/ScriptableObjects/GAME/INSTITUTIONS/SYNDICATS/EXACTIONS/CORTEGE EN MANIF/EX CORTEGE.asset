@@ -18,5 +18,5 @@ MonoBehaviour:
   m_eventList:
   - {fileID: 11400000, guid: 7f4fa38e27dbb414e9aa8cf7386b7744, type: 2}
   m_conditions:
-  - {fileID: 11400000, guid: 1dea17947edadc645b302ef7196671b4, type: 2}
   - {fileID: 11400000, guid: c61d80583f0b68f4896b54d5e1a6ce93, type: 2}
+  - {fileID: 11400000, guid: 72a0c4950dec9e345a9aac8a520654e7, type: 2}
