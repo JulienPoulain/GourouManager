@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 [CreateAssetMenu(fileName = "NewConditionBool", menuName = "GourouManager/Condition/ConditionBool")]
 public class ConditionBoolSO : ConditionSO

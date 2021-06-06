@@ -18,24 +18,19 @@ public class RoundManager : Singleton<RoundManager>
         // 1. Ajout des nouveaux évènements d'exactions puis exécution des évènements actifs.
         AddEvent(newActiveEvents, GameManager.Instance.PendingExactions);
         
-        //foreach (EventSO evenement in newActiveEvents)
-        foreach (EventSO newActiveEvent in newActiveEvents.ToList())
+        /* Ancienne méthode : Enlever ce qui pourrait faire doublon.
+         List<EventSO> tmpNewActiveEvents = newActiveEvents.ToList();
+        foreach (EventSO nae in tmpNewActiveEvents.ToList())
         {
-            if (GameManager.Instance.ActiveEvents.Contains(newActiveEvent))
+            if (GameManager.Instance.ActiveEvents.Contains(nae))
             {
-                newActiveEvents.Remove(newActiveEvent);
+                newActiveEvents.Remove(nae);
             }
         }
-        /*for(int i = 0; i < newActiveEvents.Count; i++)
-        {
-            if (GameManager.Instance.ActiveEvents.Contains(newActiveEvents[i]))
-            {
-                newActiveEvents.Remove(newActiveEvents[i]);
-                i--;
-            }
-        }*/
-        
-        GameManager.Instance.ActiveEvents.AddRange(newActiveEvents);
+
+        GameManager.Instance.ActiveEvents.AddRange(newActiveEvents);*/
+
+        AddEvent(GameManager.Instance.ActiveEvents, GameManager.Instance.PendingExactions);
         
         ComputeEvents(GameManager.Instance.ActiveEvents);
         
@@ -80,26 +75,40 @@ public class RoundManager : Singleton<RoundManager>
     /// Ajoute l'évènement p_event à la liste d'évènement p_events sans doublon.
     /// </summary>
     /// <param name="p_events">Liste d'évènements</param>
-    /// <param name="p_event">Évènement</param>
+    /// <param name="p_event">Évènement à ajouter</param>
     public void AddEvent(List<EventSO> p_events, EventSO p_event)
     {
         if (!p_events.Contains(p_event))
             p_events.Add(p_event);
+    }
+
+    /// <summary>
+    /// Ajoute à la liste d'évènements p_events les évènements contenus dans la liste d'évènements p_eventsToAdd sans doublon.
+    /// </summary>
+    /// <param name="p_events">Liste d'évènements</param>
+    /// <param name="p_eventsToAdd">Liste d'évènements à ajouter</param>
+    public void AddEvent(List<EventSO> p_events, List<EventSO> p_eventsToAdd)
+    {
+        foreach (EventSO eventToAdd in p_eventsToAdd)
+        {
+            AddEvent(p_events, eventToAdd);
+        }
     }
     
     /// <summary>
     /// Ajoute à la liste d'évènements p_events les évènements contenus dans les exactions de la liste d'exactions p_exactions sans doublon.
     /// </summary>
     /// <param name="p_events">Liste d'évènements</param>
-    /// <param name="p_exactions">Liste d'exactions</param>
+    /// <param name="p_exactions">Liste d'exactions à ajouter</param>
     public void AddEvent(List<EventSO> p_events, List<ExactionSO> p_exactions)
     {
         foreach (ExactionSO exaction in p_exactions)
         {
-            foreach (EventSO evenement in exaction.EventList)
+            AddEvent(p_events, exaction.EventList);
+            /*foreach (EventSO evenement in exaction.EventList)
             {
                 AddEvent(p_events, evenement);
-            }
+            }*/
         }
     }
     
@@ -168,7 +177,6 @@ public class RoundManager : Singleton<RoundManager>
                     {
                         info.obtain();
                     }
-                    evenement.InfoGained.Clear();
                 }
 
                 //Reduction du compteur d'events (sa durée d'activité)

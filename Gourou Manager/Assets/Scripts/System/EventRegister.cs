@@ -129,7 +129,7 @@ public class EventRegister : Singleton<EventRegister>
     }
     
     /// <summary>
-    /// Ajoute l'ensemble d'exactions p_exactions au registre pour le tour p_turn.
+    /// Ajoute l'ensemble des exactions de p_exactions au registre pour le tour p_turn.
     /// </summary>
     /// <param name="p_turn">Tour</param>
     /// <param name="p_exactions">Collection d'exactions</param>
