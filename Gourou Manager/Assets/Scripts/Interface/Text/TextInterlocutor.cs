@@ -92,7 +92,7 @@ public class TextInterlocutor : MonoBehaviour
             {            
                 // On affiche : nom de la ressource / le tyle (> || < || =) / valeur de la ressource
                 m_accessibilityOb[i].SetActive(true);
-                m_accessibility[i].text = "" + m_Interlocutor.AccessCondition[i].ToString();
+                m_accessibility[i].text = "" + m_Interlocutor.AccessCondition[i].Express();
             }
         }
         else

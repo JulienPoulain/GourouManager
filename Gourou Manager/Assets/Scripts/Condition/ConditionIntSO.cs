@@ -1,4 +1,5 @@
 using System;
+using ConditionTypeMethods;
 using TMPro;
 using UnityEngine;
 
@@ -21,11 +22,16 @@ public class ConditionIntSO : ConditionSO
         }
     }
 
+    public override string Express()
+    {
+        return m_syncInt.Name + " (" + m_syncInt.Value + ") " + m_conditionType.GetString(" ou ") +" à " + m_value + ".";
+    }
+
     public override string ToString()
     {
         string str = null;
 
-        str = m_syncInt.name + ":" + m_syncInt.Value + " " + ConditionTypeToString(m_conditionType) + " " + m_value;
+        str = m_syncInt.name + " (" + m_syncInt.Value + ") " + m_conditionType.GetSymbol(", ") + " " + m_value;
 
         return str;
     }
