@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Soudoyer
   m_exactionPos: {fileID: 11400000, guid: 0da06bcc13d84064689c00f7a49a7d91, type: 2}
-  m_exactionNeg: {fileID: 0}
+  m_exactionNeg: {fileID: 11400000, guid: 0f3bc18d820f86d40ac11474b5e2d450, type: 2}
   m_cdtSuccess:
   - {fileID: 11400000, guid: 2aab25a4b6568544ebfd319b0f76f671, type: 2}
   m_cooldown: 900
