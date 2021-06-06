@@ -9,11 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f4b2361bf53edb458383d8faec3177c, type: 3}
-  m_Name: INFO AEMILIA
+  m_Script: {fileID: 11500000, guid: 305aa538d4407b149bac159b7c5e8197, type: 3}
+  m_Name: CDT INFO AEMILIA
   m_EditorClassIdentifier: 
-  m_name: Info sur Aemilia
-  m_initValue: 0
-  m_value: 0
-  m_title: Info sur Aemilia
-  m_description: "Information sur la Pr\xE9sidente."
+  m_syncBool: {fileID: 11400000, guid: 10289abc5bae02442bb1004d3f37b75f, type: 2}

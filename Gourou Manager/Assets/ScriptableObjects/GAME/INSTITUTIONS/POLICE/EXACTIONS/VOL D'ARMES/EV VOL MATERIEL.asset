@@ -10,15 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
-  m_Name: Cult_B ++
+  m_Name: EV VOL MATERIEL
   m_EditorClassIdentifier: 
-  m_name: Vol d'armes
-  m_description: "Vous avez gagn\xE9 en brutalit\xE9 aux yeux du public."
-  m_initDuration: 0
+  m_name: Vol de materiel et d'armes
+  m_description: "Information sur Charmichael Johnson Smith. Vous d\xE9couvrez des
+    documents montrant que Charmichael Johnson Smith, chef de la Police, \xE0 n\xE9goci\xE9
+    la tranquilit\xE9 avec de puissants dealers locaux.  "
+  m_initDuration: 1
   m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts:
-  - {fileID: 11400000, guid: 3f4b5a97f0ed7d44dadca6e54e679066, type: 2}
+  - {fileID: 11400000, guid: eb43f9984838b1b499acbd05217dfde9, type: 2}
+  - {fileID: 11400000, guid: a9363aa573c1c3b41a84c631247f33f6, type: 2}
   m_infoGained: []
   m_IsDisplayed: 1

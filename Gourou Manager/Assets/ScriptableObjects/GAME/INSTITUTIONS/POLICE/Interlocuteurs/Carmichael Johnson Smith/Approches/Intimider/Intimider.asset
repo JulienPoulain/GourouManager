@@ -17,7 +17,6 @@ MonoBehaviour:
   m_exactionNeg: {fileID: 11400000, guid: 458335a89041f8945bd566bae1614032, type: 2}
   m_cdtSuccess:
   - {fileID: 11400000, guid: 2058a50d44087e14ba5cdfc97ec05b29, type: 2}
-  - {fileID: 11400000, guid: 24a76af6003d47c408517a1237d2f497, type: 2}
   m_cooldown: -1
   m_remainingTime: 0
   m_descriptionApproach: "Intimider Carmichael Johonson gr\xE2ce \xE0 vos informations"
