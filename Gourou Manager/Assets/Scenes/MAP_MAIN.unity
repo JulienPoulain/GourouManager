@@ -7942,6 +7942,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5868983803118335828, guid: 8835eb43743433e4c9d465c9b619c6d0, type: 2}
     - target: {fileID: 5574047611772360620, guid: d7fd04aae81088d45846afb7ac704421, type: 3}
+      propertyPath: m_text
+      value: Gourou Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5574047611772360620, guid: d7fd04aae81088d45846afb7ac704421, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 8835eb43743433e4c9d465c9b619c6d0, type: 2}
