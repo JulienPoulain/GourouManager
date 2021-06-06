@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ef948b4ac235f48a340eab83fc045e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ressourceName: Points de fanatisme
+  m_ressourceName: "Points de fanatisme : Les points de fanatisme sont utilis\xE9s
+    pour lancer certaines exactions, ils ont beaucoup de valeur et sont relativement
+    difficile \xE0 obtenir "
   m_textPrefab: {fileID: 2101137435692569717, guid: 158e883b1a7581d498d2b0a8244d1301, type: 3}
-  m_displayTime: 5
-  m_canBeAutoDestroy: 1
