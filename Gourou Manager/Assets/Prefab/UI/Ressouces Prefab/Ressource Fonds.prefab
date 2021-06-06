@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ef948b4ac235f48a340eab83fc045e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ressourceName: Fonds
+  m_ressourceName: "Fonds : Les fonds permettent de r\xE9aliser certaines exactions
+    telles que soudoyer . Chaque institution poss\xE8de ses propres fonds qui leur
+    permettent de lancer des \xE9v\xE8nements pour ou contre le culte "
   m_textPrefab: {fileID: 2101137435692569717, guid: 158e883b1a7581d498d2b0a8244d1301, type: 3}
-  m_displayTime: 5
-  m_canBeAutoDestroy: 1
