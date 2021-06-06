@@ -10,6 +10,9 @@ public class ButtonBehavior : MonoBehaviour, IPointerDownHandler
     // en static parce qu'il s'agit une valeur qui sera commun à tout le monde
     [SerializeField] private float m_scaleDuration;
     [SerializeField] private string m_SceneName;
+
+
+
     private Image m_image;
     
     void Start()
@@ -20,6 +23,5 @@ public class ButtonBehavior : MonoBehaviour, IPointerDownHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         SceneManager.LoadScene(m_SceneName, LoadSceneMode.Single);
-        Debug.Log("je clicke dessus");
     }
 }

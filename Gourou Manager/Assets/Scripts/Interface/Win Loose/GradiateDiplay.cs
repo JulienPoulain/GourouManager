@@ -17,7 +17,7 @@ public class GradiateDiplay : MonoBehaviour
     // définit la valeur max de l'apha
     // List<float> m_alphaValue;
 
-    private void Start()
+    void Start()
     {
         // On commence par mettre toutes les couleurs en opacité 0
         
@@ -49,9 +49,30 @@ public class GradiateDiplay : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Le but est de reproduire le processus du Start, à utiliser lorsqu'on veut recharger l'interface 2 fois dans une même scène
+    /// </summary>
+    public void ResetInterface()
+    {
+        for (int i = 0; i < m_imageList.Count; i++)
+        {
+            Color color = m_imageColorList[i];
+            color.a = 255;
+
+            m_imageList[i].color = color;
+        }
+
+        for (int i = 0; i < m_textList.Count; i++)
+        {
+            Color color = m_imageTextList[i];
+            color.a = 255;
+
+            m_textList[i].color = color;
+        }
+    }
+
     public void Display()
     {
-        Debug.Log("DEBUT DE LA COROUTINE");
         StartCoroutine(DradiateDisplay());
     }
 
@@ -60,7 +81,6 @@ public class GradiateDiplay : MonoBehaviour
         float time = 0;
         while (time <= m_displayDuration)
         {
-            Debug.Log("LE TEMPS : " + time);
             yield return null;
 
             for (int i = 0; i < m_imageList.Count; i++)
