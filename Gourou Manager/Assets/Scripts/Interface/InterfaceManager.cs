@@ -93,7 +93,7 @@ public class InterfaceManager : MonoBehaviour
 
     // Institution actuellement sélectionnée
     public InstitutionScript m_institutionSelected;     // Definit dans Cursor.cs 
-
+    public InterlocutorSO m_interlocutorSelected;
     // -----------------------------------------------------------------------------------------
 
     void Awake()
@@ -183,11 +183,10 @@ public class InterfaceManager : MonoBehaviour
         m_interlocutorScript.m_backGroundColor.color = GameManager.Instance.m_interfaceManager.m_institutionSelected.InstitutionColor;
     }
 
-    public void DisplayApproche(InterlocutorSO p_interlocutor) // appeler depuis textInterlocutor
+    public void DisplayApproche() // appeler depuis textInterlocutor
     {
         m_approche.SetActive(true);
         m_ApprocheIsDisplay = true;
-        m_approcheScript.Display(p_interlocutor);
         DisallowHeavyInstitution();
     }
 

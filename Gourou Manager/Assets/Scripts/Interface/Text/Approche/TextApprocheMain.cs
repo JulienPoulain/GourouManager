@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -23,7 +24,27 @@ public class TextApprocheMain : MonoBehaviour
             m_approcheScript.Add(thisObject.GetComponent<TextApprocheIndividual>());
         }
     }
-    
+
+    private void OnEnable()
+    {
+        Debug.Log("CA SAFFICHE");
+        InterlocutorSO p_interlocutor = GameManager.Instance.m_interfaceManager.m_interlocutorSelected;
+        foreach (GameObject approachText in m_approche)
+        {
+            approachText.SetActive(false);
+        }
+
+        GameManager.Instance.m_interfaceManager.ChangeColorInstitution(m_imageList);
+        m_interlocutorImage.sprite = p_interlocutor.m_sprite;
+
+        for (int i = 0; i < p_interlocutor.m_approach.Count; i++)
+        {
+            m_approche[i].SetActive(true);
+            m_approcheScript[i].DisplayApproach(p_interlocutor.m_approach[i]);
+        }
+
+    }
+
     // on prend tous les scripts InterlocutorSO pour les configurer avec les ApprochSO correspondants
     public void Display(InterlocutorSO p_interlocutor) // depuis InterfaceManager
     {
