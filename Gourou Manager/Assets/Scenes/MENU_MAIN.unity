@@ -1376,6 +1376,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 95409428}
     - target: {fileID: 3118929937286795839, guid: 4b2566c47bd96784882a3f23b33190f1, type: 3}
+      propertyPath: m_text
+      value: GOUROU MANAGER
+      objectReference: {fileID: 0}
+    - target: {fileID: 3118929937286795839, guid: 4b2566c47bd96784882a3f23b33190f1, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 8835eb43743433e4c9d465c9b619c6d0, type: 2}
@@ -1475,6 +1479,16 @@ PrefabInstance:
     - target: {fileID: 3922986855292756324, guid: 8be76ece7c1a14e4ab59d4280c0e1636, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307272586464611661, guid: 8be76ece7c1a14e4ab59d4280c0e1636, type: 3}
+      propertyPath: m_text
+      value: 'VANNIER Jules : Lead | GD'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520784718246788391, guid: 8be76ece7c1a14e4ab59d4280c0e1636, type: 3}
+      propertyPath: m_text
+      value: 'PROVOST--LACOMMARE Aiden : Artiste 2D | Texturing
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 6238718164439961451, guid: 8be76ece7c1a14e4ab59d4280c0e1636, type: 3}
       propertyPath: m_Pivot.x
