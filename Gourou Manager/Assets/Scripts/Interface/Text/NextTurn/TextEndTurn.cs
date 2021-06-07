@@ -57,10 +57,16 @@ public class TextEndTurn : MonoBehaviour
         // Affichage du Culthe
         m_TextmainInstitutionName.text = "" + GameManager.Instance.MainInstitution.m_name;
 
-        m_textCultStatList[0].text = "" + GameManager.Instance.MainInstitution.Funds.Value.ToString("N1");
-        m_textCultStatList[1].text = "" + GameManager.Instance.MainInstitution.Members.Value.ToString();
-        m_textCultStatList[2].text = "" + GameManager.Instance.MainInstitution.Fanatics.Value.ToString();
-        m_textCultStatList[3].text = "" + GameManager.Instance.MainInstitution.PublicExposure.Value.ToString();
+        InstitutionStats oldStats = EventRegister.Instance.GetInstitutionsStats(GameManager.Instance.Turn);
+        InstitutionStats newStats = EventRegister.Instance.GetInstitutionsStats(GameManager.Instance.Turn + 1);
+
+        var diff = newStats.Compare(oldStats);
+
+        m_textCultStatList[0].text = "" + diff.funds.ToString("+#;-#;0");
+        m_textCultStatList[1].text = "" + diff.members.ToString("+#;-#;0");
+        m_textCultStatList[2].text = "" + diff.fanatics.ToString("+#;-#;0");
+        m_textCultStatList[3].text = "" + diff.publicExposure.ToString("+#;-#;0");
+        m_textCultStatList[4].text = "" + diff.brutality.ToString("+#;-#;0");
 
         // on récupère la liste d'event du tour qui vient de finir
         List<EventSO> m_eventList = EventRegister.Instance.GetEvents(GameManager.Instance.Turn);

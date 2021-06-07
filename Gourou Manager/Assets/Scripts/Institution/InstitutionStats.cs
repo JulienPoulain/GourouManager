@@ -40,7 +40,7 @@ public class InstitutionStats
             $"Fonds ({m_funds}), Membres ({m_members}), Fanatiques ({m_fanatics}) Exposition publique ({m_publicExposure}), brutalité ({m_brutality}), Corruption({m_decay})";
     }
     
-    public (int fundsDif, int membersDif, int fanaticsDif, int publicExposureDif, int brutalityDif, int decayDif) Compare(InstitutionStats p_institutionStats)
+    public (int funds, int members, int fanatics, int publicExposure, int brutality, int decay) Compare(InstitutionStats p_institutionStats)
     {
         int fundsDif = m_funds - p_institutionStats.Funds;
         int membersDif = m_members - p_institutionStats.Members;
