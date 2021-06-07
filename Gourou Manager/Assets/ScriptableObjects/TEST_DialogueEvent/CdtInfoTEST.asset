@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 305aa538d4407b149bac159b7c5e8197, type: 3}
   m_Name: CdtInfoTEST
   m_EditorClassIdentifier: 
-  m_ressource: {fileID: 11400000, guid: 7973ab8114fac8b4e97a3cf6552a3344, type: 2}
+  m_syncBool: {fileID: 11400000, guid: 7973ab8114fac8b4e97a3cf6552a3344, type: 2}
