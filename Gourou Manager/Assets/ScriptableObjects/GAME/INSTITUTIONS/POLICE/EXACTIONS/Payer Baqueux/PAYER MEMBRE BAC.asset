@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: PAYER MEMBRE BAC
   m_EditorClassIdentifier: 
-  m_name: Corrompre un membre de la BAC
-  m_description: "Vous proposez 5 000 a un policier de la brigade anti criminalit\xE9
-    pour qu'il ferme les yeux sur les actions du Culte"
+  m_name: Corrompre des membres de la BAC
+  m_description: "Vous offrez 10 000 a des policiers de la brigade anti criminalit\xE9
+    pour qu'il ferme les yeux sur les actions du Culte et diffusent le message du
+    Grand Ancien"
   m_eventList:
   - {fileID: 11400000, guid: ed075f217fa1dcd4ab6a46f5221fb117, type: 2}
   m_conditions:

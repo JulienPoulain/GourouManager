@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: EX_HAPPINESS_CTHULHU
   m_EditorClassIdentifier: 
   m_name: Creation du poste d'Happiness Cthulhu Manager
-  m_description: "Les entreprises cr\xE9ent un nouveau poste : Cthulhu Happiness
-    Manager, ce qui am\xE9liore votre exposition publique."
+  m_description: " Si les Entrepreneurs sont assez corrompus et le Culte suffisamment
+    connu, vous pouvez demander aux chefs d'Entreprise de cr\xE9er le poste d'Happiness
+    Cthulhu Manager qui promeut le Culte"
   m_eventList:
   - {fileID: 11400000, guid: 7d025f36a7051f041acf7c5b345c7a58, type: 2}
   m_conditions:
