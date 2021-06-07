@@ -1,6 +1,5 @@
 using System;
 using ConditionTypeMethods;
-using TMPro;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewConditionInt", menuName = "GourouManager/Condition/ConditionInt")]

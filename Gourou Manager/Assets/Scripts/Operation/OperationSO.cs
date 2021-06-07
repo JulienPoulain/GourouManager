@@ -8,8 +8,10 @@ public abstract class OperationSO : ScriptableObject, IInitializable
 
     public abstract int Compute();
 
+    #if UNITY_EDITOR
     private void OnValidate()
     {
         m_overview = ToString();
     }
+    #endif
 }
