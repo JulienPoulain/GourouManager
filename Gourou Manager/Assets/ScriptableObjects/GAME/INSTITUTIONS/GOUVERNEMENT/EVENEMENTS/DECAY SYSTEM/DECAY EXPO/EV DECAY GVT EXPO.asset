@@ -15,14 +15,14 @@ MonoBehaviour:
   m_name: Ev Gvt Decay Expo
   m_description: 
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: f2d8723d57a5bf64ab5f926403dbee61, type: 2}
   m_infoGained: []
-  m_IsDisplayed: 1
+  m_IsDisplayed: 0
   m_initNbUse: -1
-  m_nbUse: 0
+  m_nbUse: -1
   m_cdtActivation:
   - {fileID: 11400000, guid: 800327a1d4e14924d854652f9d1be90a, type: 2}

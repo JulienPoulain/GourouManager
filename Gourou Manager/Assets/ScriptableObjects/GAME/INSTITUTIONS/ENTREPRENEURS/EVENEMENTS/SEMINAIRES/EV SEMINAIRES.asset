@@ -24,8 +24,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 623948cd6cc02f346b1debd6c8c9027a, type: 2}
   m_infoGained: []
   m_IsDisplayed: 1
-  m_initNbUse: -1
-  m_nbUse: -1
+  m_initNbUse: 1
+  m_nbUse: 0
   m_cdtActivation:
   - {fileID: 11400000, guid: f049916448607e849a981f3b939e04ae, type: 2}
   - {fileID: 11400000, guid: c05585db4e334334e9df16d5774522ff, type: 2}

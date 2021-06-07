@@ -17,7 +17,7 @@ MonoBehaviour:
   m_exactionNeg: {fileID: 11400000, guid: a661190126f02cf4b9e4a91fd1fe8a3c, type: 2}
   m_cdtSuccess:
   - {fileID: 11400000, guid: 54a62150a95861545b9e21d064d45b40, type: 2}
-  m_cooldown: 5
+  m_cooldown: 8
   m_remainingTime: 0
   m_descriptionApproach: Intimider Marcus
   m_dialogueApproach: "\"Ob\xE9issez \xE0 Mon Ami et \xE0 moi, ou votre chroniqueur

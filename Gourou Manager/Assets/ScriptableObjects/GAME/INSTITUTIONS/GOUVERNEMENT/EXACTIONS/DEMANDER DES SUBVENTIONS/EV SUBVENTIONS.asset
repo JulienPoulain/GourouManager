@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
   m_Name: EV SUBVENTIONS
   m_EditorClassIdentifier: 
-  m_name: Subventions Publiques
-  m_description: Vous obtenez 6 000 Fonds d'argent public
+  m_name: 'Detournement d''argent public '
+  m_description: "Vous perdez 15 de Brutalit\xE9 contre 12 000 Fonds d'argent public
+    gracieusement d\xE9tourn\xE9 par le ministre de l'Int\xE9rieur"
   m_initDuration: 1
   m_duration: 1
   m_initDelay: 0
@@ -21,5 +22,6 @@ MonoBehaviour:
   m_impacts:
   - {fileID: 11400000, guid: bb76d763a277a1c439cfb812fc911e91, type: 2}
   - {fileID: 11400000, guid: c4f8e7ef41034324d818fbe1290249ef, type: 2}
+  - {fileID: 11400000, guid: 840e1440eebb9e04db2e4160b2bdc9d3, type: 2}
   m_infoGained: []
   m_IsDisplayed: 1

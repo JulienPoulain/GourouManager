@@ -22,5 +22,6 @@ MonoBehaviour:
   m_impacts:
   - {fileID: 11400000, guid: e945733b31acfa54493bd58ffeec6752, type: 2}
   - {fileID: 11400000, guid: 7ded3864761d8df46a0f47f761926b99, type: 2}
+  - {fileID: 11400000, guid: c86d9d16d91de1142bb39262a386671b, type: 2}
   m_infoGained: []
   m_IsDisplayed: 1
