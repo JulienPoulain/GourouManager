@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuBehavior : MonoBehaviour
 {
-    [SerializeField] [Tooltip("Besoin de tous les GO associers au Menu pour les faire disparêtre / apparaître")] List<GameObject> m_menuObject;
+    [SerializeField] [Tooltip("Besoin de tous les GO associers au Menu pour les faire disparÃªtre / apparaÃ®tre")] List<GameObject> m_menuObject;
 
     [SerializeField] bool m_gameHasCredit;
     [SerializeField] GameObject m_creditOption;

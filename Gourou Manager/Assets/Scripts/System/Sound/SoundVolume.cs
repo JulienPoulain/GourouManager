@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class SoundVolume : MonoBehaviour
 {
-
-    private static readonly string FirstPlay = "FirstPlay";
     private static readonly string BackgroundPref = "BackgroundPref";
     private static readonly string SoundEffectPref = "SoundEffectPref";
     private int m_firstPlayInt;
@@ -20,6 +18,7 @@ public class SoundVolume : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //premiere ouverture (valeur par defaut a zero)
         if (m_firstPlayInt == 0)
         {
             m_backgroundFloat = .5f;
@@ -28,8 +27,8 @@ public class SoundVolume : MonoBehaviour
             m_soundEffectSlider.value = m_soundEffectFloat;
             PlayerPrefs.SetFloat(BackgroundPref, m_backgroundFloat);
             PlayerPrefs.SetFloat(SoundEffectPref, m_soundEffectFloat);
-            PlayerPrefs.SetInt(FirstPlay, -1);
         }
+        //autre ouverture
         else
         {
             m_backgroundFloat = PlayerPrefs.GetFloat(BackgroundPref);
@@ -45,15 +44,6 @@ public class SoundVolume : MonoBehaviour
         PlayerPrefs.SetFloat(SoundEffectPref, m_soundEffectSlider.value);
     }
 
-    //sauvegarde les paramettres si on quitte la fenetre du jeu
-    private void OnApplicationFocus(bool inFocus)
-    {
-        if (!inFocus)
-        {
-            SaveSoundSettings();
-        }
-    }
-
     public void UpdateSound()
     {
         m_backgroundAudio.volume = m_backgroundSlider.value;
@@ -61,6 +51,7 @@ public class SoundVolume : MonoBehaviour
         {
             effect.volume = m_soundEffectSlider.value;
         }
-        
+
+        SaveSoundSettings();
     }
 }

@@ -33,7 +33,7 @@ public class ButtonFeedBack : MonoBehaviour, IPointerExitHandler, IPointerEnterH
     {
         GameManager.Instance.m_interfaceManager.m_imageBehavior.ReplaceBackGroundImage(m_thisImage);
         
-        // Ici on met blanc, parce que tous les textes des bouttons sont en blanc, cela évite certains bug de couleur
+        // Ici on met blanc, parce que tous les textes des bouttons sont en blanc, cela Ã©vite certains bug de couleur
         m_buttonText.color = Color.white;
     }
 }
