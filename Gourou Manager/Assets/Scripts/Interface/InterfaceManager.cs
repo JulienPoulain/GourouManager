@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Vector3 = UnityEngine.Vector3;
 
 using TMPro;
-using UnityEditorInternal;
-using Quaternion = UnityEngine.Quaternion;
-using Vector2 = UnityEngine.Vector2;
 
 // local = text in front of the camera
 // global = text in map
@@ -33,7 +26,6 @@ public class InterfaceManager : MonoBehaviour
 
     TextInstitutionLight m_institutionLightScript;
     TextInstitutionHeavy m_institutionHeavyScript;
-    TextCrisis m_crisisScript;
     public TextInterlocutor m_interlocutorScript; // seulement utiliser dans InterlocutorButton (vital)
     TextApprocheMain m_approcheScript;
     TextEndTurn m_endTurnScript;
