@@ -16,7 +16,7 @@ MonoBehaviour:
   m_description: "Le Gouvernement d\xE9ploye un arsenal de mesures radicales contre
     ce qu'il appelle d\xE9sormais \"la secte de Cthulhu\""
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts:
@@ -24,6 +24,7 @@ MonoBehaviour:
   m_infoGained: []
   m_IsDisplayed: 1
   m_initNbUse: -1
-  m_nbUse: 0
+  m_nbUse: -1
   m_cdtActivation:
   - {fileID: 11400000, guid: cb9762a393a066041b02336e310f428f, type: 2}
+  - {fileID: 11400000, guid: 3d54c1cdc79cd654f8106e594fc502b0, type: 2}

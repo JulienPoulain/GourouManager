@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: "Intimidation de Herbert - R\xE9ussite"
   m_description: "Le Ministre de l'\xC9conomie octroie des subventions massives aux
-    m\xE9dias et \xE0 la Police"
+    m\xE9dias, \xE0 la Police ainsi qu'au Culte "
   m_initDuration: 8
   m_duration: 8
   m_initDelay: 0
@@ -22,5 +22,6 @@ MonoBehaviour:
   m_impacts:
   - {fileID: 11400000, guid: d66b3c831ff68214fb35f46584297074, type: 2}
   - {fileID: 11400000, guid: 12a080ab012e10b45bd33b0735a414ca, type: 2}
+  - {fileID: 11400000, guid: 15286e42f9dfde1469c929d0caaf9222, type: 2}
   m_infoGained: []
   m_IsDisplayed: 1

@@ -15,10 +15,9 @@ MonoBehaviour:
   m_name: Intimider Hector
   m_exactionPos: {fileID: 11400000, guid: c552f5aca8f4f894cab293a045271c7a, type: 2}
   m_exactionNeg: {fileID: 11400000, guid: 4a1c8609a4f6a554c8a35f7b763e72eb, type: 2}
-  m_cdtSuccess:
-  - {fileID: 11400000, guid: 166843ed9b05dc443ab0fb6afcd731a4, type: 2}
+  m_cdtSuccess: []
   m_cooldown: 5
-  m_remainingTime: 4
+  m_remainingTime: 0
   m_descriptionApproach: "Vous envoyez un Fanatique passer un message \xE0 Hector
     : les journalistes qui seront hostiles au Culte risquent d'avoir des probl\xE8mes."
   m_dialogueApproach: "\"Prenez garde \xE0 ce que votre objectif capture, il existe

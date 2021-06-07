@@ -10,15 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
-  m_Name: Police_C ++
+  m_Name: EV MANIF
   m_EditorClassIdentifier: 
-  m_name: "Soudoiement Michael : R\xE9ussite"
-  m_description: La corruption de la police augmente
-  m_initDuration: 1
-  m_duration: 1
+  m_name: Manifestation de protestation contre le Gouvernement
+  m_description: "Les Adeptes du Culte de Cthulhu d\xE9filent devant le Gouvernement
+    en signe de protestation contre l'absence de d\xE9votion au Grand Ancien"
+  m_initDuration: 3
+  m_duration: 0
   m_initDelay: 0
   m_delay: 0
   m_impacts:
-  - {fileID: 11400000, guid: 062e0b988b9715b4986dc36c0ca9ae05, type: 2}
+  - {fileID: 11400000, guid: 51cf2a353aad6b74da0f76f5109fd97b, type: 2}
+  - {fileID: 11400000, guid: 34f8d26f6e381b147a75559a676660a4, type: 2}
   m_infoGained: []
   m_IsDisplayed: 1

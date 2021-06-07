@@ -25,6 +25,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 129ba86edbfbbc142b58e475714e08af, type: 2}
   m_exactionList:
   - {fileID: 11400000, guid: 7d55c4f7d6c234f42a1d41e6ddf41aa2, type: 2}
+  - {fileID: 11400000, guid: a0addded12f7ed44ca05d13adbb4383d, type: 2}
+  - {fileID: 11400000, guid: b746569f6e457cd449610f7448ad371a, type: 2}
   m_triggeredEvents:
   - {fileID: 11400000, guid: c094c8bd72f8c1d4284b56a4548d5af8, type: 2}
   - {fileID: 11400000, guid: 99333d77762a0664cabffd6ed6a6743e, type: 2}
@@ -37,4 +39,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 87ef66802a033ec4da40fa6c56f2543a, type: 2}
   - {fileID: 11400000, guid: c1e4058ace0f3194fb077350063dbdf1, type: 2}
   - {fileID: 11400000, guid: 3ee54af54d2f2a54d8b528478f3886e4, type: 2}
+  - {fileID: 11400000, guid: 46de6524637eb1b49a3f5dadc0205229, type: 2}
+  - {fileID: 11400000, guid: 314574d449a3a8045bfaf95997ca6dbc, type: 2}
   m_pictogram: {fileID: 21300000, guid: 4a3fa9abe22c1734c954e0598db27a0a, type: 3}

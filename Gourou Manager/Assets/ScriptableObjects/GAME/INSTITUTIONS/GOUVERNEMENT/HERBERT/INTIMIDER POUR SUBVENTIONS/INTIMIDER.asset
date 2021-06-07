@@ -16,7 +16,7 @@ MonoBehaviour:
   m_exactionPos: {fileID: 11400000, guid: f388f655d47b7674396b0550042b0e8e, type: 2}
   m_exactionNeg: {fileID: 11400000, guid: cbf8e3f5e9d3cca4c926b8541d2d3888, type: 2}
   m_cdtSuccess:
-  - {fileID: 11400000, guid: bad301a8cde99264cb62bc063bc475aa, type: 2}
+  - {fileID: 11400000, guid: 0c94d99aa1a004d49beb30c727e7fccd, type: 2}
   m_cooldown: 900
   m_remainingTime: 0
   m_descriptionApproach: "Vous menacez Herbert d'attaques de Fanatiques \xE0 son
@@ -24,5 +24,5 @@ MonoBehaviour:
     M\xE9dias par les subventions"
   m_dialogueApproach: "\"Vous \xEAtes peut-\xEAtre intouchable, mais ce n'est pas
     le cas de votre mari. La vie peut \xEAtre longue lorsqu'on est seul.\""
-  m_resultatApproach: "Si vous r\xE9ussissez \xE0 intimider Herbert, la Police et
-    les M\xE9dias recevront plus d'argent de la part du Gouvernement. "
+  m_resultatApproach: "Si vous r\xE9ussissez \xE0 intimider Herbert, la Police, les
+    M\xE9dias et le Culte recevront de l'argent de la part du Gouvernement."
