@@ -15,11 +15,12 @@ MonoBehaviour:
   m_name: "Les m\xE9dias ont \xE9crit un article positif sur le culte"
   m_description: "L'exposition publique du culte a augment\xE9"
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: b5aba30b8487fce41a4c23283049077e, type: 2}
   - {fileID: 11400000, guid: 57ed49931e72c3e44815e909dcc56e8b, type: 2}
+  - {fileID: 11400000, guid: 1e20a71dbf5a4d84a812c147611dee52, type: 2}
   m_infoGained: []
   m_IsDisplayed: 1

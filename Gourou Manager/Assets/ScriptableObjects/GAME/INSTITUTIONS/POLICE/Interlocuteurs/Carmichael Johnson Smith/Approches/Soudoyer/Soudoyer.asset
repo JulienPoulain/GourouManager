@@ -22,5 +22,5 @@ MonoBehaviour:
   m_descriptionApproach: Soudoyer Carmichael
   m_dialogueApproach: "\"Cette \xEEle est une gigantesque fosse \xE0 purin, Carmichael.
     Mon Ami et moi pouvons vous sortir de l\xE0.\""
-  m_resultatApproach: Si vous parvenez a soudoyer Carmichael vous pourrez faire monter
-    la corruption de la Police
+  m_resultatApproach: "Offrez 25 000 a Charmichael contre la lib\xE9ration de 3 Fanatiques
+    et une augmentation de la Brutalit\xE9 du Culte"

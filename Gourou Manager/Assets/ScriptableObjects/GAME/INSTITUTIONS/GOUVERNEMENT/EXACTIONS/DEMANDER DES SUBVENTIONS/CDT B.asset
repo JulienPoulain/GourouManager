@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CDT B
   m_EditorClassIdentifier: 
   m_syncInt: {fileID: 11400000, guid: aeb5c07663399d447b10360c56750814, type: 2}
-  m_conditionType: 3
-  m_value: 40
+  m_conditionType: 6
+  m_value: 15

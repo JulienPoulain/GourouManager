@@ -13,12 +13,15 @@ MonoBehaviour:
   m_Name: Info +1
   m_EditorClassIdentifier: 
   m_name: "Soudoiement Marcus : r\xE9ussite"
-  m_description: "Vous avez maintenant acc\xE8s \xE0 un entrepreneur."
+  m_description: "Marcus vous apprends une Information d\xE9cisive sur l'Entrepreneur
+    Jacques. Il promeut \xE9galement le Culte dans ses \xE9ditoriaux"
   m_initDuration: 1
   m_duration: 1
   m_initDelay: 0
   m_delay: 0
-  m_impacts: []
+  m_impacts:
+  - {fileID: 11400000, guid: f33c1c2ce62e5bb418e97022e090d16e, type: 2}
+  - {fileID: 11400000, guid: 16e5a0552c5dbb3489022bfd912f90c3, type: 2}
   m_infoGained:
   - {fileID: 11400000, guid: be1b4c9eca8c95648a2966de8c92e021, type: 2}
   m_IsDisplayed: 1

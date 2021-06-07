@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Endoctriner les Fanatiques
   m_description: "Vous manipulez les membres vuln\xE9rables du Culte pour en faire
-    des Fanatiques. Vous coute 2 Membres, rapporte 2 Fanatiques"
+    des Fanatiques. Vous co\xFBte 4 Membres, rapporte 4 Fanatiques"
   m_eventList:
   - {fileID: 11400000, guid: 7d21ee8cfda4eaf45ac40bed5cd93657, type: 2}
   m_conditions:

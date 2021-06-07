@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091a2ba52b3429146aa84d3233a6a18e, type: 3}
   m_Name: EX SUBVENTIONS
   m_EditorClassIdentifier: 
-  m_name: Demander de l'argent public
-  m_description: "Promouvoir aupr\xE8s d'un secr\xE9taire d'\xE9tat les emplois que
-    peux cr\xE9er le Culte en \xE9change d'un financement public"
+  m_name: Marchander de l'argent public
+  m_description: "Proposez au Ministre de l'Int\xE9rieur de d\xE9tourner 12 000 Fonds
+    d'argent public en \xE9change d'une r\xE9duction de la Brutalit\xE9 du Culte.
+    Achetez la paix sociale"
   m_eventList:
   - {fileID: 11400000, guid: 4e9cebed408c8664da728365acedcdd3, type: 2}
   m_conditions:
