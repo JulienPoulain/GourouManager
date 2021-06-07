@@ -75,6 +75,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
         Initialize();
         
         EventRegister.Instance.Add(m_turn, m_mainInstitution);
+        Debug.Log(EventRegister.Instance.Summary(m_turn));
     }
 
     public void EndTurn()
@@ -90,6 +91,7 @@ public class GameManager : Singleton<GameManager>, IInitializable
         TryEndGame();
 
         m_turn++;
+        Debug.Log(EventRegister.Instance.Summary(m_turn));
         m_interfaceManager.m_cultStatScript.Display();
     }
     

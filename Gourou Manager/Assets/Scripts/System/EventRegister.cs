@@ -102,6 +102,18 @@ public class EventRegister : Singleton<EventRegister>
     }
 
     /// <summary>
+    /// Renvoie les stats de l'institutions principale au tour précisé.
+    /// </summary>
+    /// <param name="p_turn">Tour</param>
+    /// <returns>Les stats de l'institution principale au tour p_turn.</returns>
+    public InstitutionStats GetInstitutionsStats(int p_turn)
+    {
+        if (!m_registers.ContainsKey(p_turn))
+            return new InstitutionStats();
+        return m_registers[p_turn].InstitutionStats;
+    }
+
+    /// <summary>
     /// Renvoie les exactions s'étant produit durant le tour précisé.
     /// </summary>
     /// <param name="p_turn">Tour</param>

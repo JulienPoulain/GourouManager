@@ -7,6 +7,16 @@ public class InstitutionStats
     int m_brutality;
     int m_decay;
 
+    public InstitutionStats()
+    {
+        m_funds = 0;
+        m_members = 0;
+        m_fanatics = 0;
+        m_publicExposure = 0;
+        m_brutality = 0;
+        m_decay = 0;
+    }
+    
     public InstitutionStats(InstitutionSO p_institution)
     {
         m_funds = p_institution.Funds.Value;
