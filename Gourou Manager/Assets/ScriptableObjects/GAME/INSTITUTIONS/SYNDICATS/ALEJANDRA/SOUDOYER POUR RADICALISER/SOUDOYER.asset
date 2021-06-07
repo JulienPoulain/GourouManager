@@ -16,10 +16,9 @@ MonoBehaviour:
   m_exactionPos: {fileID: 11400000, guid: eb6fbe187620bf34a83e3336827397f2, type: 2}
   m_exactionNeg: {fileID: 11400000, guid: 55016955c8971e945a662f5a9dd0a54b, type: 2}
   m_cdtSuccess:
-  - {fileID: 11400000, guid: 05b7c9f24478b9e45bddba8c8a4c2d8b, type: 2}
   - {fileID: 11400000, guid: 74e59adc172b71041b25c1f4034c6b5c, type: 2}
-  m_cooldown: 6
-  m_remainingTime: 5
+  m_cooldown: 3
+  m_remainingTime: 0
   m_descriptionApproach: Vous proposez a Alejandra 1200 Fonds par tour contre la
     propagation d'un discours radical dans les organisations syndicales.
   m_dialogueApproach: "\"Je lis en vous la souffrance d'un pass\xE9 difficile ; mon

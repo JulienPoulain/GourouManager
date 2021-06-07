@@ -24,8 +24,6 @@ MonoBehaviour:
   m_exactionList:
   - {fileID: 11400000, guid: 6aa192956c78d8444b9d1752344e18c7, type: 2}
   - {fileID: 11400000, guid: 3fd6ce792fbb4a540903aa5ad2fdcfff, type: 2}
-  m_triggeredEvents:
-  - {fileID: 11400000, guid: 359d853acb4c55047a9eaf0ef6448917, type: 2}
-  - {fileID: 11400000, guid: 661c37c0b0d44364b8759c8999897275, type: 2}
-  - {fileID: 11400000, guid: 23349d5678b492d4fbd10ce6268072c7, type: 2}
+  - {fileID: 11400000, guid: 378c65a8eca875746bc6a8f62f7f7658, type: 2}
+  m_triggeredEvents: []
   m_pictogram: {fileID: 21300000, guid: c89069ff87be6cc4088e97e0eab3d7b8, type: 3}

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
+  m_Name: EV SUBVENTIONS
+  m_EditorClassIdentifier: 
+  m_name: Subventions Publiques
+  m_description: Vous obtenez 6 000 Fonds d'argent public
+  m_initDuration: 1
+  m_duration: 1
+  m_initDelay: 0
+  m_delay: 0
+  m_impacts:
+  - {fileID: 11400000, guid: bb76d763a277a1c439cfb812fc911e91, type: 2}
+  - {fileID: 11400000, guid: c4f8e7ef41034324d818fbe1290249ef, type: 2}
+  m_infoGained: []
+  m_IsDisplayed: 1

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a07221645fd8ad42978314f51634aaa, type: 3}
   m_Name: CDT NONE
   m_EditorClassIdentifier: 
-  m_syncInt: {fileID: 11400000, guid: 7f5b92c99316aed42a18e4219b5aa0f9, type: 2}
-  m_conditionType: 2
+  m_syncInt: {fileID: 11400000, guid: 246b7a895aefcf84091b7cbb415df657, type: 2}
+  m_conditionType: -1
   m_value: 0
