@@ -69,6 +69,8 @@ public class RoundManager : Singleton<RoundManager>
         // 4. Nettoyage des listes.
         ClearFinishedEvent(GameManager.Instance.ActiveEvents);
         ClearRecoveredApproaches(GameManager.Instance.ApproachesAttempted);
+        
+        EventRegister.Instance.Add(GameManager.Instance.Turn + 1, GameManager.Instance.MainInstitution);
     }
     
     /// <summary>

@@ -73,6 +73,8 @@ public class GameManager : Singleton<GameManager>, IInitializable
         //m_cameraScript = m_camera.GetComponent<CameraManager>();
 
         Initialize();
+        
+        EventRegister.Instance.Add(m_turn, m_mainInstitution);
     }
 
     public void EndTurn()

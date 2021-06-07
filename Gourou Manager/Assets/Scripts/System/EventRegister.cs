@@ -29,14 +29,21 @@ public class EventRegister : Singleton<EventRegister>
     {
         private HashSet<ExactionSO> m_exactions = new HashSet<ExactionSO>();
         private HashSet<EventSO> m_events = new HashSet<EventSO>();
+        private InstitutionStats m_institutionStats;
 
         public HashSet<ExactionSO> Exactions => m_exactions;
         public HashSet<EventSO> Events => m_events;
+        public InstitutionStats InstitutionStats
+        {
+            get => m_institutionStats;
+            set => m_institutionStats = value;
+        }
 
         public string Summary()
         {
             string str = "";
             
+            // Résumé exactions
             if (m_exactions.Count == 0)
             {
                 str += "Aucune exactions.";
@@ -49,10 +56,11 @@ public class EventRegister : Singleton<EventRegister>
                     str += exaction.name + ", ";
                 }
                 //str += String.Join(", ", m_exactions);
-                str += "]\r";
+                str += "] | ";
             }
             
-            if (m_exactions.Count == 0)
+            // Résumé évènements
+            if (m_events.Count == 0)
             {
                 str += "Aucune évènements.";
             }
@@ -63,8 +71,11 @@ public class EventRegister : Singleton<EventRegister>
                 {
                     str += iEvent.name + ", ";
                 }
-                str += "]\r";
+                str += "] | ";
             }
+            
+            // Résumé stats culte
+            str += $"STATS CULTE : {m_institutionStats}";
             
             return str;
         }
@@ -99,7 +110,7 @@ public class EventRegister : Singleton<EventRegister>
     {
         if (!m_registers.ContainsKey(p_turn))
             return new List<ExactionSO>();
-            //m_registers.Add(p_turn, new Register());
+        //m_registers.Add(p_turn, new Register());
         return m_registers[p_turn].Exactions.ToList();
     }
 
@@ -162,5 +173,17 @@ public class EventRegister : Singleton<EventRegister>
         if (!m_registers.ContainsKey(p_turn))
             m_registers.Add(p_turn, new Register());
         m_registers[p_turn].Events.UnionWith(p_events);
+    }
+
+    /// <summary>
+    /// Ajoute les stats du culte p_institution au registre pour le tour p_turn.
+    /// </summary>
+    /// <param name="p_turn">Tour</param>
+    /// <param name="p_institution">L'institution dont on prend les stats</param>
+    public void Add(int p_turn, InstitutionSO p_institution)
+    {
+        if (!m_registers.ContainsKey(p_turn))
+            m_registers.Add(p_turn, new Register());
+        m_registers[p_turn].InstitutionStats = new InstitutionStats(p_institution);
     }
 }
