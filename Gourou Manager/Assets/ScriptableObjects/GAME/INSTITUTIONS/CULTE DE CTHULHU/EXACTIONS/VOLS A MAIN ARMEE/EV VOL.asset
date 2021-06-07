@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
+  m_Name: EV VOL
+  m_EditorClassIdentifier: 
+  m_name: "Vols \xE0 main arm\xE9e"
+  m_description: Vos Fanatiques rapportent 6000 Fonds de butin
+  m_initDuration: 1
+  m_duration: 1
+  m_initDelay: 0
+  m_delay: 0
+  m_impacts:
+  - {fileID: 11400000, guid: 2cb9f1c95cc2fba44b981a493b0841f6, type: 2}
+  - {fileID: 11400000, guid: 58ffce3f7dc83914eb0918abe852e430, type: 2}
+  - {fileID: 11400000, guid: 3556fe95abed1194e9d02af63f18192a, type: 2}
+  - {fileID: 11400000, guid: 55c12bf7205e09041a4de809c4f65a41, type: 2}
+  m_infoGained: []
+  m_IsDisplayed: 1
