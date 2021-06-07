@@ -33,7 +33,6 @@ public class InterfaceManager : MonoBehaviour
 
     TextInstitutionLight m_institutionLightScript;
     TextInstitutionHeavy m_institutionHeavyScript;
-    TextCrisis m_crisisScript;
     public TextInterlocutor m_interlocutorScript; // seulement utiliser dans InterlocutorButton (vital)
     TextApprocheMain m_approcheScript;
     TextEndTurn m_endTurnScript;
