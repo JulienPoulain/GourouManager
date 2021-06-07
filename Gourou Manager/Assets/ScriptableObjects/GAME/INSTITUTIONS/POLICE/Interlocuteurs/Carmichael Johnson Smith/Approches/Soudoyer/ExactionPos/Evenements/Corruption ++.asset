@@ -13,12 +13,16 @@ MonoBehaviour:
   m_Name: Corruption ++
   m_EditorClassIdentifier: 
   m_name: "Soudoyer Carmichael : Succ\xE8s"
-  m_description: "La corruption de la police a augment\xE9"
+  m_description: "Le chef de la Police vous fournit 4 Fanatiques arm\xE9s et garanti
+    que la Police resteras \xE0 vos c\xF4t\xE9s"
   m_initDuration: 1
   m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 658bc386149ecfc4585e3849265ebc07, type: 2}
+  - {fileID: 11400000, guid: c582e84b33cd6994a8e78987097a505b, type: 2}
+  - {fileID: 11400000, guid: e3c34b7b38a6473478ee01b447d8c77f, type: 2}
+  - {fileID: 11400000, guid: 60ba4509a0cfbe14090c10d8f86f26fc, type: 2}
   m_infoGained: []
   m_IsDisplayed: 1

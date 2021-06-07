@@ -19,4 +19,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dab474088cd3c8848ae44442e8137650, type: 2}
   m_conditions:
   - {fileID: 11400000, guid: 309aee27a1b15ec4bbe3f537840b42e0, type: 2}
-  - {fileID: 11400000, guid: 1250d4ac5e82d7a4e90fd344090db7e6, type: 2}
