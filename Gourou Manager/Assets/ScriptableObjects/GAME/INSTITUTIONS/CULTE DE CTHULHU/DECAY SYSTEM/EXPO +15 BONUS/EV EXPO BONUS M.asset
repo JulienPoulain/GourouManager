@@ -15,14 +15,15 @@ MonoBehaviour:
   m_name: 'CulteEvent Bonus M '
   m_description: Expo +15 = 1 bonus M
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: e4f64e34ba1dccb4a8ad2596f522436a, type: 2}
+  - {fileID: 11400000, guid: 1ef15c45056823842a84c8918fdaf774, type: 2}
   m_infoGained: []
   m_IsDisplayed: 0
   m_initNbUse: -1
-  m_nbUse: 0
+  m_nbUse: -1
   m_cdtActivation:
   - {fileID: 11400000, guid: 4db75234f15768c4fa88f24455bc39b5, type: 2}

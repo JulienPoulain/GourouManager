@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EV VOL
   m_EditorClassIdentifier: 
   m_name: "Vols \xE0 main arm\xE9e"
-  m_description: Vos Fanatiques rapportent 6000 Fonds de butin
+  m_description: Vous perdez 2 Fanatiques contre 10 000 Fonds de butin
   m_initDuration: 1
   m_duration: 1
   m_initDelay: 0

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42973922d5e361d4b87d9d48e6e44c31, type: 3}
   m_Name: OP FA
   m_EditorClassIdentifier: 
-  m_overview: 'OP FA : 4'
-  m_operand: 4
+  m_overview: 'OP FA : 3'
+  m_operand: 3

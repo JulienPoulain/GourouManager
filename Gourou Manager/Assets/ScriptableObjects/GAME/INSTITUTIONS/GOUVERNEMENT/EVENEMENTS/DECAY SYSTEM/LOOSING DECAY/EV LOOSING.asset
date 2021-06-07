@@ -16,7 +16,7 @@ MonoBehaviour:
   m_description: "Le Gouvernement p\xE9nalise la pratique du Culte de Cthulhu et
     r\xE9quisitionne l'Arm\xE9e pour d\xE9manteler le Culte"
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts:
@@ -24,7 +24,8 @@ MonoBehaviour:
   m_infoGained: []
   m_IsDisplayed: 0
   m_initNbUse: -1
-  m_nbUse: 0
+  m_nbUse: -1
   m_cdtActivation:
   - {fileID: 11400000, guid: 6df0f487c10e3e24fbc8db216ea871a1, type: 2}
   - {fileID: 11400000, guid: b16e1437ee66090449ff31cd48f4a393, type: 2}
+  - {fileID: 11400000, guid: c2115446daf35f841b357074255e0693, type: 2}

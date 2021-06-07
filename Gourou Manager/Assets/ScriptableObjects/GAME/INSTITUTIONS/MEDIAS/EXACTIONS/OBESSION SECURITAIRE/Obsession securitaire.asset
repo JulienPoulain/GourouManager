@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Obsession securitaire
   m_EditorClassIdentifier: 
   m_name: "Obession s\xE9curitaire"
-  m_description: "Vous offrez 20 000 aux m\xE9dias pour qu'ils abordent continuellement
-    des th\xE9matiques anxiog\xE9nes et s\xE9curitaires, la paranoia renforcera le
-    Culte"
+  m_description: "Si le Culte est suffisament connu, vous pouvez offrir 20 000 aux
+    m\xE9dias pour qu'ils abordent continuellement des th\xE9matiques anxiog\xE9nes
+    et s\xE9curitaires, la paranoia renforcera le Culte"
   m_eventList:
   - {fileID: 11400000, guid: 65877882516d12c41abbe33840f24110, type: 2}
   m_conditions:

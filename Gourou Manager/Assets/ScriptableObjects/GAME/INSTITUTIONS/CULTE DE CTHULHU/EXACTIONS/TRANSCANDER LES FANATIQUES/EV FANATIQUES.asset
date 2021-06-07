@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: EV FANATIQUES
   m_EditorClassIdentifier: 
   m_name: "Fanatiques endoctrin\xE9s"
-  m_description: Vous perdez 2 Membres pour obtenir 1 Fanatiques
+  m_description: Vous perdez 4 Membres pour obtenir 2 Fanatiques
   m_initDuration: 1
-  m_duration: 0
+  m_duration: 1
   m_initDelay: 0
   m_delay: 0
   m_impacts:

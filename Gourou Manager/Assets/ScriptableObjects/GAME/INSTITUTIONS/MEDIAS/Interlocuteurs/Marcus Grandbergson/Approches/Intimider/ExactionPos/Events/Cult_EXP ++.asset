@@ -16,6 +16,10 @@ MonoBehaviour:
   m_description: 'L''exposition publique du culte augmente '
   m_initDuration: 1
   m_duration: 1
+  m_initDelay: 0
+  m_delay: 0
   m_impacts:
   - {fileID: 11400000, guid: 589ad726951756147bddd42aa7b0d4c2, type: 2}
+  - {fileID: 11400000, guid: 1ad9a10f3e97bf14599670584a7da383, type: 2}
   m_infoGained: []
+  m_IsDisplayed: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: VOL A MAIN ARMEE
   m_EditorClassIdentifier: 
   m_name: "Vols \xE0 main arm\xE9e"
-  m_description: Vous envoyez les Fanatiques voler des commerces pour gagner des
+  m_description: Vous envoyez les Fanatiques voler des commerces pour gagner 10 000
     Fonds. Cela vous couteras 2 Fanatiques et quelques ennuis avec la Police
   m_eventList:
   - {fileID: 11400000, guid: 4c9f9a1a0c51f8041bb7e636f842fe49, type: 2}
