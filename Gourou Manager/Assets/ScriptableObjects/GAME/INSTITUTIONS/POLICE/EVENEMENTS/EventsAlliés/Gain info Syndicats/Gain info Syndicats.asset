@@ -21,11 +21,10 @@ MonoBehaviour:
   m_initDelay: 0
   m_delay: 0
   m_impacts: []
-  m_infoGained:
-  - {fileID: 11400000, guid: efcb79a553411ec4482aa2dc731f70ce, type: 2}
+  m_infoGained: []
   m_IsDisplayed: 1
   m_initNbUse: -1
-  m_nbUse: 0
+  m_nbUse: -1
   m_cdtActivation:
   - {fileID: 11400000, guid: 589158f948469ce4bb85d8d14e767d88, type: 2}
   - {fileID: 11400000, guid: 8e3d04f9e3bb48d49beceb8afb41c029, type: 2}

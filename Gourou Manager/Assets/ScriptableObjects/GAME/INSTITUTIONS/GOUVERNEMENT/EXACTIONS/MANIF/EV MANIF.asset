@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9f4ab8457d18d4a9717cfa44bee696, type: 3}
+  m_Name: EV MANIF
+  m_EditorClassIdentifier: 
+  m_name: Manifestation de protestation contre le Gouvernement
+  m_description: "Les Adeptes du Culte de Cthulhu d\xE9filent devant le Gouvernement
+    en signe de protestation contre l'absence de d\xE9votion au Grand Ancien"
+  m_initDuration: 3
+  m_duration: 0
+  m_initDelay: 0
+  m_delay: 0
+  m_impacts:
+  - {fileID: 11400000, guid: 51cf2a353aad6b74da0f76f5109fd97b, type: 2}
+  - {fileID: 11400000, guid: 34f8d26f6e381b147a75559a676660a4, type: 2}
+  m_infoGained: []
+  m_IsDisplayed: 1

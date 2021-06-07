@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EV CASSEURS
   m_EditorClassIdentifier: 
   m_name: Manifestation Violente
-  m_description: "Vous perdez 5000 Fonds mais gagnez fortement en Brutalit\xE9"
+  m_description: "Vous perdez 3 Fanatiques mais gagnez en Brutalit\xE9"
   m_initDuration: 1
   m_duration: 1
   m_initDelay: 0
@@ -21,6 +21,6 @@ MonoBehaviour:
   m_impacts:
   - {fileID: 11400000, guid: a9f1634713ad3b74ea57774ccd72af41, type: 2}
   - {fileID: 11400000, guid: 2b27a2a6f57595d4b824cdd4b308ea9e, type: 2}
-  - {fileID: 11400000, guid: a92702584205ff94883073689ab2adc4, type: 2}
+  - {fileID: 11400000, guid: f6fa38b962e2c3945a5fbe1cfc4b3471, type: 2}
   m_infoGained: []
   m_IsDisplayed: 1

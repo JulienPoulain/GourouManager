@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cult_F --
   m_EditorClassIdentifier: 
   m_name: Tout soudoiement a un prix...
-  m_description: "Vous avez pay\xE9 20000 \xE0 Michael pour le soudoyer"
+  m_description: "Vous avez pay\xE9 12000 \xE0 Michael pour le soudoyer"
   m_initDuration: 1
   m_duration: 1
   m_initDelay: 0

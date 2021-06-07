@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: EX CASSEURS
   m_EditorClassIdentifier: 
   m_name: "D\xE9cha\xEEner les casseurs"
-  m_description: Vous payez les Syndicalistes pour qu'ils laissent les casseurs infiltrer
-    leur prochaine manifestation
+  m_description: "Vous envoyez 3 Fanatiques commettre des violences en marge d'une
+    manifestation pour favoriser la confrontation avec la Police. Rapporte beaucoup
+    de Brutalit\xE9 "
   m_eventList:
   - {fileID: 11400000, guid: 10e84920bd9fd3147bfd0ddf6c585612, type: 2}
   m_conditions:
   - {fileID: 11400000, guid: 46b9cbbb8f7028b45a328a6af06b854b, type: 2}
+  - {fileID: 11400000, guid: 3bff2100aaa7d194a802804dfe6a94b6, type: 2}

@@ -13,11 +13,9 @@ MonoBehaviour:
   m_Name: EV VOL MATERIEL
   m_EditorClassIdentifier: 
   m_name: Vol de materiel et d'armes
-  m_description: "Information sur Charmichael Johnson Smith. Vous d\xE9couvrez des
-    documents montrant que Charmichael Johnson Smith, chef de la Police, \xE0 n\xE9goci\xE9
-    la tranquilit\xE9 avec de puissants dealers locaux.  "
+  m_description: "Le Culte gagne en brutalit\xE9 au prix de 3 Fanatiques"
   m_initDuration: 1
-  m_duration: 1
+  m_duration: 0
   m_initDelay: 0
   m_delay: 0
   m_impacts:
